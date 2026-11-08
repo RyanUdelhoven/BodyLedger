@@ -1,45 +1,111 @@
 # BodyLedger
 
-React and TypeScript measurement journal with a persistent local SQLite database.
+**Your measurements. Your history. Hosted on your own computer.**
 
-## Open
+BodyLedger is a personal measurement journal that runs locally and opens in your browser. Track weight, body measurements, and custom metrics; explore trends; and set goals that account for time spent above or below a target.
 
-Bookmark **http://bodyledger.localhost:18080/**. Docker Desktop and Coulson must be running; visiting the bookmark starts the managed Compose app. Reload a previously opened tab to use the current version.
+Your journal lives in a SQLite database on your computer, preserved in a Docker volume. BodyLedger does not require an account, a cloud database, or a hosting subscription. It includes no telemetry or external fonts.
 
-The database already contains the requested synthetic history: **2,504 daily entries**, January 1, 2020–November 8, 2026 inclusive, with daily Weight and 358 Sunday-only Gut measurements. Weight uses 0.1 lb increments; Gut uses 1/8 inch increments. The 2024 first-to-last weight loss is 15.0 lb. See `data/README.md` for generation details and CSV/JSON copies.
+## Why I recommend Coulson
 
-## Storage
+I recommend running BodyLedger with [Coulson](https://github.com/ratazzi/coulson), a local application gateway. It makes a locally hosted app feel like a regular bookmarked website:
 
-SQLite lives at `/data/bodyledger.sqlite` inside the container, backed by Docker volume **`bodyledger_journal`**. The `entries` table holds one row per calendar date, enforced by its primary key. The `journal` table holds revisioned metric definitions, settings, goals, and profile metadata. Saves update both tables in a single transaction and reject stale revisions.
+- **Open a bookmark to start the app.** Coulson starts the registered Docker Compose application when you visit its URL.
+- **Use a memorable address.** Open `http://bodyledger.localhost:18080/` instead of remembering a port number.
+- **Keep the terminal out of everyday use.** Register the app once, then open it from your browser.
+- **Manage local apps together.** Coulson provides status, logs, and start/stop commands for registered applications.
 
-A small Node 24 service serves the built React client and same-origin `/api/journal` endpoint. The application now uses this database across browsers and both local URLs. Browser storage is no longer the active journal. Earlier IndexedDB databases remain untouched; previously downloaded full journal backups can be restored through Settings if needed.
+Coulson and the Docker engine must already be running. Opening the bookmark does not launch Docker Desktop or a stopped Coulson daemon. Coulson can stop idle applications according to its configuration; BodyLedger's saved data persists when its container stops.
 
-The synthetic dataset seeds a new database once. Restarting or rebuilding the container preserves changes and never reseeds an existing database, including intentionally emptied journals. Do not run `docker compose down -v` or delete the named volume unless intentionally removing all data.
+Coulson is recommended, but optional. You can also run BodyLedger directly with Docker Compose.
 
-Settings → Manage data provides full JSON backup/restore, measurement CSV import/export, history editing, inclusive date-range deletion, and metric deletion. Restore replaces the current journal; deletions run immediately. Full backups include preferences and goals; CSV contains dates and measurements. SQLite must be backed up consistently: use the app’s full backup, SQLite’s backup mechanism, or stop the app before copying database files. Copying a live SQLite file without its WAL can omit recent writes.
+## Get started
 
-## Docker and Coulson
+### Requirements
+
+- Docker Desktop, or a working Docker engine with Docker Compose.
+- A browser.
+- Coulson for bookmark-triggered startup. This setup uses Coulson on macOS.
+
+You do not need Node.js installed on your computer to run the Docker version.
+
+### Build and run
+
+From the project directory:
 
 ```sh
 docker compose -p bodyledger up -d --build
-coulson stop bodyledger
+```
+
+Open **http://localhost:3000/**. The published port binds to your computer's loopback interface.
+
+### Use Coulson
+
+Install and start Coulson following its [setup instructions](https://github.com/ratazzi/coulson). Start Docker Desktop as well.
+
+BodyLedger includes `.coulson.toml`, which selects the Docker provider, `compose.yml`, service `web`, and host port `3000`.
+
+For Coulson's default `~/.coulson` apps directory, register the project from its root:
+
+```sh
+mkdir -p ~/.coulson
+ln -s "$PWD" ~/.coulson/bodyledger
+coulson scan
+```
+
+If `~/.coulson/bodyledger` already links to this project, skip the link command. If you configured a different apps directory, use that directory instead.
+
+Bookmark **http://bodyledger.localhost:18080/**. This address assumes the `.localhost` suffix and HTTP gateway port `18080` used by this setup; adjust it if your Coulson configuration differs.
+
+Useful commands:
+
+```sh
 coulson ps
+coulson stop bodyledger
+coulson doctor
 docker compose -p bodyledger logs --tail 50 web
 ```
 
-The web service listens on container port 8080, published only at `127.0.0.1:3000`. Coulson proxies the bookmark to that port. `.coulson.toml` selects Docker, `compose.yml`, and service `web`. `~/.coulson/bodyledger` links to this project. The shared local-port registry reserves port 3000. Coulson’s launch agent includes `/usr/local/bin` so it can find Docker. Its existing idle timeout is 900 seconds; automatic idle shutdown has not been timed.
+After stopping BodyLedger through Coulson, visiting its bookmark starts it again. For an app update, rebuild with the Docker Compose command above and refresh your browser.
 
-To unregister only this app, stop it, remove its `~/.coulson/bodyledger` symlink, and rescan Coulson. Preserve the database volume. No TLS trust, global domain, or network exposure changes are required.
+## What you can do
 
-## Features
+- **Record measurements:** one entry per date, custom metrics, unit conversion, and quick keyboard entry.
+- **Explore Trends:** Days YoY, Previous weekdays, Week flow, and Year flow, with shared metric selection.
+- **Set goals:** above/below targets with durations in days or weeks and measured streak progress.
+- **Manage history:** edit saved dates, rename metrics, and delete selected entries, date ranges, or metrics.
+- **Move your data:** CSV import/export and full JSON backup/restore under **Settings → Manage data**.
+- **Personalize:** light/dark themes, display precision, measurement schedules, and waist-to-height ratio.
 
-Manual measurements, custom metrics, independent units/precision, reporting schedules, four trend views with statistics/tables, goals, profile-based waist-to-height ratio, CSV import/export, backups, demo refresh, bulk deletion, and responsive light/dark themes are included. Gut in the requested demo appears only on Sundays, regardless of a customized reporting schedule. Refresh demo preserves non-demo entries on occupied dates; full demo replacement clears existing entries and goals.
+Goal streaks bridge missing dates between recorded observations and stop at the latest measurement. A value equal to the target does not satisfy a strict above/below goal. Optional reminders work while the journal is open.
 
-Notifications are optional and work while the journal is open. Closed-browser reminder delivery is not implemented. No accounts, cloud sync, telemetry, or external fonts are used. The original iOS project remains untouched; its CSV export can transfer measurements.
+New databases start with synthetic example measurements from January 1, 2020, through November 8, 2026. Existing databases are never reseeded, including intentionally emptied journals. Remove unwanted example entries through the history or date-range deletion controls. See [data/README.md](data/README.md) for dataset details.
+
+## Import a CSV
+
+Use **Settings → Manage data → Import CSV**. The adjacent **See the CSV format** control shows an example.
+
+```csv
+Date,Weight (lb),Gut (in)
+2026-11-01,206.1,38.375
+2026-11-02,205.7,
+```
+
+Use one row per calendar date, dates formatted as `YYYY-MM-DD`, and metric names with units in the headers. Leave missing measurements blank. Files must be no larger than 10 MB. Exporting a CSV first provides headers matching your current metric names.
+
+## Keep your data safe
+
+The database lives at `/data/bodyledger.sqlite` inside the container, stored in the persistent Docker volume **`bodyledger_journal`**. Rebuilding or restarting the app preserves it. Browser storage is not the active journal.
+
+Download a **Full backup** from Settings to preserve measurements, metric definitions, goals, schedules, and preferences. CSV exports contain measurement data. Restoring a full backup replaces the journal; deletion controls take effect immediately.
+
+**Do not delete the database volume or run `docker compose down -v` unless you intend to erase your journal.** Local hosting keeps storage under your control; keep backups somewhere separate from the app's disk.
 
 ## Development
 
-Use Node 24, which supplies SQLite and TypeScript stripping.
+The frontend uses React and TypeScript. A small Node 24 service serves the built client and its SQLite API. Docker packages both together.
+
+With Node 24 installed:
 
 ```sh
 npm ci
@@ -47,49 +113,11 @@ npm run build
 DB_PATH=/tmp/bodyledger-development.sqlite PORT=8080 node --experimental-strip-types server.mjs
 ```
 
-Open `http://localhost:8080`. For frontend hot reload, keep Docker running and use `npm run dev`; Vite proxies `/api` to `127.0.0.1:3000`, using the same database.
+Open `http://localhost:8080`. For frontend hot reload, run the Docker app and `npm run dev`; Vite proxies API requests to `127.0.0.1:3000`, using that app's database.
 
 ```sh
 npm test
 npm run test:browser
 ```
 
-Browser tests launch a separate local server on port 3101 with a temporary SQLite database. Mutation fixtures refuse to operate against the real database. Installed Google Chrome is required. `BODYLEDGER_URL` is available for explicitly selected targets; never point mutation tests at the live journal. The lifecycle test requires explicit `BODYLEDGER_LIFECYCLE=1` and stops only BodyLedger; normal tests skip it.
-
-## Source map
-
-`server.mjs` owns SQLite, initial seeding, transactions, and static/API HTTP serving. `migrations.mjs` handles the atomic removal of retired note fields. `src/db.ts` is the typed client for that API. `src/model.ts` owns validation, units, calendars, CSV, and synthetic data. `src/trends.ts` computes chart series. `src/components/` holds UI areas; `src/main.tsx` owns navigation and atomic conflict review. `src/styles.css` defines semantic themes and responsive styling.
-
-## SQLite verification
-
-The live database was queried directly: 2,504 rows span 2020-01-01 through 2026-11-08, with 358 Sunday Gut measurements. Fifteen model tests and five isolated browser journeys passed. A separate read-only live check verified two Coulson stop/bookmark-start cycles preserved the complete journal, including revisions, identifiers, and settings. Automatic idle shutdown remains untested.
-
-Trends range controls retain independent draft and saved values for each chart. Valid edits queue against the latest acknowledged database revision without disabling the other controls. Empty or out-of-range input leaves the chart at its last valid range and resets on blur. The delayed-save browser regression checks typing, arrow stepping, switching chart modes, independent persistence, and reload.
-
-Days YoY uses **Weeks covered**: a value of N selects the latest N × 7 calendar days, ending today. Prior-year series align to those calendar dates one and two years earlier. The existing internal `ranges.days` preference now stores this week count; other chart range controls retain their own units and values.
-
-All trend line series connect across missing observations, including year comparisons, historical averages, and deviation boundaries. Missing measurements remain absent in tables and statistics; connecting the visual line does not create or interpolate stored values. Weekday bars retain their empty positions.
-
-Trends uses one shared metric selection across Days YoY, Previous weekdays, Week flow, and Year flow. Changing the metric in any of these views updates the selection for all four views; range values remain independent.
-
-Previous weekdays labels its range **Weeks covered**. All trend Y axes use explicit whole-number ticks in the selected display units, with at most five horizontal grid lines including the bottom and top bounds. Bounds include every plotted series and deviation boundary. Measurement, tooltip, and table precision remain unchanged.
-
-Every Trends graph displays the selected metric’s goal as a labeled dashed target line when that goal exists. Targets follow display units, remain visible outside the observed range, and appear even without observations. Axis bounds include the goal while retaining the five-grid-line limit. Switching to a metric without a goal hides the line; removing a goal removes it from all graphs.
-
-## Compact journal layout
-
-The shared promotional header and date block have been removed from every page. New entry opens directly with the measurement form. The left-aligned date picker and Add a metric controls share the save-button section below the inputs. The latest-weight summary, New entry/Daily check-in header, scheduled count, goals count, and decorative side panels are removed. The date picker retains an accessible name without a visible label. CSV import and its format example now live beside Export CSV in Settings → Manage data.
-
-Trends places the metric selector, range control, and optional weekday selector in one control row. Compact statistics and a viewport-sized chart keep controls, statistics, and graph visible together at desktop and mobile sizes. The expandable chart-data table remains below the graph.
-
-Measurement entry fields align their decimal points using a shared fractional column and fixed-width digits. Integer entries align at the implied decimal position. Alignment adapts to typed precision and unit conversions without modifying the entered or stored measurement. History editing uses the same numeric input.
-
-New entry arranges measurements three per row on desktop, two on tablets, and one on phones. Tab and Shift+Tab move directly between values in row order. Unit selectors remain available by mouse or Alt+Down from the value field; Escape returns to its value. The compact three-column layout adapts to smaller screens without horizontal scrolling.
-
-Notes have been retired: there is no note editor, history column, CSV export column, or stored entry field. Startup removes legacy note fields transactionally while preserving entry dates, IDs, measurements, and all other journal metadata. Old CSV Notes columns are accepted and ignored; old JSON backups have their note fields stripped before saving.
-
-New entry uses compact inline label/value controls. Clicking or tabbing into a numeric input selects its entire number; the shared focus outline and background include the label and unit selector. Measurement values use 28.8px text, with 19.2px labels and units. Add a metric sits beside the date picker. History appears below the form; select a date to load its measurements for editing. Clear form and the decorative Add metric tagline have been removed.
-
-Goals support above/below thresholds and a required duration in days or weeks. Cards show the current measured streak and duration progress. Comparisons are strict (equal values do not satisfy above/below). Streaks use calendar dates across recorded observations, bridge missing dates, reset on an out-of-range measurement, and stop at the latest observation; future observations do not count. Streaks use available history, including measurements before goal creation. Existing goals infer direction from their starting value and default to one day.
-
-Settings → Manage data includes Metric names for renaming stored metrics (unique names, up to 10 characters). Names update history and CSV column headers and all metric displays; stable IDs preserve existing values, schedules, and goals. History follows the deletion sections. Demo-history controls have been removed from Settings.
+Browser tests require installed Google Chrome and use a temporary SQLite database on port `3101`. Keep mutation tests away from your real journal. Live lifecycle tests require explicit opt-in and remain skipped in normal runs.
