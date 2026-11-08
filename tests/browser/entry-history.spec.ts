@@ -30,6 +30,12 @@ test("New entry combines labels with larger inputs, places Add beside date, and 
       Math.abs(date!.y + date!.height / 2 - (add!.y + add!.height / 2)),
     ).toBeLessThan(3);
     expect(add!.x).toBeGreaterThan(date!.x);
+    await expect(
+      page.locator(".entry-actions").getByLabel("Effective date"),
+    ).toBeVisible();
+    await expect(
+      page.locator(".entry-actions").getByRole("button", { name: /Save/ }),
+    ).toBeVisible();
   }
   const input = page.getByRole("textbox", { name: "Weight", exact: true }),
     group = input.locator("..");

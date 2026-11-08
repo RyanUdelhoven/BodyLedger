@@ -1720,3 +1720,20 @@ footer {
     font-size: 11px;
   }
 }
+
+.entry-actions {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.entry-actions .effective-date {
+  order: -1;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.entry-card .entry-actions .effective-date {
+  padding: 0;
+}
+.entry-actions > .primary {
+  margin-left: auto;
+}

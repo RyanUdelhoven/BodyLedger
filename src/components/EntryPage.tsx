@@ -136,25 +136,6 @@ export function EntryPage({
       <div className="entry-layout">
         <section className="card entry-card">
           <form onSubmit={onSave}>
-            <div className="effective-date">
-              <input
-                id="effective-date"
-                aria-label="Effective date"
-                type="date"
-                required
-                value={day}
-                onChange={(e) => fill(e.target.value)}
-              />
-              <button
-                type="button"
-                className="add-metric entry-add-metric"
-                onClick={() => setAdding(!adding)}
-                aria-expanded={adding}
-                aria-controls="new-metric-form"
-              >
-                <Plus size={17} /> Add a metric
-              </button>
-            </div>
             <h3 className="sr-only">Measurements</h3>
             <p id="measurement-keyboard-help" className="sr-only">
               Tab moves between measurements. Alt plus Arrow Down focuses the
@@ -299,11 +280,30 @@ export function EntryPage({
                 {error}
               </p>
             )}
-            <div className="form-actions">
+            <div className="form-actions entry-actions">
               <button className="primary" disabled={busy}>
                 <Check size={17} />{" "}
                 {busy ? "Saving…" : saved ? "Save changes" : "Save entry"}
               </button>
+              <div className="effective-date">
+                <input
+                  id="effective-date"
+                  aria-label="Effective date"
+                  type="date"
+                  required
+                  value={day}
+                  onChange={(e) => fill(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="add-metric entry-add-metric"
+                  onClick={() => setAdding(!adding)}
+                  aria-expanded={adding}
+                  aria-controls="new-metric-form"
+                >
+                  <Plus size={17} /> Add a metric
+                </button>
+              </div>
             </div>
           </form>
         </section>
