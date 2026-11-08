@@ -16,7 +16,6 @@ test("trend lines bridge missing observations without filling missing table cell
     id: `gap-${index}`,
     date,
     values: { weight: 90 + index },
-    note: "",
   }));
   expect(
     (

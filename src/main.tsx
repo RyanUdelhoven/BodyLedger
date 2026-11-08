@@ -353,7 +353,6 @@ function App() {
                         </strong>
                       </p>
                     ))}
-                  <small>{entry.note || "No note"}</small>
                 </button>
               ))}
             </div>

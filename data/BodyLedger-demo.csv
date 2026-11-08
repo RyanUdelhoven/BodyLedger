@@ -1,2505 +1,2505 @@
-Date,Weight (lb),Gut (in),Notes
-2020-01-01,188.5,,Synthetic demo history
-2020-01-02,187.4,,Synthetic demo history
-2020-01-03,187,,Synthetic demo history
-2020-01-04,189.1,,Synthetic demo history
-2020-01-05,191.1,34,Synthetic demo history
-2020-01-06,190.4,,Synthetic demo history
-2020-01-07,189.6,,Synthetic demo history
-2020-01-08,188.7,,Synthetic demo history
-2020-01-09,187.3,,Synthetic demo history
-2020-01-10,186.5,,Synthetic demo history
-2020-01-11,188.7,,Synthetic demo history
-2020-01-12,190.9,33.875,Synthetic demo history
-2020-01-13,190.3,,Synthetic demo history
-2020-01-14,188.9,,Synthetic demo history
-2020-01-15,188.1,,Synthetic demo history
-2020-01-16,188.6,,Synthetic demo history
-2020-01-17,187,,Synthetic demo history
-2020-01-18,188.6,,Synthetic demo history
-2020-01-19,190.7,33.75,Synthetic demo history
-2020-01-20,189.7,,Synthetic demo history
-2020-01-21,188.5,,Synthetic demo history
-2020-01-22,186.8,,Synthetic demo history
-2020-01-23,185.7,,Synthetic demo history
-2020-01-24,185.6,,Synthetic demo history
-2020-01-25,187.8,,Synthetic demo history
-2020-01-26,190.1,33.875,Synthetic demo history
-2020-01-27,189,,Synthetic demo history
-2020-01-28,188,,Synthetic demo history
-2020-01-29,187.4,,Synthetic demo history
-2020-01-30,186.2,,Synthetic demo history
-2020-01-31,185.9,,Synthetic demo history
-2020-02-01,187.2,,Synthetic demo history
-2020-02-02,189.8,33.875,Synthetic demo history
-2020-02-03,189.1,,Synthetic demo history
-2020-02-04,188.2,,Synthetic demo history
-2020-02-05,186.8,,Synthetic demo history
-2020-02-06,186.3,,Synthetic demo history
-2020-02-07,185.2,,Synthetic demo history
-2020-02-08,186.9,,Synthetic demo history
-2020-02-09,189.1,33.625,Synthetic demo history
-2020-02-10,188.5,,Synthetic demo history
-2020-02-11,188.1,,Synthetic demo history
-2020-02-12,187.2,,Synthetic demo history
-2020-02-13,185.8,,Synthetic demo history
-2020-02-14,185.5,,Synthetic demo history
-2020-02-15,186.3,,Synthetic demo history
-2020-02-16,188.4,33.625,Synthetic demo history
-2020-02-17,187.7,,Synthetic demo history
-2020-02-18,186.6,,Synthetic demo history
-2020-02-19,186.1,,Synthetic demo history
-2020-02-20,184.7,,Synthetic demo history
-2020-02-21,183.8,,Synthetic demo history
-2020-02-22,185.4,,Synthetic demo history
-2020-02-23,187.9,33.625,Synthetic demo history
-2020-02-24,187.8,,Synthetic demo history
-2020-02-25,187.1,,Synthetic demo history
-2020-02-26,185.2,,Synthetic demo history
-2020-02-27,184.6,,Synthetic demo history
-2020-02-28,183.3,,Synthetic demo history
-2020-02-29,185.8,,Synthetic demo history
-2020-03-01,188.2,33.625,Synthetic demo history
-2020-03-02,187.2,,Synthetic demo history
-2020-03-03,185.6,,Synthetic demo history
-2020-03-04,184.8,,Synthetic demo history
-2020-03-05,184.1,,Synthetic demo history
-2020-03-06,183.2,,Synthetic demo history
-2020-03-07,185.3,,Synthetic demo history
-2020-03-08,187.9,33.375,Synthetic demo history
-2020-03-09,186.6,,Synthetic demo history
-2020-03-10,185.4,,Synthetic demo history
-2020-03-11,183.7,,Synthetic demo history
-2020-03-12,182.9,,Synthetic demo history
-2020-03-13,182,,Synthetic demo history
-2020-03-14,183.8,,Synthetic demo history
-2020-03-15,185.8,33.375,Synthetic demo history
-2020-03-16,184.9,,Synthetic demo history
-2020-03-17,184.6,,Synthetic demo history
-2020-03-18,183.6,,Synthetic demo history
-2020-03-19,182.9,,Synthetic demo history
-2020-03-20,182.8,,Synthetic demo history
-2020-03-21,183.9,,Synthetic demo history
-2020-03-22,185.4,33.25,Synthetic demo history
-2020-03-23,184,,Synthetic demo history
-2020-03-24,184.2,,Synthetic demo history
-2020-03-25,182.7,,Synthetic demo history
-2020-03-26,182.1,,Synthetic demo history
-2020-03-27,181.6,,Synthetic demo history
-2020-03-28,182.6,,Synthetic demo history
-2020-03-29,184.9,33.125,Synthetic demo history
-2020-03-30,183.5,,Synthetic demo history
-2020-03-31,182.5,,Synthetic demo history
-2020-04-01,181.6,,Synthetic demo history
-2020-04-02,180.9,,Synthetic demo history
-2020-04-03,180.5,,Synthetic demo history
-2020-04-04,182.7,,Synthetic demo history
-2020-04-05,184.6,33,Synthetic demo history
-2020-04-06,183.9,,Synthetic demo history
-2020-04-07,183.2,,Synthetic demo history
-2020-04-08,181.5,,Synthetic demo history
-2020-04-09,181.5,,Synthetic demo history
-2020-04-10,180.3,,Synthetic demo history
-2020-04-11,182.5,,Synthetic demo history
-2020-04-12,185.1,33.125,Synthetic demo history
-2020-04-13,184.3,,Synthetic demo history
-2020-04-14,183.4,,Synthetic demo history
-2020-04-15,181.6,,Synthetic demo history
-2020-04-16,181.2,,Synthetic demo history
-2020-04-17,180.8,,Synthetic demo history
-2020-04-18,182.4,,Synthetic demo history
-2020-04-19,185.4,33.125,Synthetic demo history
-2020-04-20,184.1,,Synthetic demo history
-2020-04-21,183.7,,Synthetic demo history
-2020-04-22,182.7,,Synthetic demo history
-2020-04-23,181.8,,Synthetic demo history
-2020-04-24,180.7,,Synthetic demo history
-2020-04-25,182.8,,Synthetic demo history
-2020-04-26,184.4,33.125,Synthetic demo history
-2020-04-27,183,,Synthetic demo history
-2020-04-28,182.7,,Synthetic demo history
-2020-04-29,180.8,,Synthetic demo history
-2020-04-30,179.9,,Synthetic demo history
-2020-05-01,179,,Synthetic demo history
-2020-05-02,181.5,,Synthetic demo history
-2020-05-03,183.2,33,Synthetic demo history
-2020-05-04,182.3,,Synthetic demo history
-2020-05-05,181.6,,Synthetic demo history
-2020-05-06,181.3,,Synthetic demo history
-2020-05-07,180.2,,Synthetic demo history
-2020-05-08,179.2,,Synthetic demo history
-2020-05-09,180.6,,Synthetic demo history
-2020-05-10,183.1,32.875,Synthetic demo history
-2020-05-11,181.6,,Synthetic demo history
-2020-05-12,180.6,,Synthetic demo history
-2020-05-13,179.7,,Synthetic demo history
-2020-05-14,178.5,,Synthetic demo history
-2020-05-15,177.9,,Synthetic demo history
-2020-05-16,179.3,,Synthetic demo history
-2020-05-17,181.6,32.625,Synthetic demo history
-2020-05-18,181,,Synthetic demo history
-2020-05-19,180.1,,Synthetic demo history
-2020-05-20,179.4,,Synthetic demo history
-2020-05-21,178.4,,Synthetic demo history
-2020-05-22,178.3,,Synthetic demo history
-2020-05-23,179.5,,Synthetic demo history
-2020-05-24,182.3,32.625,Synthetic demo history
-2020-05-25,181.4,,Synthetic demo history
-2020-05-26,180.7,,Synthetic demo history
-2020-05-27,179.1,,Synthetic demo history
-2020-05-28,178.7,,Synthetic demo history
-2020-05-29,178.1,,Synthetic demo history
-2020-05-30,179.5,,Synthetic demo history
-2020-05-31,182.1,32.75,Synthetic demo history
-2020-06-01,180.9,,Synthetic demo history
-2020-06-02,179.9,,Synthetic demo history
-2020-06-03,178.1,,Synthetic demo history
-2020-06-04,177.1,,Synthetic demo history
-2020-06-05,179.3,,Synthetic demo history
-2020-06-06,179.8,,Synthetic demo history
-2020-06-07,181.4,32.625,Synthetic demo history
-2020-06-08,179.9,,Synthetic demo history
-2020-06-09,179.4,,Synthetic demo history
-2020-06-10,178.3,,Synthetic demo history
-2020-06-11,177.8,,Synthetic demo history
-2020-06-12,177.7,,Synthetic demo history
-2020-06-13,179.6,,Synthetic demo history
-2020-06-14,181.7,32.875,Synthetic demo history
-2020-06-15,180.6,,Synthetic demo history
-2020-06-16,180.4,,Synthetic demo history
-2020-06-17,179.3,,Synthetic demo history
-2020-06-18,178.7,,Synthetic demo history
-2020-06-19,178.3,,Synthetic demo history
-2020-06-20,180.6,,Synthetic demo history
-2020-06-21,182,32.875,Synthetic demo history
-2020-06-22,181.5,,Synthetic demo history
-2020-06-23,181.1,,Synthetic demo history
-2020-06-24,180.2,,Synthetic demo history
-2020-06-25,181.5,,Synthetic demo history
-2020-06-26,180.7,,Synthetic demo history
-2020-06-27,182.1,,Synthetic demo history
-2020-06-28,184,32.75,Synthetic demo history
-2020-06-29,183,,Synthetic demo history
-2020-06-30,182.4,,Synthetic demo history
-2020-07-01,181.3,,Synthetic demo history
-2020-07-02,181.1,,Synthetic demo history
-2020-07-03,179.9,,Synthetic demo history
-2020-07-04,181.3,,Synthetic demo history
-2020-07-05,183.5,32.875,Synthetic demo history
-2020-07-06,182.5,,Synthetic demo history
-2020-07-07,181.4,,Synthetic demo history
-2020-07-08,180.2,,Synthetic demo history
-2020-07-09,179.1,,Synthetic demo history
-2020-07-10,178.8,,Synthetic demo history
-2020-07-11,180.4,,Synthetic demo history
-2020-07-12,183,32.875,Synthetic demo history
-2020-07-13,182,,Synthetic demo history
-2020-07-14,181.1,,Synthetic demo history
-2020-07-15,180.5,,Synthetic demo history
-2020-07-16,179.3,,Synthetic demo history
-2020-07-17,179.1,,Synthetic demo history
-2020-07-18,180.7,,Synthetic demo history
-2020-07-19,183.3,32.625,Synthetic demo history
-2020-07-20,182,,Synthetic demo history
-2020-07-21,181.4,,Synthetic demo history
-2020-07-22,180.4,,Synthetic demo history
-2020-07-23,180.2,,Synthetic demo history
-2020-07-24,181.7,,Synthetic demo history
-2020-07-25,182.7,,Synthetic demo history
-2020-07-26,184.4,32.75,Synthetic demo history
-2020-07-27,182.9,,Synthetic demo history
-2020-07-28,182.5,,Synthetic demo history
-2020-07-29,181.6,,Synthetic demo history
-2020-07-30,181,,Synthetic demo history
-2020-07-31,180.1,,Synthetic demo history
-2020-08-01,183,,Synthetic demo history
-2020-08-02,185.2,33,Synthetic demo history
-2020-08-03,184.3,,Synthetic demo history
-2020-08-04,182.9,,Synthetic demo history
-2020-08-05,181.9,,Synthetic demo history
-2020-08-06,181,,Synthetic demo history
-2020-08-07,180.2,,Synthetic demo history
-2020-08-08,182.6,,Synthetic demo history
-2020-08-09,187.4,33.125,Synthetic demo history
-2020-08-10,185.6,,Synthetic demo history
-2020-08-11,184.3,,Synthetic demo history
-2020-08-12,182.8,,Synthetic demo history
-2020-08-13,181.6,,Synthetic demo history
-2020-08-14,181.2,,Synthetic demo history
-2020-08-15,182.6,,Synthetic demo history
-2020-08-16,184.7,33.125,Synthetic demo history
-2020-08-17,183.9,,Synthetic demo history
-2020-08-18,182.8,,Synthetic demo history
-2020-08-19,182.5,,Synthetic demo history
-2020-08-20,182.1,,Synthetic demo history
-2020-08-21,181.1,,Synthetic demo history
-2020-08-22,183.1,,Synthetic demo history
-2020-08-23,185.4,33.375,Synthetic demo history
-2020-08-24,184.9,,Synthetic demo history
-2020-08-25,184.5,,Synthetic demo history
-2020-08-26,183.9,,Synthetic demo history
-2020-08-27,182.9,,Synthetic demo history
-2020-08-28,182.6,,Synthetic demo history
-2020-08-29,184.6,,Synthetic demo history
-2020-08-30,187.2,33.375,Synthetic demo history
-2020-08-31,186.2,,Synthetic demo history
-2020-09-01,185,,Synthetic demo history
-2020-09-02,184,,Synthetic demo history
-2020-09-03,183.2,,Synthetic demo history
-2020-09-04,183.1,,Synthetic demo history
-2020-09-05,185.5,,Synthetic demo history
-2020-09-06,188,33.5,Synthetic demo history
-2020-09-07,187.2,,Synthetic demo history
-2020-09-08,186.6,,Synthetic demo history
-2020-09-09,185.9,,Synthetic demo history
-2020-09-10,185.3,,Synthetic demo history
-2020-09-11,184.3,,Synthetic demo history
-2020-09-12,186.7,,Synthetic demo history
-2020-09-13,188.2,33.5,Synthetic demo history
-2020-09-14,187.8,,Synthetic demo history
-2020-09-15,186.7,,Synthetic demo history
-2020-09-16,186.7,,Synthetic demo history
-2020-09-17,185.3,,Synthetic demo history
-2020-09-18,184.7,,Synthetic demo history
-2020-09-19,186.6,,Synthetic demo history
-2020-09-20,189.1,33.625,Synthetic demo history
-2020-09-21,188.1,,Synthetic demo history
-2020-09-22,186.6,,Synthetic demo history
-2020-09-23,186.3,,Synthetic demo history
-2020-09-24,185,,Synthetic demo history
-2020-09-25,184.7,,Synthetic demo history
-2020-09-26,186.9,,Synthetic demo history
-2020-09-27,189.4,33.875,Synthetic demo history
-2020-09-28,187.8,,Synthetic demo history
-2020-09-29,186.9,,Synthetic demo history
-2020-09-30,186.4,,Synthetic demo history
-2020-10-01,186.2,,Synthetic demo history
-2020-10-02,185.4,,Synthetic demo history
-2020-10-03,187.2,,Synthetic demo history
-2020-10-04,189.3,33.875,Synthetic demo history
-2020-10-05,188.5,,Synthetic demo history
-2020-10-06,188.7,,Synthetic demo history
-2020-10-07,187.6,,Synthetic demo history
-2020-10-08,187,,Synthetic demo history
-2020-10-09,186.4,,Synthetic demo history
-2020-10-10,188,,Synthetic demo history
-2020-10-11,190.1,33.75,Synthetic demo history
-2020-10-12,189.7,,Synthetic demo history
-2020-10-13,189,,Synthetic demo history
-2020-10-14,188.6,,Synthetic demo history
-2020-10-15,187.8,,Synthetic demo history
-2020-10-16,186.9,,Synthetic demo history
-2020-10-17,189.4,,Synthetic demo history
-2020-10-18,191.7,34.125,Synthetic demo history
-2020-10-19,190.2,,Synthetic demo history
-2020-10-20,189.7,,Synthetic demo history
-2020-10-21,189,,Synthetic demo history
-2020-10-22,188.8,,Synthetic demo history
-2020-10-23,188.2,,Synthetic demo history
-2020-10-24,190.1,,Synthetic demo history
-2020-10-25,191.5,34.125,Synthetic demo history
-2020-10-26,191.1,,Synthetic demo history
-2020-10-27,190.9,,Synthetic demo history
-2020-10-28,190,,Synthetic demo history
-2020-10-29,189.3,,Synthetic demo history
-2020-10-30,188.7,,Synthetic demo history
-2020-10-31,190.7,,Synthetic demo history
-2020-11-01,193.1,34.375,Synthetic demo history
-2020-11-02,192.3,,Synthetic demo history
-2020-11-03,191.8,,Synthetic demo history
-2020-11-04,191.7,,Synthetic demo history
-2020-11-05,190.7,,Synthetic demo history
-2020-11-06,190.1,,Synthetic demo history
-2020-11-07,191.7,,Synthetic demo history
-2020-11-08,193.6,34.5,Synthetic demo history
-2020-11-09,192.6,,Synthetic demo history
-2020-11-10,192.4,,Synthetic demo history
-2020-11-11,191.4,,Synthetic demo history
-2020-11-12,190.5,,Synthetic demo history
-2020-11-13,190.1,,Synthetic demo history
-2020-11-14,192.2,,Synthetic demo history
-2020-11-15,194.7,34.5,Synthetic demo history
-2020-11-16,193.6,,Synthetic demo history
-2020-11-17,192.5,,Synthetic demo history
-2020-11-18,191.2,,Synthetic demo history
-2020-11-19,190.6,,Synthetic demo history
-2020-11-20,189.9,,Synthetic demo history
-2020-11-21,192.8,,Synthetic demo history
-2020-11-22,194.5,34.5,Synthetic demo history
-2020-11-23,193,,Synthetic demo history
-2020-11-24,192.7,,Synthetic demo history
-2020-11-25,191.9,,Synthetic demo history
-2020-11-26,192,,Synthetic demo history
-2020-11-27,191,,Synthetic demo history
-2020-11-28,192.8,,Synthetic demo history
-2020-11-29,194.6,34.5,Synthetic demo history
-2020-11-30,193.2,,Synthetic demo history
-2020-12-01,194.1,,Synthetic demo history
-2020-12-02,192.7,,Synthetic demo history
-2020-12-03,191.9,,Synthetic demo history
-2020-12-04,193.5,,Synthetic demo history
-2020-12-05,194.7,,Synthetic demo history
-2020-12-06,196.3,34.625,Synthetic demo history
-2020-12-07,195.1,,Synthetic demo history
-2020-12-08,194.6,,Synthetic demo history
-2020-12-09,193.9,,Synthetic demo history
-2020-12-10,192.7,,Synthetic demo history
-2020-12-11,192.4,,Synthetic demo history
-2020-12-12,194.2,,Synthetic demo history
-2020-12-13,196.2,34.625,Synthetic demo history
-2020-12-14,195.6,,Synthetic demo history
-2020-12-15,194.6,,Synthetic demo history
-2020-12-16,193.4,,Synthetic demo history
-2020-12-17,193.2,,Synthetic demo history
-2020-12-18,191.9,,Synthetic demo history
-2020-12-19,193.8,,Synthetic demo history
-2020-12-20,196.4,34.75,Synthetic demo history
-2020-12-21,194.9,,Synthetic demo history
-2020-12-22,194.7,,Synthetic demo history
-2020-12-23,194,,Synthetic demo history
-2020-12-24,193.2,,Synthetic demo history
-2020-12-25,192.1,,Synthetic demo history
-2020-12-26,194.3,,Synthetic demo history
-2020-12-27,196.8,34.875,Synthetic demo history
-2020-12-28,195.2,,Synthetic demo history
-2020-12-29,194.9,,Synthetic demo history
-2020-12-30,193.6,,Synthetic demo history
-2020-12-31,192.9,,Synthetic demo history
-2021-01-01,191.5,,Synthetic demo history
-2021-01-02,195.7,,Synthetic demo history
-2021-01-03,196.8,34.5,Synthetic demo history
-2021-01-04,195.3,,Synthetic demo history
-2021-01-05,194.2,,Synthetic demo history
-2021-01-06,192.9,,Synthetic demo history
-2021-01-07,191.3,,Synthetic demo history
-2021-01-08,190.7,,Synthetic demo history
-2021-01-09,192.4,,Synthetic demo history
-2021-01-10,194.7,34.5,Synthetic demo history
-2021-01-11,193.5,,Synthetic demo history
-2021-01-12,193.1,,Synthetic demo history
-2021-01-13,192.2,,Synthetic demo history
-2021-01-14,191.8,,Synthetic demo history
-2021-01-15,193.4,,Synthetic demo history
-2021-01-16,193.3,,Synthetic demo history
-2021-01-17,194.7,34.375,Synthetic demo history
-2021-01-18,193.9,,Synthetic demo history
-2021-01-19,192.7,,Synthetic demo history
-2021-01-20,191.7,,Synthetic demo history
-2021-01-21,191.3,,Synthetic demo history
-2021-01-22,190.4,,Synthetic demo history
-2021-01-23,192.1,,Synthetic demo history
-2021-01-24,194.8,34.5,Synthetic demo history
-2021-01-25,193.4,,Synthetic demo history
-2021-01-26,192.9,,Synthetic demo history
-2021-01-27,191.2,,Synthetic demo history
-2021-01-28,190.4,,Synthetic demo history
-2021-01-29,189.6,,Synthetic demo history
-2021-01-30,192.3,,Synthetic demo history
-2021-01-31,194.3,34.5,Synthetic demo history
-2021-02-01,192.9,,Synthetic demo history
-2021-02-02,192,,Synthetic demo history
-2021-02-03,190.6,,Synthetic demo history
-2021-02-04,190.2,,Synthetic demo history
-2021-02-05,189.3,,Synthetic demo history
-2021-02-06,191,,Synthetic demo history
-2021-02-07,192.8,34.25,Synthetic demo history
-2021-02-08,191.6,,Synthetic demo history
-2021-02-09,190.6,,Synthetic demo history
-2021-02-10,189.5,,Synthetic demo history
-2021-02-11,189.4,,Synthetic demo history
-2021-02-12,189,,Synthetic demo history
-2021-02-13,190.2,,Synthetic demo history
-2021-02-14,192.4,34.25,Synthetic demo history
-2021-02-15,191.4,,Synthetic demo history
-2021-02-16,190.6,,Synthetic demo history
-2021-02-17,190,,Synthetic demo history
-2021-02-18,188.5,,Synthetic demo history
-2021-02-19,187.9,,Synthetic demo history
-2021-02-20,190.1,,Synthetic demo history
-2021-02-21,192.2,34.25,Synthetic demo history
-2021-02-22,191.4,,Synthetic demo history
-2021-02-23,190,,Synthetic demo history
-2021-02-24,189.3,,Synthetic demo history
-2021-02-25,188.4,,Synthetic demo history
-2021-02-26,187.7,,Synthetic demo history
-2021-02-27,189.8,,Synthetic demo history
-2021-02-28,191.7,34.125,Synthetic demo history
-2021-03-01,190.9,,Synthetic demo history
-2021-03-02,190.3,,Synthetic demo history
-2021-03-03,189.6,,Synthetic demo history
-2021-03-04,188.5,,Synthetic demo history
-2021-03-05,187.9,,Synthetic demo history
-2021-03-06,189.4,,Synthetic demo history
-2021-03-07,191.2,34.25,Synthetic demo history
-2021-03-08,190.5,,Synthetic demo history
-2021-03-09,189.5,,Synthetic demo history
-2021-03-10,188.5,,Synthetic demo history
-2021-03-11,187.7,,Synthetic demo history
-2021-03-12,187.3,,Synthetic demo history
-2021-03-13,188.4,,Synthetic demo history
-2021-03-14,190.8,33.875,Synthetic demo history
-2021-03-15,189.6,,Synthetic demo history
-2021-03-16,189.5,,Synthetic demo history
-2021-03-17,188.4,,Synthetic demo history
-2021-03-18,186.6,,Synthetic demo history
-2021-03-19,185.9,,Synthetic demo history
-2021-03-20,187.8,,Synthetic demo history
-2021-03-21,190.2,34,Synthetic demo history
-2021-03-22,189.3,,Synthetic demo history
-2021-03-23,188.4,,Synthetic demo history
-2021-03-24,187.1,,Synthetic demo history
-2021-03-25,186.5,,Synthetic demo history
-2021-03-26,185.1,,Synthetic demo history
-2021-03-27,187.4,,Synthetic demo history
-2021-03-28,193,33.75,Synthetic demo history
-2021-03-29,189.9,,Synthetic demo history
-2021-03-30,188.7,,Synthetic demo history
-2021-03-31,186.8,,Synthetic demo history
-2021-04-01,186.6,,Synthetic demo history
-2021-04-02,185,,Synthetic demo history
-2021-04-03,186.6,,Synthetic demo history
-2021-04-04,188.8,33.75,Synthetic demo history
-2021-04-05,187.3,,Synthetic demo history
-2021-04-06,187.5,,Synthetic demo history
-2021-04-07,186.5,,Synthetic demo history
-2021-04-08,186.4,,Synthetic demo history
-2021-04-09,186,,Synthetic demo history
-2021-04-10,187.3,,Synthetic demo history
-2021-04-11,188.8,33.875,Synthetic demo history
-2021-04-12,188.6,,Synthetic demo history
-2021-04-13,190.5,,Synthetic demo history
-2021-04-14,187.9,,Synthetic demo history
-2021-04-15,186.9,,Synthetic demo history
-2021-04-16,185.4,,Synthetic demo history
-2021-04-17,187.1,,Synthetic demo history
-2021-04-18,189.8,33.75,Synthetic demo history
-2021-04-19,191.1,,Synthetic demo history
-2021-04-20,188.5,,Synthetic demo history
-2021-04-21,187.1,,Synthetic demo history
-2021-04-22,186.1,,Synthetic demo history
-2021-04-23,184.7,,Synthetic demo history
-2021-04-24,187.4,,Synthetic demo history
-2021-04-25,188.5,33.75,Synthetic demo history
-2021-04-26,187.8,,Synthetic demo history
-2021-04-27,186.9,,Synthetic demo history
-2021-04-28,186.6,,Synthetic demo history
-2021-04-29,186.1,,Synthetic demo history
-2021-04-30,185.9,,Synthetic demo history
-2021-05-01,187.1,,Synthetic demo history
-2021-05-02,189.9,33.75,Synthetic demo history
-2021-05-03,188.2,,Synthetic demo history
-2021-05-04,187.5,,Synthetic demo history
-2021-05-05,186.1,,Synthetic demo history
-2021-05-06,184.9,,Synthetic demo history
-2021-05-07,184.1,,Synthetic demo history
-2021-05-08,186.3,,Synthetic demo history
-2021-05-09,187.9,33.5,Synthetic demo history
-2021-05-10,186.7,,Synthetic demo history
-2021-05-11,186.5,,Synthetic demo history
-2021-05-12,185.5,,Synthetic demo history
-2021-05-13,184.8,,Synthetic demo history
-2021-05-14,184.1,,Synthetic demo history
-2021-05-15,185.5,,Synthetic demo history
-2021-05-16,187.3,33.375,Synthetic demo history
-2021-05-17,186.3,,Synthetic demo history
-2021-05-18,185.7,,Synthetic demo history
-2021-05-19,185.2,,Synthetic demo history
-2021-05-20,184.1,,Synthetic demo history
-2021-05-21,184.2,,Synthetic demo history
-2021-05-22,185.9,,Synthetic demo history
-2021-05-23,187.7,33.625,Synthetic demo history
-2021-05-24,187.4,,Synthetic demo history
-2021-05-25,185.9,,Synthetic demo history
-2021-05-26,184.3,,Synthetic demo history
-2021-05-27,183.8,,Synthetic demo history
-2021-05-28,186.1,,Synthetic demo history
-2021-05-29,187.3,,Synthetic demo history
-2021-05-30,188.2,33.5,Synthetic demo history
-2021-05-31,186.8,,Synthetic demo history
-2021-06-01,185.6,,Synthetic demo history
-2021-06-02,184.4,,Synthetic demo history
-2021-06-03,184.2,,Synthetic demo history
-2021-06-04,183.1,,Synthetic demo history
-2021-06-05,184.3,,Synthetic demo history
-2021-06-06,186.2,33.25,Synthetic demo history
-2021-06-07,185.7,,Synthetic demo history
-2021-06-08,185.2,,Synthetic demo history
-2021-06-09,184.4,,Synthetic demo history
-2021-06-10,183.7,,Synthetic demo history
-2021-06-11,182.9,,Synthetic demo history
-2021-06-12,184.2,,Synthetic demo history
-2021-06-13,186.3,33.375,Synthetic demo history
-2021-06-14,185.6,,Synthetic demo history
-2021-06-15,184.9,,Synthetic demo history
-2021-06-16,185.8,,Synthetic demo history
-2021-06-17,183.9,,Synthetic demo history
-2021-06-18,182.9,,Synthetic demo history
-2021-06-19,184.7,,Synthetic demo history
-2021-06-20,187.1,33.5,Synthetic demo history
-2021-06-21,186.8,,Synthetic demo history
-2021-06-22,186,,Synthetic demo history
-2021-06-23,184.9,,Synthetic demo history
-2021-06-24,184,,Synthetic demo history
-2021-06-25,183.1,,Synthetic demo history
-2021-06-26,184.9,,Synthetic demo history
-2021-06-27,187.7,33.375,Synthetic demo history
-2021-06-28,186.9,,Synthetic demo history
-2021-06-29,186.4,,Synthetic demo history
-2021-06-30,185.1,,Synthetic demo history
-2021-07-01,183.7,,Synthetic demo history
-2021-07-02,182.4,,Synthetic demo history
-2021-07-03,184.5,,Synthetic demo history
-2021-07-04,187.4,33.375,Synthetic demo history
-2021-07-05,186.2,,Synthetic demo history
-2021-07-06,186,,Synthetic demo history
-2021-07-07,184.6,,Synthetic demo history
-2021-07-08,184.4,,Synthetic demo history
-2021-07-09,183.2,,Synthetic demo history
-2021-07-10,184.7,,Synthetic demo history
-2021-07-11,186.6,33.25,Synthetic demo history
-2021-07-12,185.8,,Synthetic demo history
-2021-07-13,184.9,,Synthetic demo history
-2021-07-14,183.8,,Synthetic demo history
-2021-07-15,182.6,,Synthetic demo history
-2021-07-16,181.7,,Synthetic demo history
-2021-07-17,183.5,,Synthetic demo history
-2021-07-18,185.6,33.375,Synthetic demo history
-2021-07-19,184.4,,Synthetic demo history
-2021-07-20,184.1,,Synthetic demo history
-2021-07-21,182.8,,Synthetic demo history
-2021-07-22,182.6,,Synthetic demo history
-2021-07-23,181.8,,Synthetic demo history
-2021-07-24,183.9,,Synthetic demo history
-2021-07-25,186.4,33.25,Synthetic demo history
-2021-07-26,186.1,,Synthetic demo history
-2021-07-27,185,,Synthetic demo history
-2021-07-28,184.2,,Synthetic demo history
-2021-07-29,183.7,,Synthetic demo history
-2021-07-30,182.6,,Synthetic demo history
-2021-07-31,184.3,,Synthetic demo history
-2021-08-01,187,33.375,Synthetic demo history
-2021-08-02,185.8,,Synthetic demo history
-2021-08-03,185.2,,Synthetic demo history
-2021-08-04,184.8,,Synthetic demo history
-2021-08-05,184.1,,Synthetic demo history
-2021-08-06,183.4,,Synthetic demo history
-2021-08-07,186,,Synthetic demo history
-2021-08-08,187.9,33.5,Synthetic demo history
-2021-08-09,187.1,,Synthetic demo history
-2021-08-10,186.3,,Synthetic demo history
-2021-08-11,185,,Synthetic demo history
-2021-08-12,185.1,,Synthetic demo history
-2021-08-13,184.2,,Synthetic demo history
-2021-08-14,185.7,,Synthetic demo history
-2021-08-15,188.5,33.625,Synthetic demo history
-2021-08-16,187.3,,Synthetic demo history
-2021-08-17,187.3,,Synthetic demo history
-2021-08-18,186.3,,Synthetic demo history
-2021-08-19,186,,Synthetic demo history
-2021-08-20,184.6,,Synthetic demo history
-2021-08-21,187.2,,Synthetic demo history
-2021-08-22,190,34,Synthetic demo history
-2021-08-23,188.5,,Synthetic demo history
-2021-08-24,187.4,,Synthetic demo history
-2021-08-25,186.7,,Synthetic demo history
-2021-08-26,187,,Synthetic demo history
-2021-08-27,186.3,,Synthetic demo history
-2021-08-28,188,,Synthetic demo history
-2021-08-29,189.5,33.875,Synthetic demo history
-2021-08-30,188.9,,Synthetic demo history
-2021-08-31,188.1,,Synthetic demo history
-2021-09-01,187.4,,Synthetic demo history
-2021-09-02,187.4,,Synthetic demo history
-2021-09-03,187.1,,Synthetic demo history
-2021-09-04,188.3,,Synthetic demo history
-2021-09-05,191.4,34,Synthetic demo history
-2021-09-06,190.2,,Synthetic demo history
-2021-09-07,189.2,,Synthetic demo history
-2021-09-08,189,,Synthetic demo history
-2021-09-09,188,,Synthetic demo history
-2021-09-10,187,,Synthetic demo history
-2021-09-11,189.1,,Synthetic demo history
-2021-09-12,191.8,34,Synthetic demo history
-2021-09-13,190.1,,Synthetic demo history
-2021-09-14,189.8,,Synthetic demo history
-2021-09-15,188.8,,Synthetic demo history
-2021-09-16,188.3,,Synthetic demo history
-2021-09-17,187.3,,Synthetic demo history
-2021-09-18,190,,Synthetic demo history
-2021-09-19,192.3,34.25,Synthetic demo history
-2021-09-20,191.6,,Synthetic demo history
-2021-09-21,191.2,,Synthetic demo history
-2021-09-22,190.6,,Synthetic demo history
-2021-09-23,190,,Synthetic demo history
-2021-09-24,189.2,,Synthetic demo history
-2021-09-25,191.5,,Synthetic demo history
-2021-09-26,193.3,34.25,Synthetic demo history
-2021-09-27,192.3,,Synthetic demo history
-2021-09-28,191.2,,Synthetic demo history
-2021-09-29,191.1,,Synthetic demo history
-2021-09-30,190.5,,Synthetic demo history
-2021-10-01,189.5,,Synthetic demo history
-2021-10-02,191.7,,Synthetic demo history
-2021-10-03,194.6,34.5,Synthetic demo history
-2021-10-04,193.4,,Synthetic demo history
-2021-10-05,192.7,,Synthetic demo history
-2021-10-06,192,,Synthetic demo history
-2021-10-07,191,,Synthetic demo history
-2021-10-08,190.4,,Synthetic demo history
-2021-10-09,192,,Synthetic demo history
-2021-10-10,194,34.375,Synthetic demo history
-2021-10-11,193.9,,Synthetic demo history
-2021-10-12,193.2,,Synthetic demo history
-2021-10-13,192.3,,Synthetic demo history
-2021-10-14,191.6,,Synthetic demo history
-2021-10-15,190.5,,Synthetic demo history
-2021-10-16,192.7,,Synthetic demo history
-2021-10-17,194.9,34.5,Synthetic demo history
-2021-10-18,193.9,,Synthetic demo history
-2021-10-19,193.2,,Synthetic demo history
-2021-10-20,192,,Synthetic demo history
-2021-10-21,191.9,,Synthetic demo history
-2021-10-22,191.1,,Synthetic demo history
-2021-10-23,193.7,,Synthetic demo history
-2021-10-24,196.6,34.625,Synthetic demo history
-2021-10-25,195,,Synthetic demo history
-2021-10-26,195,,Synthetic demo history
-2021-10-27,193.3,,Synthetic demo history
-2021-10-28,192.4,,Synthetic demo history
-2021-10-29,191.4,,Synthetic demo history
-2021-10-30,193.5,,Synthetic demo history
-2021-10-31,196.5,34.625,Synthetic demo history
-2021-11-01,195.5,,Synthetic demo history
-2021-11-02,194.6,,Synthetic demo history
-2021-11-03,193.7,,Synthetic demo history
-2021-11-04,193.3,,Synthetic demo history
-2021-11-05,192.6,,Synthetic demo history
-2021-11-06,195.3,,Synthetic demo history
-2021-11-07,197.5,35,Synthetic demo history
-2021-11-08,196.6,,Synthetic demo history
-2021-11-09,195.6,,Synthetic demo history
-2021-11-10,194,,Synthetic demo history
-2021-11-11,193.2,,Synthetic demo history
-2021-11-12,192.3,,Synthetic demo history
-2021-11-13,194.8,,Synthetic demo history
-2021-11-14,197.7,34.875,Synthetic demo history
-2021-11-15,196.2,,Synthetic demo history
-2021-11-16,195.7,,Synthetic demo history
-2021-11-17,198.1,,Synthetic demo history
-2021-11-18,196.5,,Synthetic demo history
-2021-11-19,195,,Synthetic demo history
-2021-11-20,196.6,,Synthetic demo history
-2021-11-21,199.1,35.25,Synthetic demo history
-2021-11-22,197.5,,Synthetic demo history
-2021-11-23,197.1,,Synthetic demo history
-2021-11-24,195.6,,Synthetic demo history
-2021-11-25,194.8,,Synthetic demo history
-2021-11-26,194.2,,Synthetic demo history
-2021-11-27,195.9,,Synthetic demo history
-2021-11-28,198.2,34.875,Synthetic demo history
-2021-11-29,198.1,,Synthetic demo history
-2021-11-30,196.6,,Synthetic demo history
-2021-12-01,196,,Synthetic demo history
-2021-12-02,196,,Synthetic demo history
-2021-12-03,196,,Synthetic demo history
-2021-12-04,197.5,,Synthetic demo history
-2021-12-05,200.4,35.375,Synthetic demo history
-2021-12-06,199,,Synthetic demo history
-2021-12-07,198.2,,Synthetic demo history
-2021-12-08,197,,Synthetic demo history
-2021-12-09,196.2,,Synthetic demo history
-2021-12-10,195.5,,Synthetic demo history
-2021-12-11,198,,Synthetic demo history
-2021-12-12,199.6,35.25,Synthetic demo history
-2021-12-13,198.8,,Synthetic demo history
-2021-12-14,198.4,,Synthetic demo history
-2021-12-15,197.6,,Synthetic demo history
-2021-12-16,197.5,,Synthetic demo history
-2021-12-17,196.4,,Synthetic demo history
-2021-12-18,197.8,,Synthetic demo history
-2021-12-19,199.8,35.25,Synthetic demo history
-2021-12-20,198.6,,Synthetic demo history
-2021-12-21,198.3,,Synthetic demo history
-2021-12-22,197.4,,Synthetic demo history
-2021-12-23,196.8,,Synthetic demo history
-2021-12-24,196.1,,Synthetic demo history
-2021-12-25,197.9,,Synthetic demo history
-2021-12-26,199.4,35.125,Synthetic demo history
-2021-12-27,198.7,,Synthetic demo history
-2021-12-28,197.7,,Synthetic demo history
-2021-12-29,196.5,,Synthetic demo history
-2021-12-30,195.9,,Synthetic demo history
-2021-12-31,194.9,,Synthetic demo history
-2022-01-01,196.8,,Synthetic demo history
-2022-01-02,198.9,35.25,Synthetic demo history
-2022-01-03,198.2,,Synthetic demo history
-2022-01-04,197.8,,Synthetic demo history
-2022-01-05,197.6,,Synthetic demo history
-2022-01-06,196.8,,Synthetic demo history
-2022-01-07,195.9,,Synthetic demo history
-2022-01-08,197.9,,Synthetic demo history
-2022-01-09,199.8,35.375,Synthetic demo history
-2022-01-10,199,,Synthetic demo history
-2022-01-11,198.2,,Synthetic demo history
-2022-01-12,197,,Synthetic demo history
-2022-01-13,196.6,,Synthetic demo history
-2022-01-14,195.1,,Synthetic demo history
-2022-01-15,197.5,,Synthetic demo history
-2022-01-16,200.4,35.375,Synthetic demo history
-2022-01-17,198.7,,Synthetic demo history
-2022-01-18,198,,Synthetic demo history
-2022-01-19,197.6,,Synthetic demo history
-2022-01-20,196.5,,Synthetic demo history
-2022-01-21,195.2,,Synthetic demo history
-2022-01-22,197.4,,Synthetic demo history
-2022-01-23,200,35.125,Synthetic demo history
-2022-01-24,199.7,,Synthetic demo history
-2022-01-25,198.7,,Synthetic demo history
-2022-01-26,198,,Synthetic demo history
-2022-01-27,197.1,,Synthetic demo history
-2022-01-28,196.8,,Synthetic demo history
-2022-01-29,198,,Synthetic demo history
-2022-01-30,200.1,35.125,Synthetic demo history
-2022-01-31,199.4,,Synthetic demo history
-2022-02-01,198.2,,Synthetic demo history
-2022-02-02,197.7,,Synthetic demo history
-2022-02-03,197,,Synthetic demo history
-2022-02-04,195.7,,Synthetic demo history
-2022-02-05,197.8,,Synthetic demo history
-2022-02-06,199.7,35.25,Synthetic demo history
-2022-02-07,198.3,,Synthetic demo history
-2022-02-08,197.5,,Synthetic demo history
-2022-02-09,196.6,,Synthetic demo history
-2022-02-10,195.9,,Synthetic demo history
-2022-02-11,195,,Synthetic demo history
-2022-02-12,196.3,,Synthetic demo history
-2022-02-13,197.7,35,Synthetic demo history
-2022-02-14,197,,Synthetic demo history
-2022-02-15,196.8,,Synthetic demo history
-2022-02-16,196.4,,Synthetic demo history
-2022-02-17,195.2,,Synthetic demo history
-2022-02-18,194.8,,Synthetic demo history
-2022-02-19,195.7,,Synthetic demo history
-2022-02-20,198.8,35,Synthetic demo history
-2022-02-21,200.9,,Synthetic demo history
-2022-02-22,198.3,,Synthetic demo history
-2022-02-23,197,,Synthetic demo history
-2022-02-24,196.1,,Synthetic demo history
-2022-02-25,194.7,,Synthetic demo history
-2022-02-26,196,,Synthetic demo history
-2022-02-27,198.1,35,Synthetic demo history
-2022-02-28,196.9,,Synthetic demo history
-2022-03-01,196.6,,Synthetic demo history
-2022-03-02,195.5,,Synthetic demo history
-2022-03-03,195.3,,Synthetic demo history
-2022-03-04,194.5,,Synthetic demo history
-2022-03-05,196,,Synthetic demo history
-2022-03-06,198,35,Synthetic demo history
-2022-03-07,197.2,,Synthetic demo history
-2022-03-08,196.1,,Synthetic demo history
-2022-03-09,195.2,,Synthetic demo history
-2022-03-10,194.7,,Synthetic demo history
-2022-03-11,193.7,,Synthetic demo history
-2022-03-12,195.6,,Synthetic demo history
-2022-03-13,198.2,34.875,Synthetic demo history
-2022-03-14,197.1,,Synthetic demo history
-2022-03-15,196.3,,Synthetic demo history
-2022-03-16,194.4,,Synthetic demo history
-2022-03-17,193.7,,Synthetic demo history
-2022-03-18,192.7,,Synthetic demo history
-2022-03-19,195.2,,Synthetic demo history
-2022-03-20,196.3,34.75,Synthetic demo history
-2022-03-21,195.8,,Synthetic demo history
-2022-03-22,194.6,,Synthetic demo history
-2022-03-23,193.8,,Synthetic demo history
-2022-03-24,192.8,,Synthetic demo history
-2022-03-25,192.2,,Synthetic demo history
-2022-03-26,193.5,,Synthetic demo history
-2022-03-27,196.3,34.75,Synthetic demo history
-2022-03-28,194.8,,Synthetic demo history
-2022-03-29,194.1,,Synthetic demo history
-2022-03-30,192.4,,Synthetic demo history
-2022-03-31,191.3,,Synthetic demo history
-2022-04-01,190.4,,Synthetic demo history
-2022-04-02,191.9,,Synthetic demo history
-2022-04-03,194.9,34.625,Synthetic demo history
-2022-04-04,193.4,,Synthetic demo history
-2022-04-05,192.8,,Synthetic demo history
-2022-04-06,192.2,,Synthetic demo history
-2022-04-07,191.4,,Synthetic demo history
-2022-04-08,190.4,,Synthetic demo history
-2022-04-09,192,,Synthetic demo history
-2022-04-10,194.3,34.5,Synthetic demo history
-2022-04-11,192.8,,Synthetic demo history
-2022-04-12,192,,Synthetic demo history
-2022-04-13,190.3,,Synthetic demo history
-2022-04-14,189.8,,Synthetic demo history
-2022-04-15,189.1,,Synthetic demo history
-2022-04-16,191,,Synthetic demo history
-2022-04-17,193.5,34.5,Synthetic demo history
-2022-04-18,192.7,,Synthetic demo history
-2022-04-19,192.6,,Synthetic demo history
-2022-04-20,192.3,,Synthetic demo history
-2022-04-21,191.2,,Synthetic demo history
-2022-04-22,190.4,,Synthetic demo history
-2022-04-23,191.9,,Synthetic demo history
-2022-04-24,193.9,34.375,Synthetic demo history
-2022-04-25,193.2,,Synthetic demo history
-2022-04-26,192.6,,Synthetic demo history
-2022-04-27,192,,Synthetic demo history
-2022-04-28,191.4,,Synthetic demo history
-2022-04-29,191.1,,Synthetic demo history
-2022-04-30,192.9,,Synthetic demo history
-2022-05-01,195,34.625,Synthetic demo history
-2022-05-02,194.3,,Synthetic demo history
-2022-05-03,193.2,,Synthetic demo history
-2022-05-04,192.4,,Synthetic demo history
-2022-05-05,191.4,,Synthetic demo history
-2022-05-06,191.1,,Synthetic demo history
-2022-05-07,192,,Synthetic demo history
-2022-05-08,194.1,34.5,Synthetic demo history
-2022-05-09,192.9,,Synthetic demo history
-2022-05-10,192.3,,Synthetic demo history
-2022-05-11,191.1,,Synthetic demo history
-2022-05-12,191.2,,Synthetic demo history
-2022-05-13,190.1,,Synthetic demo history
-2022-05-14,192.1,,Synthetic demo history
-2022-05-15,193.7,34.5,Synthetic demo history
-2022-05-16,193.3,,Synthetic demo history
-2022-05-17,192.3,,Synthetic demo history
-2022-05-18,191.3,,Synthetic demo history
-2022-05-19,190.5,,Synthetic demo history
-2022-05-20,190.1,,Synthetic demo history
-2022-05-21,191.7,,Synthetic demo history
-2022-05-22,195.1,34.5,Synthetic demo history
-2022-05-23,193.1,,Synthetic demo history
-2022-05-24,191.7,,Synthetic demo history
-2022-05-25,190.8,,Synthetic demo history
-2022-05-26,189.5,,Synthetic demo history
-2022-05-27,188.6,,Synthetic demo history
-2022-05-28,191.2,,Synthetic demo history
-2022-05-29,193,34.25,Synthetic demo history
-2022-05-30,192.9,,Synthetic demo history
-2022-05-31,192.3,,Synthetic demo history
-2022-06-01,190.6,,Synthetic demo history
-2022-06-02,192.5,,Synthetic demo history
-2022-06-03,190.1,,Synthetic demo history
-2022-06-04,191.2,,Synthetic demo history
-2022-06-05,193.7,34.25,Synthetic demo history
-2022-06-06,193.1,,Synthetic demo history
-2022-06-07,191.9,,Synthetic demo history
-2022-06-08,190.7,,Synthetic demo history
-2022-06-09,189.4,,Synthetic demo history
-2022-06-10,188.4,,Synthetic demo history
-2022-06-11,190.4,,Synthetic demo history
-2022-06-12,192.4,34.25,Synthetic demo history
-2022-06-13,191.8,,Synthetic demo history
-2022-06-14,191.2,,Synthetic demo history
-2022-06-15,190.7,,Synthetic demo history
-2022-06-16,190.4,,Synthetic demo history
-2022-06-17,189.6,,Synthetic demo history
-2022-06-18,190.9,,Synthetic demo history
-2022-06-19,192.8,34.125,Synthetic demo history
-2022-06-20,191.8,,Synthetic demo history
-2022-06-21,190.9,,Synthetic demo history
-2022-06-22,189.8,,Synthetic demo history
-2022-06-23,189.3,,Synthetic demo history
-2022-06-24,188,,Synthetic demo history
-2022-06-25,190.2,,Synthetic demo history
-2022-06-26,191.5,34.125,Synthetic demo history
-2022-06-27,191.3,,Synthetic demo history
-2022-06-28,190.9,,Synthetic demo history
-2022-06-29,190.2,,Synthetic demo history
-2022-06-30,188.7,,Synthetic demo history
-2022-07-01,188.4,,Synthetic demo history
-2022-07-02,189.3,,Synthetic demo history
-2022-07-03,191.4,34.25,Synthetic demo history
-2022-07-04,190.5,,Synthetic demo history
-2022-07-05,190,,Synthetic demo history
-2022-07-06,188.7,,Synthetic demo history
-2022-07-07,188.5,,Synthetic demo history
-2022-07-08,188,,Synthetic demo history
-2022-07-09,190.3,,Synthetic demo history
-2022-07-10,192.4,34.125,Synthetic demo history
-2022-07-11,191.6,,Synthetic demo history
-2022-07-12,193.5,,Synthetic demo history
-2022-07-13,191.7,,Synthetic demo history
-2022-07-14,190.8,,Synthetic demo history
-2022-07-15,189.6,,Synthetic demo history
-2022-07-16,191.2,,Synthetic demo history
-2022-07-17,193.8,34.25,Synthetic demo history
-2022-07-18,193.3,,Synthetic demo history
-2022-07-19,192.3,,Synthetic demo history
-2022-07-20,190.8,,Synthetic demo history
-2022-07-21,189.9,,Synthetic demo history
-2022-07-22,188.9,,Synthetic demo history
-2022-07-23,191.1,,Synthetic demo history
-2022-07-24,194.2,34.375,Synthetic demo history
-2022-07-25,193.7,,Synthetic demo history
-2022-07-26,192.4,,Synthetic demo history
-2022-07-27,191.1,,Synthetic demo history
-2022-07-28,190.2,,Synthetic demo history
-2022-07-29,189.7,,Synthetic demo history
-2022-07-30,192.1,,Synthetic demo history
-2022-07-31,194.4,34.5,Synthetic demo history
-2022-08-01,193.8,,Synthetic demo history
-2022-08-02,192.4,,Synthetic demo history
-2022-08-03,191.1,,Synthetic demo history
-2022-08-04,190.5,,Synthetic demo history
-2022-08-05,189.5,,Synthetic demo history
-2022-08-06,192.3,,Synthetic demo history
-2022-08-07,194.7,34.625,Synthetic demo history
-2022-08-08,193.7,,Synthetic demo history
-2022-08-09,193.5,,Synthetic demo history
-2022-08-10,192.3,,Synthetic demo history
-2022-08-11,191.4,,Synthetic demo history
-2022-08-12,191.1,,Synthetic demo history
-2022-08-13,193.4,,Synthetic demo history
-2022-08-14,195.3,34.5,Synthetic demo history
-2022-08-15,194.4,,Synthetic demo history
-2022-08-16,193.5,,Synthetic demo history
-2022-08-17,192.8,,Synthetic demo history
-2022-08-18,192.1,,Synthetic demo history
-2022-08-19,191.4,,Synthetic demo history
-2022-08-20,193,,Synthetic demo history
-2022-08-21,195,34.5,Synthetic demo history
-2022-08-22,194.3,,Synthetic demo history
-2022-08-23,193.1,,Synthetic demo history
-2022-08-24,192.1,,Synthetic demo history
-2022-08-25,191.9,,Synthetic demo history
-2022-08-26,190.8,,Synthetic demo history
-2022-08-27,193.2,,Synthetic demo history
-2022-08-28,195.7,34.875,Synthetic demo history
-2022-08-29,195.1,,Synthetic demo history
-2022-08-30,194.4,,Synthetic demo history
-2022-08-31,194.2,,Synthetic demo history
-2022-09-01,193.3,,Synthetic demo history
-2022-09-02,192.6,,Synthetic demo history
-2022-09-03,194.7,,Synthetic demo history
-2022-09-04,197.4,34.875,Synthetic demo history
-2022-09-05,196.2,,Synthetic demo history
-2022-09-06,195.5,,Synthetic demo history
-2022-09-07,194.4,,Synthetic demo history
-2022-09-08,194.4,,Synthetic demo history
-2022-09-09,193.6,,Synthetic demo history
-2022-09-10,195.6,,Synthetic demo history
-2022-09-11,197.4,35,Synthetic demo history
-2022-09-12,196.3,,Synthetic demo history
-2022-09-13,195.5,,Synthetic demo history
-2022-09-14,195.8,,Synthetic demo history
-2022-09-15,195.4,,Synthetic demo history
-2022-09-16,195,,Synthetic demo history
-2022-09-17,196.8,,Synthetic demo history
-2022-09-18,199,35.125,Synthetic demo history
-2022-09-19,197.9,,Synthetic demo history
-2022-09-20,196.7,,Synthetic demo history
-2022-09-21,195.6,,Synthetic demo history
-2022-09-22,195.3,,Synthetic demo history
-2022-09-23,194.6,,Synthetic demo history
-2022-09-24,196.9,,Synthetic demo history
-2022-09-25,199.6,35.25,Synthetic demo history
-2022-09-26,198.4,,Synthetic demo history
-2022-09-27,198.2,,Synthetic demo history
-2022-09-28,197.7,,Synthetic demo history
-2022-09-29,197.2,,Synthetic demo history
-2022-09-30,196.2,,Synthetic demo history
-2022-10-01,198.3,,Synthetic demo history
-2022-10-02,200.2,35.5,Synthetic demo history
-2022-10-03,199.8,,Synthetic demo history
-2022-10-04,198.6,,Synthetic demo history
-2022-10-05,197.2,,Synthetic demo history
-2022-10-06,196.9,,Synthetic demo history
-2022-10-07,196.5,,Synthetic demo history
-2022-10-08,198.7,,Synthetic demo history
-2022-10-09,201.2,35.5,Synthetic demo history
-2022-10-10,200.7,,Synthetic demo history
-2022-10-11,200.3,,Synthetic demo history
-2022-10-12,199.4,,Synthetic demo history
-2022-10-13,198.4,,Synthetic demo history
-2022-10-14,197.1,,Synthetic demo history
-2022-10-15,198.6,,Synthetic demo history
-2022-10-16,201.4,35.375,Synthetic demo history
-2022-10-17,201.1,,Synthetic demo history
-2022-10-18,199.8,,Synthetic demo history
-2022-10-19,198.5,,Synthetic demo history
-2022-10-20,198.2,,Synthetic demo history
-2022-10-21,197,,Synthetic demo history
-2022-10-22,199,,Synthetic demo history
-2022-10-23,201.6,35.625,Synthetic demo history
-2022-10-24,201.2,,Synthetic demo history
-2022-10-25,200.8,,Synthetic demo history
-2022-10-26,199.6,,Synthetic demo history
-2022-10-27,198.7,,Synthetic demo history
-2022-10-28,197.7,,Synthetic demo history
-2022-10-29,200,,Synthetic demo history
-2022-10-30,202.3,35.625,Synthetic demo history
-2022-10-31,201.5,,Synthetic demo history
-2022-11-01,200.4,,Synthetic demo history
-2022-11-02,198.7,,Synthetic demo history
-2022-11-03,198.8,,Synthetic demo history
-2022-11-04,198.2,,Synthetic demo history
-2022-11-05,200.8,,Synthetic demo history
-2022-11-06,202.4,35.75,Synthetic demo history
-2022-11-07,201.3,,Synthetic demo history
-2022-11-08,200.9,,Synthetic demo history
-2022-11-09,200.1,,Synthetic demo history
-2022-11-10,199.9,,Synthetic demo history
-2022-11-11,199.2,,Synthetic demo history
-2022-11-12,200.6,,Synthetic demo history
-2022-11-13,203.2,35.875,Synthetic demo history
-2022-11-14,201.8,,Synthetic demo history
-2022-11-15,201.5,,Synthetic demo history
-2022-11-16,200,,Synthetic demo history
-2022-11-17,199.3,,Synthetic demo history
-2022-11-18,198.5,,Synthetic demo history
-2022-11-19,201,,Synthetic demo history
-2022-11-20,203,35.875,Synthetic demo history
-2022-11-21,202.3,,Synthetic demo history
-2022-11-22,201.9,,Synthetic demo history
-2022-11-23,200.7,,Synthetic demo history
-2022-11-24,199.8,,Synthetic demo history
-2022-11-25,199,,Synthetic demo history
-2022-11-26,200.9,,Synthetic demo history
-2022-11-27,203.4,35.75,Synthetic demo history
-2022-11-28,201.7,,Synthetic demo history
-2022-11-29,201.7,,Synthetic demo history
-2022-11-30,201.1,,Synthetic demo history
-2022-12-01,201.4,,Synthetic demo history
-2022-12-02,200.4,,Synthetic demo history
-2022-12-03,204.7,,Synthetic demo history
-2022-12-04,206.1,36,Synthetic demo history
-2022-12-05,204.7,,Synthetic demo history
-2022-12-06,204.4,,Synthetic demo history
-2022-12-07,203.3,,Synthetic demo history
-2022-12-08,204.3,,Synthetic demo history
-2022-12-09,202.9,,Synthetic demo history
-2022-12-10,203.6,,Synthetic demo history
-2022-12-11,205.2,36.25,Synthetic demo history
-2022-12-12,204.1,,Synthetic demo history
-2022-12-13,203.6,,Synthetic demo history
-2022-12-14,202.1,,Synthetic demo history
-2022-12-15,202.4,,Synthetic demo history
-2022-12-16,201.1,,Synthetic demo history
-2022-12-17,202.8,,Synthetic demo history
-2022-12-18,204.4,36,Synthetic demo history
-2022-12-19,204.4,,Synthetic demo history
-2022-12-20,204,,Synthetic demo history
-2022-12-21,202.7,,Synthetic demo history
-2022-12-22,202.1,,Synthetic demo history
-2022-12-23,201.7,,Synthetic demo history
-2022-12-24,203.1,,Synthetic demo history
-2022-12-25,205.2,36.125,Synthetic demo history
-2022-12-26,204.6,,Synthetic demo history
-2022-12-27,204.4,,Synthetic demo history
-2022-12-28,203.5,,Synthetic demo history
-2022-12-29,202.9,,Synthetic demo history
-2022-12-30,202.4,,Synthetic demo history
-2022-12-31,204.3,,Synthetic demo history
-2023-01-01,205.1,36,Synthetic demo history
-2023-01-02,204.7,,Synthetic demo history
-2023-01-03,204,,Synthetic demo history
-2023-01-04,202.6,,Synthetic demo history
-2023-01-05,201.8,,Synthetic demo history
-2023-01-06,200.9,,Synthetic demo history
-2023-01-07,203,,Synthetic demo history
-2023-01-08,205.3,36,Synthetic demo history
-2023-01-09,204.5,,Synthetic demo history
-2023-01-10,203.2,,Synthetic demo history
-2023-01-11,202.3,,Synthetic demo history
-2023-01-12,201.4,,Synthetic demo history
-2023-01-13,201.2,,Synthetic demo history
-2023-01-14,203.4,,Synthetic demo history
-2023-01-15,205.6,36,Synthetic demo history
-2023-01-16,205.1,,Synthetic demo history
-2023-01-17,203.7,,Synthetic demo history
-2023-01-18,202.8,,Synthetic demo history
-2023-01-19,202,,Synthetic demo history
-2023-01-20,201.5,,Synthetic demo history
-2023-01-21,204.1,,Synthetic demo history
-2023-01-22,206.7,36.25,Synthetic demo history
-2023-01-23,206.1,,Synthetic demo history
-2023-01-24,205.1,,Synthetic demo history
-2023-01-25,204,,Synthetic demo history
-2023-01-26,202.9,,Synthetic demo history
-2023-01-27,204.3,,Synthetic demo history
-2023-01-28,205,,Synthetic demo history
-2023-01-29,206.2,36.125,Synthetic demo history
-2023-01-30,204.8,,Synthetic demo history
-2023-01-31,204.2,,Synthetic demo history
-2023-02-01,202.7,,Synthetic demo history
-2023-02-02,201.9,,Synthetic demo history
-2023-02-03,201,,Synthetic demo history
-2023-02-04,202.6,,Synthetic demo history
-2023-02-05,204.7,36.125,Synthetic demo history
-2023-02-06,203.8,,Synthetic demo history
-2023-02-07,203,,Synthetic demo history
-2023-02-08,201.6,,Synthetic demo history
-2023-02-09,201.8,,Synthetic demo history
-2023-02-10,200.4,,Synthetic demo history
-2023-02-11,202,,Synthetic demo history
-2023-02-12,203.9,35.875,Synthetic demo history
-2023-02-13,202.4,,Synthetic demo history
-2023-02-14,201.5,,Synthetic demo history
-2023-02-15,201.1,,Synthetic demo history
-2023-02-16,199.9,,Synthetic demo history
-2023-02-17,199.1,,Synthetic demo history
-2023-02-18,201.6,,Synthetic demo history
-2023-02-19,203,35.75,Synthetic demo history
-2023-02-20,202.7,,Synthetic demo history
-2023-02-21,201.7,,Synthetic demo history
-2023-02-22,201,,Synthetic demo history
-2023-02-23,200.2,,Synthetic demo history
-2023-02-24,199.8,,Synthetic demo history
-2023-02-25,201.2,,Synthetic demo history
-2023-02-26,203.4,35.75,Synthetic demo history
-2023-02-27,202.6,,Synthetic demo history
-2023-02-28,201.9,,Synthetic demo history
-2023-03-01,201,,Synthetic demo history
-2023-03-02,200.5,,Synthetic demo history
-2023-03-03,199.7,,Synthetic demo history
-2023-03-04,201.5,,Synthetic demo history
-2023-03-05,204.1,35.875,Synthetic demo history
-2023-03-06,202.8,,Synthetic demo history
-2023-03-07,201.8,,Synthetic demo history
-2023-03-08,200.9,,Synthetic demo history
-2023-03-09,200.1,,Synthetic demo history
-2023-03-10,199.4,,Synthetic demo history
-2023-03-11,200.6,,Synthetic demo history
-2023-03-12,202.8,35.875,Synthetic demo history
-2023-03-13,201.3,,Synthetic demo history
-2023-03-14,201,,Synthetic demo history
-2023-03-15,202.2,,Synthetic demo history
-2023-03-16,201.2,,Synthetic demo history
-2023-03-17,199.6,,Synthetic demo history
-2023-03-18,201,,Synthetic demo history
-2023-03-19,203.1,35.75,Synthetic demo history
-2023-03-20,201.4,,Synthetic demo history
-2023-03-21,200.6,,Synthetic demo history
-2023-03-22,199.4,,Synthetic demo history
-2023-03-23,198.5,,Synthetic demo history
-2023-03-24,197.3,,Synthetic demo history
-2023-03-25,199.4,,Synthetic demo history
-2023-03-26,201.3,35.5,Synthetic demo history
-2023-03-27,201.1,,Synthetic demo history
-2023-03-28,200.1,,Synthetic demo history
-2023-03-29,199.7,,Synthetic demo history
-2023-03-30,198.2,,Synthetic demo history
-2023-03-31,197.6,,Synthetic demo history
-2023-04-01,199.5,,Synthetic demo history
-2023-04-02,202.1,35.375,Synthetic demo history
-2023-04-03,200.5,,Synthetic demo history
-2023-04-04,199.4,,Synthetic demo history
-2023-04-05,199.1,,Synthetic demo history
-2023-04-06,197.9,,Synthetic demo history
-2023-04-07,196.4,,Synthetic demo history
-2023-04-08,198.3,,Synthetic demo history
-2023-04-09,200.9,35.25,Synthetic demo history
-2023-04-10,200,,Synthetic demo history
-2023-04-11,199,,Synthetic demo history
-2023-04-12,198,,Synthetic demo history
-2023-04-13,197.1,,Synthetic demo history
-2023-04-14,196.5,,Synthetic demo history
-2023-04-15,198.6,,Synthetic demo history
-2023-04-16,200.7,35.375,Synthetic demo history
-2023-04-17,199.6,,Synthetic demo history
-2023-04-18,198.4,,Synthetic demo history
-2023-04-19,197,,Synthetic demo history
-2023-04-20,196,,Synthetic demo history
-2023-04-21,194.5,,Synthetic demo history
-2023-04-22,196.5,,Synthetic demo history
-2023-04-23,198.3,35,Synthetic demo history
-2023-04-24,197.4,,Synthetic demo history
-2023-04-25,197,,Synthetic demo history
-2023-04-26,195.7,,Synthetic demo history
-2023-04-27,195,,Synthetic demo history
-2023-04-28,194.6,,Synthetic demo history
-2023-04-29,196.5,,Synthetic demo history
-2023-04-30,198.5,35.125,Synthetic demo history
-2023-05-01,197.4,,Synthetic demo history
-2023-05-02,197.1,,Synthetic demo history
-2023-05-03,196.3,,Synthetic demo history
-2023-05-04,195.8,,Synthetic demo history
-2023-05-05,195,,Synthetic demo history
-2023-05-06,197.2,,Synthetic demo history
-2023-05-07,199.4,35,Synthetic demo history
-2023-05-08,198.2,,Synthetic demo history
-2023-05-09,197.6,,Synthetic demo history
-2023-05-10,195.8,,Synthetic demo history
-2023-05-11,195.8,,Synthetic demo history
-2023-05-12,195.1,,Synthetic demo history
-2023-05-13,196.9,,Synthetic demo history
-2023-05-14,198.5,35.25,Synthetic demo history
-2023-05-15,198.1,,Synthetic demo history
-2023-05-16,197.6,,Synthetic demo history
-2023-05-17,196.3,,Synthetic demo history
-2023-05-18,195.6,,Synthetic demo history
-2023-05-19,195.1,,Synthetic demo history
-2023-05-20,196.9,,Synthetic demo history
-2023-05-21,199.3,35.25,Synthetic demo history
-2023-05-22,198.1,,Synthetic demo history
-2023-05-23,197.5,,Synthetic demo history
-2023-05-24,196.6,,Synthetic demo history
-2023-05-25,195.4,,Synthetic demo history
-2023-05-26,194.7,,Synthetic demo history
-2023-05-27,196.3,,Synthetic demo history
-2023-05-28,198.5,35.125,Synthetic demo history
-2023-05-29,197.9,,Synthetic demo history
-2023-05-30,196.9,,Synthetic demo history
-2023-05-31,195.2,,Synthetic demo history
-2023-06-01,194,,Synthetic demo history
-2023-06-02,193.2,,Synthetic demo history
-2023-06-03,197.8,,Synthetic demo history
-2023-06-04,198.8,35.125,Synthetic demo history
-2023-06-05,197.7,,Synthetic demo history
-2023-06-06,196.1,,Synthetic demo history
-2023-06-07,194.6,,Synthetic demo history
-2023-06-08,193.7,,Synthetic demo history
-2023-06-09,193.7,,Synthetic demo history
-2023-06-10,194.7,,Synthetic demo history
-2023-06-11,197.4,34.875,Synthetic demo history
-2023-06-12,195.7,,Synthetic demo history
-2023-06-13,195.2,,Synthetic demo history
-2023-06-14,193.7,,Synthetic demo history
-2023-06-15,192.9,,Synthetic demo history
-2023-06-16,191.5,,Synthetic demo history
-2023-06-17,194.4,,Synthetic demo history
-2023-06-18,196.5,35,Synthetic demo history
-2023-06-19,195.2,,Synthetic demo history
-2023-06-20,194.9,,Synthetic demo history
-2023-06-21,194.2,,Synthetic demo history
-2023-06-22,193.6,,Synthetic demo history
-2023-06-23,193.3,,Synthetic demo history
-2023-06-24,194.2,,Synthetic demo history
-2023-06-25,197,34.75,Synthetic demo history
-2023-06-26,196.3,,Synthetic demo history
-2023-06-27,195.1,,Synthetic demo history
-2023-06-28,194.6,,Synthetic demo history
-2023-06-29,196.3,,Synthetic demo history
-2023-06-30,194.9,,Synthetic demo history
-2023-07-01,197.3,,Synthetic demo history
-2023-07-02,198.8,35,Synthetic demo history
-2023-07-03,197.5,,Synthetic demo history
-2023-07-04,196.4,,Synthetic demo history
-2023-07-05,195.3,,Synthetic demo history
-2023-07-06,194.4,,Synthetic demo history
-2023-07-07,193.6,,Synthetic demo history
-2023-07-08,195.4,,Synthetic demo history
-2023-07-09,197.7,35,Synthetic demo history
-2023-07-10,196.9,,Synthetic demo history
-2023-07-11,196.1,,Synthetic demo history
-2023-07-12,195.3,,Synthetic demo history
-2023-07-13,194.8,,Synthetic demo history
-2023-07-14,193.7,,Synthetic demo history
-2023-07-15,195.4,,Synthetic demo history
-2023-07-16,198.6,35,Synthetic demo history
-2023-07-17,197.4,,Synthetic demo history
-2023-07-18,197,,Synthetic demo history
-2023-07-19,195.6,,Synthetic demo history
-2023-07-20,194.8,,Synthetic demo history
-2023-07-21,194.3,,Synthetic demo history
-2023-07-22,196.2,,Synthetic demo history
-2023-07-23,198.5,35.125,Synthetic demo history
-2023-07-24,197.7,,Synthetic demo history
-2023-07-25,197.6,,Synthetic demo history
-2023-07-26,197,,Synthetic demo history
-2023-07-27,196.8,,Synthetic demo history
-2023-07-28,195.8,,Synthetic demo history
-2023-07-29,197,,Synthetic demo history
-2023-07-30,199,35.125,Synthetic demo history
-2023-07-31,198.3,,Synthetic demo history
-2023-08-01,197,,Synthetic demo history
-2023-08-02,196.4,,Synthetic demo history
-2023-08-03,196,,Synthetic demo history
-2023-08-04,197.3,,Synthetic demo history
-2023-08-05,198.3,,Synthetic demo history
-2023-08-06,200.4,35.25,Synthetic demo history
-2023-08-07,200.7,,Synthetic demo history
-2023-08-08,198.7,,Synthetic demo history
-2023-08-09,198,,Synthetic demo history
-2023-08-10,197,,Synthetic demo history
-2023-08-11,196.4,,Synthetic demo history
-2023-08-12,197.8,,Synthetic demo history
-2023-08-13,200.2,35.25,Synthetic demo history
-2023-08-14,199.1,,Synthetic demo history
-2023-08-15,197.8,,Synthetic demo history
-2023-08-16,196.5,,Synthetic demo history
-2023-08-17,196.1,,Synthetic demo history
-2023-08-18,195.2,,Synthetic demo history
-2023-08-19,196.9,,Synthetic demo history
-2023-08-20,199.8,35.25,Synthetic demo history
-2023-08-21,198.8,,Synthetic demo history
-2023-08-22,198,,Synthetic demo history
-2023-08-23,197.5,,Synthetic demo history
-2023-08-24,196.5,,Synthetic demo history
-2023-08-25,196.4,,Synthetic demo history
-2023-08-26,197.8,,Synthetic demo history
-2023-08-27,200.2,35.25,Synthetic demo history
-2023-08-28,199.4,,Synthetic demo history
-2023-08-29,198.5,,Synthetic demo history
-2023-08-30,197.8,,Synthetic demo history
-2023-08-31,196.8,,Synthetic demo history
-2023-09-01,196.9,,Synthetic demo history
-2023-09-02,199.3,,Synthetic demo history
-2023-09-03,201.7,35.75,Synthetic demo history
-2023-09-04,201.1,,Synthetic demo history
-2023-09-05,200,,Synthetic demo history
-2023-09-06,199.7,,Synthetic demo history
-2023-09-07,198.5,,Synthetic demo history
-2023-09-08,197.8,,Synthetic demo history
-2023-09-09,200,,Synthetic demo history
-2023-09-10,202.5,35.625,Synthetic demo history
-2023-09-11,201.4,,Synthetic demo history
-2023-09-12,200.7,,Synthetic demo history
-2023-09-13,200.8,,Synthetic demo history
-2023-09-14,200.2,,Synthetic demo history
-2023-09-15,199.5,,Synthetic demo history
-2023-09-16,201.5,,Synthetic demo history
-2023-09-17,204,35.75,Synthetic demo history
-2023-09-18,203.4,,Synthetic demo history
-2023-09-19,202.6,,Synthetic demo history
-2023-09-20,201.7,,Synthetic demo history
-2023-09-21,200.6,,Synthetic demo history
-2023-09-22,200.6,,Synthetic demo history
-2023-09-23,203,,Synthetic demo history
-2023-09-24,205,36,Synthetic demo history
-2023-09-25,203.4,,Synthetic demo history
-2023-09-26,203.4,,Synthetic demo history
-2023-09-27,202.5,,Synthetic demo history
-2023-09-28,202.5,,Synthetic demo history
-2023-09-29,202.4,,Synthetic demo history
-2023-09-30,204.1,,Synthetic demo history
-2023-10-01,206.4,36.25,Synthetic demo history
-2023-10-02,205.3,,Synthetic demo history
-2023-10-03,205.2,,Synthetic demo history
-2023-10-04,204.8,,Synthetic demo history
-2023-10-05,203.9,,Synthetic demo history
-2023-10-06,202.6,,Synthetic demo history
-2023-10-07,204.8,,Synthetic demo history
-2023-10-08,207.9,36.375,Synthetic demo history
-2023-10-09,206.3,,Synthetic demo history
-2023-10-10,205.5,,Synthetic demo history
-2023-10-11,204.3,,Synthetic demo history
-2023-10-12,203.6,,Synthetic demo history
-2023-10-13,203.1,,Synthetic demo history
-2023-10-14,204.6,,Synthetic demo history
-2023-10-15,206.7,36.375,Synthetic demo history
-2023-10-16,205.8,,Synthetic demo history
-2023-10-17,205.3,,Synthetic demo history
-2023-10-18,206.8,,Synthetic demo history
-2023-10-19,205,,Synthetic demo history
-2023-10-20,204.3,,Synthetic demo history
-2023-10-21,206.1,,Synthetic demo history
-2023-10-22,207.9,36.375,Synthetic demo history
-2023-10-23,207.3,,Synthetic demo history
-2023-10-24,206.5,,Synthetic demo history
-2023-10-25,205.7,,Synthetic demo history
-2023-10-26,205.3,,Synthetic demo history
-2023-10-27,204.7,,Synthetic demo history
-2023-10-28,206.6,,Synthetic demo history
-2023-10-29,208.5,36.375,Synthetic demo history
-2023-10-30,207.2,,Synthetic demo history
-2023-10-31,206.2,,Synthetic demo history
-2023-11-01,204.7,,Synthetic demo history
-2023-11-02,204.3,,Synthetic demo history
-2023-11-03,203.4,,Synthetic demo history
-2023-11-04,206.1,,Synthetic demo history
-2023-11-05,209.4,36.375,Synthetic demo history
-2023-11-06,207.9,,Synthetic demo history
-2023-11-07,206.6,,Synthetic demo history
-2023-11-08,205.2,,Synthetic demo history
-2023-11-09,204.2,,Synthetic demo history
-2023-11-10,203.7,,Synthetic demo history
-2023-11-11,205,,Synthetic demo history
-2023-11-12,207.5,36.625,Synthetic demo history
-2023-11-13,207.3,,Synthetic demo history
-2023-11-14,206.6,,Synthetic demo history
-2023-11-15,205.2,,Synthetic demo history
-2023-11-16,205.6,,Synthetic demo history
-2023-11-17,204.7,,Synthetic demo history
-2023-11-18,206.4,,Synthetic demo history
-2023-11-19,208.6,36.5,Synthetic demo history
-2023-11-20,208.5,,Synthetic demo history
-2023-11-21,207.4,,Synthetic demo history
-2023-11-22,207.1,,Synthetic demo history
-2023-11-23,206,,Synthetic demo history
-2023-11-24,206,,Synthetic demo history
-2023-11-25,208.1,,Synthetic demo history
-2023-11-26,210,36.75,Synthetic demo history
-2023-11-27,208.5,,Synthetic demo history
-2023-11-28,208,,Synthetic demo history
-2023-11-29,207.2,,Synthetic demo history
-2023-11-30,206.3,,Synthetic demo history
-2023-12-01,205.1,,Synthetic demo history
-2023-12-02,207.8,,Synthetic demo history
-2023-12-03,209.1,36.75,Synthetic demo history
-2023-12-04,208.8,,Synthetic demo history
-2023-12-05,208.1,,Synthetic demo history
-2023-12-06,207.6,,Synthetic demo history
-2023-12-07,207.2,,Synthetic demo history
-2023-12-08,206.3,,Synthetic demo history
-2023-12-09,208,,Synthetic demo history
-2023-12-10,209.9,36.875,Synthetic demo history
-2023-12-11,211.7,,Synthetic demo history
-2023-12-12,209.6,,Synthetic demo history
-2023-12-13,207.8,,Synthetic demo history
-2023-12-14,206.6,,Synthetic demo history
-2023-12-15,206.4,,Synthetic demo history
-2023-12-16,210.9,,Synthetic demo history
-2023-12-17,211.4,36.75,Synthetic demo history
-2023-12-18,209.6,,Synthetic demo history
-2023-12-19,208.6,,Synthetic demo history
-2023-12-20,207.4,,Synthetic demo history
-2023-12-21,208.4,,Synthetic demo history
-2023-12-22,206.7,,Synthetic demo history
-2023-12-23,208.6,,Synthetic demo history
-2023-12-24,210.7,36.75,Synthetic demo history
-2023-12-25,209.5,,Synthetic demo history
-2023-12-26,208.7,,Synthetic demo history
-2023-12-27,207.9,,Synthetic demo history
-2023-12-28,207.5,,Synthetic demo history
-2023-12-29,207,,Synthetic demo history
-2023-12-30,208.7,,Synthetic demo history
-2023-12-31,211,36.75,Synthetic demo history
-2024-01-01,210.6,,Synthetic demo history
-2024-01-02,209.5,,Synthetic demo history
-2024-01-03,208.3,,Synthetic demo history
-2024-01-04,207.4,,Synthetic demo history
-2024-01-05,206.3,,Synthetic demo history
-2024-01-06,208.3,,Synthetic demo history
-2024-01-07,210.7,36.75,Synthetic demo history
-2024-01-08,209.1,,Synthetic demo history
-2024-01-09,209,,Synthetic demo history
-2024-01-10,208.4,,Synthetic demo history
-2024-01-11,207.4,,Synthetic demo history
-2024-01-12,206.4,,Synthetic demo history
-2024-01-13,208.8,,Synthetic demo history
-2024-01-14,210.3,36.75,Synthetic demo history
-2024-01-15,209.6,,Synthetic demo history
-2024-01-16,209.5,,Synthetic demo history
-2024-01-17,208.1,,Synthetic demo history
-2024-01-18,207.7,,Synthetic demo history
-2024-01-19,206.6,,Synthetic demo history
-2024-01-20,207.6,,Synthetic demo history
-2024-01-21,208.9,36.5,Synthetic demo history
-2024-01-22,208.1,,Synthetic demo history
-2024-01-23,207.6,,Synthetic demo history
-2024-01-24,207,,Synthetic demo history
-2024-01-25,206.4,,Synthetic demo history
-2024-01-26,205.7,,Synthetic demo history
-2024-01-27,207.6,,Synthetic demo history
-2024-01-28,209.2,36.5,Synthetic demo history
-2024-01-29,207.8,,Synthetic demo history
-2024-01-30,207.6,,Synthetic demo history
-2024-01-31,206.3,,Synthetic demo history
-2024-02-01,205.7,,Synthetic demo history
-2024-02-02,204.4,,Synthetic demo history
-2024-02-03,206,,Synthetic demo history
-2024-02-04,208.2,36.5,Synthetic demo history
-2024-02-05,207,,Synthetic demo history
-2024-02-06,206.4,,Synthetic demo history
-2024-02-07,205.4,,Synthetic demo history
-2024-02-08,205.1,,Synthetic demo history
-2024-02-09,204.1,,Synthetic demo history
-2024-02-10,205.6,,Synthetic demo history
-2024-02-11,208,36.375,Synthetic demo history
-2024-02-12,207,,Synthetic demo history
-2024-02-13,206.4,,Synthetic demo history
-2024-02-14,205,,Synthetic demo history
-2024-02-15,203.9,,Synthetic demo history
-2024-02-16,202.8,,Synthetic demo history
-2024-02-17,203.8,,Synthetic demo history
-2024-02-18,206.3,36.25,Synthetic demo history
-2024-02-19,205.3,,Synthetic demo history
-2024-02-20,204.2,,Synthetic demo history
-2024-02-21,203.3,,Synthetic demo history
-2024-02-22,201.9,,Synthetic demo history
-2024-02-23,200.8,,Synthetic demo history
-2024-02-24,203.1,,Synthetic demo history
-2024-02-25,205.3,35.875,Synthetic demo history
-2024-02-26,204.3,,Synthetic demo history
-2024-02-27,203.4,,Synthetic demo history
-2024-02-28,202.2,,Synthetic demo history
-2024-02-29,201.7,,Synthetic demo history
-2024-03-01,200.7,,Synthetic demo history
-2024-03-02,203.3,,Synthetic demo history
-2024-03-03,204.5,35.875,Synthetic demo history
-2024-03-04,203.6,,Synthetic demo history
-2024-03-05,202.3,,Synthetic demo history
-2024-03-06,201.8,,Synthetic demo history
-2024-03-07,201.1,,Synthetic demo history
-2024-03-08,200.5,,Synthetic demo history
-2024-03-09,201.7,,Synthetic demo history
-2024-03-10,204,36,Synthetic demo history
-2024-03-11,202.9,,Synthetic demo history
-2024-03-12,202.1,,Synthetic demo history
-2024-03-13,201.8,,Synthetic demo history
-2024-03-14,200.7,,Synthetic demo history
-2024-03-15,200.5,,Synthetic demo history
-2024-03-16,201.8,,Synthetic demo history
-2024-03-17,203.1,35.875,Synthetic demo history
-2024-03-18,202.2,,Synthetic demo history
-2024-03-19,202.1,,Synthetic demo history
-2024-03-20,200.9,,Synthetic demo history
-2024-03-21,200.7,,Synthetic demo history
-2024-03-22,199.6,,Synthetic demo history
-2024-03-23,201.4,,Synthetic demo history
-2024-03-24,202.3,35.625,Synthetic demo history
-2024-03-25,201.4,,Synthetic demo history
-2024-03-26,201,,Synthetic demo history
-2024-03-27,199.8,,Synthetic demo history
-2024-03-28,199.7,,Synthetic demo history
-2024-03-29,198.6,,Synthetic demo history
-2024-03-30,199.5,,Synthetic demo history
-2024-03-31,200.9,35.5,Synthetic demo history
-2024-04-01,200.2,,Synthetic demo history
-2024-04-02,199.6,,Synthetic demo history
-2024-04-03,199.1,,Synthetic demo history
-2024-04-04,198.1,,Synthetic demo history
-2024-04-05,197.6,,Synthetic demo history
-2024-04-06,198.8,,Synthetic demo history
-2024-04-07,200.2,35.25,Synthetic demo history
-2024-04-08,199.4,,Synthetic demo history
-2024-04-09,198.6,,Synthetic demo history
-2024-04-10,198,,Synthetic demo history
-2024-04-11,197.5,,Synthetic demo history
-2024-04-12,196.8,,Synthetic demo history
-2024-04-13,198,,Synthetic demo history
-2024-04-14,199.5,35.125,Synthetic demo history
-2024-04-15,198.1,,Synthetic demo history
-2024-04-16,198,,Synthetic demo history
-2024-04-17,196.3,,Synthetic demo history
-2024-04-18,195.9,,Synthetic demo history
-2024-04-19,194.5,,Synthetic demo history
-2024-04-20,196.8,,Synthetic demo history
-2024-04-21,198.8,35.125,Synthetic demo history
-2024-04-22,198.4,,Synthetic demo history
-2024-04-23,196.8,,Synthetic demo history
-2024-04-24,195.6,,Synthetic demo history
-2024-04-25,194.9,,Synthetic demo history
-2024-04-26,194.2,,Synthetic demo history
-2024-04-27,195.5,,Synthetic demo history
-2024-04-28,197.9,35.125,Synthetic demo history
-2024-04-29,196.8,,Synthetic demo history
-2024-04-30,196.1,,Synthetic demo history
-2024-05-01,195.1,,Synthetic demo history
-2024-05-02,194.6,,Synthetic demo history
-2024-05-03,193.5,,Synthetic demo history
-2024-05-04,195.4,,Synthetic demo history
-2024-05-05,197,34.75,Synthetic demo history
-2024-05-06,195.6,,Synthetic demo history
-2024-05-07,195,,Synthetic demo history
-2024-05-08,193.8,,Synthetic demo history
-2024-05-09,193.2,,Synthetic demo history
-2024-05-10,192.3,,Synthetic demo history
-2024-05-11,194.7,,Synthetic demo history
-2024-05-12,196.8,35,Synthetic demo history
-2024-05-13,195.5,,Synthetic demo history
-2024-05-14,194.3,,Synthetic demo history
-2024-05-15,193.3,,Synthetic demo history
-2024-05-16,192.5,,Synthetic demo history
-2024-05-17,192.3,,Synthetic demo history
-2024-05-18,193.9,,Synthetic demo history
-2024-05-19,196.3,34.875,Synthetic demo history
-2024-05-20,195.2,,Synthetic demo history
-2024-05-21,194.3,,Synthetic demo history
-2024-05-22,192.7,,Synthetic demo history
-2024-05-23,192.5,,Synthetic demo history
-2024-05-24,191.6,,Synthetic demo history
-2024-05-25,194.1,,Synthetic demo history
-2024-05-26,196.6,34.75,Synthetic demo history
-2024-05-27,195.5,,Synthetic demo history
-2024-05-28,195.7,,Synthetic demo history
-2024-05-29,193.7,,Synthetic demo history
-2024-05-30,193,,Synthetic demo history
-2024-05-31,191.9,,Synthetic demo history
-2024-06-01,193.9,,Synthetic demo history
-2024-06-02,195.3,34.625,Synthetic demo history
-2024-06-03,193.8,,Synthetic demo history
-2024-06-04,193,,Synthetic demo history
-2024-06-05,191.8,,Synthetic demo history
-2024-06-06,191.3,,Synthetic demo history
-2024-06-07,190.7,,Synthetic demo history
-2024-06-08,192,,Synthetic demo history
-2024-06-09,194.4,34.375,Synthetic demo history
-2024-06-10,193,,Synthetic demo history
-2024-06-11,192.1,,Synthetic demo history
-2024-06-12,190.9,,Synthetic demo history
-2024-06-13,190.8,,Synthetic demo history
-2024-06-14,189.4,,Synthetic demo history
-2024-06-15,191.7,,Synthetic demo history
-2024-06-16,194.1,34.5,Synthetic demo history
-2024-06-17,192.7,,Synthetic demo history
-2024-06-18,192,,Synthetic demo history
-2024-06-19,194.5,,Synthetic demo history
-2024-06-20,192.4,,Synthetic demo history
-2024-06-21,191.1,,Synthetic demo history
-2024-06-22,192.4,,Synthetic demo history
-2024-06-23,194.2,34.625,Synthetic demo history
-2024-06-24,193.4,,Synthetic demo history
-2024-06-25,192.9,,Synthetic demo history
-2024-06-26,192.2,,Synthetic demo history
-2024-06-27,191.1,,Synthetic demo history
-2024-06-28,190.9,,Synthetic demo history
-2024-06-29,192.6,,Synthetic demo history
-2024-06-30,196.5,34.625,Synthetic demo history
-2024-07-01,194.4,,Synthetic demo history
-2024-07-02,193.8,,Synthetic demo history
-2024-07-03,191.9,,Synthetic demo history
-2024-07-04,191.4,,Synthetic demo history
-2024-07-05,190.5,,Synthetic demo history
-2024-07-06,192.4,,Synthetic demo history
-2024-07-07,197.9,34.625,Synthetic demo history
-2024-07-08,195.5,,Synthetic demo history
-2024-07-09,194.1,,Synthetic demo history
-2024-07-10,192.7,,Synthetic demo history
-2024-07-11,192,,Synthetic demo history
-2024-07-12,190.8,,Synthetic demo history
-2024-07-13,193.3,,Synthetic demo history
-2024-07-14,195.4,34.625,Synthetic demo history
-2024-07-15,193.6,,Synthetic demo history
-2024-07-16,193.3,,Synthetic demo history
-2024-07-17,191.6,,Synthetic demo history
-2024-07-18,190.4,,Synthetic demo history
-2024-07-19,189.4,,Synthetic demo history
-2024-07-20,191.4,,Synthetic demo history
-2024-07-21,193.3,34.5,Synthetic demo history
-2024-07-22,192.9,,Synthetic demo history
-2024-07-23,192.1,,Synthetic demo history
-2024-07-24,191.5,,Synthetic demo history
-2024-07-25,191,,Synthetic demo history
-2024-07-26,190.7,,Synthetic demo history
-2024-07-27,192.3,,Synthetic demo history
-2024-07-28,194.8,34.5,Synthetic demo history
-2024-07-29,193.6,,Synthetic demo history
-2024-07-30,192.5,,Synthetic demo history
-2024-07-31,191.9,,Synthetic demo history
-2024-08-01,191.7,,Synthetic demo history
-2024-08-02,190.7,,Synthetic demo history
-2024-08-03,192.6,,Synthetic demo history
-2024-08-04,194.7,34.5,Synthetic demo history
-2024-08-05,193.6,,Synthetic demo history
-2024-08-06,192.6,,Synthetic demo history
-2024-08-07,191.9,,Synthetic demo history
-2024-08-08,192.3,,Synthetic demo history
-2024-08-09,191.5,,Synthetic demo history
-2024-08-10,193.1,,Synthetic demo history
-2024-08-11,195.4,34.625,Synthetic demo history
-2024-08-12,194.8,,Synthetic demo history
-2024-08-13,193.8,,Synthetic demo history
-2024-08-14,192.9,,Synthetic demo history
-2024-08-15,192.6,,Synthetic demo history
-2024-08-16,191.9,,Synthetic demo history
-2024-08-17,194.3,,Synthetic demo history
-2024-08-18,196.6,34.875,Synthetic demo history
-2024-08-19,195.1,,Synthetic demo history
-2024-08-20,194.8,,Synthetic demo history
-2024-08-21,193.6,,Synthetic demo history
-2024-08-22,193.2,,Synthetic demo history
-2024-08-23,192,,Synthetic demo history
-2024-08-24,194.3,,Synthetic demo history
-2024-08-25,196.4,34.875,Synthetic demo history
-2024-08-26,196.3,,Synthetic demo history
-2024-08-27,196.3,,Synthetic demo history
-2024-08-28,196,,Synthetic demo history
-2024-08-29,194.8,,Synthetic demo history
-2024-08-30,194.1,,Synthetic demo history
-2024-08-31,196,,Synthetic demo history
-2024-09-01,198.3,35.125,Synthetic demo history
-2024-09-02,197.6,,Synthetic demo history
-2024-09-03,196.6,,Synthetic demo history
-2024-09-04,195.6,,Synthetic demo history
-2024-09-05,196.9,,Synthetic demo history
-2024-09-06,194.6,,Synthetic demo history
-2024-09-07,195.7,,Synthetic demo history
-2024-09-08,197.8,35,Synthetic demo history
-2024-09-09,196.7,,Synthetic demo history
-2024-09-10,195.6,,Synthetic demo history
-2024-09-11,194.6,,Synthetic demo history
-2024-09-12,193.9,,Synthetic demo history
-2024-09-13,193.7,,Synthetic demo history
-2024-09-14,195.4,,Synthetic demo history
-2024-09-15,198.5,34.875,Synthetic demo history
-2024-09-16,197,,Synthetic demo history
-2024-09-17,196.2,,Synthetic demo history
-2024-09-18,195.8,,Synthetic demo history
-2024-09-19,195.1,,Synthetic demo history
-2024-09-20,193.8,,Synthetic demo history
-2024-09-21,195.6,,Synthetic demo history
-2024-09-22,197.5,35,Synthetic demo history
-2024-09-23,196.8,,Synthetic demo history
-2024-09-24,195.7,,Synthetic demo history
-2024-09-25,194.6,,Synthetic demo history
-2024-09-26,193.8,,Synthetic demo history
-2024-09-27,194,,Synthetic demo history
-2024-09-28,196.1,,Synthetic demo history
-2024-09-29,197.7,35,Synthetic demo history
-2024-09-30,197.4,,Synthetic demo history
-2024-10-01,196.4,,Synthetic demo history
-2024-10-02,195.6,,Synthetic demo history
-2024-10-03,195.2,,Synthetic demo history
-2024-10-04,194.2,,Synthetic demo history
-2024-10-05,196.3,,Synthetic demo history
-2024-10-06,199,35.375,Synthetic demo history
-2024-10-07,198.4,,Synthetic demo history
-2024-10-08,197.8,,Synthetic demo history
-2024-10-09,196.4,,Synthetic demo history
-2024-10-10,195.9,,Synthetic demo history
-2024-10-11,195.2,,Synthetic demo history
-2024-10-12,197,,Synthetic demo history
-2024-10-13,199.6,35.25,Synthetic demo history
-2024-10-14,198,,Synthetic demo history
-2024-10-15,197.5,,Synthetic demo history
-2024-10-16,196.9,,Synthetic demo history
-2024-10-17,196.4,,Synthetic demo history
-2024-10-18,196,,Synthetic demo history
-2024-10-19,197.1,,Synthetic demo history
-2024-10-20,198.5,35.25,Synthetic demo history
-2024-10-21,197.4,,Synthetic demo history
-2024-10-22,197.4,,Synthetic demo history
-2024-10-23,196.7,,Synthetic demo history
-2024-10-24,195.9,,Synthetic demo history
-2024-10-25,195.2,,Synthetic demo history
-2024-10-26,197,,Synthetic demo history
-2024-10-27,198.7,35.25,Synthetic demo history
-2024-10-28,198.4,,Synthetic demo history
-2024-10-29,198,,Synthetic demo history
-2024-10-30,197.5,,Synthetic demo history
-2024-10-31,196.5,,Synthetic demo history
-2024-11-01,195.6,,Synthetic demo history
-2024-11-02,196.7,,Synthetic demo history
-2024-11-03,198.7,35.125,Synthetic demo history
-2024-11-04,197.4,,Synthetic demo history
-2024-11-05,196.8,,Synthetic demo history
-2024-11-06,195.9,,Synthetic demo history
-2024-11-07,195.8,,Synthetic demo history
-2024-11-08,195.7,,Synthetic demo history
-2024-11-09,197.2,,Synthetic demo history
-2024-11-10,199.2,35.25,Synthetic demo history
-2024-11-11,198.5,,Synthetic demo history
-2024-11-12,198,,Synthetic demo history
-2024-11-13,196.9,,Synthetic demo history
-2024-11-14,199.7,,Synthetic demo history
-2024-11-15,197.5,,Synthetic demo history
-2024-11-16,198.7,,Synthetic demo history
-2024-11-17,199.8,35.25,Synthetic demo history
-2024-11-18,198.5,,Synthetic demo history
-2024-11-19,198,,Synthetic demo history
-2024-11-20,197.6,,Synthetic demo history
-2024-11-21,196.8,,Synthetic demo history
-2024-11-22,195.6,,Synthetic demo history
-2024-11-23,197.5,,Synthetic demo history
-2024-11-24,198.8,35.375,Synthetic demo history
-2024-11-25,198.3,,Synthetic demo history
-2024-11-26,198,,Synthetic demo history
-2024-11-27,196.7,,Synthetic demo history
-2024-11-28,196.3,,Synthetic demo history
-2024-11-29,195.3,,Synthetic demo history
-2024-11-30,197.5,,Synthetic demo history
-2024-12-01,200,35.25,Synthetic demo history
-2024-12-02,199,,Synthetic demo history
-2024-12-03,198.1,,Synthetic demo history
-2024-12-04,197,,Synthetic demo history
-2024-12-05,195.9,,Synthetic demo history
-2024-12-06,195,,Synthetic demo history
-2024-12-07,196.5,,Synthetic demo history
-2024-12-08,198.2,35.375,Synthetic demo history
-2024-12-09,197.4,,Synthetic demo history
-2024-12-10,196.6,,Synthetic demo history
-2024-12-11,196.2,,Synthetic demo history
-2024-12-12,195.4,,Synthetic demo history
-2024-12-13,194.3,,Synthetic demo history
-2024-12-14,196.2,,Synthetic demo history
-2024-12-15,198.6,35.25,Synthetic demo history
-2024-12-16,197.4,,Synthetic demo history
-2024-12-17,196.5,,Synthetic demo history
-2024-12-18,195.4,,Synthetic demo history
-2024-12-19,194.3,,Synthetic demo history
-2024-12-20,193.3,,Synthetic demo history
-2024-12-21,195.3,,Synthetic demo history
-2024-12-22,198.3,35,Synthetic demo history
-2024-12-23,197.2,,Synthetic demo history
-2024-12-24,196,,Synthetic demo history
-2024-12-25,194.6,,Synthetic demo history
-2024-12-26,194.4,,Synthetic demo history
-2024-12-27,193.1,,Synthetic demo history
-2024-12-28,195,,Synthetic demo history
-2024-12-29,196.9,34.875,Synthetic demo history
-2024-12-30,196.5,,Synthetic demo history
-2024-12-31,195.6,,Synthetic demo history
-2025-01-01,195.4,,Synthetic demo history
-2025-01-02,194.5,,Synthetic demo history
-2025-01-03,194.7,,Synthetic demo history
-2025-01-04,196.3,,Synthetic demo history
-2025-01-05,198,35.25,Synthetic demo history
-2025-01-06,197.2,,Synthetic demo history
-2025-01-07,196.7,,Synthetic demo history
-2025-01-08,195.4,,Synthetic demo history
-2025-01-09,195.2,,Synthetic demo history
-2025-01-10,196.6,,Synthetic demo history
-2025-01-11,197.3,,Synthetic demo history
-2025-01-12,198.6,35.25,Synthetic demo history
-2025-01-13,197.3,,Synthetic demo history
-2025-01-14,197.3,,Synthetic demo history
-2025-01-15,196.3,,Synthetic demo history
-2025-01-16,198.2,,Synthetic demo history
-2025-01-17,196.5,,Synthetic demo history
-2025-01-18,197.4,,Synthetic demo history
-2025-01-19,199.7,35.125,Synthetic demo history
-2025-01-20,198.4,,Synthetic demo history
-2025-01-21,197.4,,Synthetic demo history
-2025-01-22,196.3,,Synthetic demo history
-2025-01-23,196.3,,Synthetic demo history
-2025-01-24,195.7,,Synthetic demo history
-2025-01-25,197.7,,Synthetic demo history
-2025-01-26,199.5,35.375,Synthetic demo history
-2025-01-27,198.4,,Synthetic demo history
-2025-01-28,198.2,,Synthetic demo history
-2025-01-29,197.3,,Synthetic demo history
-2025-01-30,197,,Synthetic demo history
-2025-01-31,196.7,,Synthetic demo history
-2025-02-01,198.8,,Synthetic demo history
-2025-02-02,201.1,35.625,Synthetic demo history
-2025-02-03,200.5,,Synthetic demo history
-2025-02-04,199.4,,Synthetic demo history
-2025-02-05,198.4,,Synthetic demo history
-2025-02-06,197.5,,Synthetic demo history
-2025-02-07,197.3,,Synthetic demo history
-2025-02-08,198.8,,Synthetic demo history
-2025-02-09,201.8,35.5,Synthetic demo history
-2025-02-10,200.1,,Synthetic demo history
-2025-02-11,199.3,,Synthetic demo history
-2025-02-12,198,,Synthetic demo history
-2025-02-13,197,,Synthetic demo history
-2025-02-14,195.7,,Synthetic demo history
-2025-02-15,197.6,,Synthetic demo history
-2025-02-16,200.3,35.25,Synthetic demo history
-2025-02-17,199.1,,Synthetic demo history
-2025-02-18,198.1,,Synthetic demo history
-2025-02-19,197.3,,Synthetic demo history
-2025-02-20,196.3,,Synthetic demo history
-2025-02-21,195.5,,Synthetic demo history
-2025-02-22,197.2,,Synthetic demo history
-2025-02-23,199.6,35.375,Synthetic demo history
-2025-02-24,198.9,,Synthetic demo history
-2025-02-25,197.5,,Synthetic demo history
-2025-02-26,196.3,,Synthetic demo history
-2025-02-27,195.5,,Synthetic demo history
-2025-02-28,195,,Synthetic demo history
-2025-03-01,196.9,,Synthetic demo history
-2025-03-02,199.1,35.25,Synthetic demo history
-2025-03-03,198.4,,Synthetic demo history
-2025-03-04,197.3,,Synthetic demo history
-2025-03-05,196.4,,Synthetic demo history
-2025-03-06,195.5,,Synthetic demo history
-2025-03-07,195.1,,Synthetic demo history
-2025-03-08,197.2,,Synthetic demo history
-2025-03-09,198.5,35.25,Synthetic demo history
-2025-03-10,197.8,,Synthetic demo history
-2025-03-11,197.2,,Synthetic demo history
-2025-03-12,195.9,,Synthetic demo history
-2025-03-13,195.9,,Synthetic demo history
-2025-03-14,195.3,,Synthetic demo history
-2025-03-15,197,,Synthetic demo history
-2025-03-16,199,35.125,Synthetic demo history
-2025-03-17,198.5,,Synthetic demo history
-2025-03-18,197.7,,Synthetic demo history
-2025-03-19,195.9,,Synthetic demo history
-2025-03-20,194.8,,Synthetic demo history
-2025-03-21,194.1,,Synthetic demo history
-2025-03-22,196.5,,Synthetic demo history
-2025-03-23,198.8,35.25,Synthetic demo history
-2025-03-24,199.7,,Synthetic demo history
-2025-03-25,197.6,,Synthetic demo history
-2025-03-26,196.4,,Synthetic demo history
-2025-03-27,195.3,,Synthetic demo history
-2025-03-28,194.7,,Synthetic demo history
-2025-03-29,196.3,,Synthetic demo history
-2025-03-30,198.3,35.125,Synthetic demo history
-2025-03-31,198,,Synthetic demo history
-2025-04-01,197.6,,Synthetic demo history
-2025-04-02,196,,Synthetic demo history
-2025-04-03,194.8,,Synthetic demo history
-2025-04-04,194.4,,Synthetic demo history
-2025-04-05,196.2,,Synthetic demo history
-2025-04-06,198.5,35.125,Synthetic demo history
-2025-04-07,197.7,,Synthetic demo history
-2025-04-08,197.1,,Synthetic demo history
-2025-04-09,195.7,,Synthetic demo history
-2025-04-10,195.3,,Synthetic demo history
-2025-04-11,193.9,,Synthetic demo history
-2025-04-12,196.2,,Synthetic demo history
-2025-04-13,198.2,35.125,Synthetic demo history
-2025-04-14,197.5,,Synthetic demo history
-2025-04-15,196.4,,Synthetic demo history
-2025-04-16,195.6,,Synthetic demo history
-2025-04-17,194.9,,Synthetic demo history
-2025-04-18,194.3,,Synthetic demo history
-2025-04-19,196.4,,Synthetic demo history
-2025-04-20,198.1,35.125,Synthetic demo history
-2025-04-21,197.1,,Synthetic demo history
-2025-04-22,196.7,,Synthetic demo history
-2025-04-23,195.3,,Synthetic demo history
-2025-04-24,194.9,,Synthetic demo history
-2025-04-25,193.5,,Synthetic demo history
-2025-04-26,195.5,,Synthetic demo history
-2025-04-27,197.8,35,Synthetic demo history
-2025-04-28,197.3,,Synthetic demo history
-2025-04-29,196.8,,Synthetic demo history
-2025-04-30,196.5,,Synthetic demo history
-2025-05-01,196.1,,Synthetic demo history
-2025-05-02,198.1,,Synthetic demo history
-2025-05-03,198.7,,Synthetic demo history
-2025-05-04,199.8,35.125,Synthetic demo history
-2025-05-05,198.6,,Synthetic demo history
-2025-05-06,196.9,,Synthetic demo history
-2025-05-07,196.3,,Synthetic demo history
-2025-05-08,195.1,,Synthetic demo history
-2025-05-09,196.2,,Synthetic demo history
-2025-05-10,197.4,,Synthetic demo history
-2025-05-11,199.1,35.125,Synthetic demo history
-2025-05-12,198.3,,Synthetic demo history
-2025-05-13,197.1,,Synthetic demo history
-2025-05-14,196.2,,Synthetic demo history
-2025-05-15,195.3,,Synthetic demo history
-2025-05-16,194.1,,Synthetic demo history
-2025-05-17,196.5,,Synthetic demo history
-2025-05-18,199.7,35.25,Synthetic demo history
-2025-05-19,198.3,,Synthetic demo history
-2025-05-20,196.9,,Synthetic demo history
-2025-05-21,196.1,,Synthetic demo history
-2025-05-22,195,,Synthetic demo history
-2025-05-23,194.4,,Synthetic demo history
-2025-05-24,196.7,,Synthetic demo history
-2025-05-25,198.5,35.125,Synthetic demo history
-2025-05-26,197.5,,Synthetic demo history
-2025-05-27,197,,Synthetic demo history
-2025-05-28,196,,Synthetic demo history
-2025-05-29,195.9,,Synthetic demo history
-2025-05-30,194.8,,Synthetic demo history
-2025-05-31,196.9,,Synthetic demo history
-2025-06-01,198.5,35,Synthetic demo history
-2025-06-02,197.4,,Synthetic demo history
-2025-06-03,196.2,,Synthetic demo history
-2025-06-04,195.6,,Synthetic demo history
-2025-06-05,195.2,,Synthetic demo history
-2025-06-06,194.2,,Synthetic demo history
-2025-06-07,195.7,,Synthetic demo history
-2025-06-08,198.7,35,Synthetic demo history
-2025-06-09,197.3,,Synthetic demo history
-2025-06-10,195.8,,Synthetic demo history
-2025-06-11,194.5,,Synthetic demo history
-2025-06-12,193.8,,Synthetic demo history
-2025-06-13,193,,Synthetic demo history
-2025-06-14,195.3,,Synthetic demo history
-2025-06-15,197.5,34.875,Synthetic demo history
-2025-06-16,196.7,,Synthetic demo history
-2025-06-17,195.4,,Synthetic demo history
-2025-06-18,196.3,,Synthetic demo history
-2025-06-19,194.7,,Synthetic demo history
-2025-06-20,193.6,,Synthetic demo history
-2025-06-21,195.6,,Synthetic demo history
-2025-06-22,197.2,35,Synthetic demo history
-2025-06-23,196.2,,Synthetic demo history
-2025-06-24,195.5,,Synthetic demo history
-2025-06-25,196.7,,Synthetic demo history
-2025-06-26,195.5,,Synthetic demo history
-2025-06-27,194,,Synthetic demo history
-2025-06-28,195.3,,Synthetic demo history
-2025-06-29,197.3,35,Synthetic demo history
-2025-06-30,196.3,,Synthetic demo history
-2025-07-01,195,,Synthetic demo history
-2025-07-02,194.1,,Synthetic demo history
-2025-07-03,193.8,,Synthetic demo history
-2025-07-04,192.7,,Synthetic demo history
-2025-07-05,194.9,,Synthetic demo history
-2025-07-06,197.1,35.125,Synthetic demo history
-2025-07-07,195.8,,Synthetic demo history
-2025-07-08,195.1,,Synthetic demo history
-2025-07-09,194.7,,Synthetic demo history
-2025-07-10,194,,Synthetic demo history
-2025-07-11,193.9,,Synthetic demo history
-2025-07-12,195.2,,Synthetic demo history
-2025-07-13,197.3,35.125,Synthetic demo history
-2025-07-14,196.5,,Synthetic demo history
-2025-07-15,196.1,,Synthetic demo history
-2025-07-16,194.6,,Synthetic demo history
-2025-07-17,194.4,,Synthetic demo history
-2025-07-18,193.8,,Synthetic demo history
-2025-07-19,196,,Synthetic demo history
-2025-07-20,198.6,35.125,Synthetic demo history
-2025-07-21,197.4,,Synthetic demo history
-2025-07-22,196.3,,Synthetic demo history
-2025-07-23,195.4,,Synthetic demo history
-2025-07-24,194.2,,Synthetic demo history
-2025-07-25,193.4,,Synthetic demo history
-2025-07-26,195.5,,Synthetic demo history
-2025-07-27,198,35.25,Synthetic demo history
-2025-07-28,197.1,,Synthetic demo history
-2025-07-29,196.5,,Synthetic demo history
-2025-07-30,195.3,,Synthetic demo history
-2025-07-31,195.6,,Synthetic demo history
-2025-08-01,195.7,,Synthetic demo history
-2025-08-02,198.3,,Synthetic demo history
-2025-08-03,200.7,35.5,Synthetic demo history
-2025-08-04,200.3,,Synthetic demo history
-2025-08-05,199,,Synthetic demo history
-2025-08-06,198.3,,Synthetic demo history
-2025-08-07,197.5,,Synthetic demo history
-2025-08-08,197,,Synthetic demo history
-2025-08-09,199.5,,Synthetic demo history
-2025-08-10,202.2,35.625,Synthetic demo history
-2025-08-11,200.6,,Synthetic demo history
-2025-08-12,199.7,,Synthetic demo history
-2025-08-13,199.4,,Synthetic demo history
-2025-08-14,198.2,,Synthetic demo history
-2025-08-15,197.7,,Synthetic demo history
-2025-08-16,199.7,,Synthetic demo history
-2025-08-17,202.1,35.625,Synthetic demo history
-2025-08-18,201,,Synthetic demo history
-2025-08-19,200.3,,Synthetic demo history
-2025-08-20,200.2,,Synthetic demo history
-2025-08-21,199.5,,Synthetic demo history
-2025-08-22,198.6,,Synthetic demo history
-2025-08-23,201.1,,Synthetic demo history
-2025-08-24,202.8,35.75,Synthetic demo history
-2025-08-25,202.4,,Synthetic demo history
-2025-08-26,202.4,,Synthetic demo history
-2025-08-27,202,,Synthetic demo history
-2025-08-28,201.3,,Synthetic demo history
-2025-08-29,200.2,,Synthetic demo history
-2025-08-30,204.6,,Synthetic demo history
-2025-08-31,206.2,35.875,Synthetic demo history
-2025-09-01,204.5,,Synthetic demo history
-2025-09-02,203.2,,Synthetic demo history
-2025-09-03,202.3,,Synthetic demo history
-2025-09-04,201.3,,Synthetic demo history
-2025-09-05,199.9,,Synthetic demo history
-2025-09-06,202.3,,Synthetic demo history
-2025-09-07,204.3,36,Synthetic demo history
-2025-09-08,203.8,,Synthetic demo history
-2025-09-09,203.4,,Synthetic demo history
-2025-09-10,202.6,,Synthetic demo history
-2025-09-11,201.7,,Synthetic demo history
-2025-09-12,201.1,,Synthetic demo history
-2025-09-13,203.7,,Synthetic demo history
-2025-09-14,205.5,36.125,Synthetic demo history
-2025-09-15,204.6,,Synthetic demo history
-2025-09-16,204.2,,Synthetic demo history
-2025-09-17,203.4,,Synthetic demo history
-2025-09-18,203.4,,Synthetic demo history
-2025-09-19,202.9,,Synthetic demo history
-2025-09-20,205.2,,Synthetic demo history
-2025-09-21,207.3,36.5,Synthetic demo history
-2025-09-22,206.7,,Synthetic demo history
-2025-09-23,208.2,,Synthetic demo history
-2025-09-24,206.2,,Synthetic demo history
-2025-09-25,205.5,,Synthetic demo history
-2025-09-26,204.6,,Synthetic demo history
-2025-09-27,205.6,,Synthetic demo history
-2025-09-28,208.5,36.5,Synthetic demo history
-2025-09-29,207.1,,Synthetic demo history
-2025-09-30,206.1,,Synthetic demo history
-2025-10-01,205.7,,Synthetic demo history
-2025-10-02,205.4,,Synthetic demo history
-2025-10-03,205.1,,Synthetic demo history
-2025-10-04,207.3,,Synthetic demo history
-2025-10-05,209.8,36.875,Synthetic demo history
-2025-10-06,208.9,,Synthetic demo history
-2025-10-07,207.9,,Synthetic demo history
-2025-10-08,207.1,,Synthetic demo history
-2025-10-09,206.5,,Synthetic demo history
-2025-10-10,206.4,,Synthetic demo history
-2025-10-11,207.8,,Synthetic demo history
-2025-10-12,209.2,36.875,Synthetic demo history
-2025-10-13,209.2,,Synthetic demo history
-2025-10-14,208.4,,Synthetic demo history
-2025-10-15,207.4,,Synthetic demo history
-2025-10-16,207,,Synthetic demo history
-2025-10-17,206.5,,Synthetic demo history
-2025-10-18,207.9,,Synthetic demo history
-2025-10-19,210.9,37,Synthetic demo history
-2025-10-20,210.4,,Synthetic demo history
-2025-10-21,210,,Synthetic demo history
-2025-10-22,208.3,,Synthetic demo history
-2025-10-23,208.4,,Synthetic demo history
-2025-10-24,207.6,,Synthetic demo history
-2025-10-25,209.8,,Synthetic demo history
-2025-10-26,212,37.125,Synthetic demo history
-2025-10-27,210.8,,Synthetic demo history
-2025-10-28,210.1,,Synthetic demo history
-2025-10-29,210,,Synthetic demo history
-2025-10-30,209.2,,Synthetic demo history
-2025-10-31,208.6,,Synthetic demo history
-2025-11-01,210.3,,Synthetic demo history
-2025-11-02,212.4,37,Synthetic demo history
-2025-11-03,212,,Synthetic demo history
-2025-11-04,210.8,,Synthetic demo history
-2025-11-05,210.4,,Synthetic demo history
-2025-11-06,210,,Synthetic demo history
-2025-11-07,209.9,,Synthetic demo history
-2025-11-08,211.1,,Synthetic demo history
-2025-11-09,213.6,37.125,Synthetic demo history
-2025-11-10,212.6,,Synthetic demo history
-2025-11-11,211.7,,Synthetic demo history
-2025-11-12,210.8,,Synthetic demo history
-2025-11-13,210.5,,Synthetic demo history
-2025-11-14,209.4,,Synthetic demo history
-2025-11-15,212.1,,Synthetic demo history
-2025-11-16,214.8,37.375,Synthetic demo history
-2025-11-17,213.5,,Synthetic demo history
-2025-11-18,212.4,,Synthetic demo history
-2025-11-19,214.3,,Synthetic demo history
-2025-11-20,212.8,,Synthetic demo history
-2025-11-21,211.9,,Synthetic demo history
-2025-11-22,213.6,,Synthetic demo history
-2025-11-23,216.1,37.5,Synthetic demo history
-2025-11-24,214.4,,Synthetic demo history
-2025-11-25,214.1,,Synthetic demo history
-2025-11-26,213.3,,Synthetic demo history
-2025-11-27,212.6,,Synthetic demo history
-2025-11-28,212,,Synthetic demo history
-2025-11-29,213.8,,Synthetic demo history
-2025-11-30,215.7,37.625,Synthetic demo history
-2025-12-01,214.9,,Synthetic demo history
-2025-12-02,214.6,,Synthetic demo history
-2025-12-03,214.3,,Synthetic demo history
-2025-12-04,213.5,,Synthetic demo history
-2025-12-05,212.8,,Synthetic demo history
-2025-12-06,214.5,,Synthetic demo history
-2025-12-07,216.6,37.875,Synthetic demo history
-2025-12-08,215.4,,Synthetic demo history
-2025-12-09,214.6,,Synthetic demo history
-2025-12-10,214.1,,Synthetic demo history
-2025-12-11,213.7,,Synthetic demo history
-2025-12-12,213,,Synthetic demo history
-2025-12-13,214.2,,Synthetic demo history
-2025-12-14,216.4,37.625,Synthetic demo history
-2025-12-15,215.6,,Synthetic demo history
-2025-12-16,214.7,,Synthetic demo history
-2025-12-17,214,,Synthetic demo history
-2025-12-18,213.2,,Synthetic demo history
-2025-12-19,212.5,,Synthetic demo history
-2025-12-20,215.3,,Synthetic demo history
-2025-12-21,217.4,37.75,Synthetic demo history
-2025-12-22,216.7,,Synthetic demo history
-2025-12-23,215.3,,Synthetic demo history
-2025-12-24,214.3,,Synthetic demo history
-2025-12-25,214,,Synthetic demo history
-2025-12-26,212.7,,Synthetic demo history
-2025-12-27,214.6,,Synthetic demo history
-2025-12-28,217.7,37.75,Synthetic demo history
-2025-12-29,217.2,,Synthetic demo history
-2025-12-30,216.1,,Synthetic demo history
-2025-12-31,215.2,,Synthetic demo history
-2026-01-01,215.8,,Synthetic demo history
-2026-01-02,214.2,,Synthetic demo history
-2026-01-03,215.8,,Synthetic demo history
-2026-01-04,217,38,Synthetic demo history
-2026-01-05,216.7,,Synthetic demo history
-2026-01-06,215.8,,Synthetic demo history
-2026-01-07,214.5,,Synthetic demo history
-2026-01-08,213.6,,Synthetic demo history
-2026-01-09,213.4,,Synthetic demo history
-2026-01-10,215.4,,Synthetic demo history
-2026-01-11,217.6,38,Synthetic demo history
-2026-01-12,216.4,,Synthetic demo history
-2026-01-13,215.4,,Synthetic demo history
-2026-01-14,214,,Synthetic demo history
-2026-01-15,213.6,,Synthetic demo history
-2026-01-16,212.6,,Synthetic demo history
-2026-01-17,214.5,,Synthetic demo history
-2026-01-18,216.8,37.75,Synthetic demo history
-2026-01-19,215.8,,Synthetic demo history
-2026-01-20,215.2,,Synthetic demo history
-2026-01-21,214.3,,Synthetic demo history
-2026-01-22,214.3,,Synthetic demo history
-2026-01-23,213.5,,Synthetic demo history
-2026-01-24,214.7,,Synthetic demo history
-2026-01-25,217.4,37.75,Synthetic demo history
-2026-01-26,216,,Synthetic demo history
-2026-01-27,215.3,,Synthetic demo history
-2026-01-28,214.1,,Synthetic demo history
-2026-01-29,213.8,,Synthetic demo history
-2026-01-30,213.3,,Synthetic demo history
-2026-01-31,214.6,,Synthetic demo history
-2026-02-01,217.5,38,Synthetic demo history
-2026-02-02,216.3,,Synthetic demo history
-2026-02-03,216.2,,Synthetic demo history
-2026-02-04,216.1,,Synthetic demo history
-2026-02-05,215.5,,Synthetic demo history
-2026-02-06,214.8,,Synthetic demo history
-2026-02-07,216.8,,Synthetic demo history
-2026-02-08,218.8,38.125,Synthetic demo history
-2026-02-09,217.6,,Synthetic demo history
-2026-02-10,217.1,,Synthetic demo history
-2026-02-11,216,,Synthetic demo history
-2026-02-12,214.7,,Synthetic demo history
-2026-02-13,213.8,,Synthetic demo history
-2026-02-14,216.1,,Synthetic demo history
-2026-02-15,218.1,38.125,Synthetic demo history
-2026-02-16,217.4,,Synthetic demo history
-2026-02-17,216.6,,Synthetic demo history
-2026-02-18,215.5,,Synthetic demo history
-2026-02-19,214.5,,Synthetic demo history
-2026-02-20,213.4,,Synthetic demo history
-2026-02-21,215.5,,Synthetic demo history
-2026-02-22,216.9,37.75,Synthetic demo history
-2026-02-23,216.2,,Synthetic demo history
-2026-02-24,215.2,,Synthetic demo history
-2026-02-25,214.1,,Synthetic demo history
-2026-02-26,213.7,,Synthetic demo history
-2026-02-27,213,,Synthetic demo history
-2026-02-28,214.6,,Synthetic demo history
-2026-03-01,216.6,37.75,Synthetic demo history
-2026-03-02,215.3,,Synthetic demo history
-2026-03-03,214.2,,Synthetic demo history
-2026-03-04,213.4,,Synthetic demo history
-2026-03-05,213.1,,Synthetic demo history
-2026-03-06,211.8,,Synthetic demo history
-2026-03-07,214,,Synthetic demo history
-2026-03-08,216.1,37.625,Synthetic demo history
-2026-03-09,215.3,,Synthetic demo history
-2026-03-10,214.1,,Synthetic demo history
-2026-03-11,213,,Synthetic demo history
-2026-03-12,212.2,,Synthetic demo history
-2026-03-13,210.8,,Synthetic demo history
-2026-03-14,212.7,,Synthetic demo history
-2026-03-15,214.7,37.625,Synthetic demo history
-2026-03-16,213.7,,Synthetic demo history
-2026-03-17,212.9,,Synthetic demo history
-2026-03-18,212.1,,Synthetic demo history
-2026-03-19,210.8,,Synthetic demo history
-2026-03-20,210.8,,Synthetic demo history
-2026-03-21,212.8,,Synthetic demo history
-2026-03-22,214.9,37.5,Synthetic demo history
-2026-03-23,213.7,,Synthetic demo history
-2026-03-24,212.6,,Synthetic demo history
-2026-03-25,211.3,,Synthetic demo history
-2026-03-26,210.2,,Synthetic demo history
-2026-03-27,209.6,,Synthetic demo history
-2026-03-28,211.2,,Synthetic demo history
-2026-03-29,213.5,37.5,Synthetic demo history
-2026-03-30,212.8,,Synthetic demo history
-2026-03-31,212.6,,Synthetic demo history
-2026-04-01,212.1,,Synthetic demo history
-2026-04-02,210.8,,Synthetic demo history
-2026-04-03,210.7,,Synthetic demo history
-2026-04-04,211.7,,Synthetic demo history
-2026-04-05,214.1,37.375,Synthetic demo history
-2026-04-06,213.6,,Synthetic demo history
-2026-04-07,212.6,,Synthetic demo history
-2026-04-08,211.2,,Synthetic demo history
-2026-04-09,210.1,,Synthetic demo history
-2026-04-10,209.5,,Synthetic demo history
-2026-04-11,211.3,,Synthetic demo history
-2026-04-12,214.3,37.375,Synthetic demo history
-2026-04-13,213,,Synthetic demo history
-2026-04-14,212,,Synthetic demo history
-2026-04-15,210.7,,Synthetic demo history
-2026-04-16,209.8,,Synthetic demo history
-2026-04-17,208.4,,Synthetic demo history
-2026-04-18,211,,Synthetic demo history
-2026-04-19,213.4,37.25,Synthetic demo history
-2026-04-20,212.3,,Synthetic demo history
-2026-04-21,211.8,,Synthetic demo history
-2026-04-22,211,,Synthetic demo history
-2026-04-23,209.7,,Synthetic demo history
-2026-04-24,208.5,,Synthetic demo history
-2026-04-25,210.2,,Synthetic demo history
-2026-04-26,211.7,37.125,Synthetic demo history
-2026-04-27,210.9,,Synthetic demo history
-2026-04-28,210.4,,Synthetic demo history
-2026-04-29,209.8,,Synthetic demo history
-2026-04-30,209.7,,Synthetic demo history
-2026-05-01,209.3,,Synthetic demo history
-2026-05-02,210.5,,Synthetic demo history
-2026-05-03,212.8,37.125,Synthetic demo history
-2026-05-04,211.7,,Synthetic demo history
-2026-05-05,210.8,,Synthetic demo history
-2026-05-06,210,,Synthetic demo history
-2026-05-07,209.4,,Synthetic demo history
-2026-05-08,208.7,,Synthetic demo history
-2026-05-09,210.5,,Synthetic demo history
-2026-05-10,212.7,37.25,Synthetic demo history
-2026-05-11,211.6,,Synthetic demo history
-2026-05-12,211.2,,Synthetic demo history
-2026-05-13,209.9,,Synthetic demo history
-2026-05-14,209.1,,Synthetic demo history
-2026-05-15,208.1,,Synthetic demo history
-2026-05-16,210.1,,Synthetic demo history
-2026-05-17,212.6,37,Synthetic demo history
-2026-05-18,211.7,,Synthetic demo history
-2026-05-19,210.9,,Synthetic demo history
-2026-05-20,209.3,,Synthetic demo history
-2026-05-21,208.5,,Synthetic demo history
-2026-05-22,208,,Synthetic demo history
-2026-05-23,209.6,,Synthetic demo history
-2026-05-24,212.3,37.125,Synthetic demo history
-2026-05-25,213,,Synthetic demo history
-2026-05-26,213.7,,Synthetic demo history
-2026-05-27,210.9,,Synthetic demo history
-2026-05-28,208.8,,Synthetic demo history
-2026-05-29,207.6,,Synthetic demo history
-2026-05-30,209,,Synthetic demo history
-2026-05-31,211.1,37.125,Synthetic demo history
-2026-06-01,210.4,,Synthetic demo history
-2026-06-02,209.9,,Synthetic demo history
-2026-06-03,208.9,,Synthetic demo history
-2026-06-04,208.5,,Synthetic demo history
-2026-06-05,207.4,,Synthetic demo history
-2026-06-06,208.7,,Synthetic demo history
-2026-06-07,211.4,37.125,Synthetic demo history
-2026-06-08,210.7,,Synthetic demo history
-2026-06-09,210.2,,Synthetic demo history
-2026-06-10,208.9,,Synthetic demo history
-2026-06-11,208.4,,Synthetic demo history
-2026-06-12,208.2,,Synthetic demo history
-2026-06-13,209.4,,Synthetic demo history
-2026-06-14,211.3,37,Synthetic demo history
-2026-06-15,210.3,,Synthetic demo history
-2026-06-16,209.9,,Synthetic demo history
-2026-06-17,209,,Synthetic demo history
-2026-06-18,208.5,,Synthetic demo history
-2026-06-19,207.6,,Synthetic demo history
-2026-06-20,209.9,,Synthetic demo history
-2026-06-21,212,37.125,Synthetic demo history
-2026-06-22,211.5,,Synthetic demo history
-2026-06-23,210.8,,Synthetic demo history
-2026-06-24,210,,Synthetic demo history
-2026-06-25,209.1,,Synthetic demo history
-2026-06-26,208.1,,Synthetic demo history
-2026-06-27,209.6,,Synthetic demo history
-2026-06-28,212,37,Synthetic demo history
-2026-06-29,210.6,,Synthetic demo history
-2026-06-30,210.3,,Synthetic demo history
-2026-07-01,213,,Synthetic demo history
-2026-07-02,210.9,,Synthetic demo history
-2026-07-03,209.9,,Synthetic demo history
-2026-07-04,211.1,,Synthetic demo history
-2026-07-05,212.4,37.125,Synthetic demo history
-2026-07-06,212.1,,Synthetic demo history
-2026-07-07,211.3,,Synthetic demo history
-2026-07-08,210.3,,Synthetic demo history
-2026-07-09,209.6,,Synthetic demo history
-2026-07-10,209.3,,Synthetic demo history
-2026-07-11,210.7,,Synthetic demo history
-2026-07-12,212.8,37.125,Synthetic demo history
-2026-07-13,211.9,,Synthetic demo history
-2026-07-14,211.5,,Synthetic demo history
-2026-07-15,210,,Synthetic demo history
-2026-07-16,208.8,,Synthetic demo history
-2026-07-17,208.6,,Synthetic demo history
-2026-07-18,210.7,,Synthetic demo history
-2026-07-19,212.8,37.125,Synthetic demo history
-2026-07-20,211.6,,Synthetic demo history
-2026-07-21,211,,Synthetic demo history
-2026-07-22,210.4,,Synthetic demo history
-2026-07-23,210.1,,Synthetic demo history
-2026-07-24,209.4,,Synthetic demo history
-2026-07-25,210.9,,Synthetic demo history
-2026-07-26,212,37.25,Synthetic demo history
-2026-07-27,211.7,,Synthetic demo history
-2026-07-28,210.8,,Synthetic demo history
-2026-07-29,209.7,,Synthetic demo history
-2026-07-30,209.4,,Synthetic demo history
-2026-07-31,208.9,,Synthetic demo history
-2026-08-01,210.3,,Synthetic demo history
-2026-08-02,212.7,37.25,Synthetic demo history
-2026-08-03,211.4,,Synthetic demo history
-2026-08-04,212.5,,Synthetic demo history
-2026-08-05,211.5,,Synthetic demo history
-2026-08-06,210.5,,Synthetic demo history
-2026-08-07,210.1,,Synthetic demo history
-2026-08-08,211.6,,Synthetic demo history
-2026-08-09,213,37.375,Synthetic demo history
-2026-08-10,212.2,,Synthetic demo history
-2026-08-11,211.7,,Synthetic demo history
-2026-08-12,211.4,,Synthetic demo history
-2026-08-13,211.3,,Synthetic demo history
-2026-08-14,210.5,,Synthetic demo history
-2026-08-15,212,,Synthetic demo history
-2026-08-16,214.6,37.375,Synthetic demo history
-2026-08-17,214.1,,Synthetic demo history
-2026-08-18,213.8,,Synthetic demo history
-2026-08-19,213.1,,Synthetic demo history
-2026-08-20,212.5,,Synthetic demo history
-2026-08-21,211.8,,Synthetic demo history
-2026-08-22,213.7,,Synthetic demo history
-2026-08-23,215.6,37.625,Synthetic demo history
-2026-08-24,214.6,,Synthetic demo history
-2026-08-25,214.2,,Synthetic demo history
-2026-08-26,213.5,,Synthetic demo history
-2026-08-27,213,,Synthetic demo history
-2026-08-28,212.4,,Synthetic demo history
-2026-08-29,214.4,,Synthetic demo history
-2026-08-30,217.1,37.875,Synthetic demo history
-2026-08-31,216.4,,Synthetic demo history
-2026-09-01,215.1,,Synthetic demo history
-2026-09-02,214.4,,Synthetic demo history
-2026-09-03,214,,Synthetic demo history
-2026-09-04,212.8,,Synthetic demo history
-2026-09-05,215.4,,Synthetic demo history
-2026-09-06,217.3,37.75,Synthetic demo history
-2026-09-07,216.2,,Synthetic demo history
-2026-09-08,215.3,,Synthetic demo history
-2026-09-09,215.1,,Synthetic demo history
-2026-09-10,214.5,,Synthetic demo history
-2026-09-11,213.9,,Synthetic demo history
-2026-09-12,216.2,,Synthetic demo history
-2026-09-13,218.7,38,Synthetic demo history
-2026-09-14,217.5,,Synthetic demo history
-2026-09-15,216.8,,Synthetic demo history
-2026-09-16,215.8,,Synthetic demo history
-2026-09-17,214.6,,Synthetic demo history
-2026-09-18,214.1,,Synthetic demo history
-2026-09-19,216.8,,Synthetic demo history
-2026-09-20,218.9,38,Synthetic demo history
-2026-09-21,217.8,,Synthetic demo history
-2026-09-22,217.8,,Synthetic demo history
-2026-09-23,216.7,,Synthetic demo history
-2026-09-24,215.9,,Synthetic demo history
-2026-09-25,215.8,,Synthetic demo history
-2026-09-26,217,,Synthetic demo history
-2026-09-27,219.5,38.25,Synthetic demo history
-2026-09-28,218.1,,Synthetic demo history
-2026-09-29,218.4,,Synthetic demo history
-2026-09-30,217.9,,Synthetic demo history
-2026-10-01,216.8,,Synthetic demo history
-2026-10-02,216.7,,Synthetic demo history
-2026-10-03,218.8,,Synthetic demo history
-2026-10-04,220.8,38.5,Synthetic demo history
-2026-10-05,220.2,,Synthetic demo history
-2026-10-06,219.5,,Synthetic demo history
-2026-10-07,218.7,,Synthetic demo history
-2026-10-08,218.2,,Synthetic demo history
-2026-10-09,217.3,,Synthetic demo history
-2026-10-10,220.4,,Synthetic demo history
-2026-10-11,221.8,38.25,Synthetic demo history
-2026-10-12,220.9,,Synthetic demo history
-2026-10-13,220.1,,Synthetic demo history
-2026-10-14,219.6,,Synthetic demo history
-2026-10-15,218.8,,Synthetic demo history
-2026-10-16,218.4,,Synthetic demo history
-2026-10-17,220,,Synthetic demo history
-2026-10-18,222.3,38.625,Synthetic demo history
-2026-10-19,221.7,,Synthetic demo history
-2026-10-20,221.1,,Synthetic demo history
-2026-10-21,220.7,,Synthetic demo history
-2026-10-22,219.7,,Synthetic demo history
-2026-10-23,218.8,,Synthetic demo history
-2026-10-24,220.4,,Synthetic demo history
-2026-10-25,223.2,38.5,Synthetic demo history
-2026-10-26,222,,Synthetic demo history
-2026-10-27,221.2,,Synthetic demo history
-2026-10-28,220.3,,Synthetic demo history
-2026-10-29,220.1,,Synthetic demo history
-2026-10-30,219.1,,Synthetic demo history
-2026-10-31,221,,Synthetic demo history
-2026-11-01,223.6,38.625,Synthetic demo history
-2026-11-02,222.9,,Synthetic demo history
-2026-11-03,222.3,,Synthetic demo history
-2026-11-04,221.2,,Synthetic demo history
-2026-11-05,220.6,,Synthetic demo history
-2026-11-06,219.8,,Synthetic demo history
-2026-11-07,221.8,,Synthetic demo history
-2026-11-08,224,39,Synthetic demo history
+Date,Weight (lb),Gut (in)
+2020-01-01,188.5,
+2020-01-02,187.4,
+2020-01-03,187,
+2020-01-04,189.1,
+2020-01-05,191.1,34
+2020-01-06,190.4,
+2020-01-07,189.6,
+2020-01-08,188.7,
+2020-01-09,187.3,
+2020-01-10,186.5,
+2020-01-11,188.7,
+2020-01-12,190.9,33.875
+2020-01-13,190.3,
+2020-01-14,188.9,
+2020-01-15,188.1,
+2020-01-16,188.6,
+2020-01-17,187,
+2020-01-18,188.6,
+2020-01-19,190.7,33.75
+2020-01-20,189.7,
+2020-01-21,188.5,
+2020-01-22,186.8,
+2020-01-23,185.7,
+2020-01-24,185.6,
+2020-01-25,187.8,
+2020-01-26,190.1,33.875
+2020-01-27,189,
+2020-01-28,188,
+2020-01-29,187.4,
+2020-01-30,186.2,
+2020-01-31,185.9,
+2020-02-01,187.2,
+2020-02-02,189.8,33.875
+2020-02-03,189.1,
+2020-02-04,188.2,
+2020-02-05,186.8,
+2020-02-06,186.3,
+2020-02-07,185.2,
+2020-02-08,186.9,
+2020-02-09,189.1,33.625
+2020-02-10,188.5,
+2020-02-11,188.1,
+2020-02-12,187.2,
+2020-02-13,185.8,
+2020-02-14,185.5,
+2020-02-15,186.3,
+2020-02-16,188.4,33.625
+2020-02-17,187.7,
+2020-02-18,186.6,
+2020-02-19,186.1,
+2020-02-20,184.7,
+2020-02-21,183.8,
+2020-02-22,185.4,
+2020-02-23,187.9,33.625
+2020-02-24,187.8,
+2020-02-25,187.1,
+2020-02-26,185.2,
+2020-02-27,184.6,
+2020-02-28,183.3,
+2020-02-29,185.8,
+2020-03-01,188.2,33.625
+2020-03-02,187.2,
+2020-03-03,185.6,
+2020-03-04,184.8,
+2020-03-05,184.1,
+2020-03-06,183.2,
+2020-03-07,185.3,
+2020-03-08,187.9,33.375
+2020-03-09,186.6,
+2020-03-10,185.4,
+2020-03-11,183.7,
+2020-03-12,182.9,
+2020-03-13,182,
+2020-03-14,183.8,
+2020-03-15,185.8,33.375
+2020-03-16,184.9,
+2020-03-17,184.6,
+2020-03-18,183.6,
+2020-03-19,182.9,
+2020-03-20,182.8,
+2020-03-21,183.9,
+2020-03-22,185.4,33.25
+2020-03-23,184,
+2020-03-24,184.2,
+2020-03-25,182.7,
+2020-03-26,182.1,
+2020-03-27,181.6,
+2020-03-28,182.6,
+2020-03-29,184.9,33.125
+2020-03-30,183.5,
+2020-03-31,182.5,
+2020-04-01,181.6,
+2020-04-02,180.9,
+2020-04-03,180.5,
+2020-04-04,182.7,
+2020-04-05,184.6,33
+2020-04-06,183.9,
+2020-04-07,183.2,
+2020-04-08,181.5,
+2020-04-09,181.5,
+2020-04-10,180.3,
+2020-04-11,182.5,
+2020-04-12,185.1,33.125
+2020-04-13,184.3,
+2020-04-14,183.4,
+2020-04-15,181.6,
+2020-04-16,181.2,
+2020-04-17,180.8,
+2020-04-18,182.4,
+2020-04-19,185.4,33.125
+2020-04-20,184.1,
+2020-04-21,183.7,
+2020-04-22,182.7,
+2020-04-23,181.8,
+2020-04-24,180.7,
+2020-04-25,182.8,
+2020-04-26,184.4,33.125
+2020-04-27,183,
+2020-04-28,182.7,
+2020-04-29,180.8,
+2020-04-30,179.9,
+2020-05-01,179,
+2020-05-02,181.5,
+2020-05-03,183.2,33
+2020-05-04,182.3,
+2020-05-05,181.6,
+2020-05-06,181.3,
+2020-05-07,180.2,
+2020-05-08,179.2,
+2020-05-09,180.6,
+2020-05-10,183.1,32.875
+2020-05-11,181.6,
+2020-05-12,180.6,
+2020-05-13,179.7,
+2020-05-14,178.5,
+2020-05-15,177.9,
+2020-05-16,179.3,
+2020-05-17,181.6,32.625
+2020-05-18,181,
+2020-05-19,180.1,
+2020-05-20,179.4,
+2020-05-21,178.4,
+2020-05-22,178.3,
+2020-05-23,179.5,
+2020-05-24,182.3,32.625
+2020-05-25,181.4,
+2020-05-26,180.7,
+2020-05-27,179.1,
+2020-05-28,178.7,
+2020-05-29,178.1,
+2020-05-30,179.5,
+2020-05-31,182.1,32.75
+2020-06-01,180.9,
+2020-06-02,179.9,
+2020-06-03,178.1,
+2020-06-04,177.1,
+2020-06-05,179.3,
+2020-06-06,179.8,
+2020-06-07,181.4,32.625
+2020-06-08,179.9,
+2020-06-09,179.4,
+2020-06-10,178.3,
+2020-06-11,177.8,
+2020-06-12,177.7,
+2020-06-13,179.6,
+2020-06-14,181.7,32.875
+2020-06-15,180.6,
+2020-06-16,180.4,
+2020-06-17,179.3,
+2020-06-18,178.7,
+2020-06-19,178.3,
+2020-06-20,180.6,
+2020-06-21,182,32.875
+2020-06-22,181.5,
+2020-06-23,181.1,
+2020-06-24,180.2,
+2020-06-25,181.5,
+2020-06-26,180.7,
+2020-06-27,182.1,
+2020-06-28,184,32.75
+2020-06-29,183,
+2020-06-30,182.4,
+2020-07-01,181.3,
+2020-07-02,181.1,
+2020-07-03,179.9,
+2020-07-04,181.3,
+2020-07-05,183.5,32.875
+2020-07-06,182.5,
+2020-07-07,181.4,
+2020-07-08,180.2,
+2020-07-09,179.1,
+2020-07-10,178.8,
+2020-07-11,180.4,
+2020-07-12,183,32.875
+2020-07-13,182,
+2020-07-14,181.1,
+2020-07-15,180.5,
+2020-07-16,179.3,
+2020-07-17,179.1,
+2020-07-18,180.7,
+2020-07-19,183.3,32.625
+2020-07-20,182,
+2020-07-21,181.4,
+2020-07-22,180.4,
+2020-07-23,180.2,
+2020-07-24,181.7,
+2020-07-25,182.7,
+2020-07-26,184.4,32.75
+2020-07-27,182.9,
+2020-07-28,182.5,
+2020-07-29,181.6,
+2020-07-30,181,
+2020-07-31,180.1,
+2020-08-01,183,
+2020-08-02,185.2,33
+2020-08-03,184.3,
+2020-08-04,182.9,
+2020-08-05,181.9,
+2020-08-06,181,
+2020-08-07,180.2,
+2020-08-08,182.6,
+2020-08-09,187.4,33.125
+2020-08-10,185.6,
+2020-08-11,184.3,
+2020-08-12,182.8,
+2020-08-13,181.6,
+2020-08-14,181.2,
+2020-08-15,182.6,
+2020-08-16,184.7,33.125
+2020-08-17,183.9,
+2020-08-18,182.8,
+2020-08-19,182.5,
+2020-08-20,182.1,
+2020-08-21,181.1,
+2020-08-22,183.1,
+2020-08-23,185.4,33.375
+2020-08-24,184.9,
+2020-08-25,184.5,
+2020-08-26,183.9,
+2020-08-27,182.9,
+2020-08-28,182.6,
+2020-08-29,184.6,
+2020-08-30,187.2,33.375
+2020-08-31,186.2,
+2020-09-01,185,
+2020-09-02,184,
+2020-09-03,183.2,
+2020-09-04,183.1,
+2020-09-05,185.5,
+2020-09-06,188,33.5
+2020-09-07,187.2,
+2020-09-08,186.6,
+2020-09-09,185.9,
+2020-09-10,185.3,
+2020-09-11,184.3,
+2020-09-12,186.7,
+2020-09-13,188.2,33.5
+2020-09-14,187.8,
+2020-09-15,186.7,
+2020-09-16,186.7,
+2020-09-17,185.3,
+2020-09-18,184.7,
+2020-09-19,186.6,
+2020-09-20,189.1,33.625
+2020-09-21,188.1,
+2020-09-22,186.6,
+2020-09-23,186.3,
+2020-09-24,185,
+2020-09-25,184.7,
+2020-09-26,186.9,
+2020-09-27,189.4,33.875
+2020-09-28,187.8,
+2020-09-29,186.9,
+2020-09-30,186.4,
+2020-10-01,186.2,
+2020-10-02,185.4,
+2020-10-03,187.2,
+2020-10-04,189.3,33.875
+2020-10-05,188.5,
+2020-10-06,188.7,
+2020-10-07,187.6,
+2020-10-08,187,
+2020-10-09,186.4,
+2020-10-10,188,
+2020-10-11,190.1,33.75
+2020-10-12,189.7,
+2020-10-13,189,
+2020-10-14,188.6,
+2020-10-15,187.8,
+2020-10-16,186.9,
+2020-10-17,189.4,
+2020-10-18,191.7,34.125
+2020-10-19,190.2,
+2020-10-20,189.7,
+2020-10-21,189,
+2020-10-22,188.8,
+2020-10-23,188.2,
+2020-10-24,190.1,
+2020-10-25,191.5,34.125
+2020-10-26,191.1,
+2020-10-27,190.9,
+2020-10-28,190,
+2020-10-29,189.3,
+2020-10-30,188.7,
+2020-10-31,190.7,
+2020-11-01,193.1,34.375
+2020-11-02,192.3,
+2020-11-03,191.8,
+2020-11-04,191.7,
+2020-11-05,190.7,
+2020-11-06,190.1,
+2020-11-07,191.7,
+2020-11-08,193.6,34.5
+2020-11-09,192.6,
+2020-11-10,192.4,
+2020-11-11,191.4,
+2020-11-12,190.5,
+2020-11-13,190.1,
+2020-11-14,192.2,
+2020-11-15,194.7,34.5
+2020-11-16,193.6,
+2020-11-17,192.5,
+2020-11-18,191.2,
+2020-11-19,190.6,
+2020-11-20,189.9,
+2020-11-21,192.8,
+2020-11-22,194.5,34.5
+2020-11-23,193,
+2020-11-24,192.7,
+2020-11-25,191.9,
+2020-11-26,192,
+2020-11-27,191,
+2020-11-28,192.8,
+2020-11-29,194.6,34.5
+2020-11-30,193.2,
+2020-12-01,194.1,
+2020-12-02,192.7,
+2020-12-03,191.9,
+2020-12-04,193.5,
+2020-12-05,194.7,
+2020-12-06,196.3,34.625
+2020-12-07,195.1,
+2020-12-08,194.6,
+2020-12-09,193.9,
+2020-12-10,192.7,
+2020-12-11,192.4,
+2020-12-12,194.2,
+2020-12-13,196.2,34.625
+2020-12-14,195.6,
+2020-12-15,194.6,
+2020-12-16,193.4,
+2020-12-17,193.2,
+2020-12-18,191.9,
+2020-12-19,193.8,
+2020-12-20,196.4,34.75
+2020-12-21,194.9,
+2020-12-22,194.7,
+2020-12-23,194,
+2020-12-24,193.2,
+2020-12-25,192.1,
+2020-12-26,194.3,
+2020-12-27,196.8,34.875
+2020-12-28,195.2,
+2020-12-29,194.9,
+2020-12-30,193.6,
+2020-12-31,192.9,
+2021-01-01,191.5,
+2021-01-02,195.7,
+2021-01-03,196.8,34.5
+2021-01-04,195.3,
+2021-01-05,194.2,
+2021-01-06,192.9,
+2021-01-07,191.3,
+2021-01-08,190.7,
+2021-01-09,192.4,
+2021-01-10,194.7,34.5
+2021-01-11,193.5,
+2021-01-12,193.1,
+2021-01-13,192.2,
+2021-01-14,191.8,
+2021-01-15,193.4,
+2021-01-16,193.3,
+2021-01-17,194.7,34.375
+2021-01-18,193.9,
+2021-01-19,192.7,
+2021-01-20,191.7,
+2021-01-21,191.3,
+2021-01-22,190.4,
+2021-01-23,192.1,
+2021-01-24,194.8,34.5
+2021-01-25,193.4,
+2021-01-26,192.9,
+2021-01-27,191.2,
+2021-01-28,190.4,
+2021-01-29,189.6,
+2021-01-30,192.3,
+2021-01-31,194.3,34.5
+2021-02-01,192.9,
+2021-02-02,192,
+2021-02-03,190.6,
+2021-02-04,190.2,
+2021-02-05,189.3,
+2021-02-06,191,
+2021-02-07,192.8,34.25
+2021-02-08,191.6,
+2021-02-09,190.6,
+2021-02-10,189.5,
+2021-02-11,189.4,
+2021-02-12,189,
+2021-02-13,190.2,
+2021-02-14,192.4,34.25
+2021-02-15,191.4,
+2021-02-16,190.6,
+2021-02-17,190,
+2021-02-18,188.5,
+2021-02-19,187.9,
+2021-02-20,190.1,
+2021-02-21,192.2,34.25
+2021-02-22,191.4,
+2021-02-23,190,
+2021-02-24,189.3,
+2021-02-25,188.4,
+2021-02-26,187.7,
+2021-02-27,189.8,
+2021-02-28,191.7,34.125
+2021-03-01,190.9,
+2021-03-02,190.3,
+2021-03-03,189.6,
+2021-03-04,188.5,
+2021-03-05,187.9,
+2021-03-06,189.4,
+2021-03-07,191.2,34.25
+2021-03-08,190.5,
+2021-03-09,189.5,
+2021-03-10,188.5,
+2021-03-11,187.7,
+2021-03-12,187.3,
+2021-03-13,188.4,
+2021-03-14,190.8,33.875
+2021-03-15,189.6,
+2021-03-16,189.5,
+2021-03-17,188.4,
+2021-03-18,186.6,
+2021-03-19,185.9,
+2021-03-20,187.8,
+2021-03-21,190.2,34
+2021-03-22,189.3,
+2021-03-23,188.4,
+2021-03-24,187.1,
+2021-03-25,186.5,
+2021-03-26,185.1,
+2021-03-27,187.4,
+2021-03-28,193,33.75
+2021-03-29,189.9,
+2021-03-30,188.7,
+2021-03-31,186.8,
+2021-04-01,186.6,
+2021-04-02,185,
+2021-04-03,186.6,
+2021-04-04,188.8,33.75
+2021-04-05,187.3,
+2021-04-06,187.5,
+2021-04-07,186.5,
+2021-04-08,186.4,
+2021-04-09,186,
+2021-04-10,187.3,
+2021-04-11,188.8,33.875
+2021-04-12,188.6,
+2021-04-13,190.5,
+2021-04-14,187.9,
+2021-04-15,186.9,
+2021-04-16,185.4,
+2021-04-17,187.1,
+2021-04-18,189.8,33.75
+2021-04-19,191.1,
+2021-04-20,188.5,
+2021-04-21,187.1,
+2021-04-22,186.1,
+2021-04-23,184.7,
+2021-04-24,187.4,
+2021-04-25,188.5,33.75
+2021-04-26,187.8,
+2021-04-27,186.9,
+2021-04-28,186.6,
+2021-04-29,186.1,
+2021-04-30,185.9,
+2021-05-01,187.1,
+2021-05-02,189.9,33.75
+2021-05-03,188.2,
+2021-05-04,187.5,
+2021-05-05,186.1,
+2021-05-06,184.9,
+2021-05-07,184.1,
+2021-05-08,186.3,
+2021-05-09,187.9,33.5
+2021-05-10,186.7,
+2021-05-11,186.5,
+2021-05-12,185.5,
+2021-05-13,184.8,
+2021-05-14,184.1,
+2021-05-15,185.5,
+2021-05-16,187.3,33.375
+2021-05-17,186.3,
+2021-05-18,185.7,
+2021-05-19,185.2,
+2021-05-20,184.1,
+2021-05-21,184.2,
+2021-05-22,185.9,
+2021-05-23,187.7,33.625
+2021-05-24,187.4,
+2021-05-25,185.9,
+2021-05-26,184.3,
+2021-05-27,183.8,
+2021-05-28,186.1,
+2021-05-29,187.3,
+2021-05-30,188.2,33.5
+2021-05-31,186.8,
+2021-06-01,185.6,
+2021-06-02,184.4,
+2021-06-03,184.2,
+2021-06-04,183.1,
+2021-06-05,184.3,
+2021-06-06,186.2,33.25
+2021-06-07,185.7,
+2021-06-08,185.2,
+2021-06-09,184.4,
+2021-06-10,183.7,
+2021-06-11,182.9,
+2021-06-12,184.2,
+2021-06-13,186.3,33.375
+2021-06-14,185.6,
+2021-06-15,184.9,
+2021-06-16,185.8,
+2021-06-17,183.9,
+2021-06-18,182.9,
+2021-06-19,184.7,
+2021-06-20,187.1,33.5
+2021-06-21,186.8,
+2021-06-22,186,
+2021-06-23,184.9,
+2021-06-24,184,
+2021-06-25,183.1,
+2021-06-26,184.9,
+2021-06-27,187.7,33.375
+2021-06-28,186.9,
+2021-06-29,186.4,
+2021-06-30,185.1,
+2021-07-01,183.7,
+2021-07-02,182.4,
+2021-07-03,184.5,
+2021-07-04,187.4,33.375
+2021-07-05,186.2,
+2021-07-06,186,
+2021-07-07,184.6,
+2021-07-08,184.4,
+2021-07-09,183.2,
+2021-07-10,184.7,
+2021-07-11,186.6,33.25
+2021-07-12,185.8,
+2021-07-13,184.9,
+2021-07-14,183.8,
+2021-07-15,182.6,
+2021-07-16,181.7,
+2021-07-17,183.5,
+2021-07-18,185.6,33.375
+2021-07-19,184.4,
+2021-07-20,184.1,
+2021-07-21,182.8,
+2021-07-22,182.6,
+2021-07-23,181.8,
+2021-07-24,183.9,
+2021-07-25,186.4,33.25
+2021-07-26,186.1,
+2021-07-27,185,
+2021-07-28,184.2,
+2021-07-29,183.7,
+2021-07-30,182.6,
+2021-07-31,184.3,
+2021-08-01,187,33.375
+2021-08-02,185.8,
+2021-08-03,185.2,
+2021-08-04,184.8,
+2021-08-05,184.1,
+2021-08-06,183.4,
+2021-08-07,186,
+2021-08-08,187.9,33.5
+2021-08-09,187.1,
+2021-08-10,186.3,
+2021-08-11,185,
+2021-08-12,185.1,
+2021-08-13,184.2,
+2021-08-14,185.7,
+2021-08-15,188.5,33.625
+2021-08-16,187.3,
+2021-08-17,187.3,
+2021-08-18,186.3,
+2021-08-19,186,
+2021-08-20,184.6,
+2021-08-21,187.2,
+2021-08-22,190,34
+2021-08-23,188.5,
+2021-08-24,187.4,
+2021-08-25,186.7,
+2021-08-26,187,
+2021-08-27,186.3,
+2021-08-28,188,
+2021-08-29,189.5,33.875
+2021-08-30,188.9,
+2021-08-31,188.1,
+2021-09-01,187.4,
+2021-09-02,187.4,
+2021-09-03,187.1,
+2021-09-04,188.3,
+2021-09-05,191.4,34
+2021-09-06,190.2,
+2021-09-07,189.2,
+2021-09-08,189,
+2021-09-09,188,
+2021-09-10,187,
+2021-09-11,189.1,
+2021-09-12,191.8,34
+2021-09-13,190.1,
+2021-09-14,189.8,
+2021-09-15,188.8,
+2021-09-16,188.3,
+2021-09-17,187.3,
+2021-09-18,190,
+2021-09-19,192.3,34.25
+2021-09-20,191.6,
+2021-09-21,191.2,
+2021-09-22,190.6,
+2021-09-23,190,
+2021-09-24,189.2,
+2021-09-25,191.5,
+2021-09-26,193.3,34.25
+2021-09-27,192.3,
+2021-09-28,191.2,
+2021-09-29,191.1,
+2021-09-30,190.5,
+2021-10-01,189.5,
+2021-10-02,191.7,
+2021-10-03,194.6,34.5
+2021-10-04,193.4,
+2021-10-05,192.7,
+2021-10-06,192,
+2021-10-07,191,
+2021-10-08,190.4,
+2021-10-09,192,
+2021-10-10,194,34.375
+2021-10-11,193.9,
+2021-10-12,193.2,
+2021-10-13,192.3,
+2021-10-14,191.6,
+2021-10-15,190.5,
+2021-10-16,192.7,
+2021-10-17,194.9,34.5
+2021-10-18,193.9,
+2021-10-19,193.2,
+2021-10-20,192,
+2021-10-21,191.9,
+2021-10-22,191.1,
+2021-10-23,193.7,
+2021-10-24,196.6,34.625
+2021-10-25,195,
+2021-10-26,195,
+2021-10-27,193.3,
+2021-10-28,192.4,
+2021-10-29,191.4,
+2021-10-30,193.5,
+2021-10-31,196.5,34.625
+2021-11-01,195.5,
+2021-11-02,194.6,
+2021-11-03,193.7,
+2021-11-04,193.3,
+2021-11-05,192.6,
+2021-11-06,195.3,
+2021-11-07,197.5,35
+2021-11-08,196.6,
+2021-11-09,195.6,
+2021-11-10,194,
+2021-11-11,193.2,
+2021-11-12,192.3,
+2021-11-13,194.8,
+2021-11-14,197.7,34.875
+2021-11-15,196.2,
+2021-11-16,195.7,
+2021-11-17,198.1,
+2021-11-18,196.5,
+2021-11-19,195,
+2021-11-20,196.6,
+2021-11-21,199.1,35.25
+2021-11-22,197.5,
+2021-11-23,197.1,
+2021-11-24,195.6,
+2021-11-25,194.8,
+2021-11-26,194.2,
+2021-11-27,195.9,
+2021-11-28,198.2,34.875
+2021-11-29,198.1,
+2021-11-30,196.6,
+2021-12-01,196,
+2021-12-02,196,
+2021-12-03,196,
+2021-12-04,197.5,
+2021-12-05,200.4,35.375
+2021-12-06,199,
+2021-12-07,198.2,
+2021-12-08,197,
+2021-12-09,196.2,
+2021-12-10,195.5,
+2021-12-11,198,
+2021-12-12,199.6,35.25
+2021-12-13,198.8,
+2021-12-14,198.4,
+2021-12-15,197.6,
+2021-12-16,197.5,
+2021-12-17,196.4,
+2021-12-18,197.8,
+2021-12-19,199.8,35.25
+2021-12-20,198.6,
+2021-12-21,198.3,
+2021-12-22,197.4,
+2021-12-23,196.8,
+2021-12-24,196.1,
+2021-12-25,197.9,
+2021-12-26,199.4,35.125
+2021-12-27,198.7,
+2021-12-28,197.7,
+2021-12-29,196.5,
+2021-12-30,195.9,
+2021-12-31,194.9,
+2022-01-01,196.8,
+2022-01-02,198.9,35.25
+2022-01-03,198.2,
+2022-01-04,197.8,
+2022-01-05,197.6,
+2022-01-06,196.8,
+2022-01-07,195.9,
+2022-01-08,197.9,
+2022-01-09,199.8,35.375
+2022-01-10,199,
+2022-01-11,198.2,
+2022-01-12,197,
+2022-01-13,196.6,
+2022-01-14,195.1,
+2022-01-15,197.5,
+2022-01-16,200.4,35.375
+2022-01-17,198.7,
+2022-01-18,198,
+2022-01-19,197.6,
+2022-01-20,196.5,
+2022-01-21,195.2,
+2022-01-22,197.4,
+2022-01-23,200,35.125
+2022-01-24,199.7,
+2022-01-25,198.7,
+2022-01-26,198,
+2022-01-27,197.1,
+2022-01-28,196.8,
+2022-01-29,198,
+2022-01-30,200.1,35.125
+2022-01-31,199.4,
+2022-02-01,198.2,
+2022-02-02,197.7,
+2022-02-03,197,
+2022-02-04,195.7,
+2022-02-05,197.8,
+2022-02-06,199.7,35.25
+2022-02-07,198.3,
+2022-02-08,197.5,
+2022-02-09,196.6,
+2022-02-10,195.9,
+2022-02-11,195,
+2022-02-12,196.3,
+2022-02-13,197.7,35
+2022-02-14,197,
+2022-02-15,196.8,
+2022-02-16,196.4,
+2022-02-17,195.2,
+2022-02-18,194.8,
+2022-02-19,195.7,
+2022-02-20,198.8,35
+2022-02-21,200.9,
+2022-02-22,198.3,
+2022-02-23,197,
+2022-02-24,196.1,
+2022-02-25,194.7,
+2022-02-26,196,
+2022-02-27,198.1,35
+2022-02-28,196.9,
+2022-03-01,196.6,
+2022-03-02,195.5,
+2022-03-03,195.3,
+2022-03-04,194.5,
+2022-03-05,196,
+2022-03-06,198,35
+2022-03-07,197.2,
+2022-03-08,196.1,
+2022-03-09,195.2,
+2022-03-10,194.7,
+2022-03-11,193.7,
+2022-03-12,195.6,
+2022-03-13,198.2,34.875
+2022-03-14,197.1,
+2022-03-15,196.3,
+2022-03-16,194.4,
+2022-03-17,193.7,
+2022-03-18,192.7,
+2022-03-19,195.2,
+2022-03-20,196.3,34.75
+2022-03-21,195.8,
+2022-03-22,194.6,
+2022-03-23,193.8,
+2022-03-24,192.8,
+2022-03-25,192.2,
+2022-03-26,193.5,
+2022-03-27,196.3,34.75
+2022-03-28,194.8,
+2022-03-29,194.1,
+2022-03-30,192.4,
+2022-03-31,191.3,
+2022-04-01,190.4,
+2022-04-02,191.9,
+2022-04-03,194.9,34.625
+2022-04-04,193.4,
+2022-04-05,192.8,
+2022-04-06,192.2,
+2022-04-07,191.4,
+2022-04-08,190.4,
+2022-04-09,192,
+2022-04-10,194.3,34.5
+2022-04-11,192.8,
+2022-04-12,192,
+2022-04-13,190.3,
+2022-04-14,189.8,
+2022-04-15,189.1,
+2022-04-16,191,
+2022-04-17,193.5,34.5
+2022-04-18,192.7,
+2022-04-19,192.6,
+2022-04-20,192.3,
+2022-04-21,191.2,
+2022-04-22,190.4,
+2022-04-23,191.9,
+2022-04-24,193.9,34.375
+2022-04-25,193.2,
+2022-04-26,192.6,
+2022-04-27,192,
+2022-04-28,191.4,
+2022-04-29,191.1,
+2022-04-30,192.9,
+2022-05-01,195,34.625
+2022-05-02,194.3,
+2022-05-03,193.2,
+2022-05-04,192.4,
+2022-05-05,191.4,
+2022-05-06,191.1,
+2022-05-07,192,
+2022-05-08,194.1,34.5
+2022-05-09,192.9,
+2022-05-10,192.3,
+2022-05-11,191.1,
+2022-05-12,191.2,
+2022-05-13,190.1,
+2022-05-14,192.1,
+2022-05-15,193.7,34.5
+2022-05-16,193.3,
+2022-05-17,192.3,
+2022-05-18,191.3,
+2022-05-19,190.5,
+2022-05-20,190.1,
+2022-05-21,191.7,
+2022-05-22,195.1,34.5
+2022-05-23,193.1,
+2022-05-24,191.7,
+2022-05-25,190.8,
+2022-05-26,189.5,
+2022-05-27,188.6,
+2022-05-28,191.2,
+2022-05-29,193,34.25
+2022-05-30,192.9,
+2022-05-31,192.3,
+2022-06-01,190.6,
+2022-06-02,192.5,
+2022-06-03,190.1,
+2022-06-04,191.2,
+2022-06-05,193.7,34.25
+2022-06-06,193.1,
+2022-06-07,191.9,
+2022-06-08,190.7,
+2022-06-09,189.4,
+2022-06-10,188.4,
+2022-06-11,190.4,
+2022-06-12,192.4,34.25
+2022-06-13,191.8,
+2022-06-14,191.2,
+2022-06-15,190.7,
+2022-06-16,190.4,
+2022-06-17,189.6,
+2022-06-18,190.9,
+2022-06-19,192.8,34.125
+2022-06-20,191.8,
+2022-06-21,190.9,
+2022-06-22,189.8,
+2022-06-23,189.3,
+2022-06-24,188,
+2022-06-25,190.2,
+2022-06-26,191.5,34.125
+2022-06-27,191.3,
+2022-06-28,190.9,
+2022-06-29,190.2,
+2022-06-30,188.7,
+2022-07-01,188.4,
+2022-07-02,189.3,
+2022-07-03,191.4,34.25
+2022-07-04,190.5,
+2022-07-05,190,
+2022-07-06,188.7,
+2022-07-07,188.5,
+2022-07-08,188,
+2022-07-09,190.3,
+2022-07-10,192.4,34.125
+2022-07-11,191.6,
+2022-07-12,193.5,
+2022-07-13,191.7,
+2022-07-14,190.8,
+2022-07-15,189.6,
+2022-07-16,191.2,
+2022-07-17,193.8,34.25
+2022-07-18,193.3,
+2022-07-19,192.3,
+2022-07-20,190.8,
+2022-07-21,189.9,
+2022-07-22,188.9,
+2022-07-23,191.1,
+2022-07-24,194.2,34.375
+2022-07-25,193.7,
+2022-07-26,192.4,
+2022-07-27,191.1,
+2022-07-28,190.2,
+2022-07-29,189.7,
+2022-07-30,192.1,
+2022-07-31,194.4,34.5
+2022-08-01,193.8,
+2022-08-02,192.4,
+2022-08-03,191.1,
+2022-08-04,190.5,
+2022-08-05,189.5,
+2022-08-06,192.3,
+2022-08-07,194.7,34.625
+2022-08-08,193.7,
+2022-08-09,193.5,
+2022-08-10,192.3,
+2022-08-11,191.4,
+2022-08-12,191.1,
+2022-08-13,193.4,
+2022-08-14,195.3,34.5
+2022-08-15,194.4,
+2022-08-16,193.5,
+2022-08-17,192.8,
+2022-08-18,192.1,
+2022-08-19,191.4,
+2022-08-20,193,
+2022-08-21,195,34.5
+2022-08-22,194.3,
+2022-08-23,193.1,
+2022-08-24,192.1,
+2022-08-25,191.9,
+2022-08-26,190.8,
+2022-08-27,193.2,
+2022-08-28,195.7,34.875
+2022-08-29,195.1,
+2022-08-30,194.4,
+2022-08-31,194.2,
+2022-09-01,193.3,
+2022-09-02,192.6,
+2022-09-03,194.7,
+2022-09-04,197.4,34.875
+2022-09-05,196.2,
+2022-09-06,195.5,
+2022-09-07,194.4,
+2022-09-08,194.4,
+2022-09-09,193.6,
+2022-09-10,195.6,
+2022-09-11,197.4,35
+2022-09-12,196.3,
+2022-09-13,195.5,
+2022-09-14,195.8,
+2022-09-15,195.4,
+2022-09-16,195,
+2022-09-17,196.8,
+2022-09-18,199,35.125
+2022-09-19,197.9,
+2022-09-20,196.7,
+2022-09-21,195.6,
+2022-09-22,195.3,
+2022-09-23,194.6,
+2022-09-24,196.9,
+2022-09-25,199.6,35.25
+2022-09-26,198.4,
+2022-09-27,198.2,
+2022-09-28,197.7,
+2022-09-29,197.2,
+2022-09-30,196.2,
+2022-10-01,198.3,
+2022-10-02,200.2,35.5
+2022-10-03,199.8,
+2022-10-04,198.6,
+2022-10-05,197.2,
+2022-10-06,196.9,
+2022-10-07,196.5,
+2022-10-08,198.7,
+2022-10-09,201.2,35.5
+2022-10-10,200.7,
+2022-10-11,200.3,
+2022-10-12,199.4,
+2022-10-13,198.4,
+2022-10-14,197.1,
+2022-10-15,198.6,
+2022-10-16,201.4,35.375
+2022-10-17,201.1,
+2022-10-18,199.8,
+2022-10-19,198.5,
+2022-10-20,198.2,
+2022-10-21,197,
+2022-10-22,199,
+2022-10-23,201.6,35.625
+2022-10-24,201.2,
+2022-10-25,200.8,
+2022-10-26,199.6,
+2022-10-27,198.7,
+2022-10-28,197.7,
+2022-10-29,200,
+2022-10-30,202.3,35.625
+2022-10-31,201.5,
+2022-11-01,200.4,
+2022-11-02,198.7,
+2022-11-03,198.8,
+2022-11-04,198.2,
+2022-11-05,200.8,
+2022-11-06,202.4,35.75
+2022-11-07,201.3,
+2022-11-08,200.9,
+2022-11-09,200.1,
+2022-11-10,199.9,
+2022-11-11,199.2,
+2022-11-12,200.6,
+2022-11-13,203.2,35.875
+2022-11-14,201.8,
+2022-11-15,201.5,
+2022-11-16,200,
+2022-11-17,199.3,
+2022-11-18,198.5,
+2022-11-19,201,
+2022-11-20,203,35.875
+2022-11-21,202.3,
+2022-11-22,201.9,
+2022-11-23,200.7,
+2022-11-24,199.8,
+2022-11-25,199,
+2022-11-26,200.9,
+2022-11-27,203.4,35.75
+2022-11-28,201.7,
+2022-11-29,201.7,
+2022-11-30,201.1,
+2022-12-01,201.4,
+2022-12-02,200.4,
+2022-12-03,204.7,
+2022-12-04,206.1,36
+2022-12-05,204.7,
+2022-12-06,204.4,
+2022-12-07,203.3,
+2022-12-08,204.3,
+2022-12-09,202.9,
+2022-12-10,203.6,
+2022-12-11,205.2,36.25
+2022-12-12,204.1,
+2022-12-13,203.6,
+2022-12-14,202.1,
+2022-12-15,202.4,
+2022-12-16,201.1,
+2022-12-17,202.8,
+2022-12-18,204.4,36
+2022-12-19,204.4,
+2022-12-20,204,
+2022-12-21,202.7,
+2022-12-22,202.1,
+2022-12-23,201.7,
+2022-12-24,203.1,
+2022-12-25,205.2,36.125
+2022-12-26,204.6,
+2022-12-27,204.4,
+2022-12-28,203.5,
+2022-12-29,202.9,
+2022-12-30,202.4,
+2022-12-31,204.3,
+2023-01-01,205.1,36
+2023-01-02,204.7,
+2023-01-03,204,
+2023-01-04,202.6,
+2023-01-05,201.8,
+2023-01-06,200.9,
+2023-01-07,203,
+2023-01-08,205.3,36
+2023-01-09,204.5,
+2023-01-10,203.2,
+2023-01-11,202.3,
+2023-01-12,201.4,
+2023-01-13,201.2,
+2023-01-14,203.4,
+2023-01-15,205.6,36
+2023-01-16,205.1,
+2023-01-17,203.7,
+2023-01-18,202.8,
+2023-01-19,202,
+2023-01-20,201.5,
+2023-01-21,204.1,
+2023-01-22,206.7,36.25
+2023-01-23,206.1,
+2023-01-24,205.1,
+2023-01-25,204,
+2023-01-26,202.9,
+2023-01-27,204.3,
+2023-01-28,205,
+2023-01-29,206.2,36.125
+2023-01-30,204.8,
+2023-01-31,204.2,
+2023-02-01,202.7,
+2023-02-02,201.9,
+2023-02-03,201,
+2023-02-04,202.6,
+2023-02-05,204.7,36.125
+2023-02-06,203.8,
+2023-02-07,203,
+2023-02-08,201.6,
+2023-02-09,201.8,
+2023-02-10,200.4,
+2023-02-11,202,
+2023-02-12,203.9,35.875
+2023-02-13,202.4,
+2023-02-14,201.5,
+2023-02-15,201.1,
+2023-02-16,199.9,
+2023-02-17,199.1,
+2023-02-18,201.6,
+2023-02-19,203,35.75
+2023-02-20,202.7,
+2023-02-21,201.7,
+2023-02-22,201,
+2023-02-23,200.2,
+2023-02-24,199.8,
+2023-02-25,201.2,
+2023-02-26,203.4,35.75
+2023-02-27,202.6,
+2023-02-28,201.9,
+2023-03-01,201,
+2023-03-02,200.5,
+2023-03-03,199.7,
+2023-03-04,201.5,
+2023-03-05,204.1,35.875
+2023-03-06,202.8,
+2023-03-07,201.8,
+2023-03-08,200.9,
+2023-03-09,200.1,
+2023-03-10,199.4,
+2023-03-11,200.6,
+2023-03-12,202.8,35.875
+2023-03-13,201.3,
+2023-03-14,201,
+2023-03-15,202.2,
+2023-03-16,201.2,
+2023-03-17,199.6,
+2023-03-18,201,
+2023-03-19,203.1,35.75
+2023-03-20,201.4,
+2023-03-21,200.6,
+2023-03-22,199.4,
+2023-03-23,198.5,
+2023-03-24,197.3,
+2023-03-25,199.4,
+2023-03-26,201.3,35.5
+2023-03-27,201.1,
+2023-03-28,200.1,
+2023-03-29,199.7,
+2023-03-30,198.2,
+2023-03-31,197.6,
+2023-04-01,199.5,
+2023-04-02,202.1,35.375
+2023-04-03,200.5,
+2023-04-04,199.4,
+2023-04-05,199.1,
+2023-04-06,197.9,
+2023-04-07,196.4,
+2023-04-08,198.3,
+2023-04-09,200.9,35.25
+2023-04-10,200,
+2023-04-11,199,
+2023-04-12,198,
+2023-04-13,197.1,
+2023-04-14,196.5,
+2023-04-15,198.6,
+2023-04-16,200.7,35.375
+2023-04-17,199.6,
+2023-04-18,198.4,
+2023-04-19,197,
+2023-04-20,196,
+2023-04-21,194.5,
+2023-04-22,196.5,
+2023-04-23,198.3,35
+2023-04-24,197.4,
+2023-04-25,197,
+2023-04-26,195.7,
+2023-04-27,195,
+2023-04-28,194.6,
+2023-04-29,196.5,
+2023-04-30,198.5,35.125
+2023-05-01,197.4,
+2023-05-02,197.1,
+2023-05-03,196.3,
+2023-05-04,195.8,
+2023-05-05,195,
+2023-05-06,197.2,
+2023-05-07,199.4,35
+2023-05-08,198.2,
+2023-05-09,197.6,
+2023-05-10,195.8,
+2023-05-11,195.8,
+2023-05-12,195.1,
+2023-05-13,196.9,
+2023-05-14,198.5,35.25
+2023-05-15,198.1,
+2023-05-16,197.6,
+2023-05-17,196.3,
+2023-05-18,195.6,
+2023-05-19,195.1,
+2023-05-20,196.9,
+2023-05-21,199.3,35.25
+2023-05-22,198.1,
+2023-05-23,197.5,
+2023-05-24,196.6,
+2023-05-25,195.4,
+2023-05-26,194.7,
+2023-05-27,196.3,
+2023-05-28,198.5,35.125
+2023-05-29,197.9,
+2023-05-30,196.9,
+2023-05-31,195.2,
+2023-06-01,194,
+2023-06-02,193.2,
+2023-06-03,197.8,
+2023-06-04,198.8,35.125
+2023-06-05,197.7,
+2023-06-06,196.1,
+2023-06-07,194.6,
+2023-06-08,193.7,
+2023-06-09,193.7,
+2023-06-10,194.7,
+2023-06-11,197.4,34.875
+2023-06-12,195.7,
+2023-06-13,195.2,
+2023-06-14,193.7,
+2023-06-15,192.9,
+2023-06-16,191.5,
+2023-06-17,194.4,
+2023-06-18,196.5,35
+2023-06-19,195.2,
+2023-06-20,194.9,
+2023-06-21,194.2,
+2023-06-22,193.6,
+2023-06-23,193.3,
+2023-06-24,194.2,
+2023-06-25,197,34.75
+2023-06-26,196.3,
+2023-06-27,195.1,
+2023-06-28,194.6,
+2023-06-29,196.3,
+2023-06-30,194.9,
+2023-07-01,197.3,
+2023-07-02,198.8,35
+2023-07-03,197.5,
+2023-07-04,196.4,
+2023-07-05,195.3,
+2023-07-06,194.4,
+2023-07-07,193.6,
+2023-07-08,195.4,
+2023-07-09,197.7,35
+2023-07-10,196.9,
+2023-07-11,196.1,
+2023-07-12,195.3,
+2023-07-13,194.8,
+2023-07-14,193.7,
+2023-07-15,195.4,
+2023-07-16,198.6,35
+2023-07-17,197.4,
+2023-07-18,197,
+2023-07-19,195.6,
+2023-07-20,194.8,
+2023-07-21,194.3,
+2023-07-22,196.2,
+2023-07-23,198.5,35.125
+2023-07-24,197.7,
+2023-07-25,197.6,
+2023-07-26,197,
+2023-07-27,196.8,
+2023-07-28,195.8,
+2023-07-29,197,
+2023-07-30,199,35.125
+2023-07-31,198.3,
+2023-08-01,197,
+2023-08-02,196.4,
+2023-08-03,196,
+2023-08-04,197.3,
+2023-08-05,198.3,
+2023-08-06,200.4,35.25
+2023-08-07,200.7,
+2023-08-08,198.7,
+2023-08-09,198,
+2023-08-10,197,
+2023-08-11,196.4,
+2023-08-12,197.8,
+2023-08-13,200.2,35.25
+2023-08-14,199.1,
+2023-08-15,197.8,
+2023-08-16,196.5,
+2023-08-17,196.1,
+2023-08-18,195.2,
+2023-08-19,196.9,
+2023-08-20,199.8,35.25
+2023-08-21,198.8,
+2023-08-22,198,
+2023-08-23,197.5,
+2023-08-24,196.5,
+2023-08-25,196.4,
+2023-08-26,197.8,
+2023-08-27,200.2,35.25
+2023-08-28,199.4,
+2023-08-29,198.5,
+2023-08-30,197.8,
+2023-08-31,196.8,
+2023-09-01,196.9,
+2023-09-02,199.3,
+2023-09-03,201.7,35.75
+2023-09-04,201.1,
+2023-09-05,200,
+2023-09-06,199.7,
+2023-09-07,198.5,
+2023-09-08,197.8,
+2023-09-09,200,
+2023-09-10,202.5,35.625
+2023-09-11,201.4,
+2023-09-12,200.7,
+2023-09-13,200.8,
+2023-09-14,200.2,
+2023-09-15,199.5,
+2023-09-16,201.5,
+2023-09-17,204,35.75
+2023-09-18,203.4,
+2023-09-19,202.6,
+2023-09-20,201.7,
+2023-09-21,200.6,
+2023-09-22,200.6,
+2023-09-23,203,
+2023-09-24,205,36
+2023-09-25,203.4,
+2023-09-26,203.4,
+2023-09-27,202.5,
+2023-09-28,202.5,
+2023-09-29,202.4,
+2023-09-30,204.1,
+2023-10-01,206.4,36.25
+2023-10-02,205.3,
+2023-10-03,205.2,
+2023-10-04,204.8,
+2023-10-05,203.9,
+2023-10-06,202.6,
+2023-10-07,204.8,
+2023-10-08,207.9,36.375
+2023-10-09,206.3,
+2023-10-10,205.5,
+2023-10-11,204.3,
+2023-10-12,203.6,
+2023-10-13,203.1,
+2023-10-14,204.6,
+2023-10-15,206.7,36.375
+2023-10-16,205.8,
+2023-10-17,205.3,
+2023-10-18,206.8,
+2023-10-19,205,
+2023-10-20,204.3,
+2023-10-21,206.1,
+2023-10-22,207.9,36.375
+2023-10-23,207.3,
+2023-10-24,206.5,
+2023-10-25,205.7,
+2023-10-26,205.3,
+2023-10-27,204.7,
+2023-10-28,206.6,
+2023-10-29,208.5,36.375
+2023-10-30,207.2,
+2023-10-31,206.2,
+2023-11-01,204.7,
+2023-11-02,204.3,
+2023-11-03,203.4,
+2023-11-04,206.1,
+2023-11-05,209.4,36.375
+2023-11-06,207.9,
+2023-11-07,206.6,
+2023-11-08,205.2,
+2023-11-09,204.2,
+2023-11-10,203.7,
+2023-11-11,205,
+2023-11-12,207.5,36.625
+2023-11-13,207.3,
+2023-11-14,206.6,
+2023-11-15,205.2,
+2023-11-16,205.6,
+2023-11-17,204.7,
+2023-11-18,206.4,
+2023-11-19,208.6,36.5
+2023-11-20,208.5,
+2023-11-21,207.4,
+2023-11-22,207.1,
+2023-11-23,206,
+2023-11-24,206,
+2023-11-25,208.1,
+2023-11-26,210,36.75
+2023-11-27,208.5,
+2023-11-28,208,
+2023-11-29,207.2,
+2023-11-30,206.3,
+2023-12-01,205.1,
+2023-12-02,207.8,
+2023-12-03,209.1,36.75
+2023-12-04,208.8,
+2023-12-05,208.1,
+2023-12-06,207.6,
+2023-12-07,207.2,
+2023-12-08,206.3,
+2023-12-09,208,
+2023-12-10,209.9,36.875
+2023-12-11,211.7,
+2023-12-12,209.6,
+2023-12-13,207.8,
+2023-12-14,206.6,
+2023-12-15,206.4,
+2023-12-16,210.9,
+2023-12-17,211.4,36.75
+2023-12-18,209.6,
+2023-12-19,208.6,
+2023-12-20,207.4,
+2023-12-21,208.4,
+2023-12-22,206.7,
+2023-12-23,208.6,
+2023-12-24,210.7,36.75
+2023-12-25,209.5,
+2023-12-26,208.7,
+2023-12-27,207.9,
+2023-12-28,207.5,
+2023-12-29,207,
+2023-12-30,208.7,
+2023-12-31,211,36.75
+2024-01-01,210.6,
+2024-01-02,209.5,
+2024-01-03,208.3,
+2024-01-04,207.4,
+2024-01-05,206.3,
+2024-01-06,208.3,
+2024-01-07,210.7,36.75
+2024-01-08,209.1,
+2024-01-09,209,
+2024-01-10,208.4,
+2024-01-11,207.4,
+2024-01-12,206.4,
+2024-01-13,208.8,
+2024-01-14,210.3,36.75
+2024-01-15,209.6,
+2024-01-16,209.5,
+2024-01-17,208.1,
+2024-01-18,207.7,
+2024-01-19,206.6,
+2024-01-20,207.6,
+2024-01-21,208.9,36.5
+2024-01-22,208.1,
+2024-01-23,207.6,
+2024-01-24,207,
+2024-01-25,206.4,
+2024-01-26,205.7,
+2024-01-27,207.6,
+2024-01-28,209.2,36.5
+2024-01-29,207.8,
+2024-01-30,207.6,
+2024-01-31,206.3,
+2024-02-01,205.7,
+2024-02-02,204.4,
+2024-02-03,206,
+2024-02-04,208.2,36.5
+2024-02-05,207,
+2024-02-06,206.4,
+2024-02-07,205.4,
+2024-02-08,205.1,
+2024-02-09,204.1,
+2024-02-10,205.6,
+2024-02-11,208,36.375
+2024-02-12,207,
+2024-02-13,206.4,
+2024-02-14,205,
+2024-02-15,203.9,
+2024-02-16,202.8,
+2024-02-17,203.8,
+2024-02-18,206.3,36.25
+2024-02-19,205.3,
+2024-02-20,204.2,
+2024-02-21,203.3,
+2024-02-22,201.9,
+2024-02-23,200.8,
+2024-02-24,203.1,
+2024-02-25,205.3,35.875
+2024-02-26,204.3,
+2024-02-27,203.4,
+2024-02-28,202.2,
+2024-02-29,201.7,
+2024-03-01,200.7,
+2024-03-02,203.3,
+2024-03-03,204.5,35.875
+2024-03-04,203.6,
+2024-03-05,202.3,
+2024-03-06,201.8,
+2024-03-07,201.1,
+2024-03-08,200.5,
+2024-03-09,201.7,
+2024-03-10,204,36
+2024-03-11,202.9,
+2024-03-12,202.1,
+2024-03-13,201.8,
+2024-03-14,200.7,
+2024-03-15,200.5,
+2024-03-16,201.8,
+2024-03-17,203.1,35.875
+2024-03-18,202.2,
+2024-03-19,202.1,
+2024-03-20,200.9,
+2024-03-21,200.7,
+2024-03-22,199.6,
+2024-03-23,201.4,
+2024-03-24,202.3,35.625
+2024-03-25,201.4,
+2024-03-26,201,
+2024-03-27,199.8,
+2024-03-28,199.7,
+2024-03-29,198.6,
+2024-03-30,199.5,
+2024-03-31,200.9,35.5
+2024-04-01,200.2,
+2024-04-02,199.6,
+2024-04-03,199.1,
+2024-04-04,198.1,
+2024-04-05,197.6,
+2024-04-06,198.8,
+2024-04-07,200.2,35.25
+2024-04-08,199.4,
+2024-04-09,198.6,
+2024-04-10,198,
+2024-04-11,197.5,
+2024-04-12,196.8,
+2024-04-13,198,
+2024-04-14,199.5,35.125
+2024-04-15,198.1,
+2024-04-16,198,
+2024-04-17,196.3,
+2024-04-18,195.9,
+2024-04-19,194.5,
+2024-04-20,196.8,
+2024-04-21,198.8,35.125
+2024-04-22,198.4,
+2024-04-23,196.8,
+2024-04-24,195.6,
+2024-04-25,194.9,
+2024-04-26,194.2,
+2024-04-27,195.5,
+2024-04-28,197.9,35.125
+2024-04-29,196.8,
+2024-04-30,196.1,
+2024-05-01,195.1,
+2024-05-02,194.6,
+2024-05-03,193.5,
+2024-05-04,195.4,
+2024-05-05,197,34.75
+2024-05-06,195.6,
+2024-05-07,195,
+2024-05-08,193.8,
+2024-05-09,193.2,
+2024-05-10,192.3,
+2024-05-11,194.7,
+2024-05-12,196.8,35
+2024-05-13,195.5,
+2024-05-14,194.3,
+2024-05-15,193.3,
+2024-05-16,192.5,
+2024-05-17,192.3,
+2024-05-18,193.9,
+2024-05-19,196.3,34.875
+2024-05-20,195.2,
+2024-05-21,194.3,
+2024-05-22,192.7,
+2024-05-23,192.5,
+2024-05-24,191.6,
+2024-05-25,194.1,
+2024-05-26,196.6,34.75
+2024-05-27,195.5,
+2024-05-28,195.7,
+2024-05-29,193.7,
+2024-05-30,193,
+2024-05-31,191.9,
+2024-06-01,193.9,
+2024-06-02,195.3,34.625
+2024-06-03,193.8,
+2024-06-04,193,
+2024-06-05,191.8,
+2024-06-06,191.3,
+2024-06-07,190.7,
+2024-06-08,192,
+2024-06-09,194.4,34.375
+2024-06-10,193,
+2024-06-11,192.1,
+2024-06-12,190.9,
+2024-06-13,190.8,
+2024-06-14,189.4,
+2024-06-15,191.7,
+2024-06-16,194.1,34.5
+2024-06-17,192.7,
+2024-06-18,192,
+2024-06-19,194.5,
+2024-06-20,192.4,
+2024-06-21,191.1,
+2024-06-22,192.4,
+2024-06-23,194.2,34.625
+2024-06-24,193.4,
+2024-06-25,192.9,
+2024-06-26,192.2,
+2024-06-27,191.1,
+2024-06-28,190.9,
+2024-06-29,192.6,
+2024-06-30,196.5,34.625
+2024-07-01,194.4,
+2024-07-02,193.8,
+2024-07-03,191.9,
+2024-07-04,191.4,
+2024-07-05,190.5,
+2024-07-06,192.4,
+2024-07-07,197.9,34.625
+2024-07-08,195.5,
+2024-07-09,194.1,
+2024-07-10,192.7,
+2024-07-11,192,
+2024-07-12,190.8,
+2024-07-13,193.3,
+2024-07-14,195.4,34.625
+2024-07-15,193.6,
+2024-07-16,193.3,
+2024-07-17,191.6,
+2024-07-18,190.4,
+2024-07-19,189.4,
+2024-07-20,191.4,
+2024-07-21,193.3,34.5
+2024-07-22,192.9,
+2024-07-23,192.1,
+2024-07-24,191.5,
+2024-07-25,191,
+2024-07-26,190.7,
+2024-07-27,192.3,
+2024-07-28,194.8,34.5
+2024-07-29,193.6,
+2024-07-30,192.5,
+2024-07-31,191.9,
+2024-08-01,191.7,
+2024-08-02,190.7,
+2024-08-03,192.6,
+2024-08-04,194.7,34.5
+2024-08-05,193.6,
+2024-08-06,192.6,
+2024-08-07,191.9,
+2024-08-08,192.3,
+2024-08-09,191.5,
+2024-08-10,193.1,
+2024-08-11,195.4,34.625
+2024-08-12,194.8,
+2024-08-13,193.8,
+2024-08-14,192.9,
+2024-08-15,192.6,
+2024-08-16,191.9,
+2024-08-17,194.3,
+2024-08-18,196.6,34.875
+2024-08-19,195.1,
+2024-08-20,194.8,
+2024-08-21,193.6,
+2024-08-22,193.2,
+2024-08-23,192,
+2024-08-24,194.3,
+2024-08-25,196.4,34.875
+2024-08-26,196.3,
+2024-08-27,196.3,
+2024-08-28,196,
+2024-08-29,194.8,
+2024-08-30,194.1,
+2024-08-31,196,
+2024-09-01,198.3,35.125
+2024-09-02,197.6,
+2024-09-03,196.6,
+2024-09-04,195.6,
+2024-09-05,196.9,
+2024-09-06,194.6,
+2024-09-07,195.7,
+2024-09-08,197.8,35
+2024-09-09,196.7,
+2024-09-10,195.6,
+2024-09-11,194.6,
+2024-09-12,193.9,
+2024-09-13,193.7,
+2024-09-14,195.4,
+2024-09-15,198.5,34.875
+2024-09-16,197,
+2024-09-17,196.2,
+2024-09-18,195.8,
+2024-09-19,195.1,
+2024-09-20,193.8,
+2024-09-21,195.6,
+2024-09-22,197.5,35
+2024-09-23,196.8,
+2024-09-24,195.7,
+2024-09-25,194.6,
+2024-09-26,193.8,
+2024-09-27,194,
+2024-09-28,196.1,
+2024-09-29,197.7,35
+2024-09-30,197.4,
+2024-10-01,196.4,
+2024-10-02,195.6,
+2024-10-03,195.2,
+2024-10-04,194.2,
+2024-10-05,196.3,
+2024-10-06,199,35.375
+2024-10-07,198.4,
+2024-10-08,197.8,
+2024-10-09,196.4,
+2024-10-10,195.9,
+2024-10-11,195.2,
+2024-10-12,197,
+2024-10-13,199.6,35.25
+2024-10-14,198,
+2024-10-15,197.5,
+2024-10-16,196.9,
+2024-10-17,196.4,
+2024-10-18,196,
+2024-10-19,197.1,
+2024-10-20,198.5,35.25
+2024-10-21,197.4,
+2024-10-22,197.4,
+2024-10-23,196.7,
+2024-10-24,195.9,
+2024-10-25,195.2,
+2024-10-26,197,
+2024-10-27,198.7,35.25
+2024-10-28,198.4,
+2024-10-29,198,
+2024-10-30,197.5,
+2024-10-31,196.5,
+2024-11-01,195.6,
+2024-11-02,196.7,
+2024-11-03,198.7,35.125
+2024-11-04,197.4,
+2024-11-05,196.8,
+2024-11-06,195.9,
+2024-11-07,195.8,
+2024-11-08,195.7,
+2024-11-09,197.2,
+2024-11-10,199.2,35.25
+2024-11-11,198.5,
+2024-11-12,198,
+2024-11-13,196.9,
+2024-11-14,199.7,
+2024-11-15,197.5,
+2024-11-16,198.7,
+2024-11-17,199.8,35.25
+2024-11-18,198.5,
+2024-11-19,198,
+2024-11-20,197.6,
+2024-11-21,196.8,
+2024-11-22,195.6,
+2024-11-23,197.5,
+2024-11-24,198.8,35.375
+2024-11-25,198.3,
+2024-11-26,198,
+2024-11-27,196.7,
+2024-11-28,196.3,
+2024-11-29,195.3,
+2024-11-30,197.5,
+2024-12-01,200,35.25
+2024-12-02,199,
+2024-12-03,198.1,
+2024-12-04,197,
+2024-12-05,195.9,
+2024-12-06,195,
+2024-12-07,196.5,
+2024-12-08,198.2,35.375
+2024-12-09,197.4,
+2024-12-10,196.6,
+2024-12-11,196.2,
+2024-12-12,195.4,
+2024-12-13,194.3,
+2024-12-14,196.2,
+2024-12-15,198.6,35.25
+2024-12-16,197.4,
+2024-12-17,196.5,
+2024-12-18,195.4,
+2024-12-19,194.3,
+2024-12-20,193.3,
+2024-12-21,195.3,
+2024-12-22,198.3,35
+2024-12-23,197.2,
+2024-12-24,196,
+2024-12-25,194.6,
+2024-12-26,194.4,
+2024-12-27,193.1,
+2024-12-28,195,
+2024-12-29,196.9,34.875
+2024-12-30,196.5,
+2024-12-31,195.6,
+2025-01-01,195.4,
+2025-01-02,194.5,
+2025-01-03,194.7,
+2025-01-04,196.3,
+2025-01-05,198,35.25
+2025-01-06,197.2,
+2025-01-07,196.7,
+2025-01-08,195.4,
+2025-01-09,195.2,
+2025-01-10,196.6,
+2025-01-11,197.3,
+2025-01-12,198.6,35.25
+2025-01-13,197.3,
+2025-01-14,197.3,
+2025-01-15,196.3,
+2025-01-16,198.2,
+2025-01-17,196.5,
+2025-01-18,197.4,
+2025-01-19,199.7,35.125
+2025-01-20,198.4,
+2025-01-21,197.4,
+2025-01-22,196.3,
+2025-01-23,196.3,
+2025-01-24,195.7,
+2025-01-25,197.7,
+2025-01-26,199.5,35.375
+2025-01-27,198.4,
+2025-01-28,198.2,
+2025-01-29,197.3,
+2025-01-30,197,
+2025-01-31,196.7,
+2025-02-01,198.8,
+2025-02-02,201.1,35.625
+2025-02-03,200.5,
+2025-02-04,199.4,
+2025-02-05,198.4,
+2025-02-06,197.5,
+2025-02-07,197.3,
+2025-02-08,198.8,
+2025-02-09,201.8,35.5
+2025-02-10,200.1,
+2025-02-11,199.3,
+2025-02-12,198,
+2025-02-13,197,
+2025-02-14,195.7,
+2025-02-15,197.6,
+2025-02-16,200.3,35.25
+2025-02-17,199.1,
+2025-02-18,198.1,
+2025-02-19,197.3,
+2025-02-20,196.3,
+2025-02-21,195.5,
+2025-02-22,197.2,
+2025-02-23,199.6,35.375
+2025-02-24,198.9,
+2025-02-25,197.5,
+2025-02-26,196.3,
+2025-02-27,195.5,
+2025-02-28,195,
+2025-03-01,196.9,
+2025-03-02,199.1,35.25
+2025-03-03,198.4,
+2025-03-04,197.3,
+2025-03-05,196.4,
+2025-03-06,195.5,
+2025-03-07,195.1,
+2025-03-08,197.2,
+2025-03-09,198.5,35.25
+2025-03-10,197.8,
+2025-03-11,197.2,
+2025-03-12,195.9,
+2025-03-13,195.9,
+2025-03-14,195.3,
+2025-03-15,197,
+2025-03-16,199,35.125
+2025-03-17,198.5,
+2025-03-18,197.7,
+2025-03-19,195.9,
+2025-03-20,194.8,
+2025-03-21,194.1,
+2025-03-22,196.5,
+2025-03-23,198.8,35.25
+2025-03-24,199.7,
+2025-03-25,197.6,
+2025-03-26,196.4,
+2025-03-27,195.3,
+2025-03-28,194.7,
+2025-03-29,196.3,
+2025-03-30,198.3,35.125
+2025-03-31,198,
+2025-04-01,197.6,
+2025-04-02,196,
+2025-04-03,194.8,
+2025-04-04,194.4,
+2025-04-05,196.2,
+2025-04-06,198.5,35.125
+2025-04-07,197.7,
+2025-04-08,197.1,
+2025-04-09,195.7,
+2025-04-10,195.3,
+2025-04-11,193.9,
+2025-04-12,196.2,
+2025-04-13,198.2,35.125
+2025-04-14,197.5,
+2025-04-15,196.4,
+2025-04-16,195.6,
+2025-04-17,194.9,
+2025-04-18,194.3,
+2025-04-19,196.4,
+2025-04-20,198.1,35.125
+2025-04-21,197.1,
+2025-04-22,196.7,
+2025-04-23,195.3,
+2025-04-24,194.9,
+2025-04-25,193.5,
+2025-04-26,195.5,
+2025-04-27,197.8,35
+2025-04-28,197.3,
+2025-04-29,196.8,
+2025-04-30,196.5,
+2025-05-01,196.1,
+2025-05-02,198.1,
+2025-05-03,198.7,
+2025-05-04,199.8,35.125
+2025-05-05,198.6,
+2025-05-06,196.9,
+2025-05-07,196.3,
+2025-05-08,195.1,
+2025-05-09,196.2,
+2025-05-10,197.4,
+2025-05-11,199.1,35.125
+2025-05-12,198.3,
+2025-05-13,197.1,
+2025-05-14,196.2,
+2025-05-15,195.3,
+2025-05-16,194.1,
+2025-05-17,196.5,
+2025-05-18,199.7,35.25
+2025-05-19,198.3,
+2025-05-20,196.9,
+2025-05-21,196.1,
+2025-05-22,195,
+2025-05-23,194.4,
+2025-05-24,196.7,
+2025-05-25,198.5,35.125
+2025-05-26,197.5,
+2025-05-27,197,
+2025-05-28,196,
+2025-05-29,195.9,
+2025-05-30,194.8,
+2025-05-31,196.9,
+2025-06-01,198.5,35
+2025-06-02,197.4,
+2025-06-03,196.2,
+2025-06-04,195.6,
+2025-06-05,195.2,
+2025-06-06,194.2,
+2025-06-07,195.7,
+2025-06-08,198.7,35
+2025-06-09,197.3,
+2025-06-10,195.8,
+2025-06-11,194.5,
+2025-06-12,193.8,
+2025-06-13,193,
+2025-06-14,195.3,
+2025-06-15,197.5,34.875
+2025-06-16,196.7,
+2025-06-17,195.4,
+2025-06-18,196.3,
+2025-06-19,194.7,
+2025-06-20,193.6,
+2025-06-21,195.6,
+2025-06-22,197.2,35
+2025-06-23,196.2,
+2025-06-24,195.5,
+2025-06-25,196.7,
+2025-06-26,195.5,
+2025-06-27,194,
+2025-06-28,195.3,
+2025-06-29,197.3,35
+2025-06-30,196.3,
+2025-07-01,195,
+2025-07-02,194.1,
+2025-07-03,193.8,
+2025-07-04,192.7,
+2025-07-05,194.9,
+2025-07-06,197.1,35.125
+2025-07-07,195.8,
+2025-07-08,195.1,
+2025-07-09,194.7,
+2025-07-10,194,
+2025-07-11,193.9,
+2025-07-12,195.2,
+2025-07-13,197.3,35.125
+2025-07-14,196.5,
+2025-07-15,196.1,
+2025-07-16,194.6,
+2025-07-17,194.4,
+2025-07-18,193.8,
+2025-07-19,196,
+2025-07-20,198.6,35.125
+2025-07-21,197.4,
+2025-07-22,196.3,
+2025-07-23,195.4,
+2025-07-24,194.2,
+2025-07-25,193.4,
+2025-07-26,195.5,
+2025-07-27,198,35.25
+2025-07-28,197.1,
+2025-07-29,196.5,
+2025-07-30,195.3,
+2025-07-31,195.6,
+2025-08-01,195.7,
+2025-08-02,198.3,
+2025-08-03,200.7,35.5
+2025-08-04,200.3,
+2025-08-05,199,
+2025-08-06,198.3,
+2025-08-07,197.5,
+2025-08-08,197,
+2025-08-09,199.5,
+2025-08-10,202.2,35.625
+2025-08-11,200.6,
+2025-08-12,199.7,
+2025-08-13,199.4,
+2025-08-14,198.2,
+2025-08-15,197.7,
+2025-08-16,199.7,
+2025-08-17,202.1,35.625
+2025-08-18,201,
+2025-08-19,200.3,
+2025-08-20,200.2,
+2025-08-21,199.5,
+2025-08-22,198.6,
+2025-08-23,201.1,
+2025-08-24,202.8,35.75
+2025-08-25,202.4,
+2025-08-26,202.4,
+2025-08-27,202,
+2025-08-28,201.3,
+2025-08-29,200.2,
+2025-08-30,204.6,
+2025-08-31,206.2,35.875
+2025-09-01,204.5,
+2025-09-02,203.2,
+2025-09-03,202.3,
+2025-09-04,201.3,
+2025-09-05,199.9,
+2025-09-06,202.3,
+2025-09-07,204.3,36
+2025-09-08,203.8,
+2025-09-09,203.4,
+2025-09-10,202.6,
+2025-09-11,201.7,
+2025-09-12,201.1,
+2025-09-13,203.7,
+2025-09-14,205.5,36.125
+2025-09-15,204.6,
+2025-09-16,204.2,
+2025-09-17,203.4,
+2025-09-18,203.4,
+2025-09-19,202.9,
+2025-09-20,205.2,
+2025-09-21,207.3,36.5
+2025-09-22,206.7,
+2025-09-23,208.2,
+2025-09-24,206.2,
+2025-09-25,205.5,
+2025-09-26,204.6,
+2025-09-27,205.6,
+2025-09-28,208.5,36.5
+2025-09-29,207.1,
+2025-09-30,206.1,
+2025-10-01,205.7,
+2025-10-02,205.4,
+2025-10-03,205.1,
+2025-10-04,207.3,
+2025-10-05,209.8,36.875
+2025-10-06,208.9,
+2025-10-07,207.9,
+2025-10-08,207.1,
+2025-10-09,206.5,
+2025-10-10,206.4,
+2025-10-11,207.8,
+2025-10-12,209.2,36.875
+2025-10-13,209.2,
+2025-10-14,208.4,
+2025-10-15,207.4,
+2025-10-16,207,
+2025-10-17,206.5,
+2025-10-18,207.9,
+2025-10-19,210.9,37
+2025-10-20,210.4,
+2025-10-21,210,
+2025-10-22,208.3,
+2025-10-23,208.4,
+2025-10-24,207.6,
+2025-10-25,209.8,
+2025-10-26,212,37.125
+2025-10-27,210.8,
+2025-10-28,210.1,
+2025-10-29,210,
+2025-10-30,209.2,
+2025-10-31,208.6,
+2025-11-01,210.3,
+2025-11-02,212.4,37
+2025-11-03,212,
+2025-11-04,210.8,
+2025-11-05,210.4,
+2025-11-06,210,
+2025-11-07,209.9,
+2025-11-08,211.1,
+2025-11-09,213.6,37.125
+2025-11-10,212.6,
+2025-11-11,211.7,
+2025-11-12,210.8,
+2025-11-13,210.5,
+2025-11-14,209.4,
+2025-11-15,212.1,
+2025-11-16,214.8,37.375
+2025-11-17,213.5,
+2025-11-18,212.4,
+2025-11-19,214.3,
+2025-11-20,212.8,
+2025-11-21,211.9,
+2025-11-22,213.6,
+2025-11-23,216.1,37.5
+2025-11-24,214.4,
+2025-11-25,214.1,
+2025-11-26,213.3,
+2025-11-27,212.6,
+2025-11-28,212,
+2025-11-29,213.8,
+2025-11-30,215.7,37.625
+2025-12-01,214.9,
+2025-12-02,214.6,
+2025-12-03,214.3,
+2025-12-04,213.5,
+2025-12-05,212.8,
+2025-12-06,214.5,
+2025-12-07,216.6,37.875
+2025-12-08,215.4,
+2025-12-09,214.6,
+2025-12-10,214.1,
+2025-12-11,213.7,
+2025-12-12,213,
+2025-12-13,214.2,
+2025-12-14,216.4,37.625
+2025-12-15,215.6,
+2025-12-16,214.7,
+2025-12-17,214,
+2025-12-18,213.2,
+2025-12-19,212.5,
+2025-12-20,215.3,
+2025-12-21,217.4,37.75
+2025-12-22,216.7,
+2025-12-23,215.3,
+2025-12-24,214.3,
+2025-12-25,214,
+2025-12-26,212.7,
+2025-12-27,214.6,
+2025-12-28,217.7,37.75
+2025-12-29,217.2,
+2025-12-30,216.1,
+2025-12-31,215.2,
+2026-01-01,215.8,
+2026-01-02,214.2,
+2026-01-03,215.8,
+2026-01-04,217,38
+2026-01-05,216.7,
+2026-01-06,215.8,
+2026-01-07,214.5,
+2026-01-08,213.6,
+2026-01-09,213.4,
+2026-01-10,215.4,
+2026-01-11,217.6,38
+2026-01-12,216.4,
+2026-01-13,215.4,
+2026-01-14,214,
+2026-01-15,213.6,
+2026-01-16,212.6,
+2026-01-17,214.5,
+2026-01-18,216.8,37.75
+2026-01-19,215.8,
+2026-01-20,215.2,
+2026-01-21,214.3,
+2026-01-22,214.3,
+2026-01-23,213.5,
+2026-01-24,214.7,
+2026-01-25,217.4,37.75
+2026-01-26,216,
+2026-01-27,215.3,
+2026-01-28,214.1,
+2026-01-29,213.8,
+2026-01-30,213.3,
+2026-01-31,214.6,
+2026-02-01,217.5,38
+2026-02-02,216.3,
+2026-02-03,216.2,
+2026-02-04,216.1,
+2026-02-05,215.5,
+2026-02-06,214.8,
+2026-02-07,216.8,
+2026-02-08,218.8,38.125
+2026-02-09,217.6,
+2026-02-10,217.1,
+2026-02-11,216,
+2026-02-12,214.7,
+2026-02-13,213.8,
+2026-02-14,216.1,
+2026-02-15,218.1,38.125
+2026-02-16,217.4,
+2026-02-17,216.6,
+2026-02-18,215.5,
+2026-02-19,214.5,
+2026-02-20,213.4,
+2026-02-21,215.5,
+2026-02-22,216.9,37.75
+2026-02-23,216.2,
+2026-02-24,215.2,
+2026-02-25,214.1,
+2026-02-26,213.7,
+2026-02-27,213,
+2026-02-28,214.6,
+2026-03-01,216.6,37.75
+2026-03-02,215.3,
+2026-03-03,214.2,
+2026-03-04,213.4,
+2026-03-05,213.1,
+2026-03-06,211.8,
+2026-03-07,214,
+2026-03-08,216.1,37.625
+2026-03-09,215.3,
+2026-03-10,214.1,
+2026-03-11,213,
+2026-03-12,212.2,
+2026-03-13,210.8,
+2026-03-14,212.7,
+2026-03-15,214.7,37.625
+2026-03-16,213.7,
+2026-03-17,212.9,
+2026-03-18,212.1,
+2026-03-19,210.8,
+2026-03-20,210.8,
+2026-03-21,212.8,
+2026-03-22,214.9,37.5
+2026-03-23,213.7,
+2026-03-24,212.6,
+2026-03-25,211.3,
+2026-03-26,210.2,
+2026-03-27,209.6,
+2026-03-28,211.2,
+2026-03-29,213.5,37.5
+2026-03-30,212.8,
+2026-03-31,212.6,
+2026-04-01,212.1,
+2026-04-02,210.8,
+2026-04-03,210.7,
+2026-04-04,211.7,
+2026-04-05,214.1,37.375
+2026-04-06,213.6,
+2026-04-07,212.6,
+2026-04-08,211.2,
+2026-04-09,210.1,
+2026-04-10,209.5,
+2026-04-11,211.3,
+2026-04-12,214.3,37.375
+2026-04-13,213,
+2026-04-14,212,
+2026-04-15,210.7,
+2026-04-16,209.8,
+2026-04-17,208.4,
+2026-04-18,211,
+2026-04-19,213.4,37.25
+2026-04-20,212.3,
+2026-04-21,211.8,
+2026-04-22,211,
+2026-04-23,209.7,
+2026-04-24,208.5,
+2026-04-25,210.2,
+2026-04-26,211.7,37.125
+2026-04-27,210.9,
+2026-04-28,210.4,
+2026-04-29,209.8,
+2026-04-30,209.7,
+2026-05-01,209.3,
+2026-05-02,210.5,
+2026-05-03,212.8,37.125
+2026-05-04,211.7,
+2026-05-05,210.8,
+2026-05-06,210,
+2026-05-07,209.4,
+2026-05-08,208.7,
+2026-05-09,210.5,
+2026-05-10,212.7,37.25
+2026-05-11,211.6,
+2026-05-12,211.2,
+2026-05-13,209.9,
+2026-05-14,209.1,
+2026-05-15,208.1,
+2026-05-16,210.1,
+2026-05-17,212.6,37
+2026-05-18,211.7,
+2026-05-19,210.9,
+2026-05-20,209.3,
+2026-05-21,208.5,
+2026-05-22,208,
+2026-05-23,209.6,
+2026-05-24,212.3,37.125
+2026-05-25,213,
+2026-05-26,213.7,
+2026-05-27,210.9,
+2026-05-28,208.8,
+2026-05-29,207.6,
+2026-05-30,209,
+2026-05-31,211.1,37.125
+2026-06-01,210.4,
+2026-06-02,209.9,
+2026-06-03,208.9,
+2026-06-04,208.5,
+2026-06-05,207.4,
+2026-06-06,208.7,
+2026-06-07,211.4,37.125
+2026-06-08,210.7,
+2026-06-09,210.2,
+2026-06-10,208.9,
+2026-06-11,208.4,
+2026-06-12,208.2,
+2026-06-13,209.4,
+2026-06-14,211.3,37
+2026-06-15,210.3,
+2026-06-16,209.9,
+2026-06-17,209,
+2026-06-18,208.5,
+2026-06-19,207.6,
+2026-06-20,209.9,
+2026-06-21,212,37.125
+2026-06-22,211.5,
+2026-06-23,210.8,
+2026-06-24,210,
+2026-06-25,209.1,
+2026-06-26,208.1,
+2026-06-27,209.6,
+2026-06-28,212,37
+2026-06-29,210.6,
+2026-06-30,210.3,
+2026-07-01,213,
+2026-07-02,210.9,
+2026-07-03,209.9,
+2026-07-04,211.1,
+2026-07-05,212.4,37.125
+2026-07-06,212.1,
+2026-07-07,211.3,
+2026-07-08,210.3,
+2026-07-09,209.6,
+2026-07-10,209.3,
+2026-07-11,210.7,
+2026-07-12,212.8,37.125
+2026-07-13,211.9,
+2026-07-14,211.5,
+2026-07-15,210,
+2026-07-16,208.8,
+2026-07-17,208.6,
+2026-07-18,210.7,
+2026-07-19,212.8,37.125
+2026-07-20,211.6,
+2026-07-21,211,
+2026-07-22,210.4,
+2026-07-23,210.1,
+2026-07-24,209.4,
+2026-07-25,210.9,
+2026-07-26,212,37.25
+2026-07-27,211.7,
+2026-07-28,210.8,
+2026-07-29,209.7,
+2026-07-30,209.4,
+2026-07-31,208.9,
+2026-08-01,210.3,
+2026-08-02,212.7,37.25
+2026-08-03,211.4,
+2026-08-04,212.5,
+2026-08-05,211.5,
+2026-08-06,210.5,
+2026-08-07,210.1,
+2026-08-08,211.6,
+2026-08-09,213,37.375
+2026-08-10,212.2,
+2026-08-11,211.7,
+2026-08-12,211.4,
+2026-08-13,211.3,
+2026-08-14,210.5,
+2026-08-15,212,
+2026-08-16,214.6,37.375
+2026-08-17,214.1,
+2026-08-18,213.8,
+2026-08-19,213.1,
+2026-08-20,212.5,
+2026-08-21,211.8,
+2026-08-22,213.7,
+2026-08-23,215.6,37.625
+2026-08-24,214.6,
+2026-08-25,214.2,
+2026-08-26,213.5,
+2026-08-27,213,
+2026-08-28,212.4,
+2026-08-29,214.4,
+2026-08-30,217.1,37.875
+2026-08-31,216.4,
+2026-09-01,215.1,
+2026-09-02,214.4,
+2026-09-03,214,
+2026-09-04,212.8,
+2026-09-05,215.4,
+2026-09-06,217.3,37.75
+2026-09-07,216.2,
+2026-09-08,215.3,
+2026-09-09,215.1,
+2026-09-10,214.5,
+2026-09-11,213.9,
+2026-09-12,216.2,
+2026-09-13,218.7,38
+2026-09-14,217.5,
+2026-09-15,216.8,
+2026-09-16,215.8,
+2026-09-17,214.6,
+2026-09-18,214.1,
+2026-09-19,216.8,
+2026-09-20,218.9,38
+2026-09-21,217.8,
+2026-09-22,217.8,
+2026-09-23,216.7,
+2026-09-24,215.9,
+2026-09-25,215.8,
+2026-09-26,217,
+2026-09-27,219.5,38.25
+2026-09-28,218.1,
+2026-09-29,218.4,
+2026-09-30,217.9,
+2026-10-01,216.8,
+2026-10-02,216.7,
+2026-10-03,218.8,
+2026-10-04,220.8,38.5
+2026-10-05,220.2,
+2026-10-06,219.5,
+2026-10-07,218.7,
+2026-10-08,218.2,
+2026-10-09,217.3,
+2026-10-10,220.4,
+2026-10-11,221.8,38.25
+2026-10-12,220.9,
+2026-10-13,220.1,
+2026-10-14,219.6,
+2026-10-15,218.8,
+2026-10-16,218.4,
+2026-10-17,220,
+2026-10-18,222.3,38.625
+2026-10-19,221.7,
+2026-10-20,221.1,
+2026-10-21,220.7,
+2026-10-22,219.7,
+2026-10-23,218.8,
+2026-10-24,220.4,
+2026-10-25,223.2,38.5
+2026-10-26,222,
+2026-10-27,221.2,
+2026-10-28,220.3,
+2026-10-29,220.1,
+2026-10-30,219.1,
+2026-10-31,221,
+2026-11-01,223.6,38.625
+2026-11-02,222.9,
+2026-11-03,222.3,
+2026-11-04,221.2,
+2026-11-05,220.6,
+2026-11-06,219.8,
+2026-11-07,221.8,
+2026-11-08,224,39

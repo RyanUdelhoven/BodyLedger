@@ -48,9 +48,9 @@ export function CSVImport({
       <details className="csv-format">
         <summary>See the CSV format</summary>
         <code>
-          Date,Weight (lb),Gut (in),Notes
+          Date,Weight (lb),Gut (in)
           <br />
-          2026-11-01,206.1,38.375,Check-in
+          2026-11-01,206.1,38.375
         </code>
         <p>
           One row per date. Leave missing measurements blank. CSV files up to 10

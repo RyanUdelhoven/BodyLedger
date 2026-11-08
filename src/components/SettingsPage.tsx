@@ -310,8 +310,7 @@ export function SettingsPage({
               </div>
               <p className="muted">
                 Restore replaces this journal. Full backups include goals,
-                schedules, and preferences; CSV exports contain measurements and
-                notes.
+                schedules, and preferences; CSV exports contain measurements.
               </p>
             </div>
           </section>
@@ -372,7 +371,6 @@ export function SettingsPage({
                     {ms.map((m) => (
                       <th key={m.id}>{m.title}</th>
                     ))}
-                    <th>Note</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -433,7 +431,6 @@ export function SettingsPage({
                           {M.format(state, m, M.value(state, e, m))}
                         </td>
                       ))}
-                      <td className="note-cell">{e.note || "—"}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -768,8 +765,8 @@ export function SettingsPage({
                       editValues[m.id],
                       editUnits[m.id] ?? M.displayUnit(state, m),
                     );
-                if (!Object.keys(values).length && !editing.note.trim())
-                  throw Error("Keep a measurement or a note.");
+                if (!Object.keys(values).length)
+                  throw Error("Keep at least one measurement.");
                 const next = { ...editing, values, demo: false };
                 if (
                   state.entries.some(
@@ -852,15 +849,6 @@ export function SettingsPage({
                 </div>
               );
             })}
-            <label>
-              Note
-              <textarea
-                value={editing.note}
-                onChange={(e) =>
-                  setEditing({ ...editing, note: e.target.value })
-                }
-              />
-            </label>
             {error && (
               <p className="error" role="alert">
                 {error}

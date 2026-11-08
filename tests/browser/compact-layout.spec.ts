@@ -17,7 +17,7 @@ test("compact pages retain entry workflow and Settings CSV import", async ({
   await expect(page.getByLabel("Import CSV", { exact: true })).toBeAttached();
   await page.getByText("See the CSV format", { exact: true }).click();
   await expect(page.locator(".csv-format code")).toContainText(
-    "Date,Weight (lb),Gut (in),Notes",
+    "Date,Weight (lb),Gut (in)",
   );
   const imported = page.getByRole("status");
   await page.getByLabel("Import CSV", { exact: true }).setInputFiles({
@@ -29,7 +29,7 @@ test("compact pages retain entry workflow and Settings CSV import", async ({
   });
   await expect(imported).toContainText("Saved 1 entry");
   await expect(
-    page.getByRole("cell", { name: "Settings import", exact: true }),
+    page.getByRole("cell", { name: "36.00 in", exact: true }),
   ).toBeVisible();
   const exportBox = await page
       .getByRole("button", { name: "Export CSV", exact: true })

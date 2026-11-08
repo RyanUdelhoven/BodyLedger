@@ -12,4 +12,4 @@ Regenerate both files with Node 22.12+:
 node --experimental-strip-types scripts/generate-demo.ts
 ```
 
-Measurements are reproducible; generated record identifiers change. All rows are explicitly labeled synthetic. No real health data was used.
+Measurements are reproducible; generated record identifiers change. JSON records retain their synthetic flag; the CSV contains only dates and measurements. No real health data was used.

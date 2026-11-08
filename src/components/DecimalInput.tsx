@@ -10,12 +10,22 @@ export function DecimalInput({
   fractionPlaces = Math.max(3, fractionLength(value)),
   className,
   style,
+  onFocus,
+  onClick,
   ...props
 }: Props) {
   const tail = /[.,]/.test(value) ? fractionLength(value) + 1 : 0;
   return (
     <input
       {...props}
+      onFocus={(event) => {
+        event.currentTarget.select();
+        onFocus?.(event);
+      }}
+      onClick={(event) => {
+        event.currentTarget.select();
+        onClick?.(event);
+      }}
       type="text"
       inputMode="decimal"
       value={value}

@@ -16,7 +16,7 @@ A small Node 24 service serves the built React client and same-origin `/api/jour
 
 The synthetic dataset seeds a new database once. Restarting or rebuilding the container preserves changes and never reseeds an existing database, including intentionally emptied journals. Do not run `docker compose down -v` or delete the named volume unless intentionally removing all data.
 
-Settings → Manage data provides full JSON backup/restore, measurement CSV import/export, history editing, inclusive date-range deletion, and metric deletion. Restore replaces the current journal; deletions run immediately. Full backups include preferences and goals; CSV contains measurements and notes. SQLite must be backed up consistently: use the app’s full backup, SQLite’s backup mechanism, or stop the app before copying database files. Copying a live SQLite file without its WAL can omit recent writes.
+Settings → Manage data provides full JSON backup/restore, measurement CSV import/export, history editing, inclusive date-range deletion, and metric deletion. Restore replaces the current journal; deletions run immediately. Full backups include preferences and goals; CSV contains dates and measurements. SQLite must be backed up consistently: use the app’s full backup, SQLite’s backup mechanism, or stop the app before copying database files. Copying a live SQLite file without its WAL can omit recent writes.
 
 ## Docker and Coulson
 
@@ -33,7 +33,7 @@ To unregister only this app, stop it, remove its `~/.coulson/bodyledger` symlink
 
 ## Features
 
-Manual measurements and notes, custom metrics, independent units/precision, reporting schedules, four trend views with statistics/tables, goals, profile-based waist-to-height ratio, CSV import/export, backups, demo refresh, bulk deletion, and responsive light/dark themes are included. Gut in the requested demo appears only on Sundays, regardless of a customized reporting schedule. Refresh demo preserves non-demo entries on occupied dates; full demo replacement clears existing entries and goals.
+Manual measurements, custom metrics, independent units/precision, reporting schedules, four trend views with statistics/tables, goals, profile-based waist-to-height ratio, CSV import/export, backups, demo refresh, bulk deletion, and responsive light/dark themes are included. Gut in the requested demo appears only on Sundays, regardless of a customized reporting schedule. Refresh demo preserves non-demo entries on occupied dates; full demo replacement clears existing entries and goals.
 
 Notifications are optional and work while the journal is open. Closed-browser reminder delivery is not implemented. No accounts, cloud sync, telemetry, or external fonts are used. The original iOS project remains untouched; its CSV export can transfer measurements.
 
@@ -58,7 +58,7 @@ Browser tests launch a separate local server on port 3101 with a temporary SQLit
 
 ## Source map
 
-`server.mjs` owns SQLite, initial seeding, transactions, and static/API HTTP serving. `src/db.ts` is the typed client for that API. `src/model.ts` owns validation, units, calendars, CSV, and synthetic data. `src/trends.ts` computes chart series. `src/components/` holds UI areas; `src/main.tsx` owns navigation and atomic conflict review. `src/styles.css` defines semantic themes and responsive styling.
+`server.mjs` owns SQLite, initial seeding, transactions, and static/API HTTP serving. `migrations.mjs` handles the atomic removal of retired note fields. `src/db.ts` is the typed client for that API. `src/model.ts` owns validation, units, calendars, CSV, and synthetic data. `src/trends.ts` computes chart series. `src/components/` holds UI areas; `src/main.tsx` owns navigation and atomic conflict review. `src/styles.css` defines semantic themes and responsive styling.
 
 ## SQLite verification
 
@@ -84,4 +84,8 @@ Trends places the metric selector, range control, and optional weekday selector 
 
 Measurement entry fields align their decimal points using a shared fractional column and fixed-width digits. Integer entries align at the implied decimal position. Alignment adapts to typed precision and unit conversions without modifying the entered or stored measurement. History editing uses the same numeric input.
 
-New entry arranges measurements three per row. Tab and Shift+Tab move directly between values in row order. Unit selectors remain available by mouse or Alt+Down from the value field; Escape returns to its value. Mobile fields stack their unit selector below the number to retain three columns without horizontal scrolling.
+New entry arranges measurements three per row. Tab and Shift+Tab move directly between values in row order. Unit selectors remain available by mouse or Alt+Down from the value field; Escape returns to its value. The compact three-column layout adapts to smaller screens without horizontal scrolling.
+
+Notes have been retired: there is no note editor, history column, CSV export column, or stored entry field. Startup removes legacy note fields transactionally while preserving entry dates, IDs, measurements, and all other journal metadata. Old CSV Notes columns are accepted and ignored; old JSON backups have their note fields stripped before saving.
+
+New entry uses compact inline label/value controls. Clicking or tabbing into a numeric input selects its entire number; the shared focus outline and background include the unit selector. Clear form and the decorative Add metric tagline have been removed.

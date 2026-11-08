@@ -16,20 +16,19 @@ describe("measurement storage", () => {
       id: "a",
       date: "2026-11-01",
       values: { weight: 90 },
-      note: "a",
     };
-    const b = { id: "b", date: a.date, values: { gut: 98 }, note: "" };
+    const b = { id: "b", date: a.date, values: { gut: 98 } };
     expect(M.conflicts(a, b)).toBe(false);
     expect(M.mergeEntry(a, b).values).toEqual({ weight: 90, gut: 98 });
     expect(M.conflicts(a, { ...b, values: { weight: 91 } })).toBe(true);
   });
 });
 describe("CSV", () => {
-  it("round trips sparse values, quoted notes, Unicode, and canonical precision", () => {
+  it("round trips sparse measurements, Unicode names, and canonical precision", () => {
     const s = M.initial();
     s.metrics.push({
       id: "gut",
-      title: "Gut",
+      title: "腹囲",
       kind: "length",
       schedule: M.schedule(),
     });
@@ -41,13 +40,11 @@ describe("CSV", () => {
           weight: M.canonical(206.1, "lb"),
           gut: M.canonical(38.375, "in"),
         },
-        note: "Good, “steady”\nsecond line",
       },
       {
         id: "2",
         date: "2026-11-02",
         values: { gut: M.canonical(38.5, "in") },
-        note: "",
       },
     ];
     for (const metric of [false, true]) {
@@ -57,7 +54,7 @@ describe("CSV", () => {
       }
       const imported = M.importCSV(s, M.exportCSV(s));
       expect(imported.entries[0].values).toEqual(s.entries[0].values);
-      expect(imported.entries[0].note).toBe(s.entries[0].note);
+      expect(imported.entries[0]).not.toHaveProperty("note");
       expect(imported.entries[1].values.weight).toBeUndefined();
     }
   });
@@ -110,8 +107,8 @@ describe("trends", () => {
   it("retains missing weekly slots and averages observed values", () => {
     const s = M.initial();
     s.entries = [
-      { id: "1", date: "2026-11-01", values: { weight: 90 }, note: "" },
-      { id: "2", date: "2026-10-18", values: { weight: 96 }, note: "" },
+      { id: "1", date: "2026-11-01", values: { weight: 90 } },
+      { id: "2", date: "2026-10-18", values: { weight: 96 } },
     ];
     const { points } = chartData(
       s,
@@ -128,9 +125,9 @@ describe("trends", () => {
   it("excludes current week from historical baseline and today from deviation", () => {
     const s = M.initial();
     s.entries = [
-      { id: "1", date: "2026-11-01", values: { weight: 100 }, note: "" },
-      { id: "2", date: "2026-10-25", values: { weight: 90 }, note: "" },
-      { id: "3", date: "2026-10-18", values: { weight: 94 }, note: "" },
+      { id: "1", date: "2026-11-01", values: { weight: 100 } },
+      { id: "2", date: "2026-10-25", values: { weight: 90 } },
+      { id: "3", date: "2026-10-18", values: { weight: 94 } },
     ];
     const r = chartData(s, s.metrics[0], "Week flow", 3, 0, "2026-11-01");
     expect(r.points.at(-1)?.average).toBe(92);
@@ -144,13 +141,11 @@ describe("trends", () => {
       id: String(i),
       date: `2026-10-${String(i + 1).padStart(2, "0")}`,
       values: { weight: 90 + i },
-      note: "",
     }));
     s.entries.push({
       id: "now",
       date: "2026-11-01",
       values: { weight: 200 },
-      note: "",
     });
     const r = chartData(s, s.metrics[0], "Year flow", 2, 0, "2026-11-08");
     expect(r.points.at(-2)?.deviation).toBeDefined();
@@ -162,9 +157,7 @@ describe("trends", () => {
 });
 it("refreshes synthetic history without overriding real entries", () => {
   const s = M.initial();
-  s.entries = [
-    { id: "real", date: "2026-11-01", values: { weight: 99 }, note: "Real" },
-  ];
+  s.entries = [{ id: "real", date: "2026-11-01", values: { weight: 99 } }];
   const d = M.demo(s);
   expect(d.entries.find((e) => e.date === "2026-11-01")?.values.weight).toBe(
     99,
@@ -175,9 +168,7 @@ it("refreshes synthetic history without overriding real entries", () => {
 it("rejects invalid backup values", () => {
   const s = M.initial();
   expect(M.validateState(s)).toEqual(s);
-  s.entries = [
-    { id: "x", date: "2026-11-01", values: { weight: NaN }, note: "" },
-  ];
+  s.entries = [{ id: "x", date: "2026-11-01", values: { weight: NaN } }];
   expect(() => M.validateState(s)).toThrow();
 });
 
@@ -186,9 +177,7 @@ it("captures a first goal baseline and retains it after later changes", () => {
   s.goals = [
     { metricId: "weight", created: "2026-01-01", target: 80, deadline: "" },
   ];
-  s.entries = [
-    { id: "a", date: "2026-01-02", values: { weight: 90 }, note: "" },
-  ];
+  s.entries = [{ id: "a", date: "2026-01-02", values: { weight: 90 } }];
   const captured = M.captureGoalStarts(s);
   expect(captured.goals[0].start).toBe(90);
   captured.entries = [];
@@ -245,15 +234,15 @@ it("generates the requested complete irregular demo history", () => {
   const blankCSV = M.exportCSV(s)
     .split("\r\n")
     .filter((line) => line.startsWith("2020-01-01,"))[0];
-  expect(blankCSV).toContain(",,Synthetic");
+  expect(blankCSV.endsWith(",")).toBe(true);
 });
 
 it("Days YoY interprets its range as whole weeks with matching prior-year dates", () => {
   const s = M.initial();
   s.entries = [
-    { id: "now", date: "2026-11-02", values: { weight: 90 }, note: "" },
-    { id: "previous", date: "2025-11-02", values: { weight: 85 }, note: "" },
-    { id: "older", date: "2024-11-02", values: { weight: 80 }, note: "" },
+    { id: "now", date: "2026-11-02", values: { weight: 90 } },
+    { id: "previous", date: "2025-11-02", values: { weight: 85 } },
+    { id: "older", date: "2024-11-02", values: { weight: 80 } },
   ];
   const one = chartData(s, s.metrics[0], "Days YoY", 1, 0, "2026-11-08").points;
   expect(one).toHaveLength(7);
@@ -267,4 +256,20 @@ it("Days YoY interprets its range as whole weeks with matching prior-year dates"
   const two = chartData(s, s.metrics[0], "Days YoY", 2, 0, "2026-11-08").points;
   expect(two).toHaveLength(14);
   expect(two[0].date).toBe("2026-10-26");
+});
+
+it("discards retired notes from old CSV imports and backups", () => {
+  const state = M.initial();
+  const imported = M.importCSV(
+    state,
+    'Date,Weight (lb),Notes\n2026-11-08,200,"Old note, with punctuation"',
+  );
+  expect(imported.entries[0]).not.toHaveProperty("note");
+  const restored = M.validateState({
+    ...state,
+    entries: [{ ...imported.entries[0], note: "Legacy note" }],
+  });
+  expect(restored.entries[0]).not.toHaveProperty("note");
+  expect(M.exportCSV(restored).split("\r\n")[0]).toBe("Date,Weight (lb)");
+  expect(M.exportCSV(restored)).not.toContain("Legacy note");
 });

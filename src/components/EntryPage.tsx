@@ -16,8 +16,6 @@ export function EntryPage({
   const [day, setDay] = useState(M.localDate());
   const [draft, setDraft] = useState<Record<string, string>>({});
   const [inputUnits, setInputUnits] = useState<Record<string, M.Unit>>({});
-  const [note, setNote] = useState("");
-  const [showNote, setShowNote] = useState(false);
   const [adding, setAdding] = useState(false);
   const [name, setName] = useState("");
   const [newUnit, setNewUnit] = useState<M.Unit>("in");
@@ -46,8 +44,6 @@ export function EntryPage({
       ),
     );
     setInputUnits({});
-    setNote(e?.note ?? "");
-    setShowNote(!!e?.note);
   }
   useEffect(() => {
     fill(day);
@@ -117,19 +113,13 @@ export function EntryPage({
       }
       if (!Object.keys(values).length)
         throw Error("Add at least one measurement.");
-      await submit(
-        [{ id: saved?.id ?? M.id(), date: day, values, note }],
-        ms,
-        () => {
-          setDraft({});
-          setNote("");
-          setShowNote(false);
-          setAdding(false);
-          setName("");
-          setNewValue("");
-          setInputUnits({});
-        },
-      );
+      await submit([{ id: saved?.id ?? M.id(), date: day, values }], ms, () => {
+        setDraft({});
+        setAdding(false);
+        setName("");
+        setNewValue("");
+        setInputUnits({});
+      });
     } catch (e) {
       setError((e as Error).message);
     }
@@ -207,7 +197,9 @@ export function EntryPage({
                 return (
                   <div className="measurement-row" key={m.id}>
                     <div>
-                      <label htmlFor={`value-${m.id}`}>{m.title}</label>
+                      <label title={m.title} htmlFor={`value-${m.id}`}>
+                        {m.title}
+                      </label>
                       <small>
                         {M.due(m.schedule, day)
                           ? "Scheduled today"
@@ -341,46 +333,14 @@ export function EntryPage({
               className="add-metric"
               onClick={() => setAdding(!adding)}
             >
-              <Plus size={17} /> Add a metric{" "}
-              <span>Make this journal yours</span>
+              <Plus size={17} /> Add a metric
             </button>
-            {showNote && (
-              <label className="note-field">
-                Note
-                <textarea
-                  value={note}
-                  onChange={(e) => setNote(e.target.value)}
-                  placeholder="How are you feeling? Anything worth remembering?"
-                />
-              </label>
-            )}
             {error && (
               <p role="alert" className="error">
                 {error}
               </p>
             )}
             <div className="form-actions">
-              <button
-                type="button"
-                className="secondary"
-                onClick={() => setShowNote(!showNote)}
-              >
-                <Plus size={16} /> Note
-              </button>
-              <button
-                type="button"
-                className="text-button"
-                onClick={() => {
-                  setDraft({});
-                  setNote("");
-                  setAdding(false);
-                  setName("");
-                  setNewValue("");
-                  setError("");
-                }}
-              >
-                Clear form
-              </button>
               <button className="primary" disabled={busy}>
                 <Check size={17} />{" "}
                 {busy ? "Saving…" : saved ? "Save changes" : "Save entry"}

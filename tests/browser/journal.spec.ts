@@ -17,8 +17,6 @@ test("records measurements, keeps drafts, imports atomically, edits history, and
   await page.getByRole("button", { name: "Add a metric" }).click();
   await page.getByLabel("Metric name").fill("Gut");
   await page.getByLabel("First measurement").fill("38.375");
-  await page.getByRole("button", { name: "Note", exact: true }).click();
-  await page.getByLabel("Note", { exact: true }).fill("Browser verification");
   await page.getByRole("button", { name: "Save entry", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Saved 1 entry");
   await page.reload();
@@ -42,11 +40,11 @@ test("records measurements, keeps drafts, imports atomically, edits history, and
   await page.getByRole("button", { name: "2026-11-01", exact: true }).click();
   await page
     .getByRole("dialog")
-    .getByRole("textbox", { name: "Note", exact: true })
-    .fill("Edited verification");
+    .getByRole("textbox", { name: "Gut", exact: true })
+    .fill("38.5");
   await page.getByRole("button", { name: "Save changes" }).click();
   await expect(
-    page.getByRole("cell", { name: "Edited verification", exact: true }),
+    page.getByRole("cell", { name: "38.50 in", exact: true }),
   ).toBeVisible();
   const backupEvent = page.waitForEvent("download");
   await page.getByRole("button", { name: "Full backup", exact: true }).click();

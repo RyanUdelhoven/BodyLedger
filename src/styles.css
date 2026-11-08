@@ -617,9 +617,6 @@ footer span {
   background: var(--color-action);
   color: var(--color-action-text);
 }
-.note-field {
-  margin: 0 26px 20px;
-}
 .error {
   color: var(--color-danger);
   padding: 15px 26px;
@@ -930,11 +927,6 @@ th + th {
 }
 .button-row .upload-button {
   width: auto;
-}
-.note-cell {
-  max-width: 250px;
-  white-space: normal;
-  line-height: 1.7;
 }
 .check-row {
   display: flex;
@@ -1678,5 +1670,86 @@ footer {
     min-height: 27px;
     padding: 3px 6px;
     border-top: 1px solid var(--color-border);
+  }
+}
+
+/* Compact inline measurement controls; the whole value/unit group takes focus. */
+.measurement-grid {
+  gap: 10px 16px;
+  padding-block: 12px;
+}
+.measurement-grid .measurement-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.measurement-grid .measurement-row > div:first-child {
+  flex: 0 1 72px;
+}
+.measurement-grid .measurement-row label {
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.measurement-grid .measurement-row small {
+  display: none;
+}
+.measurement-grid .measurement-input {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+}
+.measurement-grid .measurement-input .decimal-input {
+  min-height: 30px;
+  padding-block: 4px;
+}
+.measurement-grid .measurement-input select {
+  width: 52px;
+  min-height: 30px;
+  padding: 3px;
+  font-size: 10px;
+}
+.measurement-input:focus-within {
+  border-color: var(--color-action);
+  outline: 2px solid var(--color-action);
+  outline-offset: 2px;
+  background: oklch(from var(--color-action) l c h / 0.12);
+}
+.measurement-input .decimal-input:focus-visible,
+.measurement-input select:focus-visible {
+  outline: none;
+}
+.measurement-input:focus-within select {
+  background: oklch(from var(--color-action) l c h / 0.22);
+  color: var(--color-text);
+}
+@media (max-width: 600px) {
+  .measurement-grid {
+    gap: 8px;
+  }
+  .measurement-grid .measurement-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+  .measurement-grid .measurement-row > div:first-child {
+    flex: none;
+  }
+  .measurement-grid .measurement-input {
+    flex-direction: row;
+    font-size: 11px;
+  }
+  .measurement-grid .measurement-input select {
+    appearance: none;
+    width: 24px;
+    min-height: 30px;
+    padding: 2px;
+    border-top: 0;
+    text-align: center;
+    font-size: 9px;
+  }
+  .measurement-grid .measurement-input .decimal-input {
+    padding-inline-start: 4px;
   }
 }

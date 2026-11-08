@@ -16,7 +16,6 @@ test("the selected metric goal appears on every graph, converts units, and stays
       id: "current",
       date: localDate(),
       values: { weight: canonical(200, "lb") },
-      note: "",
     },
   ];
   expect(
