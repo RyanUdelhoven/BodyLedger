@@ -37,14 +37,17 @@ test("New entry has three measurements per row and tabs directly between values"
         }),
       );
     expect(boxes).toHaveLength(6);
-    for (const row of [boxes.slice(0, 3), boxes.slice(3)]) {
+    const columns = viewport.width <= 600 ? 1 : viewport.width <= 1000 ? 2 : 3;
+    for (let start = 0; start < boxes.length; start += columns) {
+      const row = boxes.slice(start, start + columns);
       expect(
-        Math.max(...row.map((b) => b.y)) - Math.min(...row.map((b) => b.y)),
+        Math.max(...row.map((box) => box.y)) -
+          Math.min(...row.map((box) => box.y)),
       ).toBeLessThan(1);
-      expect(row[0].x).toBeLessThan(row[1].x);
-      expect(row[1].x).toBeLessThan(row[2].x);
+      for (let index = 1; index < row.length; index++)
+        expect(row[index].x).toBeGreaterThan(row[index - 1].x);
     }
-    expect(boxes[3].y).toBeGreaterThan(boxes[0].y);
+    expect(boxes[columns].y).toBeGreaterThan(boxes[0].y);
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
@@ -66,7 +69,7 @@ test("New entry has three measurements per row and tabs directly between values"
       ).toBeFocused();
   }
   await expect(
-    page.getByRole("button", { name: "Add a metric" }),
+    page.getByRole("button", { name: "Save entry", exact: true }),
   ).toBeFocused();
   await page.keyboard.press("Shift+Tab");
   await expect(

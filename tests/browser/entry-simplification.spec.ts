@@ -39,12 +39,18 @@ test("entry is compact and selects the number while highlighting its value and u
       length: name === "Weight" ? 5 : name === "Gut" ? 6 : 0,
     });
     await expect(input.locator("..")).toHaveCSS("outline-style", "solid");
-    const label = await page.getByText(name, { exact: true }).boundingBox(),
+    const label = await input.locator("..").locator("label").boundingBox(),
       box = await input.boundingBox();
     expect(
       Math.abs(label!.y + label!.height / 2 - (box!.y + box!.height / 2)),
     ).toBeLessThan(3);
-    expect(box!.height).toBeLessThanOrEqual(32);
+    expect(box!.height).toBeGreaterThanOrEqual(36);
+    expect(
+      await input.evaluate((element) =>
+        parseFloat(getComputedStyle(element).fontSize),
+      ),
+    ).toBeGreaterThanOrEqual(18);
+    await expect(input.locator("..").locator("label")).toHaveText(name);
   }
   await expect(
     page.getByRole("button", { name: "Note", exact: true }),

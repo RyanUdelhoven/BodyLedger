@@ -12,7 +12,7 @@ import {
   Trash2,
 } from "lucide-react";
 import { ScheduleEditor } from "./ScheduleEditor";
-import { Empty } from "./Empty";
+import { HistoryTable } from "./HistoryTable";
 import { Notifications } from "./Notifications";
 import { DecimalInput, fractionLength } from "./DecimalInput";
 import { CSVImport } from "./CSVImport";
@@ -362,86 +362,41 @@ export function SettingsPage({
                 Delete selected entries ({selected.length})
               </button>
             </div>
-            <div className="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Select</th>
-                    <th>Date</th>
-                    {ms.map((m) => (
-                      <th key={m.id}>{m.title}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {entries.slice(0, limit).map((e) => (
-                    <tr
-                      id={`entry-${e.id}`}
-                      className={highlight === e.id ? "highlight" : ""}
-                      key={e.id}
-                    >
-                      <td>
-                        <input
-                          type="checkbox"
-                          aria-label={`Select ${e.date}`}
-                          checked={selected.includes(e.id)}
-                          onChange={(ev) =>
-                            setSelected(
-                              ev.target.checked
-                                ? [...selected, e.id]
-                                : selected.filter((i) => i !== e.id),
-                            )
-                          }
-                        />
-                      </td>
-                      <td>
-                        <button
-                          className="text-link"
-                          onClick={() => {
-                            setEditing(structuredClone(e));
-                            setEditValues(
-                              Object.fromEntries(
-                                state.metrics.map((m) => [
-                                  m.id,
-                                  e.values[m.id] === undefined
-                                    ? ""
-                                    : String(
-                                        Number(
-                                          (
-                                            e.values[m.id] /
-                                            M.factor(M.displayUnit(state, m))
-                                          ).toPrecision(12),
-                                        ),
-                                      ),
-                                ]),
-                              ),
-                            );
-                            setEditUnits({});
-                            setError("");
-                          }}
-                        >
-                          {e.date}
-                        </button>
-                        {e.demo && (
-                          <small className="demo-label">Synthetic</small>
-                        )}
-                      </td>
-                      {ms.map((m) => (
-                        <td key={m.id}>
-                          {M.format(state, m, M.value(state, e, m))}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              {!entries.length && (
-                <Empty
-                  title="A fresh start."
-                  text="Saved measurements will appear here."
-                />
-              )}
-            </div>
+            <HistoryTable
+              state={state}
+              entries={entries.slice(0, limit)}
+              selected={selected}
+              highlightedId={highlight}
+              onToggle={(id, checked) =>
+                setSelected((current) =>
+                  checked
+                    ? [...current, id]
+                    : current.filter((value) => value !== id),
+                )
+              }
+              onEdit={(entry) => {
+                setEditing(structuredClone(entry));
+                setEditValues(
+                  Object.fromEntries(
+                    state.metrics.map((metric) => [
+                      metric.id,
+                      entry.values[metric.id] === undefined
+                        ? ""
+                        : String(
+                            Number(
+                              (
+                                entry.values[metric.id] /
+                                M.factor(M.displayUnit(state, metric))
+                              ).toPrecision(12),
+                            ),
+                          ),
+                    ]),
+                  ),
+                );
+                setEditUnits({});
+                setError("");
+              }}
+            />
             {entries.length > limit && (
               <button
                 className="secondary load-more"

@@ -84,8 +84,8 @@ Trends places the metric selector, range control, and optional weekday selector 
 
 Measurement entry fields align their decimal points using a shared fractional column and fixed-width digits. Integer entries align at the implied decimal position. Alignment adapts to typed precision and unit conversions without modifying the entered or stored measurement. History editing uses the same numeric input.
 
-New entry arranges measurements three per row. Tab and Shift+Tab move directly between values in row order. Unit selectors remain available by mouse or Alt+Down from the value field; Escape returns to its value. The compact three-column layout adapts to smaller screens without horizontal scrolling.
+New entry arranges measurements three per row on desktop, two on tablets, and one on phones. Tab and Shift+Tab move directly between values in row order. Unit selectors remain available by mouse or Alt+Down from the value field; Escape returns to its value. The compact three-column layout adapts to smaller screens without horizontal scrolling.
 
 Notes have been retired: there is no note editor, history column, CSV export column, or stored entry field. Startup removes legacy note fields transactionally while preserving entry dates, IDs, measurements, and all other journal metadata. Old CSV Notes columns are accepted and ignored; old JSON backups have their note fields stripped before saving.
 
-New entry uses compact inline label/value controls. Clicking or tabbing into a numeric input selects its entire number; the shared focus outline and background include the unit selector. Clear form and the decorative Add metric tagline have been removed.
+New entry uses compact inline label/value controls. Clicking or tabbing into a numeric input selects its entire number; the shared focus outline and background include the label and unit selector. Measurement values use larger 18px text. Add a metric sits beside the date picker. History appears below the form; select a date to load its measurements for editing. Clear form and the decorative Add metric tagline have been removed.

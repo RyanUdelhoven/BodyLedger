@@ -3,6 +3,7 @@ import * as M from "../model";
 import type { Submit } from "../types";
 import { Plus, Check } from "lucide-react";
 import { DecimalInput, fractionLength } from "./DecimalInput";
+import { EntryHistory } from "./EntryHistory";
 import { ScheduleEditor } from "./ScheduleEditor";
 export function EntryPage({
   state,
@@ -144,6 +145,15 @@ export function EntryPage({
                 value={day}
                 onChange={(e) => fill(e.target.value)}
               />
+              <button
+                type="button"
+                className="add-metric entry-add-metric"
+                onClick={() => setAdding(!adding)}
+                aria-expanded={adding}
+                aria-controls="new-metric-form"
+              >
+                <Plus size={17} /> Add a metric
+              </button>
             </div>
             <h3 className="sr-only">Measurements</h3>
             <p id="measurement-keyboard-help" className="sr-only">
@@ -155,16 +165,6 @@ export function EntryPage({
                 const u = inputUnits[m.id] ?? M.displayUnit(state, m);
                 return (
                   <div className="measurement-row" key={m.id}>
-                    <div>
-                      <label title={m.title} htmlFor={`value-${m.id}`}>
-                        {m.title}
-                      </label>
-                      <small>
-                        {M.due(m.schedule, day)
-                          ? "Scheduled today"
-                          : `Latest due: ${M.latestDue(m.schedule, day)}`}
-                      </small>
-                    </div>
                     <div
                       className="measurement-input"
                       style={
@@ -174,6 +174,13 @@ export function EntryPage({
                         } as CSSProperties
                       }
                     >
+                      <label
+                        className="measurement-label"
+                        title={m.title}
+                        htmlFor={`value-${m.id}`}
+                      >
+                        {m.title}
+                      </label>
                       <DecimalInput
                         fractionPlaces={fractionPlaces}
                         aria-label={m.title}
@@ -240,7 +247,7 @@ export function EntryPage({
               })}
             </div>
             {adding && (
-              <div className="new-metric">
+              <div id="new-metric-form" className="new-metric">
                 <div className="field-grid">
                   <label>
                     Metric name
@@ -287,13 +294,6 @@ export function EntryPage({
                 </button>
               </div>
             )}
-            <button
-              type="button"
-              className="add-metric"
-              onClick={() => setAdding(!adding)}
-            >
-              <Plus size={17} /> Add a metric
-            </button>
             {error && (
               <p role="alert" className="error">
                 {error}
@@ -308,6 +308,15 @@ export function EntryPage({
           </form>
         </section>
       </div>
+      <EntryHistory
+        state={state}
+        onSelect={(entry) => {
+          fill(entry.date);
+          document
+            .getElementById("effective-date")
+            ?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }}
+      />
     </>
   );
 }

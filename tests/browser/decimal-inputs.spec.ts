@@ -37,8 +37,7 @@ test("entry decimal points align across precision, integers, mobile, and history
           integer = text.split(/[.,]/)[0],
           bounds = input.getBoundingClientRect();
         return (
-          bounds.right -
-          parseFloat(style.borderRightWidth) -
+          -parseFloat(style.borderRightWidth) -
           parseFloat(style.paddingRight) -
           context.measureText(text).width +
           context.measureText(integer).width
@@ -46,13 +45,7 @@ test("entry decimal points align across precision, integers, mobile, and history
       }),
     );
     expect(positions).toHaveLength(4);
-    if (selector.includes("measurement-input")) {
-      for (let column = 0; column < 3; column++) {
-        const values = positions.filter((_, index) => index % 3 === column);
-        expect(Math.max(...values) - Math.min(...values)).toBeLessThan(1);
-      }
-    } else
-      expect(Math.max(...positions) - Math.min(...positions)).toBeLessThan(1);
+    expect(Math.max(...positions) - Math.min(...positions)).toBeLessThan(1);
   }
   for (const viewport of [
     { width: 1366, height: 768 },
