@@ -24,6 +24,9 @@ export interface Entry {
 export interface Goal {
   metricId: string;
   target: number;
+  direction?: "above" | "below";
+  duration?: number;
+  durationUnit?: "days" | "weeks";
   start?: number;
   created: string;
   deadline: string;
@@ -567,7 +570,15 @@ export function validateState(input: unknown): State {
       (g) =>
         (!ids.has(g.metricId) && g.metricId !== "army-whtr") ||
         !Number.isFinite(g.target) ||
-        g.target < 0,
+        g.target < 0 ||
+        (g.direction !== undefined &&
+          !["above", "below"].includes(g.direction)) ||
+        (g.duration !== undefined &&
+          (!Number.isInteger(g.duration) ||
+            g.duration < 1 ||
+            g.duration > 3650)) ||
+        (g.durationUnit !== undefined &&
+          !["days", "weeks"].includes(g.durationUnit)),
     ) ||
     Object.values(s.ranges).some(
       (v) => !Number.isInteger(v) || v < 1 || v > 520,
@@ -610,5 +621,42 @@ export function captureGoalStarts(s: State): State {
         .sort((a, b) => a.date.localeCompare(b.date))[0];
       return first ? { ...g, start: value(s, first, m) } : g;
     }),
+  };
+}
+
+export function goalDirection(goal: Goal): "above" | "below" {
+  return (
+    goal.direction ??
+    (goal.start !== undefined && goal.target > goal.start ? "above" : "below")
+  );
+}
+export function goalStreak(s: State, goal: Goal, today = localDate()) {
+  const metric = metrics(s).find((m) => m.id === goal.metricId);
+  const entries = metric
+    ? s.entries
+        .filter((e) => e.date <= today && value(s, e, metric) !== undefined)
+        .sort((a, b) => a.date.localeCompare(b.date))
+    : [];
+  const satisfies = (n: number) =>
+    goalDirection(goal) === "above" ? n > goal.target : n < goal.target;
+  let since: string | undefined;
+  for (const entry of entries) {
+    if (!satisfies(value(s, entry, metric!)!)) since = undefined;
+    else since ??= entry.date;
+  }
+  const latest = entries.at(-1)?.date;
+  const days =
+    since && latest
+      ? Math.round((Date.parse(latest) - Date.parse(since)) / 86400000) + 1
+      : 0;
+  const required =
+    (goal.duration ?? 1) * (goal.durationUnit === "weeks" ? 7 : 1);
+  return {
+    since,
+    latest,
+    days,
+    required,
+    progress: Math.min(100, (days / required) * 100),
+    achieved: days >= required,
   };
 }

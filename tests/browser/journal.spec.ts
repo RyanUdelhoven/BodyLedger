@@ -29,7 +29,7 @@ test("records measurements, keeps drafts, imports atomically, edits history, and
     .click();
   await page.getByLabel("Target", { exact: true }).fill("190");
   await page.getByRole("button", { name: "Save goal" }).click();
-  await expect(page.getByText("190.00 lb")).toBeVisible();
+  await expect(page.getByText("190.00 lb", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Settings", exact: true }).click();
   await page
     .getByRole("combobox", { name: "Weight units", exact: true })

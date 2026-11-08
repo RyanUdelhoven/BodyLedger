@@ -273,3 +273,43 @@ it("discards retired notes from old CSV imports and backups", () => {
   expect(M.exportCSV(restored).split("\r\n")[0]).toBe("Date,Weight (lb)");
   expect(M.exportCSV(restored)).not.toContain("Legacy note");
 });
+
+it("tracks strict above/below streaks, sparse dates, resets, future exclusion, and duration", () => {
+  const s = M.initial();
+  s.entries = [
+    { id: "1", date: "2026-10-01", values: { weight: 100 } },
+    { id: "2", date: "2026-10-08", values: { weight: 99 } },
+    { id: "3", date: "2026-10-15", values: { weight: 101 } },
+    { id: "4", date: "2026-10-22", values: { weight: 102 } },
+    { id: "5", date: "2026-12-01", values: { weight: 90 } },
+  ];
+  const g: M.Goal = {
+    metricId: "weight",
+    target: 100,
+    direction: "above",
+    duration: 1,
+    durationUnit: "weeks",
+    created: "2026-01-01",
+    deadline: "",
+  };
+  expect(M.goalStreak(s, g, "2026-11-08")).toMatchObject({
+    days: 8,
+    since: "2026-10-15",
+    achieved: true,
+  });
+  expect(M.goalStreak(s, { ...g, direction: "below" }, "2026-11-08").days).toBe(
+    0,
+  );
+  expect(M.goalStreak(s, { ...g, direction: "below" }, "2026-10-01").days).toBe(
+    0,
+  );
+  expect(M.goalStreak(s, { ...g, direction: "below" }, "2026-10-08").days).toBe(
+    1,
+  );
+  expect(M.goalStreak(s, { ...g, duration: 2 }, "2026-11-08").achieved).toBe(
+    false,
+  );
+  expect(M.goalDirection({ ...g, direction: undefined, start: 90 })).toBe(
+    "above",
+  );
+});
