@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, type CSSProperties } from "react";
 import * as M from "../model";
 import type { Submit } from "../types";
 import { Scale, Plus, Check } from "lucide-react";
+import { DecimalInput, fractionLength } from "./DecimalInput";
 import { ScheduleEditor } from "./ScheduleEditor";
 export function EntryPage({
   state,
@@ -145,6 +146,12 @@ export function EntryPage({
         e.values[weightMetric.id] !== undefined,
     )
     .sort((a, b) => b.date.localeCompare(a.date))[0];
+  const inputValues = state.metrics.map((metric) => draft[metric.id] ?? "");
+  const fractionPlaces = Math.max(3, ...inputValues.map(fractionLength));
+  const integerPlaces = Math.max(
+    3,
+    ...inputValues.map((value) => value.split(/[.,]/)[0].length),
+  );
   return (
     <>
       <div className="summary-row entry-summary">
@@ -205,11 +212,19 @@ export function EntryPage({
                         : `Latest due: ${M.latestDue(m.schedule, day)}`}
                     </small>
                   </div>
-                  <div className="measurement-input">
-                    <input
+                  <div
+                    className="measurement-input"
+                    style={
+                      {
+                        "--decimal-places": fractionPlaces,
+                        "--decimal-integers": integerPlaces,
+                      } as CSSProperties
+                    }
+                  >
+                    <DecimalInput
+                      fractionPlaces={fractionPlaces}
                       aria-label={m.title}
                       id={`value-${m.id}`}
-                      inputMode="decimal"
                       placeholder="—"
                       value={draft[m.id] ?? ""}
                       onChange={(e) =>
@@ -268,8 +283,7 @@ export function EntryPage({
                   </label>
                   <label>
                     First measurement
-                    <input
-                      inputMode="decimal"
+                    <DecimalInput
                       value={newValue}
                       onChange={(e) =>
                         setNewValue(

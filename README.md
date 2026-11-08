@@ -81,3 +81,5 @@ Every Trends graph displays the selected metric’s goal as a labeled dashed tar
 The shared promotional header and date block have been removed from every page. New entry retains its latest-weight summary and entry form, with scheduled-count, active-goal-count, and decorative side panels removed. CSV import and its format example now live beside Export CSV in Settings → Manage data.
 
 Trends places the metric selector, range control, and optional weekday selector in one control row. Compact statistics and a viewport-sized chart keep controls, statistics, and graph visible together at desktop and mobile sizes. The expandable chart-data table remains below the graph.
+
+Measurement entry fields align their decimal points using a shared fractional column and fixed-width digits. Integer entries align at the implied decimal position. Alignment adapts to typed precision and unit conversions without modifying the entered or stored measurement. History editing uses the same numeric input.

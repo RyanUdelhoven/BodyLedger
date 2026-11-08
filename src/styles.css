@@ -1577,3 +1577,36 @@ footer {
     min-height: 160px;
   }
 }
+
+/* Reserve the same fractional column while keeping the native editable input. */
+.decimal-input {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  padding-inline-end: calc(
+    (var(--decimal-places, 3) + 1 - var(--decimal-tail, 0)) * 1ch + 10px
+  );
+}
+.measurement-input {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 19px;
+  width: calc(
+    (var(--decimal-places, 3) + var(--decimal-integers, 3) + 1) * 1ch + 94px
+  );
+  max-width: calc(100% - 55px);
+}
+.measurement-input .decimal-input {
+  padding-inline-end: calc(
+    (var(--decimal-places, 3) + 1 - var(--decimal-tail, 0)) * 1ch + 10px
+  );
+}
+.measurement-input select {
+  font-family: system-ui, sans-serif;
+}
+.measurement-row > div:first-child {
+  min-width: 0;
+  flex: 1;
+}
+.measurement-row label {
+  overflow-wrap: anywhere;
+}

@@ -14,6 +14,7 @@ import {
 import { ScheduleEditor } from "./ScheduleEditor";
 import { Empty } from "./Empty";
 import { Notifications } from "./Notifications";
+import { DecimalInput, fractionLength } from "./DecimalInput";
 import { CSVImport } from "./CSVImport";
 import { download } from "../ui";
 export function SettingsPage({
@@ -49,6 +50,10 @@ export function SettingsPage({
     b.date.localeCompare(a.date),
   );
   const ms = M.metrics(state);
+  const editFractionPlaces = Math.max(
+    3,
+    ...Object.values(editValues).map(fractionLength),
+  );
   const settings = (p: Partial<M.State["settings"]>) =>
     commit({ ...state, settings: { ...state.settings, ...p } });
   async function removeEntries(ids: string[]) {
@@ -807,8 +812,8 @@ export function SettingsPage({
                 <div className="field-grid" key={m.id}>
                   <label>
                     {m.title}
-                    <input
-                      inputMode="decimal"
+                    <DecimalInput
+                      fractionPlaces={editFractionPlaces}
                       value={editValues[m.id] ?? ""}
                       onChange={(e) =>
                         setEditValues({
