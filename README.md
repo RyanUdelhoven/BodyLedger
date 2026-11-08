@@ -78,7 +78,7 @@ Every Trends graph displays the selected metric’s goal as a labeled dashed tar
 
 ## Compact journal layout
 
-The shared promotional header and date block have been removed from every page. New entry retains its latest-weight summary and entry form, with scheduled-count, active-goal-count, and decorative side panels removed. CSV import and its format example now live beside Export CSV in Settings → Manage data.
+The shared promotional header and date block have been removed from every page. New entry opens directly with a left-aligned date picker and measurement form. The latest-weight summary, New entry/Daily check-in header, scheduled count, goals count, and decorative side panels are removed. The date picker retains an accessible name without a visible label. CSV import and its format example now live beside Export CSV in Settings → Manage data.
 
 Trends places the metric selector, range control, and optional weekday selector in one control row. Compact statistics and a viewport-sized chart keep controls, statistics, and graph visible together at desktop and mobile sizes. The expandable chart-data table remains below the graph.
 

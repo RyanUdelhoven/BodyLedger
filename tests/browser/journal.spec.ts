@@ -20,7 +20,8 @@ test("records measurements, keeps drafts, imports atomically, edits history, and
   await page.getByRole("button", { name: "Save entry", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Saved 1 entry");
   await page.reload();
-  await expect(page.getByText("206.10 lb").first()).toBeVisible();
+  await page.getByLabel("Effective date").fill("2026-11-01");
+  await expect(page.getByLabel("Weight", { exact: true })).toHaveValue("206.1");
   await page.getByRole("button", { name: "Goals", exact: true }).click();
   await page
     .getByRole("button")
@@ -128,5 +129,6 @@ test("rejects stale writes from another tab without losing saved data", async ({
   await expect(other.getByRole("status")).toContainText("another tab");
   await expect(other.getByLabel("Weight", { exact: true })).toHaveValue("199");
   await other.reload();
-  await expect(other.getByText("200.00 lb").first()).toBeVisible();
+  await other.getByLabel("Effective date").fill("2026-11-04");
+  await expect(other.getByLabel("Weight", { exact: true })).toHaveValue("200");
 });

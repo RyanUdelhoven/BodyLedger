@@ -30,6 +30,9 @@ test("Coulson bookmark starts stopped containers twice and retains the database"
     await expect(page.getByLabel("Effective date")).toBeVisible({
       timeout: 60000,
     });
-    await expect(page.getByText("201.20 lb").first()).toBeVisible();
+    await page.getByLabel("Effective date").fill("2026-11-03");
+    await expect(page.getByLabel("Weight", { exact: true })).toHaveValue(
+      "201.2",
+    );
   }
 });

@@ -4,6 +4,18 @@ test("compact pages retain entry workflow and Settings CSV import", async ({
   page,
 }) => {
   await expect(page.locator(".page-heading")).toHaveCount(0);
+  await expect(page.getByText("Latest weight", { exact: true })).toHaveCount(0);
+  await expect(page.locator(".entry-card .card-header")).toHaveCount(0);
+  await expect(page.getByText("DAILY CHECK-IN", { exact: true })).toHaveCount(
+    0,
+  );
+  await expect(page.getByText("Effective date", { exact: true })).toHaveCount(
+    0,
+  );
+  const date = await page.getByLabel("Effective date").boundingBox(),
+    card = await page.locator(".entry-card").boundingBox();
+  expect(date!.x - card!.x).toBeLessThanOrEqual(32);
+
   await expect(
     page.getByText("Measurements today", { exact: true }),
   ).toHaveCount(0);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, type CSSProperties } from "react";
 import * as M from "../model";
 import type { Submit } from "../types";
-import { Scale, Plus, Check } from "lucide-react";
+import { Plus, Check } from "lucide-react";
 import { DecimalInput, fractionLength } from "./DecimalInput";
 import { ScheduleEditor } from "./ScheduleEditor";
 export function EntryPage({
@@ -124,18 +124,6 @@ export function EntryPage({
       setError((e as Error).message);
     }
   }
-  const weightMetric =
-    state.metrics.find(
-      (m) => m.kind === "weight" && m.title.toLowerCase() === "weight",
-    ) ?? state.metrics.find((m) => m.kind === "weight");
-  const lastWeight = [...state.entries]
-    .filter(
-      (e) =>
-        e.date <= M.localDate() &&
-        weightMetric &&
-        e.values[weightMetric.id] !== undefined,
-    )
-    .sort((a, b) => b.date.localeCompare(a.date))[0];
   const inputValues = state.metrics.map((metric) => draft[metric.id] ?? "");
   const fractionPlaces = Math.max(3, ...inputValues.map(fractionLength));
   const integerPlaces = Math.max(
@@ -144,42 +132,13 @@ export function EntryPage({
   );
   return (
     <>
-      <div className="summary-row entry-summary">
-        <div className="summary-card">
-          <div className="summary-icon">
-            <Scale size={20} />
-          </div>
-          <div>
-            <span>Latest weight</span>
-            <strong>
-              {lastWeight
-                ? M.format(
-                    state,
-                    weightMetric!,
-                    lastWeight.values[weightMetric!.id],
-                  )
-                : "—"}
-              <small>
-                {lastWeight ? lastWeight.date : "Your starting point awaits"}
-              </small>
-            </strong>
-          </div>
-        </div>
-      </div>
       <div className="entry-layout">
         <section className="card entry-card">
-          <div className="card-header">
-            <div>
-              <h2>New entry</h2>
-              <p>Start with where you are today.</p>
-            </div>
-            <span className="tag">DAILY CHECK-IN</span>
-          </div>
           <form onSubmit={onSave}>
             <div className="effective-date">
-              <label htmlFor="effective-date">Effective date</label>
               <input
                 id="effective-date"
+                aria-label="Effective date"
                 type="date"
                 required
                 value={day}

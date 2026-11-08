@@ -316,21 +316,6 @@ main {
   font-weight: 600;
   margin-bottom: 12px;
 }
-.summary-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 17px;
-  margin-bottom: 28px;
-}
-.summary-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  padding: 22px;
-  border: 1px solid var(--color-border);
-  border-radius: 11px;
-  background: var(--color-surface);
-}
 .summary-icon {
   display: inline-flex;
   align-items: center;
@@ -342,7 +327,6 @@ main {
   background: oklch(from var(--color-action) l c h / 0.035);
   color: var(--color-action);
 }
-.summary-card span,
 .stats span,
 .goal-values span {
   font-size: 11px;
@@ -350,22 +334,6 @@ main {
   display: block;
   margin-bottom: 8px;
 }
-.summary-card strong {
-  display: block;
-  font-family: "Manrope", sans-serif;
-  font-size: 23px;
-  font-weight: 550;
-  letter-spacing: -0.5px;
-}
-.summary-card small {
-  display: block;
-  font-family: "DM Sans", sans-serif;
-  font-size: 10px;
-  letter-spacing: 0;
-  font-weight: 400;
-  margin-top: 9px;
-}
-.summary-card em,
 .stats em {
   font-family: "DM Sans", sans-serif;
   font-size: 11px;
@@ -399,18 +367,9 @@ main {
   color: var(--color-muted);
   margin-top: 6px;
 }
-.tag {
-  font-size: 8px;
-  letter-spacing: 1.2px;
-  padding: 7px 8px;
-  background: var(--color-elevated);
-  color: var(--color-muted);
-  border-radius: 4px;
-  white-space: nowrap;
-}
 .effective-date {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 22px 26px;
   border-bottom: 1px solid var(--color-border);
@@ -1045,9 +1004,6 @@ th + th {
   .entry-layout {
     grid-template-columns: 1.9fr 1fr;
   }
-  .summary-card {
-    padding: 27px;
-  }
   .card-header {
     padding: 28px 30px;
   }
@@ -1069,33 +1025,19 @@ th + th {
   .topbar {
     padding: 0 30px;
   }
-  .summary-card {
-    padding: 18px;
-    gap: 10px;
-  }
   .summary-icon {
     width: 32px;
     height: 32px;
   }
-  .summary-card strong {
-    font-size: 21px;
-  }
   .entry-layout {
     grid-template-columns: minmax(0, 1.5fr) minmax(240px, 1fr);
     gap: 20px;
-  }
-  .tag {
-    display: none;
   }
   .storage-card {
     flex-wrap: wrap;
   }
   .storage-card > .secondary {
     margin-left: 50px;
-  }
-  .summary-card em {
-    display: block;
-    margin-top: 4px;
   }
 }
 @media (max-width: 900px) {
@@ -1134,12 +1076,6 @@ th + th {
   }
   .entry-layout {
     grid-template-columns: 1fr;
-  }
-  .summary-card {
-    padding: 18px 12px;
-  }
-  .summary-card .summary-icon {
-    display: none;
   }
   .settings-grid {
     grid-template-columns: 1fr;
@@ -1201,26 +1137,6 @@ th + th {
   h1 {
     font-size: 27px;
     letter-spacing: -1px;
-  }
-  .summary-row {
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-  .summary-card {
-    padding: 14px 10px;
-  }
-  .summary-card span {
-    font-size: 9px;
-  }
-  .summary-card strong {
-    font-size: 19px;
-  }
-  .summary-card small {
-    font-size: 8px;
-    line-height: 1.6;
-  }
-  .summary-card em {
-    font-size: 8px;
   }
   .card-header {
     padding: 21px;
@@ -1382,30 +1298,6 @@ main {
 .entry-layout {
   display: block;
 }
-.entry-summary {
-  display: block;
-  margin-bottom: 16px;
-}
-.entry-summary .summary-card {
-  padding: 14px 18px;
-  align-items: center;
-}
-.entry-summary .summary-card > div:last-child {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.entry-summary .summary-card span {
-  margin: 0;
-}
-.entry-summary .summary-card strong {
-  font-size: 20px;
-}
-.entry-summary .summary-card small {
-  display: inline;
-  margin-left: 12px;
-}
 .csv-import-controls {
   display: contents;
 }
@@ -1514,16 +1406,6 @@ footer {
   }
   .tabs button {
     padding: 11px 10px;
-  }
-  .entry-summary .summary-card {
-    padding: 12px;
-  }
-  .entry-summary .summary-card > div:last-child {
-    gap: 10px;
-  }
-  .entry-summary .summary-card small {
-    font-size: 10px;
-    margin-left: 8px;
   }
   .trend-card {
     height: calc(100dvh - 210px);
@@ -1752,4 +1634,8 @@ footer {
   .measurement-grid .measurement-input .decimal-input {
     padding-inline-start: 4px;
   }
+}
+
+.entry-card .effective-date {
+  padding-block: 12px;
 }
