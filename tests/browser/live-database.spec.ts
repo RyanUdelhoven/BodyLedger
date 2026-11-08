@@ -23,9 +23,9 @@ test("live SQLite dataset survives two Coulson stop and bookmark starts", async 
       ).trim(),
     ).toBe("");
     await page.goto("/");
-    await expect(
-      page.getByRole("heading", { name: "Make a little progress." }),
-    ).toBeVisible({ timeout: 60000 });
+    await expect(page.getByLabel("Effective date")).toBeVisible({
+      timeout: 60000,
+    });
     await expect(
       page.getByText("2,504 entries · 2 metrics · Latest 2026-11-08"),
     ).toBeVisible();

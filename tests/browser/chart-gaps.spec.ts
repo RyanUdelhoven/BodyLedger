@@ -41,7 +41,8 @@ test("trend lines bridge missing observations without filling missing table cell
       })
       .toEqual({ moves: 1, hasLine: true });
     const details = page.locator(".data-details");
-    if((await details.getAttribute("open"))===null)await details.locator("summary").click();
+    if ((await details.getAttribute("open")) === null)
+      await details.locator("summary").click();
     await expect(
       details.getByRole("cell", { name: "—", exact: true }).first(),
     ).toBeVisible();

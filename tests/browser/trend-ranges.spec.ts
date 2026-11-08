@@ -59,7 +59,7 @@ test("trend steppers edit independently during delayed saves and persist each ra
     exact: true,
   });
   await year.fill("101");
-  await page.getByRole("heading", { name: "Year flow", exact: true }).click();
+  await year.press("Tab");
   await expect(year).toHaveValue("6");
 });
 

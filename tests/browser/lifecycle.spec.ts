@@ -9,9 +9,9 @@ test("Coulson bookmark starts stopped containers twice and retains the database"
   );
   test.setTimeout(120000);
   await page.goto("/");
-  await expect(
-    page.getByRole("heading", { name: "Make a little progress." }),
-  ).toBeVisible({ timeout: 60000 });
+  await expect(page.getByLabel("Effective date")).toBeVisible({
+    timeout: 60000,
+  });
   await page.getByLabel("Effective date").fill("2026-11-03");
   await page.getByLabel("Weight", { exact: true }).fill("201.2");
   await page.getByRole("button", { name: "Save entry", exact: true }).click();
@@ -27,9 +27,9 @@ test("Coulson bookmark starts stopped containers twice and retains the database"
     );
     expect(running.trim()).toBe("");
     await page.goto("/");
-    await expect(
-      page.getByRole("heading", { name: "Make a little progress." }),
-    ).toBeVisible({ timeout: 60000 });
+    await expect(page.getByLabel("Effective date")).toBeVisible({
+      timeout: 60000,
+    });
     await expect(page.getByText("201.20 lb").first()).toBeVisible();
   }
 });

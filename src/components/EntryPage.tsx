@@ -1,26 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as M from "../model";
 import type { Submit } from "../types";
-import {
-  Scale,
-  Activity,
-  Target,
-  Plus,
-  Check,
-  Upload,
-  ShieldCheck,
-} from "lucide-react";
+import { Scale, Plus, Check } from "lucide-react";
 import { ScheduleEditor } from "./ScheduleEditor";
 export function EntryPage({
   state,
   submit,
   busy,
-  notify,
 }: {
   state: M.State;
   submit: Submit;
   busy: boolean;
-  notify: (s: string) => void;
 }) {
   const [day, setDay] = useState(M.localDate());
   const [draft, setDraft] = useState<Record<string, string>>({});
@@ -155,10 +145,9 @@ export function EntryPage({
         e.values[weightMetric.id] !== undefined,
     )
     .sort((a, b) => b.date.localeCompare(a.date))[0];
-  const dueMetrics = state.metrics.filter((m) => M.due(m.schedule, day));
   return (
     <>
-      <div className="summary-row">
+      <div className="summary-row entry-summary">
         <div className="summary-card">
           <div className="summary-icon">
             <Scale size={20} />
@@ -176,34 +165,6 @@ export function EntryPage({
               <small>
                 {lastWeight ? lastWeight.date : "Your starting point awaits"}
               </small>
-            </strong>
-          </div>
-        </div>
-        <div className="summary-card">
-          <div className="summary-icon">
-            <Activity size={20} />
-          </div>
-          <div>
-            <span>Measurements today</span>
-            <strong>
-              {
-                dueMetrics.filter((m) => saved?.values[m.id] !== undefined)
-                  .length
-              }
-              <em> / {dueMetrics.length} scheduled</em>
-              <small>A little routine. A lasting habit.</small>
-            </strong>
-          </div>
-        </div>
-        <div className="summary-card">
-          <div className="summary-icon">
-            <Target size={20} />
-          </div>
-          <div>
-            <span>Active goals</span>
-            <strong>
-              {state.goals.length}
-              <small>Progress on your own terms</small>
             </strong>
           </div>
         </div>
@@ -394,75 +355,6 @@ export function EntryPage({
             </div>
           </form>
         </section>
-        <div className="entry-aside">
-          <section className="card import-card">
-            <span className="large-icon">
-              <Upload size={23} />
-            </span>
-            <h2>Bring your history.</h2>
-            <p>
-              Your past progress belongs here, too. Import measurements from a
-              CSV or Weight Gurus export.
-            </p>
-            <label className="upload-button">
-              <Upload size={16} /> Import CSV
-              <input
-                type="file"
-                accept=".csv,.tsv,text/csv"
-                onChange={async (e) => {
-                  const f = e.target.files?.[0];
-                  if (!f) return;
-                  try {
-                    if (f.size > 10 * 1024 * 1024)
-                      throw Error("Choose a CSV smaller than 10 MB.");
-                    const bytes = await f.arrayBuffer();
-                    const view = new Uint8Array(bytes);
-                    const encoding =
-                      view[0] === 255 && view[1] === 254
-                        ? "utf-16le"
-                        : view[0] === 254 && view[1] === 255
-                          ? "utf-16be"
-                          : "utf-8";
-                    const imported = M.importCSV(
-                      state,
-                      new TextDecoder(encoding).decode(bytes),
-                    );
-                    await submit(imported.entries, imported.metrics);
-                  } catch (error) {
-                    notify((error as Error).message);
-                  }
-                  e.target.value = "";
-                }}
-              />
-            </label>
-            <div className="tiny">CSV files · Up to 10 MB · Stored locally</div>
-            <details>
-              <summary>See the CSV format</summary>
-              <code>
-                Date,Weight (lb),Gut (in),Notes
-                <br />
-                2026-11-01,206.1,38.375,Check-in
-              </code>
-            </details>
-          </section>
-          <section className="quiet-card">
-            <div className="eyebrow">BUILT AROUND YOU</div>
-            <h3>More than a number.</h3>
-            <p>
-              Track weight, measurements, percentages, or anything that matters
-              to you.
-            </p>
-            <div className="mini-tags">
-              <span>Weight</span>
-              <span>Length</span>
-              <span>Custom metrics</span>
-            </div>
-          </section>
-          <div className="storage-note">
-            <ShieldCheck size={17} />
-            <p>No account. No cloud. Your measurements stay in your local database.</p>
-          </div>
-        </div>
       </div>
     </>
   );

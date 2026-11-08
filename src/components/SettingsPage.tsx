@@ -14,6 +14,7 @@ import {
 import { ScheduleEditor } from "./ScheduleEditor";
 import { Empty } from "./Empty";
 import { Notifications } from "./Notifications";
+import { CSVImport } from "./CSVImport";
 import { download } from "../ui";
 export function SettingsPage({
   state,
@@ -265,6 +266,7 @@ export function SettingsPage({
                 >
                   <Download size={16} /> Export CSV
                 </button>
+                <CSVImport state={state} submit={submit} notify={notify} />
                 <button
                   className="secondary"
                   onClick={() =>

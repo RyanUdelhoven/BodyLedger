@@ -75,3 +75,9 @@ Trends uses one shared metric selection across Days YoY, Previous weekdays, Week
 Previous weekdays labels its range **Weeks covered**. All trend Y axes use explicit whole-number ticks in the selected display units, with at most five horizontal grid lines including the bottom and top bounds. Bounds include every plotted series and deviation boundary. Measurement, tooltip, and table precision remain unchanged.
 
 Every Trends graph displays the selected metric’s goal as a labeled dashed target line when that goal exists. Targets follow display units, remain visible outside the observed range, and appear even without observations. Axis bounds include the goal while retaining the five-grid-line limit. Switching to a metric without a goal hides the line; removing a goal removes it from all graphs.
+
+## Compact journal layout
+
+The shared promotional header and date block have been removed from every page. New entry retains its latest-weight summary and entry form, with scheduled-count, active-goal-count, and decorative side panels removed. CSV import and its format example now live beside Export CSV in Settings → Manage data.
+
+Trends places the metric selector, range control, and optional weekday selector in one control row. Compact statistics and a viewport-sized chart keep controls, statistics, and graph visible together at desktop and mobile sizes. The expandable chart-data table remains below the graph.
