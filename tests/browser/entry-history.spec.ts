@@ -47,7 +47,7 @@ test("New entry combines labels with larger inputs, places Add beside date, and 
     await input.evaluate((element) =>
       parseFloat(getComputedStyle(element).fontSize),
     ),
-  ).toBeGreaterThanOrEqual(18);
+  ).toBe(36);
   const history = page.getByRole("region", { name: "History", exact: true });
   await expect(history).toBeVisible();
   const historyBox = await history.boundingBox(),

@@ -1737,3 +1737,22 @@ footer {
 .entry-actions > .primary {
   margin-left: auto;
 }
+
+/* Larger New Entry measurement text, including labels and units. */
+.entry-card .measurement-grid .measurement-input { font-size: 36px; }
+.entry-card .measurement-grid .measurement-input .measurement-label {
+  flex-basis: 95px;
+  font-size: 24px;
+}
+.entry-card .measurement-grid .measurement-input .decimal-input {
+  min-height: 64px;
+  font-size: 36px;
+}
+.entry-card .measurement-grid .measurement-input select {
+  width: 70px;
+  min-height: 64px;
+  font-size: 24px;
+}
+@media (min-width: 1001px) and (max-width: 1250px) {
+  .entry-card .measurement-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
