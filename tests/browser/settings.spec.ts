@@ -74,8 +74,9 @@ test("schedules, profile ratio, invalid import rollback, and immediate deletions
     .click();
   await expect(page.getByRole("status")).toContainText("Deleted 1 entries");
   await page
+    .locator("section.card")
+    .filter({ has: page.getByRole("heading", { name: "Delete metric columns", exact: true }) })
     .getByRole("button", { name: "Select all", exact: true })
-    .last()
     .click();
   await page.getByRole("button", { name: "Delete selected columns" }).click();
   await page.getByRole("button", { name: "New entry", exact: true }).click();

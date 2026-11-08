@@ -12,6 +12,7 @@ import {
   Trash2,
 } from "lucide-react";
 import { ScheduleEditor } from "./ScheduleEditor";
+import { MetricNames } from "./MetricNames";
 import { HistoryTable } from "./HistoryTable";
 import { Notifications } from "./Notifications";
 import { DecimalInput, fractionLength } from "./DecimalInput";
@@ -314,98 +315,7 @@ export function SettingsPage({
               </p>
             </div>
           </section>
-          <section className="card history-card">
-            <div className="card-header">
-              <div>
-                <h2>History</h2>
-                <p>
-                  {entries.length.toLocaleString()} daily reports. Select a date
-                  to edit.
-                </p>
-              </div>
-              <button
-                className="text-button"
-                onClick={() =>
-                  setSelected(
-                    selected.length === entries.length
-                      ? []
-                      : entries.map((e) => e.id),
-                  )
-                }
-              >
-                {selected.length === entries.length && entries.length
-                  ? "Deselect all"
-                  : "Select all"}
-              </button>
-            </div>
-            <div className="history-tools">
-              <label>
-                Find date
-                <input
-                  type="date"
-                  value={find}
-                  onChange={(e) => setFind(e.target.value)}
-                />
-              </label>
-              <button
-                className="secondary"
-                disabled={!find || !entries.length}
-                onClick={go}
-              >
-                Go
-              </button>
-              <button
-                className="danger secondary"
-                disabled={!selected.length}
-                onClick={() => removeEntries(selected)}
-              >
-                Delete selected entries ({selected.length})
-              </button>
-            </div>
-            <HistoryTable
-              state={state}
-              entries={entries.slice(0, limit)}
-              selected={selected}
-              highlightedId={highlight}
-              onToggle={(id, checked) =>
-                setSelected((current) =>
-                  checked
-                    ? [...current, id]
-                    : current.filter((value) => value !== id),
-                )
-              }
-              onEdit={(entry) => {
-                setEditing(structuredClone(entry));
-                setEditValues(
-                  Object.fromEntries(
-                    state.metrics.map((metric) => [
-                      metric.id,
-                      entry.values[metric.id] === undefined
-                        ? ""
-                        : String(
-                            Number(
-                              (
-                                entry.values[metric.id] /
-                                M.factor(M.displayUnit(state, metric))
-                              ).toPrecision(12),
-                            ),
-                          ),
-                    ]),
-                  ),
-                );
-                setEditUnits({});
-                setError("");
-              }}
-            />
-            {entries.length > limit && (
-              <button
-                className="secondary load-more"
-                onClick={() => setLimit(limit + 200)}
-              >
-                Show more entries
-              </button>
-            )}
-          </section>
+          <MetricNames state={state} commit={commit} notify={notify} />
           <div className="settings-grid">
             <section className="card">
               <div className="card-header">
@@ -524,54 +434,99 @@ export function SettingsPage({
                 </button>
               </div>
             </section>
-            <section className="card wide">
-              <div className="card-header">
-                <div>
-                  <h2>Explore with demo history</h2>
-                  <p>
-                    Synthetic Weight and Gut measurements from 2020 through
-                    November 8, 2026.
-                  </p>
-                </div>
-              </div>
-              <div className="settings-body button-row">
-                <button
-                  className="secondary"
-                  onClick={async () => {
-                    if (await commit(M.demo(state)))
-                      notify(
-                        "Demo history refreshed. Your non-demo entries and goals were preserved.",
-                      );
-                  }}
-                >
-                  Refresh demo history
-                </button>
-                <button
-                  className="danger secondary"
-                  onClick={async () => {
-                    if (await commit(M.demo(state, true)))
-                      notify("All data replaced with synthetic demo history.");
-                  }}
-                >
-                  Replace all data with demo history
-                </button>
-                <button
-                  className="secondary"
-                  onClick={async () => {
-                    if (
-                      await commit({
-                        ...state,
-                        entries: state.entries.filter((e) => !e.demo),
-                      })
-                    )
-                      notify("Demo entries removed.");
-                  }}
-                >
-                  Remove demo data
-                </button>
-              </div>
-            </section>
           </div>
+          <section className="card history-card">
+            <div className="card-header">
+              <div>
+                <h2>History</h2>
+                <p>
+                  {entries.length.toLocaleString()} daily reports. Select a date
+                  to edit.
+                </p>
+              </div>
+              <button
+                className="text-button"
+                onClick={() =>
+                  setSelected(
+                    selected.length === entries.length
+                      ? []
+                      : entries.map((e) => e.id),
+                  )
+                }
+              >
+                {selected.length === entries.length && entries.length
+                  ? "Deselect all"
+                  : "Select all"}
+              </button>
+            </div>
+            <div className="history-tools">
+              <label>
+                Find date
+                <input
+                  type="date"
+                  value={find}
+                  onChange={(e) => setFind(e.target.value)}
+                />
+              </label>
+              <button
+                className="secondary"
+                disabled={!find || !entries.length}
+                onClick={go}
+              >
+                Go
+              </button>
+              <button
+                className="danger secondary"
+                disabled={!selected.length}
+                onClick={() => removeEntries(selected)}
+              >
+                Delete selected entries ({selected.length})
+              </button>
+            </div>
+            <HistoryTable
+              state={state}
+              entries={entries.slice(0, limit)}
+              selected={selected}
+              highlightedId={highlight}
+              onToggle={(id, checked) =>
+                setSelected((current) =>
+                  checked
+                    ? [...current, id]
+                    : current.filter((value) => value !== id),
+                )
+              }
+              onEdit={(entry) => {
+                setEditing(structuredClone(entry));
+                setEditValues(
+                  Object.fromEntries(
+                    state.metrics.map((metric) => [
+                      metric.id,
+                      entry.values[metric.id] === undefined
+                        ? ""
+                        : String(
+                            Number(
+                              (
+                                entry.values[metric.id] /
+                                M.factor(M.displayUnit(state, metric))
+                              ).toPrecision(12),
+                            ),
+                          ),
+                    ]),
+                  ),
+                );
+                setEditUnits({});
+                setError("");
+              }}
+            />
+            {entries.length > limit && (
+              <button
+                className="secondary load-more"
+                onClick={() => setLimit(limit + 200)}
+              >
+                Show more entries
+              </button>
+            )}
+          </section>
         </>
       ) : section === "Measurement schedules" ? (
         <section className="card">
