@@ -46,7 +46,13 @@ test("entry decimal points align across precision, integers, mobile, and history
       }),
     );
     expect(positions).toHaveLength(4);
-    expect(Math.max(...positions) - Math.min(...positions)).toBeLessThan(1);
+    if (selector.includes("measurement-input")) {
+      for (let column = 0; column < 3; column++) {
+        const values = positions.filter((_, index) => index % 3 === column);
+        expect(Math.max(...values) - Math.min(...values)).toBeLessThan(1);
+      }
+    } else
+      expect(Math.max(...positions) - Math.min(...positions)).toBeLessThan(1);
   }
   for (const viewport of [
     { width: 1366, height: 768 },

@@ -83,3 +83,5 @@ The shared promotional header and date block have been removed from every page. 
 Trends places the metric selector, range control, and optional weekday selector in one control row. Compact statistics and a viewport-sized chart keep controls, statistics, and graph visible together at desktop and mobile sizes. The expandable chart-data table remains below the graph.
 
 Measurement entry fields align their decimal points using a shared fractional column and fixed-width digits. Integer entries align at the implied decimal position. Alignment adapts to typed precision and unit conversions without modifying the entered or stored measurement. History editing uses the same numeric input.
+
+New entry arranges measurements three per row. Tab and Shift+Tab move directly between values in row order. Unit selectors remain available by mouse or Alt+Down from the value field; Escape returns to its value. Mobile fields stack their unit selector below the number to retain three columns without horizontal scrolling.

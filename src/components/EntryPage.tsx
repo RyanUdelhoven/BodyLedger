@@ -196,79 +196,98 @@ export function EntryPage({
                 onChange={(e) => fill(e.target.value)}
               />
             </div>
-            <div className="measurement-head">
-              <span>MEASUREMENT</span>
-              <span>VALUE</span>
-            </div>
-            {state.metrics.map((m) => {
-              const u = inputUnits[m.id] ?? M.displayUnit(state, m);
-              return (
-                <div className="measurement-row" key={m.id}>
-                  <div>
-                    <label htmlFor={`value-${m.id}`}>{m.title}</label>
-                    <small>
-                      {M.due(m.schedule, day)
-                        ? "Scheduled today"
-                        : `Latest due: ${M.latestDue(m.schedule, day)}`}
-                    </small>
-                  </div>
-                  <div
-                    className="measurement-input"
-                    style={
-                      {
-                        "--decimal-places": fractionPlaces,
-                        "--decimal-integers": integerPlaces,
-                      } as CSSProperties
-                    }
-                  >
-                    <DecimalInput
-                      fractionPlaces={fractionPlaces}
-                      aria-label={m.title}
-                      id={`value-${m.id}`}
-                      placeholder="—"
-                      value={draft[m.id] ?? ""}
-                      onChange={(e) =>
-                        setDraft({
-                          ...draft,
-                          [m.id]: M.limitInput(
-                            e.target.value,
-                            u,
-                            draft[m.id] ?? "",
-                          ),
-                        })
+            <h3 className="sr-only">Measurements</h3>
+            <p id="measurement-keyboard-help" className="sr-only">
+              Tab moves between measurements. Alt plus Arrow Down focuses the
+              unit selector; Escape returns to the measurement.
+            </p>
+            <div className="measurement-grid">
+              {state.metrics.map((m) => {
+                const u = inputUnits[m.id] ?? M.displayUnit(state, m);
+                return (
+                  <div className="measurement-row" key={m.id}>
+                    <div>
+                      <label htmlFor={`value-${m.id}`}>{m.title}</label>
+                      <small>
+                        {M.due(m.schedule, day)
+                          ? "Scheduled today"
+                          : `Latest due: ${M.latestDue(m.schedule, day)}`}
+                      </small>
+                    </div>
+                    <div
+                      className="measurement-input"
+                      style={
+                        {
+                          "--decimal-places": fractionPlaces,
+                          "--decimal-integers": integerPlaces,
+                        } as CSSProperties
                       }
-                    />
-                    <select
-                      aria-label={`${m.title} input unit`}
-                      value={u}
-                      onChange={(e) => {
-                        const next = e.target.value as M.Unit;
-                        const raw = draft[m.id];
-                        if (raw && Number.isFinite(Number(raw)))
+                    >
+                      <DecimalInput
+                        fractionPlaces={fractionPlaces}
+                        aria-label={m.title}
+                        id={`value-${m.id}`}
+                        placeholder="—"
+                        aria-describedby="measurement-keyboard-help"
+                        onKeyDown={(event) => {
+                          if (event.altKey && event.key === "ArrowDown") {
+                            event.preventDefault();
+                            event.currentTarget.parentElement
+                              ?.querySelector("select")
+                              ?.focus();
+                          }
+                        }}
+                        value={draft[m.id] ?? ""}
+                        onChange={(e) =>
                           setDraft({
                             ...draft,
-                            [m.id]: String(
-                              Number(
-                                (
-                                  (Number(raw) * M.factor(u)) /
-                                  M.factor(next)
-                                ).toPrecision(12),
-                              ),
+                            [m.id]: M.limitInput(
+                              e.target.value,
+                              u,
+                              draft[m.id] ?? "",
                             ),
-                          });
-                        setInputUnits({ ...inputUnits, [m.id]: next });
-                      }}
-                    >
-                      {M.units(m.kind).map((unit) => (
-                        <option key={unit} value={unit}>
-                          {unit === "number" ? "no unit" : unit}
-                        </option>
-                      ))}
-                    </select>
+                          })
+                        }
+                      />
+                      <select
+                        aria-label={`${m.title} input unit`}
+                        tabIndex={-1}
+                        onKeyDown={(event) => {
+                          if (event.key === "Escape") {
+                            event.preventDefault();
+                            document.getElementById(`value-${m.id}`)?.focus();
+                          }
+                        }}
+                        value={u}
+                        onChange={(e) => {
+                          const next = e.target.value as M.Unit;
+                          const raw = draft[m.id];
+                          if (raw && Number.isFinite(Number(raw)))
+                            setDraft({
+                              ...draft,
+                              [m.id]: String(
+                                Number(
+                                  (
+                                    (Number(raw) * M.factor(u)) /
+                                    M.factor(next)
+                                  ).toPrecision(12),
+                                ),
+                              ),
+                            });
+                          setInputUnits({ ...inputUnits, [m.id]: next });
+                        }}
+                      >
+                        {M.units(m.kind).map((unit) => (
+                          <option key={unit} value={unit}>
+                            {unit === "number" ? "no unit" : unit}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
             {adding && (
               <div className="new-metric">
                 <div className="field-grid">

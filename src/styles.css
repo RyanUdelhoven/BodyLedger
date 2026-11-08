@@ -1610,3 +1610,73 @@ footer {
 .measurement-row label {
   overflow-wrap: anywhere;
 }
+
+/* Row-major native tab order keeps data entry moving across three compact fields. */
+.measurement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px 16px;
+  padding: 16px 26px;
+}
+.measurement-grid .measurement-row {
+  container-type: inline-size;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  padding: 0;
+  min-width: 0;
+}
+.measurement-grid .measurement-row label {
+  font-size: 12px;
+}
+.measurement-grid .measurement-row small {
+  margin-top: 3px;
+  font-size: 9px;
+  max-width: none;
+}
+.measurement-grid .measurement-input {
+  width: 100%;
+  max-width: none;
+  font-size: 16px;
+}
+.measurement-grid .measurement-input .decimal-input {
+  font-size: inherit;
+  min-height: 36px;
+  padding-block: 7px;
+  padding-inline-start: 8px;
+}
+.measurement-grid .measurement-input select {
+  width: 64px;
+  min-height: 36px;
+  padding: 5px;
+  font-size: 10px;
+}
+@media (max-width: 600px) {
+  .measurement-grid {
+    gap: 12px 8px;
+    padding: 14px 12px;
+  }
+  .measurement-grid .measurement-row label {
+    font-size: 11px;
+  }
+  .measurement-grid .measurement-row small {
+    font-size: 8px;
+  }
+  .measurement-grid .measurement-input {
+    flex-direction: column;
+    font-size: clamp(
+      9px,
+      calc(
+        (100cqi - 20px) /
+          (var(--decimal-places, 3) + var(--decimal-integers, 3) + 1) / 0.6
+      ),
+      16px
+    );
+  }
+  .measurement-grid .measurement-input select {
+    width: 100%;
+    min-height: 27px;
+    padding: 3px 6px;
+    border-top: 1px solid var(--color-border);
+  }
+}
