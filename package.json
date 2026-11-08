@@ -1,0 +1,35 @@
+{
+  "name": "bodyledger",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "test": "vitest run tests/model.test.ts tests/chartAxis.test.ts",
+    "test:browser": "playwright test",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "lucide-react": "^0.577.0",
+    "papaparse": "^5.5.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-is": "^19.3.1",
+    "recharts": "^3.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/papaparse": "^5.3.16",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.1.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.0",
+    "vitest": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

@@ -1,0 +1,4 @@
+kind = "docker"
+service = "web"
+compose_file = "compose.yml"
+port = 3000

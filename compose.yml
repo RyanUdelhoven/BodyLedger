@@ -1,0 +1,13 @@
+name: bodyledger
+services:
+  web:
+    build: .
+    ports:
+      - "127.0.0.1:3000:8080"
+    volumes:
+      - journal:/data
+    init: true
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  journal:
