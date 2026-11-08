@@ -16,9 +16,7 @@ export const test = base.extend<{ emptyJournal: void }>({
       });
       expect(reset.ok()).toBe(true);
       await page.goto("/");
-      await expect(
-        page.getByRole("heading", { name: "Make a little progress." }),
-      ).toBeVisible();
+      await expect(page.getByLabel("Effective date")).toBeVisible();
       await use();
     },
     { auto: true },

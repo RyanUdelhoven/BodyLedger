@@ -1,32 +1,22 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, type CSSProperties } from "react";
 import * as M from "../model";
 import type { Submit } from "../types";
-import {
-  Scale,
-  Activity,
-  Target,
-  Plus,
-  Check,
-  Upload,
-  ShieldCheck,
-} from "lucide-react";
+import { Plus, Check } from "lucide-react";
+import { DecimalInput, fractionLength } from "./DecimalInput";
+import { EntryHistory } from "./EntryHistory";
 import { ScheduleEditor } from "./ScheduleEditor";
 export function EntryPage({
   state,
   submit,
   busy,
-  notify,
 }: {
   state: M.State;
   submit: Submit;
   busy: boolean;
-  notify: (s: string) => void;
 }) {
   const [day, setDay] = useState(M.localDate());
   const [draft, setDraft] = useState<Record<string, string>>({});
   const [inputUnits, setInputUnits] = useState<Record<string, M.Unit>>({});
-  const [note, setNote] = useState("");
-  const [showNote, setShowNote] = useState(false);
   const [adding, setAdding] = useState(false);
   const [name, setName] = useState("");
   const [newUnit, setNewUnit] = useState<M.Unit>("in");
@@ -55,8 +45,6 @@ export function EntryPage({
       ),
     );
     setInputUnits({});
-    setNote(e?.note ?? "");
-    setShowNote(!!e?.note);
   }
   useEffect(() => {
     fill(day);
@@ -126,175 +114,121 @@ export function EntryPage({
       }
       if (!Object.keys(values).length)
         throw Error("Add at least one measurement.");
-      await submit(
-        [{ id: saved?.id ?? M.id(), date: day, values, note }],
-        ms,
-        () => {
-          setDraft({});
-          setNote("");
-          setShowNote(false);
-          setAdding(false);
-          setName("");
-          setNewValue("");
-          setInputUnits({});
-        },
-      );
+      await submit([{ id: saved?.id ?? M.id(), date: day, values }], ms, () => {
+        setDraft({});
+        setAdding(false);
+        setName("");
+        setNewValue("");
+        setInputUnits({});
+      });
     } catch (e) {
       setError((e as Error).message);
     }
   }
-  const weightMetric =
-    state.metrics.find(
-      (m) => m.kind === "weight" && m.title.toLowerCase() === "weight",
-    ) ?? state.metrics.find((m) => m.kind === "weight");
-  const lastWeight = [...state.entries]
-    .filter(
-      (e) =>
-        e.date <= M.localDate() &&
-        weightMetric &&
-        e.values[weightMetric.id] !== undefined,
-    )
-    .sort((a, b) => b.date.localeCompare(a.date))[0];
-  const dueMetrics = state.metrics.filter((m) => M.due(m.schedule, day));
+  const inputValues = state.metrics.map((metric) => draft[metric.id] ?? "");
+  const fractionPlaces = Math.max(3, ...inputValues.map(fractionLength));
+  const integerPlaces = Math.max(
+    3,
+    ...inputValues.map((value) => value.split(/[.,]/)[0].length),
+  );
   return (
     <>
-      <div className="summary-row">
-        <div className="summary-card">
-          <div className="summary-icon">
-            <Scale size={20} />
-          </div>
-          <div>
-            <span>Latest weight</span>
-            <strong>
-              {lastWeight
-                ? M.format(
-                    state,
-                    weightMetric!,
-                    lastWeight.values[weightMetric!.id],
-                  )
-                : "—"}
-              <small>
-                {lastWeight ? lastWeight.date : "Your starting point awaits"}
-              </small>
-            </strong>
-          </div>
-        </div>
-        <div className="summary-card">
-          <div className="summary-icon">
-            <Activity size={20} />
-          </div>
-          <div>
-            <span>Measurements today</span>
-            <strong>
-              {
-                dueMetrics.filter((m) => saved?.values[m.id] !== undefined)
-                  .length
-              }
-              <em> / {dueMetrics.length} scheduled</em>
-              <small>A little routine. A lasting habit.</small>
-            </strong>
-          </div>
-        </div>
-        <div className="summary-card">
-          <div className="summary-icon">
-            <Target size={20} />
-          </div>
-          <div>
-            <span>Active goals</span>
-            <strong>
-              {state.goals.length}
-              <small>Progress on your own terms</small>
-            </strong>
-          </div>
-        </div>
-      </div>
       <div className="entry-layout">
         <section className="card entry-card">
-          <div className="card-header">
-            <div>
-              <h2>New entry</h2>
-              <p>Start with where you are today.</p>
-            </div>
-            <span className="tag">DAILY CHECK-IN</span>
-          </div>
           <form onSubmit={onSave}>
-            <div className="effective-date">
-              <label htmlFor="effective-date">Effective date</label>
-              <input
-                id="effective-date"
-                type="date"
-                required
-                value={day}
-                onChange={(e) => fill(e.target.value)}
-              />
-            </div>
-            <div className="measurement-head">
-              <span>MEASUREMENT</span>
-              <span>VALUE</span>
-            </div>
-            {state.metrics.map((m) => {
-              const u = inputUnits[m.id] ?? M.displayUnit(state, m);
-              return (
-                <div className="measurement-row" key={m.id}>
-                  <div>
-                    <label htmlFor={`value-${m.id}`}>{m.title}</label>
-                    <small>
-                      {M.due(m.schedule, day)
-                        ? "Scheduled today"
-                        : `Latest due: ${M.latestDue(m.schedule, day)}`}
-                    </small>
-                  </div>
-                  <div className="measurement-input">
-                    <input
-                      aria-label={m.title}
-                      id={`value-${m.id}`}
-                      inputMode="decimal"
-                      placeholder="—"
-                      value={draft[m.id] ?? ""}
-                      onChange={(e) =>
-                        setDraft({
-                          ...draft,
-                          [m.id]: M.limitInput(
-                            e.target.value,
-                            u,
-                            draft[m.id] ?? "",
-                          ),
-                        })
+            <h3 className="sr-only">Measurements</h3>
+            <p id="measurement-keyboard-help" className="sr-only">
+              Tab moves between measurements. Alt plus Arrow Down focuses the
+              unit selector; Escape returns to the measurement.
+            </p>
+            <div className="measurement-grid">
+              {state.metrics.map((m) => {
+                const u = inputUnits[m.id] ?? M.displayUnit(state, m);
+                return (
+                  <div className="measurement-row" key={m.id}>
+                    <div
+                      className="measurement-input"
+                      style={
+                        {
+                          "--decimal-places": fractionPlaces,
+                          "--decimal-integers": integerPlaces,
+                        } as CSSProperties
                       }
-                    />
-                    <select
-                      aria-label={`${m.title} input unit`}
-                      value={u}
-                      onChange={(e) => {
-                        const next = e.target.value as M.Unit;
-                        const raw = draft[m.id];
-                        if (raw && Number.isFinite(Number(raw)))
+                    >
+                      <label
+                        className="measurement-label"
+                        title={m.title}
+                        htmlFor={`value-${m.id}`}
+                      >
+                        {m.title}
+                      </label>
+                      <DecimalInput
+                        fractionPlaces={fractionPlaces}
+                        aria-label={m.title}
+                        id={`value-${m.id}`}
+                        placeholder="—"
+                        aria-describedby="measurement-keyboard-help"
+                        onKeyDown={(event) => {
+                          if (event.altKey && event.key === "ArrowDown") {
+                            event.preventDefault();
+                            event.currentTarget.parentElement
+                              ?.querySelector("select")
+                              ?.focus();
+                          }
+                        }}
+                        value={draft[m.id] ?? ""}
+                        onChange={(e) =>
                           setDraft({
                             ...draft,
-                            [m.id]: String(
-                              Number(
-                                (
-                                  (Number(raw) * M.factor(u)) /
-                                  M.factor(next)
-                                ).toPrecision(12),
-                              ),
+                            [m.id]: M.limitInput(
+                              e.target.value,
+                              u,
+                              draft[m.id] ?? "",
                             ),
-                          });
-                        setInputUnits({ ...inputUnits, [m.id]: next });
-                      }}
-                    >
-                      {M.units(m.kind).map((unit) => (
-                        <option key={unit} value={unit}>
-                          {unit === "number" ? "no unit" : unit}
-                        </option>
-                      ))}
-                    </select>
+                          })
+                        }
+                      />
+                      <select
+                        aria-label={`${m.title} input unit`}
+                        tabIndex={-1}
+                        onKeyDown={(event) => {
+                          if (event.key === "Escape") {
+                            event.preventDefault();
+                            document.getElementById(`value-${m.id}`)?.focus();
+                          }
+                        }}
+                        value={u}
+                        onChange={(e) => {
+                          const next = e.target.value as M.Unit;
+                          const raw = draft[m.id];
+                          if (raw && Number.isFinite(Number(raw)))
+                            setDraft({
+                              ...draft,
+                              [m.id]: String(
+                                Number(
+                                  (
+                                    (Number(raw) * M.factor(u)) /
+                                    M.factor(next)
+                                  ).toPrecision(12),
+                                ),
+                              ),
+                            });
+                          setInputUnits({ ...inputUnits, [m.id]: next });
+                        }}
+                      >
+                        {M.units(m.kind).map((unit) => (
+                          <option key={unit} value={unit}>
+                            {unit === "number" ? "no unit" : unit}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
             {adding && (
-              <div className="new-metric">
+              <div id="new-metric-form" className="new-metric">
                 <div className="field-grid">
                   <label>
                     Metric name
@@ -307,8 +241,7 @@ export function EntryPage({
                   </label>
                   <label>
                     First measurement
-                    <input
-                      inputMode="decimal"
+                    <DecimalInput
                       value={newValue}
                       onChange={(e) =>
                         setNewValue(
@@ -342,128 +275,48 @@ export function EntryPage({
                 </button>
               </div>
             )}
-            <button
-              type="button"
-              className="add-metric"
-              onClick={() => setAdding(!adding)}
-            >
-              <Plus size={17} /> Add a metric{" "}
-              <span>Make this journal yours</span>
-            </button>
-            {showNote && (
-              <label className="note-field">
-                Note
-                <textarea
-                  value={note}
-                  onChange={(e) => setNote(e.target.value)}
-                  placeholder="How are you feeling? Anything worth remembering?"
-                />
-              </label>
-            )}
             {error && (
               <p role="alert" className="error">
                 {error}
               </p>
             )}
-            <div className="form-actions">
-              <button
-                type="button"
-                className="secondary"
-                onClick={() => setShowNote(!showNote)}
-              >
-                <Plus size={16} /> Note
-              </button>
-              <button
-                type="button"
-                className="text-button"
-                onClick={() => {
-                  setDraft({});
-                  setNote("");
-                  setAdding(false);
-                  setName("");
-                  setNewValue("");
-                  setError("");
-                }}
-              >
-                Clear form
-              </button>
+            <div className="form-actions entry-actions">
               <button className="primary" disabled={busy}>
                 <Check size={17} />{" "}
                 {busy ? "Saving…" : saved ? "Save changes" : "Save entry"}
               </button>
+              <div className="effective-date">
+                <input
+                  id="effective-date"
+                  aria-label="Effective date"
+                  type="date"
+                  required
+                  value={day}
+                  onChange={(e) => fill(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="add-metric entry-add-metric"
+                  onClick={() => setAdding(!adding)}
+                  aria-expanded={adding}
+                  aria-controls="new-metric-form"
+                >
+                  <Plus size={17} /> Add a metric
+                </button>
+              </div>
             </div>
           </form>
         </section>
-        <div className="entry-aside">
-          <section className="card import-card">
-            <span className="large-icon">
-              <Upload size={23} />
-            </span>
-            <h2>Bring your history.</h2>
-            <p>
-              Your past progress belongs here, too. Import measurements from a
-              CSV or Weight Gurus export.
-            </p>
-            <label className="upload-button">
-              <Upload size={16} /> Import CSV
-              <input
-                type="file"
-                accept=".csv,.tsv,text/csv"
-                onChange={async (e) => {
-                  const f = e.target.files?.[0];
-                  if (!f) return;
-                  try {
-                    if (f.size > 10 * 1024 * 1024)
-                      throw Error("Choose a CSV smaller than 10 MB.");
-                    const bytes = await f.arrayBuffer();
-                    const view = new Uint8Array(bytes);
-                    const encoding =
-                      view[0] === 255 && view[1] === 254
-                        ? "utf-16le"
-                        : view[0] === 254 && view[1] === 255
-                          ? "utf-16be"
-                          : "utf-8";
-                    const imported = M.importCSV(
-                      state,
-                      new TextDecoder(encoding).decode(bytes),
-                    );
-                    await submit(imported.entries, imported.metrics);
-                  } catch (error) {
-                    notify((error as Error).message);
-                  }
-                  e.target.value = "";
-                }}
-              />
-            </label>
-            <div className="tiny">CSV files · Up to 10 MB · Stored locally</div>
-            <details>
-              <summary>See the CSV format</summary>
-              <code>
-                Date,Weight (lb),Gut (in),Notes
-                <br />
-                2026-11-01,206.1,38.375,Check-in
-              </code>
-            </details>
-          </section>
-          <section className="quiet-card">
-            <div className="eyebrow">BUILT AROUND YOU</div>
-            <h3>More than a number.</h3>
-            <p>
-              Track weight, measurements, percentages, or anything that matters
-              to you.
-            </p>
-            <div className="mini-tags">
-              <span>Weight</span>
-              <span>Length</span>
-              <span>Custom metrics</span>
-            </div>
-          </section>
-          <div className="storage-note">
-            <ShieldCheck size={17} />
-            <p>No account. No cloud. Your measurements stay in your local database.</p>
-          </div>
-        </div>
       </div>
+      <EntryHistory
+        state={state}
+        onSelect={(entry) => {
+          fill(entry.date);
+          document
+            .getElementById("effective-date")
+            ?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }}
+      />
     </>
   );
 }

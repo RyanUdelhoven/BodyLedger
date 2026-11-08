@@ -7,6 +7,9 @@ export function Goals({ state, commit }: { state: M.State; commit: Commit }) {
   const [target, setTarget] = useState("");
   const [unit, setUnit] = useState<M.Unit>("lb");
   const [deadline, setDeadline] = useState("");
+  const [direction, setDirection] = useState<"above" | "below">("below");
+  const [duration, setDuration] = useState("1");
+  const [durationUnit, setDurationUnit] = useState<"days" | "weeks">("weeks");
   const [error, setError] = useState("");
   const ms = M.metrics(state);
   function open(m: M.Metric) {
@@ -17,6 +20,9 @@ export function Goals({ state, commit }: { state: M.State; commit: Commit }) {
       goal ? String(Number((goal.target / M.factor(u)).toPrecision(12))) : "",
     );
     setUnit(u);
+    setDirection(goal ? M.goalDirection(goal) : "below");
+    setDuration(String(goal?.duration ?? 1));
+    setDurationUnit(goal?.durationUnit ?? (goal ? "days" : "weeks"));
     setDeadline(goal?.deadline ?? "");
     setError("");
   }
@@ -46,20 +52,8 @@ export function Goals({ state, commit }: { state: M.State; commit: Commit }) {
                   return first ? M.value(state, first, m) : undefined;
                 })()
               : undefined);
-          const progress =
-            goal && current !== undefined && start !== undefined
-              ? start === goal.target
-                ? current === goal.target
-                  ? 100
-                  : 0
-                : Math.max(
-                    0,
-                    Math.min(
-                      100,
-                      ((current - start) / (goal.target - start)) * 100,
-                    ),
-                  )
-              : 0;
+          const streak = goal ? M.goalStreak(state, goal) : undefined;
+          const progress = streak?.progress ?? 0;
           return (
             <button
               className="card goal-card"
@@ -81,7 +75,9 @@ export function Goals({ state, commit }: { state: M.State; commit: Commit }) {
                       <strong>{M.format(state, m, current)}</strong>
                     </div>
                     <div>
-                      <span>Target</span>
+                      <span>
+                        {M.goalDirection(goal) === "below" ? "Under" : "Over"}
+                      </span>
                       <strong>{M.format(state, m, goal.target)}</strong>
                     </div>
                   </div>
@@ -89,18 +85,20 @@ export function Goals({ state, commit }: { state: M.State; commit: Commit }) {
                     <div style={{ width: `${progress}%` }} />
                   </div>
                   <p>
-                    {Math.round(progress)}% of your journey{" "}
-                    <span>
-                      {current === undefined
-                        ? "—"
-                        : M.format(
-                            state,
-                            m,
-                            Math.abs(goal.target - current),
-                          )}{" "}
-                      remaining
-                    </span>
+                    {goal.duration ?? 1} {goal.durationUnit ?? "days"}{" "}
+                    {M.goalDirection(goal) === "below" ? "under" : "over"}{" "}
+                    {M.format(state, m, goal.target)}
                   </p>
+                  <p>
+                    {streak!.achieved ? "Goal satisfied" : "Current streak"}:{" "}
+                    {streak!.days} days
+                    <span>{Math.round(progress)}% of duration</span>
+                  </p>
+                  <small>
+                    Measured through {streak!.latest ?? "—"}. Missing days
+                    bridge recorded measurements; time stops at the latest
+                    measurement.
+                  </small>
                   <small>
                     Starting value {M.format(state, m, start)} · Latest{" "}
                     {entries.at(-1)?.date ?? "—"}
@@ -139,6 +137,9 @@ export function Goals({ state, commit }: { state: M.State; commit: Commit }) {
               try {
                 const m = ms.find((m) => m.id === editing)!;
                 const t = M.parseValue(target, unit);
+                const length = Number(duration);
+                if (!Number.isInteger(length) || length < 1 || length > 3650)
+                  throw Error("Choose a duration from 1 to 3650.");
                 const old = state.goals.find((g) => g.metricId === editing);
                 const latest = state.entries
                   .filter(
@@ -150,6 +151,9 @@ export function Goals({ state, commit }: { state: M.State; commit: Commit }) {
                 const goal: M.Goal = {
                   metricId: editing,
                   target: t,
+                  direction,
+                  duration: length,
+                  durationUnit,
                   start:
                     old?.start ??
                     (old
@@ -206,6 +210,44 @@ export function Goals({ state, commit }: { state: M.State; commit: Commit }) {
                   {M.units(ms.find((m) => m.id === editing)!.kind).map((u) => (
                     <option key={u}>{u}</option>
                   ))}
+                </select>
+              </label>
+            </div>
+            <div className="field-grid">
+              <label>
+                Direction
+                <select
+                  value={direction}
+                  onChange={(e) =>
+                    setDirection(e.target.value as "above" | "below")
+                  }
+                >
+                  <option value="below">Below (under)</option>
+                  <option value="above">Above (over)</option>
+                </select>
+              </label>
+              <label>
+                Duration
+                <input
+                  type="number"
+                  min="1"
+                  max="3650"
+                  step="1"
+                  required
+                  value={duration}
+                  onChange={(e) => setDuration(e.target.value)}
+                />
+              </label>
+              <label>
+                Time unit
+                <select
+                  value={durationUnit}
+                  onChange={(e) =>
+                    setDurationUnit(e.target.value as "days" | "weeks")
+                  }
+                >
+                  <option value="days">Days</option>
+                  <option value="weeks">Weeks</option>
                 </select>
               </label>
             </div>

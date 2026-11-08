@@ -309,50 +309,12 @@ main {
   margin: auto;
   padding: 44px;
 }
-.page-heading {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
-  margin-bottom: 34px;
-}
 .eyebrow {
   color: var(--color-action);
   font-size: 9px;
   letter-spacing: 1.8px;
   font-weight: 600;
   margin-bottom: 12px;
-}
-.page-heading p {
-  font-size: 13px;
-  color: var(--color-muted);
-  margin-top: 10px;
-}
-.today {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid var(--color-border);
-  padding: 11px 13px;
-  border-radius: 7px;
-  font-size: 11px;
-  white-space: nowrap;
-  color: var(--color-muted);
-}
-.summary-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 17px;
-  margin-bottom: 28px;
-}
-.summary-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  padding: 22px;
-  border: 1px solid var(--color-border);
-  border-radius: 11px;
-  background: var(--color-surface);
 }
 .summary-icon {
   display: inline-flex;
@@ -365,7 +327,6 @@ main {
   background: oklch(from var(--color-action) l c h / 0.035);
   color: var(--color-action);
 }
-.summary-card span,
 .stats span,
 .goal-values span {
   font-size: 11px;
@@ -373,22 +334,6 @@ main {
   display: block;
   margin-bottom: 8px;
 }
-.summary-card strong {
-  display: block;
-  font-family: "Manrope", sans-serif;
-  font-size: 23px;
-  font-weight: 550;
-  letter-spacing: -0.5px;
-}
-.summary-card small {
-  display: block;
-  font-family: "DM Sans", sans-serif;
-  font-size: 10px;
-  letter-spacing: 0;
-  font-weight: 400;
-  margin-top: 9px;
-}
-.summary-card em,
 .stats em {
   font-family: "DM Sans", sans-serif;
   font-size: 11px;
@@ -422,18 +367,9 @@ main {
   color: var(--color-muted);
   margin-top: 6px;
 }
-.tag {
-  font-size: 8px;
-  letter-spacing: 1.2px;
-  padding: 7px 8px;
-  background: var(--color-elevated);
-  color: var(--color-muted);
-  border-radius: 4px;
-  white-space: nowrap;
-}
 .effective-date {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 22px 26px;
   border-bottom: 1px solid var(--color-border);
@@ -562,30 +498,6 @@ main {
 .form-actions > .text-button {
   margin-left: auto;
 }
-.import-card {
-  padding: 26px;
-}
-.large-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 47px;
-  height: 47px;
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  color: var(--color-action);
-  margin-bottom: 24px;
-}
-.import-card h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.import-card p {
-  font-size: 12px;
-  line-height: 1.9;
-  color: var(--color-muted);
-  margin-bottom: 23px;
-}
 .upload-button {
   cursor: pointer;
   background: var(--color-elevated);
@@ -606,75 +518,8 @@ main {
   outline: 2px solid var(--color-action);
   outline-offset: 4px;
 }
-.tiny {
-  font-size: 9px;
-  color: var(--color-muted);
-  text-align: center;
-  margin-top: 13px;
-}
-.import-card details {
-  font-size: 10px;
-  color: var(--color-muted);
-  margin-top: 22px;
-  border-top: 1px solid var(--color-border);
-  padding-top: 15px;
-}
-.import-card code {
-  display: block;
-  font-size: 9px;
-  line-height: 2;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  margin-top: 10px;
-}
 summary {
   cursor: pointer;
-}
-.quiet-card {
-  border: 1px solid var(--color-border);
-  border-radius: 11px;
-  padding: 24px;
-  margin-top: 20px;
-  background: linear-gradient(
-    120deg,
-    oklch(from var(--color-action) l c h / 0.05),
-    transparent
-  );
-}
-.quiet-card .eyebrow {
-  font-size: 8px;
-}
-.quiet-card h3 {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-.quiet-card p {
-  font-size: 11px;
-  color: var(--color-muted);
-  line-height: 1.9;
-}
-.mini-tags {
-  display: flex;
-  gap: 6px;
-  margin-top: 18px;
-  flex-wrap: wrap;
-}
-.mini-tags span {
-  border: 1px solid var(--color-border);
-  border-radius: 5px;
-  padding: 6px 8px;
-  font-size: 8px;
-  color: var(--color-muted);
-}
-.storage-note {
-  display: flex;
-  gap: 10px;
-  color: var(--color-muted);
-  padding: 20px 6px;
-}
-.storage-note p {
-  font-size: 10px;
-  line-height: 1.8;
 }
 footer {
   display: flex;
@@ -730,9 +575,6 @@ footer span {
 .month-days button.selected {
   background: var(--color-action);
   color: var(--color-action-text);
-}
-.note-field {
-  margin: 0 26px 20px;
 }
 .error {
   color: var(--color-danger);
@@ -815,11 +657,6 @@ footer span {
 .chart-area {
   height: 350px;
   padding: 10px 20px 0;
-}
-.chart-average {
-  color: var(--color-muted);
-  font-size: 12px;
-  padding: 10px 26px;
 }
 .empty {
   min-height: 250px;
@@ -1050,11 +887,6 @@ th + th {
 .button-row .upload-button {
   width: auto;
 }
-.note-cell {
-  max-width: 250px;
-  white-space: normal;
-  line-height: 1.7;
-}
 .check-row {
   display: flex;
   flex-direction: row;
@@ -1172,9 +1004,6 @@ th + th {
   .entry-layout {
     grid-template-columns: 1.9fr 1fr;
   }
-  .summary-card {
-    padding: 27px;
-  }
   .card-header {
     padding: 28px 30px;
   }
@@ -1196,39 +1025,19 @@ th + th {
   .topbar {
     padding: 0 30px;
   }
-  .summary-card {
-    padding: 18px;
-    gap: 10px;
-  }
   .summary-icon {
     width: 32px;
     height: 32px;
   }
-  .summary-card strong {
-    font-size: 21px;
-  }
   .entry-layout {
     grid-template-columns: minmax(0, 1.5fr) minmax(240px, 1fr);
     gap: 20px;
-  }
-  .tag {
-    display: none;
-  }
-  .today {
-    display: none;
-  }
-  .page-heading h1 {
-    font-size: 30px;
   }
   .storage-card {
     flex-wrap: wrap;
   }
   .storage-card > .secondary {
     margin-left: 50px;
-  }
-  .summary-card em {
-    display: block;
-    margin-top: 4px;
   }
 }
 @media (max-width: 900px) {
@@ -1267,24 +1076,6 @@ th + th {
   }
   .entry-layout {
     grid-template-columns: 1fr;
-  }
-  .entry-aside {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  .quiet-card {
-    margin: 0;
-  }
-  .storage-note {
-    grid-column: 1/-1;
-    padding-top: 0;
-  }
-  .summary-card {
-    padding: 18px 12px;
-  }
-  .summary-card .summary-icon {
-    display: none;
   }
   .settings-grid {
     grid-template-columns: 1fr;
@@ -1339,40 +1130,13 @@ th + th {
   main {
     padding: 28px 18px 90px;
   }
-  .page-heading {
-    margin-bottom: 26px;
-  }
   .eyebrow {
     font-size: 7px;
     letter-spacing: 1.3px;
   }
-  h1,
-  .page-heading h1 {
+  h1 {
     font-size: 27px;
     letter-spacing: -1px;
-  }
-  .page-heading p {
-    font-size: 11px;
-  }
-  .summary-row {
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-  .summary-card {
-    padding: 14px 10px;
-  }
-  .summary-card span {
-    font-size: 9px;
-  }
-  .summary-card strong {
-    font-size: 19px;
-  }
-  .summary-card small {
-    font-size: 8px;
-    line-height: 1.6;
-  }
-  .summary-card em {
-    font-size: 8px;
   }
   .card-header {
     padding: 21px;
@@ -1411,18 +1175,6 @@ th + th {
   }
   .form-actions .text-button {
     font-size: 10px;
-  }
-  .entry-aside {
-    grid-template-columns: 1fr;
-  }
-  .import-card {
-    padding: 23px;
-  }
-  .quiet-card {
-    padding: 23px;
-  }
-  .storage-note {
-    grid-column: 1;
   }
   .goal-grid {
     grid-template-columns: 1fr;
@@ -1523,4 +1275,484 @@ th + th {
   padding: 0;
   margin: 0;
   min-width: 0;
+}
+
+/* Keep the journal focused on controls and measurements. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.topbar {
+  height: 56px;
+}
+main {
+  padding: 20px 28px;
+}
+.entry-layout {
+  display: block;
+}
+.csv-import-controls {
+  display: contents;
+}
+.csv-format summary {
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  padding: 11px 15px;
+  font-size: 11px;
+  min-height: 39px;
+}
+.csv-format[open] {
+  flex-basis: 100%;
+  order: 1;
+}
+.csv-format code {
+  display: block;
+  padding: 14px 0 4px;
+  font-size: 12px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.csv-format p {
+  color: var(--color-muted);
+  font-size: 11px;
+}
+.tabs {
+  margin-bottom: 12px;
+}
+.tabs button {
+  padding: 12px 18px;
+}
+.trend-card {
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - 190px);
+  min-height: 380px;
+}
+.trend-card .chart-controls {
+  padding: 12px 16px;
+  gap: 18px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.trend-card .chart-controls label {
+  flex: none;
+  max-width: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.trend-card .chart-controls input {
+  width: 76px;
+}
+.trend-card .chart-controls select {
+  max-width: 200px;
+}
+.trend-card .stats {
+  padding: 12px 14px;
+  margin: 0 16px 12px;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.trend-card .stats strong {
+  font-size: 18px;
+}
+.trend-card .stats span {
+  margin-bottom: 5px;
+}
+.trend-card .stats small {
+  margin-top: 5px;
+  font-size: 11px;
+}
+.trend-card .comparison-stats {
+  gap: 5px;
+  padding: 0 16px 10px;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+.trend-card .chart-area {
+  flex: 1;
+  min-height: 180px;
+  height: auto;
+  padding: 0 12px 10px;
+}
+.trend-card .empty {
+  min-height: 0;
+  height: 100%;
+}
+.trend-card + .data-details {
+  margin: 12px 0 0;
+  background: var(--color-surface);
+}
+footer {
+  margin-top: 22px;
+  padding-top: 16px;
+}
+@media (max-width: 600px) {
+  .topbar {
+    height: 48px;
+  }
+  main {
+    padding: 12px 12px 80px;
+  }
+  .tabs {
+    margin-bottom: 10px;
+  }
+  .tabs button {
+    padding: 11px 10px;
+  }
+  .trend-card {
+    height: calc(100dvh - 210px);
+  }
+  .trend-card .chart-controls {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  .trend-card .chart-controls label {
+    flex: 1;
+    min-width: 85px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    font-size: 10px;
+  }
+  .trend-card .chart-controls input,
+  .trend-card .chart-controls select {
+    width: 100%;
+    max-width: none;
+    padding: 8px;
+  }
+  .trend-card .stats {
+    margin: 0 12px 10px;
+    padding: 10px;
+    gap: 10px;
+  }
+  .trend-card .stats strong {
+    font-size: 14px;
+  }
+  .trend-card .stats span {
+    font-size: 9px;
+  }
+  .trend-card .stats small {
+    font-size: 9px;
+  }
+  .trend-card .comparison-stats {
+    padding: 0 12px 8px;
+    font-size: 9px;
+  }
+  .trend-card .chart-area {
+    padding: 0 6px 8px;
+    min-height: 160px;
+  }
+}
+
+/* Reserve the same fractional column while keeping the native editable input. */
+.decimal-input {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  padding-inline-end: calc(
+    (var(--decimal-places, 3) + 1 - var(--decimal-tail, 0)) * 1ch + 10px
+  );
+}
+.measurement-input {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 19px;
+  width: calc(
+    (var(--decimal-places, 3) + var(--decimal-integers, 3) + 1) * 1ch + 94px
+  );
+  max-width: calc(100% - 55px);
+}
+.measurement-input .decimal-input {
+  padding-inline-end: calc(
+    (var(--decimal-places, 3) + 1 - var(--decimal-tail, 0)) * 1ch + 10px
+  );
+}
+.measurement-input select {
+  font-family: system-ui, sans-serif;
+}
+.measurement-row > div:first-child {
+  min-width: 0;
+  flex: 1;
+}
+.measurement-row label {
+  overflow-wrap: anywhere;
+}
+
+/* Row-major native tab order keeps data entry moving across three compact fields. */
+.measurement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px 16px;
+  padding: 16px 26px;
+}
+.measurement-grid .measurement-row {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  padding: 0;
+  min-width: 0;
+}
+.measurement-grid .measurement-row label {
+  font-size: 12px;
+}
+.measurement-grid .measurement-row small {
+  margin-top: 3px;
+  font-size: 9px;
+  max-width: none;
+}
+.measurement-grid .measurement-input {
+  width: 100%;
+  max-width: none;
+  font-size: 16px;
+}
+.measurement-grid .measurement-input .decimal-input {
+  font-size: inherit;
+  min-height: 36px;
+  padding-block: 7px;
+  padding-inline-start: 8px;
+}
+.measurement-grid .measurement-input select {
+  width: 64px;
+  min-height: 36px;
+  padding: 5px;
+  font-size: 10px;
+}
+@media (max-width: 600px) {
+  .measurement-grid {
+    gap: 12px 8px;
+    padding: 14px 12px;
+  }
+  .measurement-grid .measurement-row label {
+    font-size: 11px;
+  }
+  .measurement-grid .measurement-row small {
+    font-size: 8px;
+  }
+  .measurement-grid .measurement-input {
+    flex-direction: column;
+    font-size: clamp(
+      9px,
+      calc(
+        (100cqi - 20px) /
+          (var(--decimal-places, 3) + var(--decimal-integers, 3) + 1) / 0.6
+      ),
+      16px
+    );
+  }
+  .measurement-grid .measurement-input select {
+    width: 100%;
+    min-height: 27px;
+    padding: 3px 6px;
+    border-top: 1px solid var(--color-border);
+  }
+}
+
+/* Compact inline measurement controls; the whole value/unit group takes focus. */
+.measurement-grid {
+  gap: 10px 16px;
+  padding-block: 12px;
+}
+.measurement-grid .measurement-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.measurement-grid .measurement-row > div:first-child {
+  flex: 0 1 72px;
+}
+.measurement-grid .measurement-row label {
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.measurement-grid .measurement-row small {
+  display: none;
+}
+.measurement-grid .measurement-input {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+}
+.measurement-grid .measurement-input .decimal-input {
+  min-height: 30px;
+  padding-block: 4px;
+}
+.measurement-grid .measurement-input select {
+  width: 52px;
+  min-height: 30px;
+  padding: 3px;
+  font-size: 10px;
+}
+.measurement-input:focus-within {
+  border-color: var(--color-action);
+  outline: 2px solid var(--color-action);
+  outline-offset: 2px;
+  background: oklch(from var(--color-action) l c h / 0.12);
+}
+.measurement-input .decimal-input:focus-visible,
+.measurement-input select:focus-visible {
+  outline: none;
+}
+.measurement-input:focus-within select {
+  background: oklch(from var(--color-action) l c h / 0.22);
+  color: var(--color-text);
+}
+@media (max-width: 600px) {
+  .measurement-grid {
+    gap: 8px;
+  }
+  .measurement-grid .measurement-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+  .measurement-grid .measurement-row > div:first-child {
+    flex: none;
+  }
+  .measurement-grid .measurement-input {
+    flex-direction: row;
+    font-size: 11px;
+  }
+  .measurement-grid .measurement-input select {
+    appearance: none;
+    width: 24px;
+    min-height: 30px;
+    padding: 2px;
+    border-top: 0;
+    text-align: center;
+    font-size: 9px;
+  }
+  .measurement-grid .measurement-input .decimal-input {
+    padding-inline-start: 4px;
+  }
+}
+
+.entry-card .effective-date {
+  padding-block: 12px;
+}
+
+/* The label, value, and unit form one colored, focusable measurement group. */
+.measurement-grid .measurement-row {
+  display: block;
+}
+.measurement-grid .measurement-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  font-size: 18px;
+}
+.measurement-grid .measurement-input .measurement-label {
+  flex: 0 1 76px;
+  min-width: 0;
+  margin: 0;
+  padding-left: 10px;
+  color: var(--color-text);
+  font-family: system-ui, sans-serif;
+  font-size: 12px;
+  cursor: text;
+}
+.measurement-grid .measurement-input .decimal-input {
+  flex: 1;
+  min-width: 0;
+  width: 0;
+  min-height: 38px;
+  padding-block: 6px;
+}
+.measurement-grid .measurement-input select {
+  width: 60px;
+  min-height: 38px;
+  font-size: 12px;
+  padding: 4px;
+}
+.measurement-input:focus-within .measurement-label {
+  color: var(--color-action);
+}
+.effective-date .entry-add-metric {
+  margin: 0;
+  padding: 8px;
+  width: auto;
+  border: 0;
+  font-size: 12px;
+}
+.entry-history .card-header {
+  padding: 14px 18px;
+}
+.entry-history .table-scroll {
+  max-height: 360px;
+}
+@media (max-width: 1000px) {
+  .measurement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .measurement-grid {
+    grid-template-columns: 1fr;
+  }
+  .measurement-grid .measurement-input {
+    flex-direction: row;
+    font-size: 18px;
+  }
+  .measurement-grid .measurement-input .measurement-label {
+    flex-basis: 80px;
+    font-size: 12px;
+  }
+  .measurement-grid .measurement-input select {
+    appearance: auto;
+    width: 60px;
+    font-size: 12px;
+  }
+  .entry-card .effective-date {
+    padding-inline: 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .effective-date .entry-add-metric {
+    font-size: 11px;
+  }
+}
+
+.entry-actions {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.entry-actions .effective-date {
+  order: -1;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.entry-card .entry-actions .effective-date {
+  padding: 0;
+}
+.entry-actions > .primary {
+  margin-left: auto;
+}
+
+/* Larger New Entry measurement text, including labels and units. */
+.entry-card .measurement-grid .measurement-input { font-size: 28.8px; }
+.entry-card .measurement-grid .measurement-input .measurement-label {
+  flex-basis: 95px;
+  font-size: 19.2px;
+}
+.entry-card .measurement-grid .measurement-input .decimal-input {
+  min-height: 64px;
+  font-size: 28.8px;
+}
+.entry-card .measurement-grid .measurement-input select {
+  width: 70px;
+  min-height: 64px;
+  font-size: 19.2px;
+}
+@media (min-width: 1001px) and (max-width: 1250px) {
+  .entry-card .measurement-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

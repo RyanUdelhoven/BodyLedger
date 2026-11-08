@@ -49,8 +49,12 @@ test("schedules, profile ratio, invalid import rollback, and immediate deletions
   await expect(
     gut.getByRole("button", { name: "15", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
-  await page.getByRole("button", { name: "New entry", exact: true }).click();
-  await page.locator(".import-card input[type=file]").setInputFiles({
+  await page
+    .getByRole("main")
+    .getByRole("button", { name: "Settings", exact: true })
+    .click();
+  await page.getByRole("button", { name: /Manage data History/ }).click();
+  await page.getByLabel("Import CSV", { exact: true }).setInputFiles({
     name: "invalid.csv",
     mimeType: "text/csv",
     buffer: Buffer.from("Date,Weight (lb)\n2026-11-02,199\n2026-11-03,invalid"),
@@ -58,8 +62,6 @@ test("schedules, profile ratio, invalid import rollback, and immediate deletions
   await expect(page.getByRole("status")).toContainText(
     "valid positive measurement",
   );
-  await page.getByRole("button", { name: "Settings", exact: true }).click();
-  await page.getByRole("button", { name: /Manage data History/ }).click();
   await expect(
     page.getByRole("button", { name: "2026-11-02", exact: true }),
   ).toHaveCount(0);
@@ -72,14 +74,13 @@ test("schedules, profile ratio, invalid import rollback, and immediate deletions
     .click();
   await expect(page.getByRole("status")).toContainText("Deleted 1 entries");
   await page
+    .locator("section.card")
+    .filter({ has: page.getByRole("heading", { name: "Delete metric columns", exact: true }) })
     .getByRole("button", { name: "Select all", exact: true })
-    .last()
     .click();
   await page.getByRole("button", { name: "Delete selected columns" }).click();
   await page.getByRole("button", { name: "New entry", exact: true }).click();
   await expect(page.getByLabel("Weight", { exact: true })).toHaveCount(0);
   await page.reload();
-  await expect(
-    page.getByRole("heading", { name: "Make a little progress." }),
-  ).toBeVisible();
+  await expect(page.getByLabel("Effective date")).toBeVisible();
 });

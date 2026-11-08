@@ -1,3 +1,4 @@
+import { removeEntryNotes } from "./migrations.mjs";
 import { createServer } from "node:http";
 import { DatabaseSync } from "node:sqlite";
 import {
@@ -69,6 +70,9 @@ if (!current())
     ),
     0,
   );
+// Retire legacy notes once; open clients must reload their old revision.
+if (removeEntryNotes(db))
+  console.log("Removed retired note fields from the journal.");
 const root = resolve("dist");
 const types = {
   ".html": "text/html; charset=utf-8",

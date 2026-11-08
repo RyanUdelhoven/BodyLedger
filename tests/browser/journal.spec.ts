@@ -5,26 +5,23 @@ test("records measurements, keeps drafts, imports atomically, edits history, and
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
-  await expect(
-    page.getByRole("heading", { name: "Make a little progress." }),
-  ).toBeVisible();
+  await expect(page.getByLabel("Effective date")).toBeVisible();
   await page.getByLabel("Effective date").fill("2026-11-01");
   await page.getByLabel("Weight", { exact: true }).fill("206.1");
   await page.getByRole("button", { name: "Trends", exact: true }).click();
   await expect(
-    page.getByRole("heading", { name: "See the bigger picture." }),
+    page.getByRole("combobox", { name: "Chart metric" }),
   ).toBeVisible();
   await page.getByRole("button", { name: "New entry", exact: true }).click();
   await expect(page.getByLabel("Weight", { exact: true })).toHaveValue("206.1");
   await page.getByRole("button", { name: "Add a metric" }).click();
   await page.getByLabel("Metric name").fill("Gut");
   await page.getByLabel("First measurement").fill("38.375");
-  await page.getByRole("button", { name: "Note", exact: true }).click();
-  await page.getByLabel("Note", { exact: true }).fill("Browser verification");
   await page.getByRole("button", { name: "Save entry", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Saved 1 entry");
   await page.reload();
-  await expect(page.getByText("206.10 lb").first()).toBeVisible();
+  await page.getByLabel("Effective date").fill("2026-11-01");
+  await expect(page.getByLabel("Weight", { exact: true })).toHaveValue("206.1");
   await page.getByRole("button", { name: "Goals", exact: true }).click();
   await page
     .getByRole("button")
@@ -32,7 +29,7 @@ test("records measurements, keeps drafts, imports atomically, edits history, and
     .click();
   await page.getByLabel("Target", { exact: true }).fill("190");
   await page.getByRole("button", { name: "Save goal" }).click();
-  await expect(page.getByText("190.00 lb")).toBeVisible();
+  await expect(page.getByText("190.00 lb", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Settings", exact: true }).click();
   await page
     .getByRole("combobox", { name: "Weight units", exact: true })
@@ -44,19 +41,18 @@ test("records measurements, keeps drafts, imports atomically, edits history, and
   await page.getByRole("button", { name: "2026-11-01", exact: true }).click();
   await page
     .getByRole("dialog")
-    .getByRole("textbox", { name: "Note", exact: true })
-    .fill("Edited verification");
+    .getByRole("textbox", { name: "Gut", exact: true })
+    .fill("38.5");
   await page.getByRole("button", { name: "Save changes" }).click();
   await expect(
-    page.getByRole("cell", { name: "Edited verification", exact: true }),
+    page.getByRole("cell", { name: "38.50 in", exact: true }),
   ).toBeVisible();
   const backupEvent = page.waitForEvent("download");
   await page.getByRole("button", { name: "Full backup", exact: true }).click();
   const backup = await backupEvent;
   const path = await backup.path();
   expect(path).toBeTruthy();
-  await page.getByRole("button", { name: "New entry", exact: true }).click();
-  const file = page.locator(".import-card input[type=file]");
+  const file = page.getByLabel("Import CSV", { exact: true });
   await file.setInputFiles({
     name: "test.csv",
     mimeType: "text/csv",
@@ -83,7 +79,7 @@ test("records measurements, keeps drafts, imports atomically, edits history, and
   ]) {
     await page.getByRole("button", { name: mode, exact: true }).click();
     await expect(
-      page.getByRole("heading", { name: mode, exact: true }),
+      page.getByRole("combobox", { name: "Chart metric" }),
     ).toBeVisible();
   }
   await page.getByRole("button", { name: "Settings", exact: true }).click();
@@ -101,9 +97,7 @@ test("records measurements, keeps drafts, imports atomically, edits history, and
     fullPage: true,
   });
   await page.setViewportSize({ width: 390, height: 844 });
-  await expect(
-    page.getByRole("heading", { name: "Make a little progress." }),
-  ).toBeVisible();
+  await expect(page.getByLabel("Effective date")).toBeVisible();
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= window.innerWidth,
@@ -121,14 +115,10 @@ test("rejects stale writes from another tab without losing saved data", async ({
   context,
 }) => {
   await page.goto("/");
-  await expect(
-    page.getByRole("heading", { name: "Make a little progress." }),
-  ).toBeVisible();
+  await expect(page.getByLabel("Effective date")).toBeVisible();
   const other = await context.newPage();
   await other.goto("/");
-  await expect(
-    other.getByRole("heading", { name: "Make a little progress." }),
-  ).toBeVisible();
+  await expect(other.getByLabel("Effective date")).toBeVisible();
   await page.getByLabel("Effective date").fill("2026-11-04");
   await page.getByLabel("Weight", { exact: true }).fill("200");
   await page.getByRole("button", { name: "Save entry", exact: true }).click();
@@ -139,5 +129,6 @@ test("rejects stale writes from another tab without losing saved data", async ({
   await expect(other.getByRole("status")).toContainText("another tab");
   await expect(other.getByLabel("Weight", { exact: true })).toHaveValue("199");
   await other.reload();
-  await expect(other.getByText("200.00 lb").first()).toBeVisible();
+  await other.getByLabel("Effective date").fill("2026-11-04");
+  await expect(other.getByLabel("Weight", { exact: true })).toHaveValue("200");
 });

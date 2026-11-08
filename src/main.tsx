@@ -10,7 +10,6 @@ import {
   Sun,
   Moon,
   ShieldCheck,
-  CalendarDays,
   Check,
   X,
 } from "lucide-react";
@@ -174,8 +173,7 @@ function App() {
         <p>Opening your journal…</p>
       </main>
     );
-  const ms = M.metrics(state),
-    today = M.localDate();
+  const ms = M.metrics(state);
   const latest = [...state.entries].sort((a, b) =>
     b.date.localeCompare(a.date),
   )[0];
@@ -258,39 +256,7 @@ function App() {
         </header>
         <main aria-busy={busy}>
           <fieldset disabled={busy} className="journal-controls">
-            <div className="page-heading">
-              <div>
-                <div className="eyebrow">
-                  A LITTLE CONSISTENCY GOES A LONG WAY
-                </div>
-                <h1>
-                  {tab === "New entry"
-                    ? "Make a little progress."
-                    : tab === "Trends"
-                      ? "See the bigger picture."
-                      : tab === "Goals"
-                        ? "Your goals. Your pace."
-                        : "Make yourself at home."}
-                </h1>
-                <p>
-                  {tab === "New entry"
-                    ? "A moment to check in. A clearer picture over time."
-                    : tab === "Trends"
-                      ? "Find the patterns behind your daily measurements."
-                      : tab === "Goals"
-                        ? "Choose what matters and follow your progress."
-                        : "Your preferences, your data, your journal."}
-                </p>
-              </div>
-              <div className="today">
-                <CalendarDays size={16} />
-                {M.date(today).toLocaleDateString(undefined, {
-                  month: "short",
-                  day: "numeric",
-                  year: "numeric",
-                })}
-              </div>
-            </div>
+            <h1 className="sr-only">{tab}</h1>
             {message && (
               <div role="status" className="toast">
                 <Check size={17} />
@@ -304,12 +270,7 @@ function App() {
               </div>
             )}
             <div hidden={tab !== "New entry"}>
-              <EntryPage
-                state={state}
-                submit={submit}
-                busy={busy}
-                notify={setMessage}
-              />
+              <EntryPage state={state} submit={submit} busy={busy} />
             </div>
             {tab === "Trends" && (
               <Trends state={state} commitRange={commitRange} />
@@ -392,7 +353,6 @@ function App() {
                         </strong>
                       </p>
                     ))}
-                  <small>{entry.note || "No note"}</small>
                 </button>
               ))}
             </div>

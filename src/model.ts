@@ -19,12 +19,14 @@ export interface Entry {
   id: string;
   date: string;
   values: Record<string, number>;
-  note: string;
   demo?: boolean;
 }
 export interface Goal {
   metricId: string;
   target: number;
+  direction?: "above" | "below";
+  duration?: number;
+  durationUnit?: "days" | "weeks";
   start?: number;
   created: string;
   deadline: string;
@@ -208,24 +210,21 @@ export function latestDue(sc: Schedule, day: string) {
 }
 export function mergeEntry(old: Entry, next: Entry) {
   return {
-    ...old,
+    ...withoutLegacyNote(old),
     values: { ...old.values, ...next.values },
-    note: next.note.trim()
-      ? old.note && old.note !== next.note
-        ? `${old.note}\n${next.note}`
-        : next.note
-      : old.note,
     demo: false,
   };
 }
 export function conflicts(a: Entry, b: Entry) {
-  return (
-    Object.keys(b.values).some(
-      (k) =>
-        a.values[k] !== undefined && Math.abs(a.values[k] - b.values[k]) > 1e-8,
-    ) ||
-    (!!a.note && !!b.note && a.note !== b.note)
+  return Object.keys(b.values).some(
+    (key) =>
+      a.values[key] !== undefined &&
+      Math.abs(a.values[key] - b.values[key]) > 1e-8,
   );
+}
+function withoutLegacyNote(entry: Entry): Entry {
+  const { note, ...clean } = entry as Entry & { note?: unknown };
+  return clean;
 }
 export const mean = (a: number[]) =>
   a.length ? a.reduce((x, y) => x + y, 0) / a.length : undefined;
@@ -238,11 +237,7 @@ export const sd = (a: number[]) => {
 export function exportCSV(s: State) {
   const ms = metrics(s);
   return Papa.unparse({
-    fields: [
-      "Date",
-      ...ms.map((m) => `${m.title} (${displayUnit(s, m)})`),
-      "Notes",
-    ],
+    fields: ["Date", ...ms.map((m) => `${m.title} (${displayUnit(s, m)})`)],
     data: [...s.entries]
       .sort((a, b) => a.date.localeCompare(b.date))
       .map((e) => [
@@ -253,7 +248,6 @@ export function exportCSV(s: State) {
             ? ""
             : Number((v / factor(displayUnit(s, m))).toPrecision(14));
         }),
-        e.note,
       ]),
   });
 }
@@ -288,7 +282,6 @@ export function importCSV(s: State, text: string) {
   const ms = structuredClone(s.metrics);
   const names = new Set<string>();
   let dateIndex = -1,
-    noteIndex = -1,
     unitIndex = -1;
   const columns: { index: number; metric: Metric; unit: Unit }[] = [];
   headers.forEach((header, index) => {
@@ -298,7 +291,7 @@ export function importCSV(s: State, text: string) {
       return;
     }
     if (/^notes?$/i.test(h)) {
-      noteIndex = index;
+      // Accept old CSV files, but retired note contents are never stored.
       return;
     }
     if (/^units?$/i.test(h)) {
@@ -363,7 +356,6 @@ export function importCSV(s: State, text: string) {
         id: id(),
         date: csvDate(row[dateIndex]),
         values,
-        note: noteIndex >= 0 ? row[noteIndex] : "",
       });
   }
   const used = new Set(
@@ -490,7 +482,6 @@ export function demo(s: State, replace = false): State {
       id: id(),
       date: row.day,
       values,
-      note: "Synthetic demo history",
       demo: true,
     });
   }
@@ -539,7 +530,6 @@ export function validateState(input: unknown): State {
     if (
       !e.id ||
       entryIDs.has(e.id) ||
-      typeof e.note !== "string" ||
       !/^\d{4}-\d{2}-\d{2}$/.test(e.date) ||
       csvDate(e.date) !== e.date ||
       days.has(e.date) ||
@@ -580,14 +570,22 @@ export function validateState(input: unknown): State {
       (g) =>
         (!ids.has(g.metricId) && g.metricId !== "army-whtr") ||
         !Number.isFinite(g.target) ||
-        g.target < 0,
+        g.target < 0 ||
+        (g.direction !== undefined &&
+          !["above", "below"].includes(g.direction)) ||
+        (g.duration !== undefined &&
+          (!Number.isInteger(g.duration) ||
+            g.duration < 1 ||
+            g.duration > 3650)) ||
+        (g.durationUnit !== undefined &&
+          !["days", "weeks"].includes(g.durationUnit)),
     ) ||
     Object.values(s.ranges).some(
       (v) => !Number.isInteger(v) || v < 1 || v > 520,
     )
   )
     throw Error("Invalid preferences or goals in backup.");
-  return s;
+  return { ...s, entries: s.entries.map(withoutLegacyNote) };
 }
 
 export function limitInput(raw: string, unit: Unit, previous = "") {
@@ -623,5 +621,42 @@ export function captureGoalStarts(s: State): State {
         .sort((a, b) => a.date.localeCompare(b.date))[0];
       return first ? { ...g, start: value(s, first, m) } : g;
     }),
+  };
+}
+
+export function goalDirection(goal: Goal): "above" | "below" {
+  return (
+    goal.direction ??
+    (goal.start !== undefined && goal.target > goal.start ? "above" : "below")
+  );
+}
+export function goalStreak(s: State, goal: Goal, today = localDate()) {
+  const metric = metrics(s).find((m) => m.id === goal.metricId);
+  const entries = metric
+    ? s.entries
+        .filter((e) => e.date <= today && value(s, e, metric) !== undefined)
+        .sort((a, b) => a.date.localeCompare(b.date))
+    : [];
+  const satisfies = (n: number) =>
+    goalDirection(goal) === "above" ? n > goal.target : n < goal.target;
+  let since: string | undefined;
+  for (const entry of entries) {
+    if (!satisfies(value(s, entry, metric!)!)) since = undefined;
+    else since ??= entry.date;
+  }
+  const latest = entries.at(-1)?.date;
+  const days =
+    since && latest
+      ? Math.round((Date.parse(latest) - Date.parse(since)) / 86400000) + 1
+      : 0;
+  const required =
+    (goal.duration ?? 1) * (goal.durationUnit === "weeks" ? 7 : 1);
+  return {
+    since,
+    latest,
+    days,
+    required,
+    progress: Math.min(100, (days / required) * 100),
+    achieved: days >= required,
   };
 }

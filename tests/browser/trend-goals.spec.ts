@@ -16,7 +16,6 @@ test("the selected metric goal appears on every graph, converts units, and stays
       id: "current",
       date: localDate(),
       values: { weight: canonical(200, "lb") },
-      note: "",
     },
   ];
   expect(
@@ -34,7 +33,7 @@ test("the selected metric goal appears on every graph, converts units, and stays
     .click();
   await page.getByRole("textbox", { name: "Target", exact: true }).fill("150");
   await page.getByRole("button", { name: "Save goal", exact: true }).click();
-  await expect(page.getByText("150.00 lb")).toBeVisible();
+  await expect(page.getByText("150.00 lb", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Trends", exact: true }).click();
   for (const mode of [
     "Days YoY",

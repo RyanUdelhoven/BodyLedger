@@ -16,7 +16,7 @@ A small Node 24 service serves the built React client and same-origin `/api/jour
 
 The synthetic dataset seeds a new database once. Restarting or rebuilding the container preserves changes and never reseeds an existing database, including intentionally emptied journals. Do not run `docker compose down -v` or delete the named volume unless intentionally removing all data.
 
-Settings → Manage data provides full JSON backup/restore, measurement CSV import/export, history editing, inclusive date-range deletion, and metric deletion. Restore replaces the current journal; deletions run immediately. Full backups include preferences and goals; CSV contains measurements and notes. SQLite must be backed up consistently: use the app’s full backup, SQLite’s backup mechanism, or stop the app before copying database files. Copying a live SQLite file without its WAL can omit recent writes.
+Settings → Manage data provides full JSON backup/restore, measurement CSV import/export, history editing, inclusive date-range deletion, and metric deletion. Restore replaces the current journal; deletions run immediately. Full backups include preferences and goals; CSV contains dates and measurements. SQLite must be backed up consistently: use the app’s full backup, SQLite’s backup mechanism, or stop the app before copying database files. Copying a live SQLite file without its WAL can omit recent writes.
 
 ## Docker and Coulson
 
@@ -33,7 +33,7 @@ To unregister only this app, stop it, remove its `~/.coulson/bodyledger` symlink
 
 ## Features
 
-Manual measurements and notes, custom metrics, independent units/precision, reporting schedules, four trend views with statistics/tables, goals, profile-based waist-to-height ratio, CSV import/export, backups, demo refresh, bulk deletion, and responsive light/dark themes are included. Gut in the requested demo appears only on Sundays, regardless of a customized reporting schedule. Refresh demo preserves non-demo entries on occupied dates; full demo replacement clears existing entries and goals.
+Manual measurements, custom metrics, independent units/precision, reporting schedules, four trend views with statistics/tables, goals, profile-based waist-to-height ratio, CSV import/export, backups, demo refresh, bulk deletion, and responsive light/dark themes are included. Gut in the requested demo appears only on Sundays, regardless of a customized reporting schedule. Refresh demo preserves non-demo entries on occupied dates; full demo replacement clears existing entries and goals.
 
 Notifications are optional and work while the journal is open. Closed-browser reminder delivery is not implemented. No accounts, cloud sync, telemetry, or external fonts are used. The original iOS project remains untouched; its CSV export can transfer measurements.
 
@@ -58,7 +58,7 @@ Browser tests launch a separate local server on port 3101 with a temporary SQLit
 
 ## Source map
 
-`server.mjs` owns SQLite, initial seeding, transactions, and static/API HTTP serving. `src/db.ts` is the typed client for that API. `src/model.ts` owns validation, units, calendars, CSV, and synthetic data. `src/trends.ts` computes chart series. `src/components/` holds UI areas; `src/main.tsx` owns navigation and atomic conflict review. `src/styles.css` defines semantic themes and responsive styling.
+`server.mjs` owns SQLite, initial seeding, transactions, and static/API HTTP serving. `migrations.mjs` handles the atomic removal of retired note fields. `src/db.ts` is the typed client for that API. `src/model.ts` owns validation, units, calendars, CSV, and synthetic data. `src/trends.ts` computes chart series. `src/components/` holds UI areas; `src/main.tsx` owns navigation and atomic conflict review. `src/styles.css` defines semantic themes and responsive styling.
 
 ## SQLite verification
 
@@ -75,3 +75,21 @@ Trends uses one shared metric selection across Days YoY, Previous weekdays, Week
 Previous weekdays labels its range **Weeks covered**. All trend Y axes use explicit whole-number ticks in the selected display units, with at most five horizontal grid lines including the bottom and top bounds. Bounds include every plotted series and deviation boundary. Measurement, tooltip, and table precision remain unchanged.
 
 Every Trends graph displays the selected metric’s goal as a labeled dashed target line when that goal exists. Targets follow display units, remain visible outside the observed range, and appear even without observations. Axis bounds include the goal while retaining the five-grid-line limit. Switching to a metric without a goal hides the line; removing a goal removes it from all graphs.
+
+## Compact journal layout
+
+The shared promotional header and date block have been removed from every page. New entry opens directly with the measurement form. The left-aligned date picker and Add a metric controls share the save-button section below the inputs. The latest-weight summary, New entry/Daily check-in header, scheduled count, goals count, and decorative side panels are removed. The date picker retains an accessible name without a visible label. CSV import and its format example now live beside Export CSV in Settings → Manage data.
+
+Trends places the metric selector, range control, and optional weekday selector in one control row. Compact statistics and a viewport-sized chart keep controls, statistics, and graph visible together at desktop and mobile sizes. The expandable chart-data table remains below the graph.
+
+Measurement entry fields align their decimal points using a shared fractional column and fixed-width digits. Integer entries align at the implied decimal position. Alignment adapts to typed precision and unit conversions without modifying the entered or stored measurement. History editing uses the same numeric input.
+
+New entry arranges measurements three per row on desktop, two on tablets, and one on phones. Tab and Shift+Tab move directly between values in row order. Unit selectors remain available by mouse or Alt+Down from the value field; Escape returns to its value. The compact three-column layout adapts to smaller screens without horizontal scrolling.
+
+Notes have been retired: there is no note editor, history column, CSV export column, or stored entry field. Startup removes legacy note fields transactionally while preserving entry dates, IDs, measurements, and all other journal metadata. Old CSV Notes columns are accepted and ignored; old JSON backups have their note fields stripped before saving.
+
+New entry uses compact inline label/value controls. Clicking or tabbing into a numeric input selects its entire number; the shared focus outline and background include the label and unit selector. Measurement values use 28.8px text, with 19.2px labels and units. Add a metric sits beside the date picker. History appears below the form; select a date to load its measurements for editing. Clear form and the decorative Add metric tagline have been removed.
+
+Goals support above/below thresholds and a required duration in days or weeks. Cards show the current measured streak and duration progress. Comparisons are strict (equal values do not satisfy above/below). Streaks use calendar dates across recorded observations, bridge missing dates, reset on an out-of-range measurement, and stop at the latest observation; future observations do not count. Streaks use available history, including measurements before goal creation. Existing goals infer direction from their starting value and default to one day.
+
+Settings → Manage data includes Metric names for renaming stored metrics (unique names, up to 10 characters). Names update history and CSV column headers and all metric displays; stable IDs preserve existing values, schedules, and goals. History follows the deletion sections. Demo-history controls have been removed from Settings.

@@ -166,33 +166,25 @@ export function Trends({
           </button>
         ))}
       </div>
-      <section className="card trend-card">
-        <div className="card-header">
-          <div>
-            <h2>{mode}</h2>
-            <p>
-              {mode === "Days YoY"
-                ? "Your measurements, alongside the same dates in previous years."
-                : mode === "Previous weekdays"
-                  ? "The same weekday, week after week."
-                  : mode === "Week flow"
-                    ? "The last seven days alongside your previous weeks."
-                    : "Twelve months alongside your previous years."}
-            </p>
-          </div>
-          <select
-            aria-label="Chart metric"
-            value={metric.id}
-            onChange={(e) => setSelection(e.target.value)}
-          >
-            {ms.map((m) => (
-              <option key={m.id} value={m.id}>
-                {m.title}
-              </option>
-            ))}
-          </select>
-        </div>
+      <section className="card trend-card" aria-labelledby="trend-title">
+        <h2 id="trend-title" className="sr-only">
+          {mode}
+        </h2>
         <div className="chart-controls">
+          <label>
+            Metric
+            <select
+              aria-label="Chart metric"
+              value={metric.id}
+              onChange={(e) => setSelection(e.target.value)}
+            >
+              {ms.map((m) => (
+                <option key={m.id} value={m.id}>
+                  {m.title}
+                </option>
+              ))}
+            </select>
+          </label>
           <label>
             {mode === "Days YoY"
               ? "Weeks covered"
@@ -382,7 +374,6 @@ export function Trends({
                     fill="#78d9b0"
                     radius={[4, 4, 0, 0]}
                   />
-
                 </ComposedChart>
               ) : (
                 <LineChart data={points}>
@@ -470,57 +461,57 @@ export function Trends({
             />
           )}
         </div>
-        <details className="data-details">
-          <summary>
-            View chart data{" "}
-            <span>
-              {points.length} {mode === "Year flow" ? "months" : "dates"}
-            </span>
-          </summary>
-          <div className="table-scroll">
-            <table>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>
-                    {mode === "Days YoY" ? new Date().getFullYear() : "Actual"}
-                  </th>
+      </section>
+      <details className="data-details">
+        <summary>
+          View chart data{" "}
+          <span>
+            {points.length} {mode === "Year flow" ? "months" : "dates"}
+          </span>
+        </summary>
+        <div className="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>
+                  {mode === "Days YoY" ? new Date().getFullYear() : "Actual"}
+                </th>
+                {mode === "Days YoY" ? (
+                  <>
+                    <th>{new Date().getFullYear() - 1}</th>
+                    <th>{new Date().getFullYear() - 2}</th>
+                  </>
+                ) : isFlow ? (
+                  <>
+                    <th>Average</th>
+                    <th>Std. dev.</th>
+                  </>
+                ) : null}
+              </tr>
+            </thead>
+            <tbody>
+              {[...points].reverse().map((p) => (
+                <tr key={p.date}>
+                  <td>{p.date}</td>
+                  <td>{stat(p.actual)}</td>
                   {mode === "Days YoY" ? (
                     <>
-                      <th>{new Date().getFullYear() - 1}</th>
-                      <th>{new Date().getFullYear() - 2}</th>
+                      <td>{stat(p.previous)}</td>
+                      <td>{stat(p.older)}</td>
                     </>
                   ) : isFlow ? (
                     <>
-                      <th>Average</th>
-                      <th>Std. dev.</th>
+                      <td>{stat(p.average)}</td>
+                      <td>{stat(p.deviation)}</td>
                     </>
                   ) : null}
                 </tr>
-              </thead>
-              <tbody>
-                {[...points].reverse().map((p) => (
-                  <tr key={p.date}>
-                    <td>{p.date}</td>
-                    <td>{stat(p.actual)}</td>
-                    {mode === "Days YoY" ? (
-                      <>
-                        <td>{stat(p.previous)}</td>
-                        <td>{stat(p.older)}</td>
-                      </>
-                    ) : isFlow ? (
-                      <>
-                        <td>{stat(p.average)}</td>
-                        <td>{stat(p.deviation)}</td>
-                      </>
-                    ) : null}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </details>
-      </section>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </details>
     </>
   );
 }

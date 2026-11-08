@@ -4,6 +4,7 @@ COPY package.json package-lock.json ./
 RUN npm ci
 COPY index.html tsconfig.json vite.config.ts ./
 COPY src ./src
+COPY public ./public
 RUN npm run build
 
 FROM node:24-alpine
@@ -13,7 +14,7 @@ COPY package.json package-lock.json ./
 RUN npm ci --omit=dev && mkdir /data && chown node:node /data
 COPY --from=build /app/dist ./dist
 COPY src/model.ts ./src/model.ts
-COPY server.mjs ./
+COPY server.mjs migrations.mjs ./
 COPY data/BodyLedger-demo.json ./data/BodyLedger-demo.json
 USER node
 EXPOSE 8080

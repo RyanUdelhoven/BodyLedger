@@ -12,8 +12,11 @@ import {
   Trash2,
 } from "lucide-react";
 import { ScheduleEditor } from "./ScheduleEditor";
-import { Empty } from "./Empty";
+import { MetricNames } from "./MetricNames";
+import { HistoryTable } from "./HistoryTable";
 import { Notifications } from "./Notifications";
+import { DecimalInput, fractionLength } from "./DecimalInput";
+import { CSVImport } from "./CSVImport";
 import { download } from "../ui";
 export function SettingsPage({
   state,
@@ -48,6 +51,10 @@ export function SettingsPage({
     b.date.localeCompare(a.date),
   );
   const ms = M.metrics(state);
+  const editFractionPlaces = Math.max(
+    3,
+    ...Object.values(editValues).map(fractionLength),
+  );
   const settings = (p: Partial<M.State["settings"]>) =>
     commit({ ...state, settings: { ...state.settings, ...p } });
   async function removeEntries(ids: string[]) {
@@ -265,6 +272,7 @@ export function SettingsPage({
                 >
                   <Download size={16} /> Export CSV
                 </button>
+                <CSVImport state={state} submit={submit} notify={notify} />
                 <button
                   className="secondary"
                   onClick={() =>
@@ -303,150 +311,11 @@ export function SettingsPage({
               </div>
               <p className="muted">
                 Restore replaces this journal. Full backups include goals,
-                schedules, and preferences; CSV exports contain measurements and
-                notes.
+                schedules, and preferences; CSV exports contain measurements.
               </p>
             </div>
           </section>
-          <section className="card history-card">
-            <div className="card-header">
-              <div>
-                <h2>History</h2>
-                <p>
-                  {entries.length.toLocaleString()} daily reports. Select a date
-                  to edit.
-                </p>
-              </div>
-              <button
-                className="text-button"
-                onClick={() =>
-                  setSelected(
-                    selected.length === entries.length
-                      ? []
-                      : entries.map((e) => e.id),
-                  )
-                }
-              >
-                {selected.length === entries.length && entries.length
-                  ? "Deselect all"
-                  : "Select all"}
-              </button>
-            </div>
-            <div className="history-tools">
-              <label>
-                Find date
-                <input
-                  type="date"
-                  value={find}
-                  onChange={(e) => setFind(e.target.value)}
-                />
-              </label>
-              <button
-                className="secondary"
-                disabled={!find || !entries.length}
-                onClick={go}
-              >
-                Go
-              </button>
-              <button
-                className="danger secondary"
-                disabled={!selected.length}
-                onClick={() => removeEntries(selected)}
-              >
-                Delete selected entries ({selected.length})
-              </button>
-            </div>
-            <div className="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Select</th>
-                    <th>Date</th>
-                    {ms.map((m) => (
-                      <th key={m.id}>{m.title}</th>
-                    ))}
-                    <th>Note</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {entries.slice(0, limit).map((e) => (
-                    <tr
-                      id={`entry-${e.id}`}
-                      className={highlight === e.id ? "highlight" : ""}
-                      key={e.id}
-                    >
-                      <td>
-                        <input
-                          type="checkbox"
-                          aria-label={`Select ${e.date}`}
-                          checked={selected.includes(e.id)}
-                          onChange={(ev) =>
-                            setSelected(
-                              ev.target.checked
-                                ? [...selected, e.id]
-                                : selected.filter((i) => i !== e.id),
-                            )
-                          }
-                        />
-                      </td>
-                      <td>
-                        <button
-                          className="text-link"
-                          onClick={() => {
-                            setEditing(structuredClone(e));
-                            setEditValues(
-                              Object.fromEntries(
-                                state.metrics.map((m) => [
-                                  m.id,
-                                  e.values[m.id] === undefined
-                                    ? ""
-                                    : String(
-                                        Number(
-                                          (
-                                            e.values[m.id] /
-                                            M.factor(M.displayUnit(state, m))
-                                          ).toPrecision(12),
-                                        ),
-                                      ),
-                                ]),
-                              ),
-                            );
-                            setEditUnits({});
-                            setError("");
-                          }}
-                        >
-                          {e.date}
-                        </button>
-                        {e.demo && (
-                          <small className="demo-label">Synthetic</small>
-                        )}
-                      </td>
-                      {ms.map((m) => (
-                        <td key={m.id}>
-                          {M.format(state, m, M.value(state, e, m))}
-                        </td>
-                      ))}
-                      <td className="note-cell">{e.note || "—"}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              {!entries.length && (
-                <Empty
-                  title="A fresh start."
-                  text="Saved measurements will appear here."
-                />
-              )}
-            </div>
-            {entries.length > limit && (
-              <button
-                className="secondary load-more"
-                onClick={() => setLimit(limit + 200)}
-              >
-                Show more entries
-              </button>
-            )}
-          </section>
+          <MetricNames state={state} commit={commit} notify={notify} />
           <div className="settings-grid">
             <section className="card">
               <div className="card-header">
@@ -565,54 +434,99 @@ export function SettingsPage({
                 </button>
               </div>
             </section>
-            <section className="card wide">
-              <div className="card-header">
-                <div>
-                  <h2>Explore with demo history</h2>
-                  <p>
-                    Synthetic Weight and Gut measurements from 2020 through
-                    November 8, 2026.
-                  </p>
-                </div>
-              </div>
-              <div className="settings-body button-row">
-                <button
-                  className="secondary"
-                  onClick={async () => {
-                    if (await commit(M.demo(state)))
-                      notify(
-                        "Demo history refreshed. Your non-demo entries and goals were preserved.",
-                      );
-                  }}
-                >
-                  Refresh demo history
-                </button>
-                <button
-                  className="danger secondary"
-                  onClick={async () => {
-                    if (await commit(M.demo(state, true)))
-                      notify("All data replaced with synthetic demo history.");
-                  }}
-                >
-                  Replace all data with demo history
-                </button>
-                <button
-                  className="secondary"
-                  onClick={async () => {
-                    if (
-                      await commit({
-                        ...state,
-                        entries: state.entries.filter((e) => !e.demo),
-                      })
-                    )
-                      notify("Demo entries removed.");
-                  }}
-                >
-                  Remove demo data
-                </button>
-              </div>
-            </section>
           </div>
+          <section className="card history-card">
+            <div className="card-header">
+              <div>
+                <h2>History</h2>
+                <p>
+                  {entries.length.toLocaleString()} daily reports. Select a date
+                  to edit.
+                </p>
+              </div>
+              <button
+                className="text-button"
+                onClick={() =>
+                  setSelected(
+                    selected.length === entries.length
+                      ? []
+                      : entries.map((e) => e.id),
+                  )
+                }
+              >
+                {selected.length === entries.length && entries.length
+                  ? "Deselect all"
+                  : "Select all"}
+              </button>
+            </div>
+            <div className="history-tools">
+              <label>
+                Find date
+                <input
+                  type="date"
+                  value={find}
+                  onChange={(e) => setFind(e.target.value)}
+                />
+              </label>
+              <button
+                className="secondary"
+                disabled={!find || !entries.length}
+                onClick={go}
+              >
+                Go
+              </button>
+              <button
+                className="danger secondary"
+                disabled={!selected.length}
+                onClick={() => removeEntries(selected)}
+              >
+                Delete selected entries ({selected.length})
+              </button>
+            </div>
+            <HistoryTable
+              state={state}
+              entries={entries.slice(0, limit)}
+              selected={selected}
+              highlightedId={highlight}
+              onToggle={(id, checked) =>
+                setSelected((current) =>
+                  checked
+                    ? [...current, id]
+                    : current.filter((value) => value !== id),
+                )
+              }
+              onEdit={(entry) => {
+                setEditing(structuredClone(entry));
+                setEditValues(
+                  Object.fromEntries(
+                    state.metrics.map((metric) => [
+                      metric.id,
+                      entry.values[metric.id] === undefined
+                        ? ""
+                        : String(
+                            Number(
+                              (
+                                entry.values[metric.id] /
+                                M.factor(M.displayUnit(state, metric))
+                              ).toPrecision(12),
+                            ),
+                          ),
+                    ]),
+                  ),
+                );
+                setEditUnits({});
+                setError("");
+              }}
+            />
+            {entries.length > limit && (
+              <button
+                className="secondary load-more"
+                onClick={() => setLimit(limit + 200)}
+              >
+                Show more entries
+              </button>
+            )}
+          </section>
         </>
       ) : section === "Measurement schedules" ? (
         <section className="card">
@@ -761,8 +675,8 @@ export function SettingsPage({
                       editValues[m.id],
                       editUnits[m.id] ?? M.displayUnit(state, m),
                     );
-                if (!Object.keys(values).length && !editing.note.trim())
-                  throw Error("Keep a measurement or a note.");
+                if (!Object.keys(values).length)
+                  throw Error("Keep at least one measurement.");
                 const next = { ...editing, values, demo: false };
                 if (
                   state.entries.some(
@@ -805,8 +719,8 @@ export function SettingsPage({
                 <div className="field-grid" key={m.id}>
                   <label>
                     {m.title}
-                    <input
-                      inputMode="decimal"
+                    <DecimalInput
+                      fractionPlaces={editFractionPlaces}
                       value={editValues[m.id] ?? ""}
                       onChange={(e) =>
                         setEditValues({
@@ -845,15 +759,6 @@ export function SettingsPage({
                 </div>
               );
             })}
-            <label>
-              Note
-              <textarea
-                value={editing.note}
-                onChange={(e) =>
-                  setEditing({ ...editing, note: e.target.value })
-                }
-              />
-            </label>
             {error && (
               <p className="error" role="alert">
                 {error}
