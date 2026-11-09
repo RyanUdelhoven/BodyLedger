@@ -53,8 +53,8 @@ export function EntryPage({
   }, []);
   useEffect(() => {
     const open = (event: Event) => fill((event as CustomEvent<string>).detail);
-    window.addEventListener("bodyledger-entry-date", open);
-    return () => window.removeEventListener("bodyledger-entry-date", open);
+    window.addEventListener("mynormal-entry-date", open);
+    return () => window.removeEventListener("mynormal-entry-date", open);
   }, [state]);
   useEffect(() => {
     const old = previous.current;

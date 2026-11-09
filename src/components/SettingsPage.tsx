@@ -239,7 +239,7 @@ export function SettingsPage({
               className="secondary"
               onClick={() =>
                 download(
-                  "BodyLedger-backup.json",
+                  "MyNormal-backup.json",
                   JSON.stringify(state, null, 2),
                   "application/json",
                 )
@@ -264,7 +264,7 @@ export function SettingsPage({
                   className="secondary"
                   onClick={() =>
                     download(
-                      "BodyLedger.csv",
+                      "MyNormal.csv",
                       M.exportCSV(state),
                       "text/csv;charset=utf-8",
                     )
@@ -277,7 +277,7 @@ export function SettingsPage({
                   className="secondary"
                   onClick={() =>
                     download(
-                      "BodyLedger-backup.json",
+                      "MyNormal-backup.json",
                       JSON.stringify(state, null, 2),
                       "application/json",
                     )

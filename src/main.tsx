@@ -191,7 +191,7 @@ function App() {
           <span className="brand-icon">
             <Activity size={23} />
           </span>
-          BodyLedger<span className="brand-dot">.</span>
+          My Normal<span className="brand-dot">.</span>
         </a>
         <div className="workspace-label">PERSONAL JOURNAL</div>
         <nav>
@@ -241,7 +241,7 @@ function App() {
               : "Dark appearance"}
           </button>
           <div className="version">
-            BODYLEDGER <span>LOCAL / V1.0</span>
+            My Normal <span>LOCAL / V1.0</span>
           </div>
         </div>
       </aside>

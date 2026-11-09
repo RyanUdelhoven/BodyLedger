@@ -498,7 +498,7 @@ export function validateState(input: unknown): State {
     !s.settings ||
     !s.ranges
   )
-    throw Error("This is not a BodyLedger journal backup.");
+    throw Error("This is not a My Normal journal backup.");
   const ids = new Set<string>();
   for (const m of s.metrics) {
     if (

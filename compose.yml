@@ -1,4 +1,4 @@
-name: bodyledger
+name: mynormal
 services:
   web:
     build: .

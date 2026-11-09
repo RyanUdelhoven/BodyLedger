@@ -1,23 +1,23 @@
-# BodyLedger
+# My Normal
 
 **Your measurements. Your history. Hosted on your own computer.**
 
-BodyLedger is a personal measurement journal that runs locally and opens in your browser. Track weight, body measurements, and custom metrics; explore trends; and set goals that account for time spent above or below a target.
+My Normal is a personal measurement journal that runs locally and opens in your browser. Track weight, body measurements, and custom metrics; explore trends; and set goals that account for time spent above or below a target.
 
-Your journal lives in a SQLite database on your computer, preserved in a Docker volume. BodyLedger does not require an account, a cloud database, or a hosting subscription. It includes no telemetry or external fonts.
+Your journal lives in a SQLite database on your computer, preserved in a Docker volume. My Normal does not require an account, a cloud database, or a hosting subscription. It includes no telemetry or external fonts.
 
 ## Why I recommend Coulson
 
-I recommend running BodyLedger with [Coulson](https://github.com/ratazzi/coulson), a local application gateway. It makes a locally hosted app feel like a regular bookmarked website:
+I recommend running My Normal with [Coulson](https://github.com/ratazzi/coulson), a local application gateway. It makes a locally hosted app feel like a regular bookmarked website:
 
 - **Open a bookmark to start the app.** Coulson starts the registered Docker Compose application when you visit its URL.
-- **Use a memorable address.** Open `http://bodyledger.localhost:18080/` instead of remembering a port number.
+- **Use a memorable address.** Open `http://mynormal.localhost:18080/` instead of remembering a port number.
 - **Keep the terminal out of everyday use.** Register the app once, then open it from your browser.
 - **Manage local apps together.** Coulson provides status, logs, and start/stop commands for registered applications.
 
-Coulson and the Docker engine must already be running. Opening the bookmark does not launch Docker Desktop or a stopped Coulson daemon. Coulson can stop idle applications according to its configuration; BodyLedger's saved data persists when its container stops.
+Coulson and the Docker engine must already be running. Opening the bookmark does not launch Docker Desktop or a stopped Coulson daemon. Coulson can stop idle applications according to its configuration; My Normal's saved data persists when its container stops.
 
-Coulson is recommended, but optional. You can also run BodyLedger directly with Docker Compose.
+Coulson is recommended, but optional. You can also run My Normal directly with Docker Compose.
 
 ## Get started
 
@@ -34,7 +34,7 @@ You do not need Node.js installed on your computer to run the Docker version.
 From the project directory:
 
 ```sh
-docker compose -p bodyledger up -d --build
+docker compose -p mynormal up -d --build
 ```
 
 Open **http://localhost:3000/**. The published port binds to your computer's loopback interface.
@@ -43,30 +43,30 @@ Open **http://localhost:3000/**. The published port binds to your computer's loo
 
 Install and start Coulson following its [setup instructions](https://github.com/ratazzi/coulson). Start Docker Desktop as well.
 
-BodyLedger includes `.coulson.toml`, which selects the Docker provider, `compose.yml`, service `web`, and host port `3000`.
+My Normal includes `.coulson.toml`, which selects the Docker provider, `compose.yml`, service `web`, and host port `3000`.
 
 For Coulson's default `~/.coulson` apps directory, register the project from its root:
 
 ```sh
 mkdir -p ~/.coulson
-ln -s "$PWD" ~/.coulson/bodyledger
+ln -s "$PWD" ~/.coulson/mynormal
 coulson scan
 ```
 
-If `~/.coulson/bodyledger` already links to this project, skip the link command. If you configured a different apps directory, use that directory instead.
+If `~/.coulson/mynormal` already links to this project, skip the link command. If you configured a different apps directory, use that directory instead.
 
-Bookmark **http://bodyledger.localhost:18080/**. This address assumes the `.localhost` suffix and HTTP gateway port `18080` used by this setup; adjust it if your Coulson configuration differs.
+Bookmark **http://mynormal.localhost:18080/**. This address assumes the `.localhost` suffix and HTTP gateway port `18080` used by this setup; adjust it if your Coulson configuration differs.
 
 Useful commands:
 
 ```sh
 coulson ps
-coulson stop bodyledger
+coulson stop mynormal
 coulson doctor
-docker compose -p bodyledger logs --tail 50 web
+docker compose -p mynormal logs --tail 50 web
 ```
 
-After stopping BodyLedger through Coulson, visiting its bookmark starts it again. For an app update, rebuild with the Docker Compose command above and refresh your browser.
+After stopping My Normal through Coulson, visiting its bookmark starts it again. For an app update, rebuild with the Docker Compose command above and refresh your browser.
 
 ## What you can do
 
@@ -95,7 +95,7 @@ Use one row per calendar date, dates formatted as `YYYY-MM-DD`, and metric names
 
 ## Keep your data safe
 
-The database lives at `/data/bodyledger.sqlite` inside the container, stored in the persistent Docker volume **`bodyledger_journal`**. Rebuilding or restarting the app preserves it. Browser storage is not the active journal.
+The database lives at `/data/mynormal.sqlite` inside the container, stored in the persistent Docker volume **`mynormal_journal`**. Rebuilding or restarting the app preserves it. Browser storage is not the active journal.
 
 Download a **Full backup** from Settings to preserve measurements, metric definitions, goals, schedules, and preferences. CSV exports contain measurement data. Restoring a full backup replaces the journal; deletion controls take effect immediately.
 
@@ -110,7 +110,7 @@ With Node 24 installed:
 ```sh
 npm ci
 npm run build
-DB_PATH=/tmp/bodyledger-development.sqlite PORT=8080 node --experimental-strip-types server.mjs
+DB_PATH=/tmp/mynormal-development.sqlite PORT=8080 node --experimental-strip-types server.mjs
 ```
 
 Open `http://localhost:8080`. For frontend hot reload, run the Docker app and `npm run dev`; Vite proxies API requests to `127.0.0.1:3000`, using that app's database.

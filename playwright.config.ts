@@ -1,5 +1,5 @@
 import { defineConfig } from "@playwright/test";
-const external = process.env.BODYLEDGER_URL;
+const external = process.env.MYNORMAL_URL;
 export default defineConfig({
   testDir: "tests/browser",
   fullyParallel: false,
@@ -18,8 +18,8 @@ export default defineConfig({
         url: "http://127.0.0.1:3101/health",
         env: {
           PORT: "3101",
-          DB_PATH: `/tmp/bodyledger-browser-${process.pid}.sqlite`,
-          BODYLEDGER_TEST: "1",
+          DB_PATH: `/tmp/mynormal-browser-${process.pid}.sqlite`,
+          MYNORMAL_TEST: "1",
         },
         reuseExistingServer: false,
       },

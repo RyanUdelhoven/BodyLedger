@@ -16,7 +16,7 @@ test("schedules, profile ratio, invalid import rollback, and immediate deletions
     .selectOption("light");
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
   await page.screenshot({
-    path: "test-results/bodyledger-light.png",
+    path: "test-results/mynormal-light.png",
     fullPage: true,
   });
   await page.getByRole("button", { name: /User profile Height/ }).click();

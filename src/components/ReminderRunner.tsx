@@ -47,13 +47,13 @@ export function ReminderRunner({
       active?.close();
       active = new Notification("Time for an entry", {
         body: `Your scheduled measurements need an entry: ${due.map((m) => m.title).join(", ")}.`,
-        tag: "bodyledger-reminder",
+        tag: "mynormal-reminder",
       });
       active.onclick = () => {
         window.focus();
         onOpen();
         window.dispatchEvent(
-          new CustomEvent("bodyledger-entry-date", { detail: today }),
+          new CustomEvent("mynormal-entry-date", { detail: today }),
         );
         active?.close();
       };

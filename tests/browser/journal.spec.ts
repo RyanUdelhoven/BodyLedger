@@ -93,7 +93,7 @@ test("records measurements, keeps drafts, imports atomically, edits history, and
   ).toHaveCount(0);
   await page.getByRole("button", { name: "New entry", exact: true }).click();
   await page.screenshot({
-    path: "test-results/bodyledger-desktop.png",
+    path: "test-results/mynormal-desktop.png",
     fullPage: true,
   });
   await page.setViewportSize({ width: 390, height: 844 });
@@ -104,7 +104,7 @@ test("records measurements, keeps drafts, imports atomically, edits history, and
     ),
   ).toBe(true);
   await page.screenshot({
-    path: "test-results/bodyledger-mobile.png",
+    path: "test-results/mynormal-mobile.png",
     fullPage: true,
   });
   expect(errors).toEqual([]);

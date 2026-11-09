@@ -10,7 +10,7 @@ import {
 } from "node:fs";
 import { dirname, resolve, extname } from "node:path";
 import { validateState } from "./src/model.ts";
-const dbPath = process.env.DB_PATH ?? "/data/bodyledger.sqlite";
+const dbPath = process.env.DB_PATH ?? "/data/mynormal.sqlite";
 mkdirSync(dirname(dbPath), { recursive: true });
 const db = new DatabaseSync(dbPath);
 db.exec(
@@ -63,7 +63,7 @@ if (!current())
     validateState(
       JSON.parse(
         readFileSync(
-          new URL("./data/BodyLedger-demo.json", import.meta.url),
+          new URL("./data/MyNormal-demo.json", import.meta.url),
           "utf8",
         ),
       ),
@@ -96,7 +96,7 @@ const server = createServer(async (req, res) => {
       db.prepare("SELECT 1").get();
       return json(200, {
         status: "ok",
-        testEnvironment: process.env.BODYLEDGER_TEST === "1",
+        testEnvironment: process.env.MYNORMAL_TEST === "1",
       });
     }
     if (pathname === "/api/journal") {
@@ -149,7 +149,7 @@ const server = createServer(async (req, res) => {
 });
 server.listen(Number(process.env.PORT ?? 8080), "0.0.0.0", () =>
   console.log(
-    `BodyLedger serving SQLite journal on port ${process.env.PORT ?? 8080}`,
+    `MyNormal serving SQLite journal on port ${process.env.PORT ?? 8080}`,
   ),
 );
 for (const signal of ["SIGTERM", "SIGINT"])

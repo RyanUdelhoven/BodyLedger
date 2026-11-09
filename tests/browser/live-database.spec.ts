@@ -5,20 +5,20 @@ test("live SQLite dataset survives two Coulson stop and bookmark starts", async 
   request,
 }) => {
   test.skip(
-    process.env.BODYLEDGER_LIVE_CHECK !== "1",
+    process.env.MYNORMAL_LIVE_CHECK !== "1",
     "Explicit read-only live persistence check.",
   );
   test.setTimeout(120000);
   const before = await (await request.get("/api/journal")).json();
   expect(before.entries).toHaveLength(2504);
   for (let i = 0; i < 2; i++) {
-    execFileSync("/usr/local/bin/coulson", ["stop", "bodyledger"], {
+    execFileSync("/usr/local/bin/coulson", ["stop", "mynormal"], {
       timeout: 30000,
     });
     expect(
       execFileSync(
         "/usr/local/bin/docker",
-        ["compose", "-p", "bodyledger", "ps", "--status", "running", "--quiet"],
+        ["compose", "-p", "mynormal", "ps", "--status", "running", "--quiet"],
         { encoding: "utf8" },
       ).trim(),
     ).toBe("");

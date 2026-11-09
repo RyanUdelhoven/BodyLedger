@@ -8,7 +8,7 @@ import { join } from "node:path";
 test("requested history appears in a new database and survives reload", async ({
   page,
 }) => {
-  const directory = await mkdtemp(join(tmpdir(), "bodyledger-initial-"));
+  const directory = await mkdtemp(join(tmpdir(), "mynormal-initial-"));
   const reservation = createServer().listen(0, "127.0.0.1");
   await once(reservation, "listening");
   const address = reservation.address();
@@ -24,7 +24,7 @@ test("requested history appears in a new database and survives reload", async ({
         ...process.env,
         PORT: String(port),
         DB_PATH: join(directory, "journal.sqlite"),
-        BODYLEDGER_TEST: "1",
+        MYNORMAL_TEST: "1",
       },
       stdio: "ignore",
     },

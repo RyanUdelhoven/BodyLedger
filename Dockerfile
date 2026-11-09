@@ -9,13 +9,13 @@ RUN npm run build
 
 FROM node:24-alpine
 WORKDIR /app
-ENV NODE_ENV=production PORT=8080 DB_PATH=/data/bodyledger.sqlite
+ENV NODE_ENV=production PORT=8080 DB_PATH=/data/mynormal.sqlite
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev && mkdir /data && chown node:node /data
 COPY --from=build /app/dist ./dist
 COPY src/model.ts ./src/model.ts
 COPY server.mjs migrations.mjs ./
-COPY data/BodyLedger-demo.json ./data/BodyLedger-demo.json
+COPY data/MyNormal-demo.json ./data/MyNormal-demo.json
 USER node
 EXPOSE 8080
 HEALTHCHECK --interval=15s --timeout=3s --start-period=5s CMD wget -q -O /dev/null http://127.0.0.1:8080/health || exit 1
