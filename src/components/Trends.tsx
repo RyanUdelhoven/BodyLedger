@@ -5,8 +5,6 @@ import {
   ResponsiveContainer,
   LineChart,
   Line,
-  ComposedChart,
-  Bar,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -138,7 +136,11 @@ export function Trends({
           },
         ]
       : [
-          { key: "actual", label: "Current", color: "var(--color-chart-current)" },
+          {
+            key: "actual",
+            label: "Current",
+            color: "var(--color-chart-current)",
+          },
           ...(isFlow
             ? [
                 {
@@ -146,7 +148,11 @@ export function Trends({
                   label: "Historical average",
                   color: "var(--color-chart-comparison)",
                 },
-                { key: "low", label: "±1 Std. dev.", color: "var(--color-chart-range)" },
+                {
+                  key: "low",
+                  label: "±1 Std. dev.",
+                  color: "var(--color-chart-range)",
+                },
                 { key: "high", label: "", color: "var(--color-chart-range)" },
               ]
             : []),
@@ -324,135 +330,82 @@ export function Trends({
               p.older !== undefined,
           ) ? (
             <ResponsiveContainer width="100%" height="100%">
-              {mode === "Previous weekdays" ? (
-                <ComposedChart data={points}>
-                  <CartesianGrid
-                    vertical={false}
-                    stroke="var(--color-border)"
-                    syncWithTicks={true}
-                  />
-                  <XAxis
-                    dataKey="label"
-                    tick={{ fill: "var(--color-muted)", fontSize: 11 }}
-                  />
-                  <YAxis
-                    width={65}
-                    domain={[yTicks[0], yTicks[yTicks.length - 1]]}
-                    ticks={yTicks}
-                    allowDataOverflow={true}
-                    interval={0}
-                    tick={{ fill: "var(--color-muted)", fontSize: 11 }}
-                    tickFormatter={(v) =>
-                      Math.round(v / axisFactor).toLocaleString()
-                    }
-                  />
-                  {goal && (
-                    <ReferenceLine
-                      y={goal.target}
-                      stroke="var(--color-chart-goal)"
-                      strokeWidth={2}
-                      strokeDasharray="6 4"
-                      label={{
-                        value: goalLabel,
-                        position: "insideTopRight",
-                        fill: "var(--color-text)",
-                        fontSize: 11,
-                      }}
-                    />
-                  )}
-                  <Tooltip
-                    contentStyle={{
-                      background: "var(--color-surface)",
-                      borderColor: "var(--color-border)",
-                      borderRadius: 12,
+              <LineChart data={points}>
+                <CartesianGrid
+                  vertical={false}
+                  stroke="var(--color-border)"
+                  syncWithTicks={true}
+                />
+                <XAxis
+                  dataKey="label"
+                  tick={{ fill: "var(--color-muted)", fontSize: 11 }}
+                  minTickGap={24}
+                />
+                <YAxis
+                  width={65}
+                  domain={[yTicks[0], yTicks[yTicks.length - 1]]}
+                  ticks={yTicks}
+                  allowDataOverflow={true}
+                  interval={0}
+                  tick={{ fill: "var(--color-muted)", fontSize: 11 }}
+                  tickFormatter={(v) =>
+                    Math.round(v / axisFactor).toLocaleString()
+                  }
+                />
+                {goal && (
+                  <ReferenceLine
+                    y={goal.target}
+                    stroke="var(--color-chart-goal)"
+                    strokeWidth={2}
+                    strokeDasharray="6 4"
+                    label={{
+                      value: goalLabel,
+                      position: "insideTopRight",
+                      fill: "var(--color-text)",
+                      fontSize: 11,
                     }}
-                    formatter={(v) => stat(Number(v))}
                   />
-                  <Bar
-                    dataKey="actual"
-                    name={metric.title}
-                    fill="var(--color-chart-current)"
-                    radius={[4, 4, 0, 0]}
-                  />
-                </ComposedChart>
-              ) : (
-                <LineChart data={points}>
-                  <CartesianGrid
-                    vertical={false}
-                    stroke="var(--color-border)"
-                    syncWithTicks={true}
-                  />
-                  <XAxis
-                    dataKey="label"
-                    tick={{ fill: "var(--color-muted)", fontSize: 11 }}
-                    minTickGap={24}
-                  />
-                  <YAxis
-                    width={65}
-                    domain={[yTicks[0], yTicks[yTicks.length - 1]]}
-                    ticks={yTicks}
-                    allowDataOverflow={true}
-                    interval={0}
-                    tick={{ fill: "var(--color-muted)", fontSize: 11 }}
-                    tickFormatter={(v) =>
-                      Math.round(v / axisFactor).toLocaleString()
+                )}
+                <Tooltip
+                  contentStyle={{
+                    background: "var(--color-surface)",
+                    borderColor: "var(--color-border)",
+                    borderRadius: 12,
+                  }}
+                  formatter={(v) => stat(Number(v))}
+                />
+                <Legend />
+                {series.map((line) => (
+                  <Line
+                    key={line.key}
+                    type="linear"
+                    dataKey={line.key}
+                    name={line.label}
+                    legendType={line.key === "high" ? "none" : "line"}
+                    stroke={line.color}
+                    strokeWidth={line.key === "actual" ? 2.5 : 1.5}
+                    strokeOpacity={
+                      line.key === "low" || line.key === "high" ? 0.5 : 1
                     }
+                    strokeDasharray={
+                      line.key === "low" || line.key === "high"
+                        ? "1 4"
+                        : undefined
+                    }
+                    strokeLinecap="round"
+                    dot={
+                      line.key !== "low" &&
+                      line.key !== "high" &&
+                      points.filter(
+                        (p) => p[line.key as keyof typeof p] !== undefined,
+                      ).length <= 14
+                        ? { r: 3 }
+                        : false
+                    }
+                    connectNulls={true}
                   />
-                  {goal && (
-                    <ReferenceLine
-                      y={goal.target}
-                      stroke="var(--color-chart-goal)"
-                      strokeWidth={2}
-                      strokeDasharray="6 4"
-                      label={{
-                        value: goalLabel,
-                        position: "insideTopRight",
-                        fill: "var(--color-text)",
-                        fontSize: 11,
-                      }}
-                    />
-                  )}
-                  <Tooltip
-                    contentStyle={{
-                      background: "var(--color-surface)",
-                      borderColor: "var(--color-border)",
-                      borderRadius: 12,
-                    }}
-                    formatter={(v) => stat(Number(v))}
-                  />
-                  <Legend />
-                  {series.map((line) => (
-                    <Line
-                      key={line.key}
-                      type="linear"
-                      dataKey={line.key}
-                      name={line.label}
-                      legendType={line.key === "high" ? "none" : "line"}
-                      stroke={line.color}
-                      strokeWidth={line.key === "actual" ? 2.5 : 1.5}
-                      strokeOpacity={
-                        line.key === "low" || line.key === "high" ? 0.5 : 1
-                      }
-                      strokeDasharray={
-                        line.key === "low" || line.key === "high"
-                          ? "1 4"
-                          : undefined
-                      }
-                      strokeLinecap="round"
-                      dot={
-                        line.key !== "low" &&
-                        line.key !== "high" &&
-                        points.filter(
-                          (p) => p[line.key as keyof typeof p] !== undefined,
-                        ).length <= 14
-                          ? { r: 3 }
-                          : false
-                      }
-                      connectNulls={true}
-                    />
-                  ))}
-                </LineChart>
-              )}
+                ))}
+              </LineChart>
             </ResponsiveContainer>
           ) : (
             <Empty

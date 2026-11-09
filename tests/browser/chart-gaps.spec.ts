@@ -47,3 +47,43 @@ test("trend lines bridge missing observations without filling missing table cell
     ).toBeVisible();
   }
 });
+
+test("previous weekdays displays measurements as a connected line", async ({
+  page,
+  request,
+}) => {
+  const state = await (await request.get("/api/journal")).json();
+  const today = localDate();
+  state.entries = [0, -14, -28].map((offset, index) => ({
+    id: `weekday-${index}`,
+    date: addDays(today, offset),
+    values: { weight: 90 + index },
+  }));
+  expect(
+    (
+      await request.put("/api/journal", {
+        data: { state, expected: state.revision },
+      })
+    ).ok(),
+  ).toBe(true);
+  await page.reload();
+  await page.getByRole("button", { name: "Trends", exact: true }).click();
+  await page
+    .getByRole("button", { name: "Previous weekdays", exact: true })
+    .click();
+  await page
+    .getByRole("combobox", { name: /^Weekday/ })
+    .selectOption(String(new Date(`${today}T12:00:00`).getDay()));
+  const curve = page.locator(".recharts-line-curve").first();
+  await expect(curve).toBeVisible();
+  await expect
+    .poll(async () => {
+      const path = await curve.getAttribute("d");
+      return {
+        moves: (path?.match(/M/g) ?? []).length,
+        hasLine: !!path?.includes("L"),
+      };
+    })
+    .toEqual({ moves: 1, hasLine: true });
+  await expect(page.locator(".recharts-bar")).toHaveCount(0);
+});
