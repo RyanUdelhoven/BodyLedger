@@ -5,31 +5,35 @@
     BlinkMacSystemFont,
     sans-serif;
   color-scheme: dark;
-  --color-bg: oklch(17% 0.012 165);
-  --color-surface: oklch(20.5% 0.014 165);
-  --color-elevated: oklch(23% 0.014 165);
-  --color-text: oklch(94% 0.008 155);
-  --color-muted: oklch(65% 0.016 160);
-  --color-action: oklch(82% 0.115 160);
-  --color-action-text: oklch(20% 0.035 160);
-  --color-border: oklch(29% 0.015 165);
+  --color-chart-current: #78d9b0;
+  --color-chart-comparison: #faff60;
+  --color-chart-range: #ff70d5;
+  --color-chart-goal: #ffbc42;
+  --color-bg: oklch(17% 0.012 260);
+  --color-surface: oklch(20.5% 0.014 260);
+  --color-elevated: oklch(23% 0.014 260);
+  --color-text: oklch(94% 0.008 250);
+  --color-muted: oklch(65% 0.016 255);
+  --color-action: oklch(82% 0.115 255);
+  --color-action-text: oklch(20% 0.035 255);
+  --color-border: oklch(29% 0.015 260);
   --color-danger: oklch(77% 0.12 25);
-  --color-sidebar: oklch(16% 0.012 165);
+  --color-sidebar: oklch(16% 0.012 260);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
 :root[data-theme="light"] {
   color-scheme: light;
-  --color-bg: oklch(97% 0.006 150);
-  --color-surface: oklch(99% 0.003 150);
-  --color-elevated: oklch(94% 0.01 155);
-  --color-text: oklch(26% 0.02 165);
-  --color-muted: oklch(48% 0.02 160);
-  --color-action: oklch(45% 0.1 160);
-  --color-action-text: oklch(99% 0.006 155);
-  --color-border: oklch(88% 0.015 165);
+  --color-bg: oklch(97% 0.006 245);
+  --color-surface: oklch(99% 0.003 245);
+  --color-elevated: oklch(94% 0.01 250);
+  --color-text: oklch(26% 0.02 260);
+  --color-muted: oklch(48% 0.02 255);
+  --color-action: oklch(45% 0.1 255);
+  --color-action-text: oklch(99% 0.006 250);
+  --color-border: oklch(88% 0.015 260);
   --color-danger: oklch(46% 0.17 25);
-  --color-sidebar: oklch(95% 0.009 150);
+  --color-sidebar: oklch(95% 0.009 245);
 }
 * {
   box-sizing: border-box;

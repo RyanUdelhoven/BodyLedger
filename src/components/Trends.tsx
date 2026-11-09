@@ -124,30 +124,30 @@ export function Trends({
           {
             key: "actual",
             label: String(new Date().getFullYear()),
-            color: "#78d9b0",
+            color: "var(--color-chart-current)",
           },
           {
             key: "previous",
             label: String(new Date().getFullYear() - 1),
-            color: "#7fa8e4",
+            color: "var(--color-chart-comparison)",
           },
           {
             key: "older",
             label: String(new Date().getFullYear() - 2),
-            color: "#b79bdd",
+            color: "var(--color-chart-range)",
           },
         ]
       : [
-          { key: "actual", label: "Current", color: "#78d9b0" },
+          { key: "actual", label: "Current", color: "var(--color-chart-current)" },
           ...(isFlow
             ? [
                 {
                   key: "average",
                   label: "Historical average",
-                  color: "#7fa8e4",
+                  color: "var(--color-chart-comparison)",
                 },
-                { key: "low", label: "±1 Std. dev.", color: "#b79bdd" },
-                { key: "high", label: "", color: "#b79bdd" },
+                { key: "low", label: "±1 Std. dev.", color: "var(--color-chart-range)" },
+                { key: "high", label: "", color: "var(--color-chart-range)" },
               ]
             : []),
         ];
@@ -349,7 +349,7 @@ export function Trends({
                   {goal && (
                     <ReferenceLine
                       y={goal.target}
-                      stroke="#bd863b"
+                      stroke="var(--color-chart-goal)"
                       strokeWidth={2}
                       strokeDasharray="6 4"
                       label={{
@@ -371,7 +371,7 @@ export function Trends({
                   <Bar
                     dataKey="actual"
                     name={metric.title}
-                    fill="#78d9b0"
+                    fill="var(--color-chart-current)"
                     radius={[4, 4, 0, 0]}
                   />
                 </ComposedChart>
@@ -401,7 +401,7 @@ export function Trends({
                   {goal && (
                     <ReferenceLine
                       y={goal.target}
-                      stroke="#bd863b"
+                      stroke="var(--color-chart-goal)"
                       strokeWidth={2}
                       strokeDasharray="6 4"
                       label={{
