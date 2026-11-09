@@ -9,10 +9,12 @@ export function EntryPage({
   state,
   submit,
   busy,
+  onSubmitted,
 }: {
   state: M.State;
   submit: Submit;
   busy: boolean;
+  onSubmitted: () => void;
 }) {
   const [day, setDay] = useState(M.localDate());
   const [draft, setDraft] = useState<Record<string, string>>({});
@@ -120,6 +122,7 @@ export function EntryPage({
         setName("");
         setNewValue("");
         setInputUnits({});
+        onSubmitted();
       });
     } catch (e) {
       setError((e as Error).message);
@@ -282,8 +285,7 @@ export function EntryPage({
             )}
             <div className="form-actions entry-actions">
               <button className="primary" disabled={busy}>
-                <Check size={17} />{" "}
-                {busy ? "Saving…" : saved ? "Save changes" : "Save entry"}
+                <Check size={17} /> {busy ? "Submitting…" : "Submit"}
               </button>
               <div className="effective-date">
                 <input

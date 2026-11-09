@@ -14,7 +14,7 @@ test("Coulson bookmark starts stopped containers twice and retains the database"
   });
   await page.getByLabel("Effective date").fill("2026-11-03");
   await page.getByLabel("Weight", { exact: true }).fill("201.2");
-  await page.getByRole("button", { name: "Save entry", exact: true }).click();
+  await page.getByRole("button", { name: "Submit", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Saved 1 entry");
   for (let cycle = 0; cycle < 2; cycle++) {
     execFileSync("/usr/local/bin/coulson", ["stop", "bodyledger"], {

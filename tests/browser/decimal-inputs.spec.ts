@@ -79,7 +79,7 @@ test("entry decimal points align across precision, integers, mobile, and history
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   ).toBe(true);
-  await page.getByRole("button", { name: "Save entry", exact: true }).click();
+  await page.getByRole("button", { name: "Submit", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Saved 1 entry");
   const saved = (await (await request.get("/api/journal")).json()).entries[0];
   expect(saved.values.weight).toBeCloseTo(canonical(198.2, "lb"));

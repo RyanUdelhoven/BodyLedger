@@ -17,7 +17,7 @@ test("records measurements, keeps drafts, imports atomically, edits history, and
   await page.getByRole("button", { name: "Add a metric" }).click();
   await page.getByLabel("Metric name").fill("Gut");
   await page.getByLabel("First measurement").fill("38.375");
-  await page.getByRole("button", { name: "Save entry", exact: true }).click();
+  await page.getByRole("button", { name: "Submit", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Saved 1 entry");
   await page.reload();
   await page.getByLabel("Effective date").fill("2026-11-01");
@@ -121,11 +121,11 @@ test("rejects stale writes from another tab without losing saved data", async ({
   await expect(other.getByLabel("Effective date")).toBeVisible();
   await page.getByLabel("Effective date").fill("2026-11-04");
   await page.getByLabel("Weight", { exact: true }).fill("200");
-  await page.getByRole("button", { name: "Save entry", exact: true }).click();
+  await page.getByRole("button", { name: "Submit", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Saved 1 entry");
   await other.getByLabel("Effective date").fill("2026-11-05");
   await other.getByLabel("Weight", { exact: true }).fill("199");
-  await other.getByRole("button", { name: "Save entry", exact: true }).click();
+  await other.getByRole("button", { name: "Submit", exact: true }).click();
   await expect(other.getByRole("status")).toContainText("another tab");
   await expect(other.getByLabel("Weight", { exact: true })).toHaveValue("199");
   await other.reload();

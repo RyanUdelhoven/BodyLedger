@@ -61,7 +61,7 @@ test("entry is compact and selects the number while highlighting its value and u
   await expect(
     page.getByText("Make this journal yours", { exact: true }),
   ).toHaveCount(0);
-  await page.getByRole("button", { name: "Save entry", exact: true }).click();
+  await page.getByRole("button", { name: "Submit", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Saved 1 entry");
   const saved = await (await request.get("/api/journal")).json();
   expect(saved.entries[0]).not.toHaveProperty("note");

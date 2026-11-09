@@ -70,7 +70,7 @@ After stopping BodyLedger through Coulson, visiting its bookmark starts it again
 
 ## What you can do
 
-- **Record measurements:** one entry per date, custom metrics, unit conversion, and quick keyboard entry.
+- **Record measurements:** one entry per date, custom metrics, unit conversion, and quick keyboard entry. Submit saves the entry and opens Trends → Days YoY.
 - **Explore Trends:** Days YoY, Previous weekdays, Week flow, and Year flow, with shared metric selection.
 - **Set goals:** above/below targets with durations in days or weeks and measured streak progress.
 - **Manage history:** edit saved dates, rename metrics, and delete selected entries, date ranges, or metrics.

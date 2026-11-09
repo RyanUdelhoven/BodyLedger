@@ -34,7 +34,7 @@ test("New entry combines labels with larger inputs, places Add beside date, and 
       page.locator(".entry-actions").getByLabel("Effective date"),
     ).toBeVisible();
     await expect(
-      page.locator(".entry-actions").getByRole("button", { name: /Save/ }),
+      page.locator(".entry-actions").getByRole("button", { name: "Submit" }),
     ).toBeVisible();
   }
   const input = page.getByRole("textbox", { name: "Weight", exact: true }),
@@ -65,8 +65,12 @@ test("New entry combines labels with larger inputs, places Add beside date, and 
     ),
   ).toBe(3);
   await input.fill("181");
-  await page.getByRole("button", { name: "Save changes", exact: true }).click();
+  await page.getByRole("button", { name: "Submit", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Saved 1 entry");
+  await expect(
+    page.getByRole("button", { name: "Days YoY", exact: true }),
+  ).toHaveClass("selected");
+  await page.getByRole("button", { name: "New entry", exact: true }).click();
   await expect(
     history.getByRole("cell", { name: "181.00 lb", exact: true }),
   ).toBeVisible();

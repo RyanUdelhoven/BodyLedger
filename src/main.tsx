@@ -270,7 +270,12 @@ function App() {
               </div>
             )}
             <div hidden={tab !== "New entry"}>
-              <EntryPage state={state} submit={submit} busy={busy} />
+              <EntryPage
+                state={state}
+                submit={submit}
+                busy={busy}
+                onSubmitted={() => setTab("Trends")}
+              />
             </div>
             {tab === "Trends" && (
               <Trends state={state} commitRange={commitRange} />

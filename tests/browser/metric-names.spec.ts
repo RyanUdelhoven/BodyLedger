@@ -6,7 +6,7 @@ test("Settings removes examples, orders history after deletion, and persists ren
   request,
 }) => {
   await page.getByLabel("Weight", { exact: true }).fill("200");
-  await page.getByRole("button", { name: "Save entry", exact: true }).click();
+  await page.getByRole("button", { name: "Submit", exact: true }).click();
   await page.getByRole("button", { name: "Settings", exact: true }).click();
   await page.getByRole("button", { name: /Manage data History/ }).click();
   await expect(

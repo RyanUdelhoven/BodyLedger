@@ -69,7 +69,7 @@ test("New entry has three measurements per row and tabs directly between values"
       ).toBeFocused();
   }
   await expect(
-    page.getByRole("button", { name: "Save entry", exact: true }),
+    page.getByRole("button", { name: "Submit", exact: true }),
   ).toBeFocused();
   await page.keyboard.press("Shift+Tab");
   await expect(
@@ -87,7 +87,7 @@ test("New entry has three measurements per row and tabs directly between values"
   await expect(
     page.getByRole("textbox", { name: "Chest", exact: true }),
   ).toBeFocused();
-  await page.getByRole("button", { name: "Save entry", exact: true }).click();
+  await page.getByRole("button", { name: "Submit", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Saved 1 entry");
   const saved = (await (await request.get("/api/journal")).json()).entries[0];
   expect(Object.keys(saved.values)).toHaveLength(6);

@@ -8,7 +8,7 @@ test("schedules, profile ratio, invalid import rollback, and immediate deletions
   await page.getByRole("button", { name: "Add a metric" }).click();
   await page.getByLabel("Metric name").fill("Gut");
   await page.getByLabel("First measurement").fill("36");
-  await page.getByRole("button", { name: "Save entry", exact: true }).click();
+  await page.getByRole("button", { name: "Submit", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("Saved 1 entry");
   await page.getByRole("button", { name: "Settings", exact: true }).click();
   await page
