@@ -13,7 +13,7 @@ import {
   ReferenceLine,
 } from "recharts";
 import { chartData, type Mode } from "../trends";
-import { wholeNumberTicks } from "../chartAxis";
+import { chooseYAxis } from "../chartAxis";
 import { Empty } from "./Empty";
 import { weekdays } from "../ui";
 export function Trends({
@@ -97,7 +97,7 @@ export function Trends({
   const goal = state.goals.find((goal) => goal.metricId === metric.id);
   const goalLabel = goal ? `Goal: ${stat(goal.target)}` : undefined;
   const axisFactor = M.factor(M.displayUnit(state, metric));
-  const yTicks = wholeNumberTicks(
+  const axis = chooseYAxis(
     [
       ...points.flatMap((p) => [
         p.actual,
@@ -111,7 +111,9 @@ export function Trends({
     ]
       .filter((v): v is number => v !== undefined)
       .map((v) => v / axisFactor),
-  ).map((v) => v * axisFactor);
+    metric.kind === "length" ? (0.4 * M.factor("in")) / axisFactor : 2,
+  );
+  const yTicks = axis.ticks.map((v) => v * axisFactor);
 
   const isFlow = mode === "Week flow" || mode === "Year flow";
   const first = observed[0],
@@ -349,7 +351,10 @@ export function Trends({
                   interval={0}
                   tick={{ fill: "var(--color-muted)", fontSize: 11 }}
                   tickFormatter={(v) =>
-                    Math.round(v / axisFactor).toLocaleString()
+                    (v / axisFactor).toLocaleString(undefined, {
+                      minimumFractionDigits: axis.decimalPlaces,
+                      maximumFractionDigits: axis.decimalPlaces,
+                    })
                   }
                 />
                 {goal && (
